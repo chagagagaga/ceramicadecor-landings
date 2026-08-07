@@ -1,0 +1,65 @@
+[
+ {
+  "slug": "barbekyu-kompleksy",
+  "n": 2,
+  "title": "Барбекю-комплексы",
+  "lead": "Летние кухни и печные комплексы в керамической облицовке ручной работы",
+  "items": 18,
+  "gid": "1299696635",
+  "src": "catalog-barbekyu-kompleksy.html"
+ },
+ {
+  "slug": "kaminy",
+  "n": 3,
+  "title": "Камины",
+  "lead": "Изразцовые камины: дровяные, электрические и биокамины в облицовке ручной работы",
+  "items": 24,
+  "gid": "0",
+  "src": "catalog-kaminy.html"
+ },
+ {
+  "slug": "izraztsy",
+  "n": 4,
+  "title": "Изразцы",
+  "lead": "Керамическая плитка и изразцы ручной формовки: рельеф, майолика, роспись",
+  "items": 22,
+  "gid": "1667762737",
+  "src": "catalog-izrazcy.html"
+ },
+ {
+  "slug": "pechi-kaminy",
+  "n": 5,
+  "title": "Типовые печи-камины",
+  "lead": "Готовые печи-камины КерамикаДекор — заводская сборка и короткий срок поставки",
+  "items": 6,
+  "gid": "1041601228",
+  "src": "catalog-seriynye-modeli.html"
+ },
+ {
+  "slug": "bannye-portaly",
+  "n": 6,
+  "title": "Порталы для банных печей",
+  "lead": "Изразцовые порталы и облицовки банных печей с художественной росписью",
+  "items": 10,
+  "gid": "1206377708",
+  "src": "catalog-otopitelnye-pechi.html?subcategory=bannye-portaly"
+ },
+ {
+  "slug": "russkie-pechi",
+  "n": 7,
+  "title": "Русские печи",
+  "lead": "Русские печи с лежанкой в изразцовой облицовке и ручной росписи",
+  "items": 11,
+  "gid": "1293673615",
+  "src": "catalog-otopitelnye-pechi.html?subcategory=russkie-pechi"
+ },
+ {
+  "slug": "otopitelnye-pechi",
+  "n": 8,
+  "title": "Отопительные печи",
+  "lead": "Отопительные печи в изразцах: облицовка, роспись и монтаж под ключ",
+  "items": 10,
+  "gid": "211597502",
+  "src": "catalog-otopitelnye-pechi.html?subcategory=otopitelnye-pechi"
+ }
+]

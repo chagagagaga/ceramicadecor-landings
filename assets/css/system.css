@@ -1,0 +1,90 @@
+/* ============================================================================
+   CERAMICADECOR — ДИЗАЙН-СИСТЕМА ПОСАДОЧНЫХ
+   ----------------------------------------------------------------------------
+   Токены сняты с боевого сайта olgabeznogova24.github.io/RU-Site-Full
+   (style.css, блок :root). Один источник правды для всех семи лендингов:
+   правится здесь — меняется везде.
+
+   Шрифты. На основном сайте стоят лицензионные TT Ramillas (заголовки)
+   и TT Commons Pro (текст). В этот репозиторий файлы не кладём: лицензия
+   не позволяет раздавать их с публичного хостинга. Перед боевым запуском
+   положите их в assets/fonts/ и раскомментируйте @font-face ниже — пока
+   работает подобранный по метрикам системный стек.
+   ========================================================================== */
+
+:root {
+  /* Фон и поверхности */
+  --bg:            #101010;
+  --bg-lighter:    #1a1a1a;
+  --bg-card:       #161616;
+
+  /* Фирменные акценты */
+  --primary:       #cb3b25;   /* терракота — все действия */
+  --primary-hover: #e14c35;
+  --orange:        #ff673d;
+  --amber:         #ffa15e;   /* цифры, цены, акценты на тёмном */
+  --green:         #93d200;   /* статус «готово» */
+
+  /* Текст */
+  --white:         #ffffff;
+  --text-muted:    rgba(255, 255, 255, .6);
+  --text-dim:      rgba(255, 255, 255, .4);
+
+  /* Линии */
+  --border:        rgba(255, 255, 255, .1);
+  --border-light:  rgba(255, 255, 255, .15);
+
+  /* Типографика */
+  --font-heading: 'TT Ramillas', Georgia, 'Times New Roman', serif;
+  --font-body:    'TT Commons Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Ритм */
+  --container: 1360px;
+  --pad-x:     clamp(1rem, .6rem + 2vw, 2.5rem);
+  --section-y: clamp(3rem, 2rem + 4vw, 6rem);
+  --transition: .3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { margin: 0; font-family: var(--font-heading); font-weight: 300; line-height: 1.1; letter-spacing: -.01em; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+[hidden] { display: none !important; }
+
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--pad-x); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  padding: .9em 1.6em; border: 1px solid transparent; border-radius: 2px;
+  font-size: .9rem; font-weight: 500; letter-spacing: .02em;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+.btn--primary { background: var(--primary); color: var(--white); }
+.btn--primary:hover { background: var(--primary-hover); }
+.btn--ghost { border-color: var(--border-light); color: var(--white); }
+.btn--ghost:hover { border-color: var(--white); }
+
+.kicker {
+  font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--amber);
+}
+
+/* Статусы готовности лендинга */
+.status { display: inline-flex; align-items: center; gap: .45em; font-size: .8rem; white-space: nowrap; }
+.status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.status--live    { color: var(--green); }
+.status--work    { color: var(--amber); }
+.status--planned { color: var(--text-dim); }

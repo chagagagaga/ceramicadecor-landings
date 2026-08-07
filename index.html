@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Посадочные страницы CeramicaDecor под Яндекс.Директ</title>
+<meta name="description" content="Карта посадочных страниц CeramicaDecor по направлениям продукции: статус, адреса, источники данных.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/system.css?v=1">
+<style>
+  .wrap { padding-block: var(--section-y); }
+  .head { max-width: 720px; margin-bottom: clamp(2.5rem, 2rem + 2vw, 4rem); }
+  .head h1 { font-size: clamp(2rem, 1.3rem + 3vw, 3.6rem); margin: .9rem 0 1.2rem; }
+  .head p { color: var(--text-muted); font-size: 1.05rem; }
+
+  .sum { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px;
+         background: var(--border); border: 1px solid var(--border); margin-bottom: 3rem; }
+  .sum div { background: var(--bg); padding: 1.5rem 1.3rem; }
+  .sum b { display: block; font-family: var(--font-heading); font-weight: 300; font-size: 2rem; color: var(--amber); }
+  .sum span { font-size: .8rem; color: var(--text-dim); }
+
+  .lp { border-top: 1px solid var(--border); }
+  .lp__row { display: grid; grid-template-columns: 2.2rem minmax(0,1fr) 8rem 7rem 8.5rem;
+             gap: 1rem; align-items: center; padding: 1.15rem .2rem;
+             border-bottom: 1px solid var(--border); transition: background var(--transition); }
+  .lp__row:hover { background: var(--bg-lighter); }
+  .lp__n { font-family: var(--font-heading); color: var(--text-dim); font-size: 1.1rem; }
+  .lp__name { min-width: 0; }
+  .lp__name b { display: block; font-size: 1.05rem; font-weight: 500; }
+  .lp__name span { display: block; font-size: .82rem; color: var(--text-dim); word-break: break-all; }
+  .lp__items { font-size: .85rem; color: var(--text-muted); }
+  .lp__go { justify-self: end; }
+  .lp__head { color: var(--text-dim); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
+  .lp__head:hover { background: none; }
+
+  .src { margin-top: 3.5rem; padding: 1.6rem; border: 1px solid var(--border); }
+  .src h2 { font-size: 1.15rem; margin-bottom: 1rem; }
+  .src dl { display: grid; gap: .8rem; margin: 0; }
+  .src dt { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
+  .src dd { margin: .15rem 0 0; font-size: .9rem; }
+  .src a { color: var(--amber); word-break: break-all; }
+  .src a:hover { color: var(--primary-hover); }
+
+  .note { margin-top: 2rem; font-size: .85rem; color: var(--text-dim); max-width: 70ch; }
+
+  @media (max-width: 860px) {
+    .lp__row { grid-template-columns: 1.8rem minmax(0,1fr) auto; row-gap: .5rem; }
+    .lp__items { grid-column: 2; }
+    .lp__go { grid-column: 2 / -1; justify-self: start; }
+    .lp__head { display: none; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="container">
+
+    <header class="head">
+      <span class="kicker">CeramicaDecor · перформанс</span>
+      <h1>Посадочные страницы<br>под Яндекс.Директ</h1>
+      <p>
+        Восемь направлений продукции — восемь отдельных посадочных с конфигуратором
+        и захватом заявки. Единая дизайн-система, единый прайс, раздельные кампании
+        и раздельная аналитика по каждому направлению.
+      </p>
+    </header>
+
+    <div class="sum">
+      <div><b>8</b><span>направлений</span></div>
+      <div><b>1</b><span>запущено</span></div>
+      <div><b>7</b><span>в очереди</span></div>
+      <div><b>101</b><span>топ-модель в прайсе</span></div>
+    </div>
+
+    <div class="lp">
+      <div class="lp__row lp__head">
+        <span>№</span><span>Направление и адрес</span><span>Статус</span><span>Прайс</span><span></span>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">1</span>
+        <span class="lp__name"><b>Банные печи и отделка парной</b>
+          <span>chagagagaga.github.io/1luch-banya-landing/</span></span>
+        <span class="status status--live">Готова</span>
+        <span class="lp__items">16 печей</span>
+        <a class="btn btn--primary lp__go" href="https://chagagagaga.github.io/1luch-banya-landing/" target="_blank" rel="noopener">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">2</span>
+        <span class="lp__name"><b>Барбекю-комплексы</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/barbekyu-kompleksy/</span></span>
+        <span class="status status--work">В работе</span>
+        <span class="lp__items">18 позиций</span>
+        <a class="btn btn--ghost lp__go" href="barbekyu-kompleksy/">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">3</span>
+        <span class="lp__name"><b>Камины</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/kaminy/</span></span>
+        <span class="status status--work">В работе</span>
+        <span class="lp__items">24 позиции</span>
+        <a class="btn btn--ghost lp__go" href="kaminy/">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">4</span>
+        <span class="lp__name"><b>Изразцы</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/izraztsy/</span></span>
+        <span class="status status--planned">В очереди</span>
+        <span class="lp__items">22 позиции</span>
+        <a class="btn btn--ghost lp__go" href="izraztsy/">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">5</span>
+        <span class="lp__name"><b>Типовые печи-камины</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/pechi-kaminy/</span></span>
+        <span class="status status--planned">В очереди</span>
+        <span class="lp__items">6 позиций</span>
+        <a class="btn btn--ghost lp__go" href="pechi-kaminy/">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">6</span>
+        <span class="lp__name"><b>Порталы для банных печей</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/bannye-portaly/</span></span>
+        <span class="status status--planned">В очереди</span>
+        <span class="lp__items">10 позиций</span>
+        <a class="btn btn--ghost lp__go" href="bannye-portaly/">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">7</span>
+        <span class="lp__name"><b>Русские печи</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/russkie-pechi/</span></span>
+        <span class="status status--planned">В очереди</span>
+        <span class="lp__items">11 позиций</span>
+        <a class="btn btn--ghost lp__go" href="russkie-pechi/">Открыть</a>
+      </div>
+
+      <div class="lp__row">
+        <span class="lp__n">8</span>
+        <span class="lp__name"><b>Отопительные печи</b>
+          <span>chagagagaga.github.io/ceramicadecor-landings/otopitelnye-pechi/</span></span>
+        <span class="status status--planned">В очереди</span>
+        <span class="lp__items">10 позиций</span>
+        <a class="btn btn--ghost lp__go" href="otopitelnye-pechi/">Открыть</a>
+      </div>
+    </div>
+
+    <section class="src">
+      <h2>Источники данных</h2>
+      <dl>
+        <div>
+          <dt>Дизайн и контент</dt>
+          <dd><a href="https://olgabeznogova24.github.io/RU-Site-Full/" target="_blank" rel="noopener">olgabeznogova24.github.io/RU-Site-Full</a></dd>
+        </div>
+        <div>
+          <dt>Цены и топ-модели</dt>
+          <dd><a href="https://docs.google.com/spreadsheets/d/1YHro02gHVouqCeRK4-np2e3a3DxteUHL7JPyKXANPxs/edit" target="_blank" rel="noopener">Google-таблица «Топ-модели по направлениям»</a></dd>
+        </div>
+        <div>
+          <dt>Дизайн-система</dt>
+          <dd>Общая для всех восьми: <code>assets/css/system.css</code> — токены сняты с боевого сайта</dd>
+        </div>
+      </dl>
+    </section>
+
+    <p class="note">
+      Направление 1 относится к дочерней компании «Первый Луч» и живёт в отдельном
+      репозитории — у него свой бренд, свои контакты и своя кампания.
+      Направления 2–8 идут под брендом CeramicaDecor в общей дизайн-системе.
+      Адреса на GitHub Pages — рабочие; перед запуском трафика переезжают
+      на поддомены основного домена, ссылки в отчётности при этом не меняются.
+    </p>
+
+  </div>
+</main>
+</body>
+</html>
