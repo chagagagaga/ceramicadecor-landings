@@ -11,13 +11,13 @@
 | № | Направление | Адрес | Статус | Прайс |
 |---|---|---|---|---|
 | 1 | Банные печи и отделка парной | [1luch-banya-landing](https://chagagagaga.github.io/1luch-banya-landing/) | на согласовании | 16 печей |
-| 2 | Барбекю-комплексы | [/barbekyu-kompleksy/](https://chagagagaga.github.io/ceramicadecor-landings/barbekyu-kompleksy/) | в работе | 18 |
-| 3 | Камины | [/kaminy/](https://chagagagaga.github.io/ceramicadecor-landings/kaminy/) | в работе | 24 |
-| 4 | Изразцы | [/izraztsy/](https://chagagagaga.github.io/ceramicadecor-landings/izraztsy/) | в очереди | 22 |
-| 5 | Типовые печи-камины | [/pechi-kaminy/](https://chagagagaga.github.io/ceramicadecor-landings/pechi-kaminy/) | в очереди | 6 |
-| 6 | Порталы для банных печей | [/bannye-portaly/](https://chagagagaga.github.io/ceramicadecor-landings/bannye-portaly/) | в очереди | 10 |
-| 7 | Русские печи | [/russkie-pechi/](https://chagagagaga.github.io/ceramicadecor-landings/russkie-pechi/) | в очереди | 11 |
-| 8 | Отопительные печи | [/otopitelnye-pechi/](https://chagagagaga.github.io/ceramicadecor-landings/otopitelnye-pechi/) | в очереди | 10 |
+| 2 | Барбекю-комплексы | [/barbekyu-kompleksy/](https://chagagagaga.github.io/ceramicadecor-landings/barbekyu-kompleksy/) | первая версия | 18 |
+| 3 | Камины | [/kaminy/](https://chagagagaga.github.io/ceramicadecor-landings/kaminy/) | первая версия | 24 |
+| 4 | Изразцы | [/izraztsy/](https://chagagagaga.github.io/ceramicadecor-landings/izraztsy/) | первая версия | 22 |
+| 5 | Типовые печи-камины | [/pechi-kaminy/](https://chagagagaga.github.io/ceramicadecor-landings/pechi-kaminy/) | первая версия | 6 |
+| 6 | Порталы для банных печей | [/bannye-portaly/](https://chagagagaga.github.io/ceramicadecor-landings/bannye-portaly/) | первая версия | 10 |
+| 7 | Русские печи | [/russkie-pechi/](https://chagagagaga.github.io/ceramicadecor-landings/russkie-pechi/) | первая версия | 11 |
+| 8 | Отопительные печи | [/otopitelnye-pechi/](https://chagagagaga.github.io/ceramicadecor-landings/otopitelnye-pechi/) | первая версия | 10 |
 
 Направление 1 — дочерняя компания «Первый Луч», свой бренд и свой репозиторий.
 Направления 2–8 — бренд CeramicaDecor.

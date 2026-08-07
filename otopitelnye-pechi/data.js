@@ -1,0 +1,353 @@
+/* Контент направления «Отопительные печи». Правится здесь — вёрстка и логика общие. */
+window.LP = {
+ "slug": "otopitelnye-pechi",
+ "title": "Отопительные печи",
+ "brand": {
+  "phone": "+7 (495) 229-30-46",
+  "worktime": "Ежедневно 9:00–21:00",
+  "address": "Москва · производство в Королёве",
+  "site": "https://ceramicadecor.ru",
+  "whatsapp": "",
+  "telegram": "",
+  "maxUrl": "",
+  "endpoint": "",
+  "metrikaId": 0
+ },
+ "priceLabel1": "Облицовка",
+ "quiz": {
+  "title": "Рассчитайте свою печь",
+  "sub": "Минута — и вы знаете вилку цены. Без звонков и регистраций.",
+  "note": "Вилка, а не финальная цена: точную смету считаем после замера и согласования 3D-проекта.",
+  "base": 0,
+  "spread": 1.24,
+  "turnkeyFactor": 1.8,
+  "matchBy": null,
+  "fields": [
+   {
+    "id": "height",
+    "type": "range",
+    "step": 1,
+    "label": "Высота печи",
+    "min": 1.2,
+    "max": 2.8,
+    "stepSize": 0.1,
+    "dec": 1,
+    "unit": "м",
+    "pricePerUnit": 215000,
+    "hint": "Чем выше печь, тем больше теплоотдающая поверхность и дольше держится тепло.",
+    "def": 1.9
+   },
+   {
+    "id": "type",
+    "type": "radio",
+    "step": 2,
+    "label": "Тип печи",
+    "options": [
+     {
+      "id": "heat",
+      "label": "Только отопление",
+      "k": 1
+     },
+     {
+      "id": "cook",
+      "label": "С варочной плитой",
+      "hint": "Отапливает и готовит",
+      "k": 1.18
+     },
+     {
+      "id": "bench",
+      "label": "С лежанкой",
+      "hint": "Тёплая лежанка на массиве печи",
+      "k": 1.45
+     }
+    ]
+   },
+   {
+    "id": "decor",
+    "type": "radio",
+    "step": 3,
+    "label": "Декор облицовки",
+    "options": [
+     {
+      "id": "plain",
+      "label": "Однотонная глазурь",
+      "k": 1
+     },
+     {
+      "id": "relief",
+      "label": "Лепной рельеф",
+      "k": 1.28
+     },
+     {
+      "id": "painted",
+      "label": "Художественная роспись",
+      "hint": "Птицы, Прованс, Усадьба, Арт Нуво",
+      "k": 1.9
+     }
+    ]
+   },
+   {
+    "id": "extra",
+    "type": "checks",
+    "label": "Дополнить печь",
+    "collapsed": true,
+    "options": [
+     {
+      "id": "chimney",
+      "label": "Дымоход с проходом кровли",
+      "add": 72000,
+      "def": true
+     },
+     {
+      "id": "niche",
+      "label": "Ниши и печурки",
+      "add": 88000
+     },
+     {
+      "id": "wood",
+      "label": "Дровница в облицовке",
+      "add": 68000
+     },
+     {
+      "id": "mount",
+      "label": "Кладка ядра и монтаж",
+      "add": 195000,
+      "def": true
+     }
+    ]
+   }
+  ]
+ },
+ "catalog": [
+  {
+   "title": "Отопительная печь с лежанкой в облицовке Птицы с росписью ручной работы",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pech",
+   "p1": 1370832,
+   "p2": 0,
+   "img": "img/01.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/"
+  },
+  {
+   "title": "Облицовка печи изразцами с художественной росписью Прованс",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
+   "p1": 295243,
+   "p2": 0,
+   "img": "img/02.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/"
+  },
+  {
+   "title": "Облицовка печи Арт Нуво в лазурной росписи",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/",
+   "p1": 876023,
+   "p2": 0,
+   "img": "img/03.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/"
+  },
+  {
+   "title": "Изразцовая печь в облицовке Усадьба с росписью ручной работы",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-53",
+   "p1": 912750,
+   "p2": 0,
+   "img": "img/04.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-5393/"
+  },
+  {
+   "title": "Облицовка отопительной печи в коллекции Универсал",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topoch",
+   "p1": 680401,
+   "p2": 0,
+   "img": "img/05.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topochnoj-dverkoj-vezuvij-9525/"
+  },
+  {
+   "title": "Облицовка отопительной печи в коллекции Птички",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-",
+   "p1": 785852,
+   "p2": 0,
+   "img": "img/06.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-lesnaya/"
+  },
+  {
+   "title": "Облицовка отопительной печи в коллекции Арт Нуво",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
+   "p1": 691369,
+   "p2": 0,
+   "img": "img/07.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/"
+  },
+  {
+   "title": "Облицовка отопительной печи в коллекции Модерн",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/",
+   "p1": 375169,
+   "p2": 0,
+   "img": "img/08.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/"
+  },
+  {
+   "title": "Облицовка отопительной печи в коллекции Дорф",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf",
+   "p1": 1368434,
+   "p2": 0,
+   "img": "img/09.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf/"
+  },
+  {
+   "title": "Облицовка отопительной печи белыми изразцами коллекции Неаполь",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/",
+   "p1": 968320,
+   "p2": 0,
+   "img": "img/10.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/"
+  }
+ ],
+ "filters": [
+  {
+   "key": "price",
+   "label": "Бюджет",
+   "field": "p1",
+   "options": [
+    {
+     "id": "p0",
+     "label": "До 700 тыс",
+     "min": 0,
+     "max": 700000
+    },
+    {
+     "id": "p1",
+     "label": "700 тыс – 1,5 млн",
+     "min": 700000,
+     "max": 1500000
+    },
+    {
+     "id": "p2",
+     "label": "1,5 – 3 млн",
+     "min": 1500000,
+     "max": 3000000
+    },
+    {
+     "id": "p3",
+     "label": "От 3 млн",
+     "min": 3000000,
+     "max": 1000000000
+    }
+   ]
+  }
+ ],
+ "why": {
+  "badTitle": "Стальная печь из магазина",
+  "goodTitle": "Изразцовая отопительная печь",
+  "bad": [
+   "Металл остывает за час: прогорели дрова — в доме снова холодно.",
+   "Жёсткое инфракрасное излучение сушит воздух и жарит всё в радиусе метра.",
+   "Ресурс стальной печи 7–10 лет, потом прогорает и меняется целиком.",
+   "Выглядит как техника, а стоит в самой видной точке дома."
+  ],
+  "good": [
+   "Массив печи набирает тепло и отдаёт его 8–12 часов после протопки.",
+   "Керамика даёт мягкое ровное тепло — воздух не пересушивается.",
+   "Печь на изразцах служит десятилетиями, отдельный элемент меняется точечно.",
+   "Становится центром интерьера, а не бытовым прибором в углу."
+  ],
+  "media": "img/02.webp"
+ },
+ "steps": [
+  {
+   "title": "Заявка и замер",
+   "text": "Обсуждаем задачу, снимаем размеры. По Москве и МО выезд замерщика бесплатный.",
+   "day": "День 1–2"
+  },
+  {
+   "title": "3D-проект и смета",
+   "text": "Показываем объект в вашем интерьере и фиксируем стоимость. Правки — до согласования.",
+   "day": "День 3–5"
+  },
+  {
+   "title": "Производство",
+   "text": "Формуем, обжигаем и расписываем в собственном цехе. Каждый изразец проходит контроль.",
+   "day": "4–8 недель"
+  },
+  {
+   "title": "Монтаж и сдача",
+   "text": "Привозим, собираем, сдаём объект. Выдаём паспорт изделия и гарантию.",
+   "day": "3–10 дней"
+  }
+ ],
+ "guarantees": [
+  {
+   "b": "50",
+   "title": "Лет гарантии на керамику",
+   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."
+  },
+  {
+   "b": "₽",
+   "title": "Смета фиксируется в договоре",
+   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."
+  },
+  {
+   "b": "3D",
+   "title": "Проект до оплаты",
+   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."
+  },
+  {
+   "b": "РФ",
+   "title": "Доставка и монтаж по России",
+   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Сколько стоит изразцовая отопительная печь?",
+   "a": "Облицовка начинается от 295 243 ₽, сложные проекты с росписью — до 1 370 832 ₽. Под ключ с кладкой ядра и монтажом примерно в 1,8 раза дороже облицовки. Свою конфигурацию посчитайте в калькуляторе выше."
+  },
+  {
+   "q": "Чем изразцовая печь лучше стальной?",
+   "a": "Теплоёмкостью. Стальная печь греет, пока в ней горят дрова, и остывает за час. Изразцовая набирает тепло в массив и отдаёт его 8–12 часов — протопили утром и вечером, дом тёплый круглые сутки. Плюс керамика не пересушивает воздух."
+  },
+  {
+   "q": "Какую площадь отапливает?",
+   "a": "Печь высотой около двух метров держит 50–80 м² при нормальном утеплении. Если дом больше, ставят две печи или печь с системой воздуховодов — решение принимает печник на замере."
+  },
+  {
+   "q": "Можно ли готовить на такой печи?",
+   "a": "Да, если заложить варочную плиту. В калькуляторе это отдельный вариант. Плита ставится под чугунный настил, а сама печь при этом продолжает работать как отопительная."
+  },
+  {
+   "q": "Нужен ли фундамент?",
+   "a": "Да, печь с керамикой весит несколько тонн и требует собственного основания. По монолитной плите обычно ставим без доработок, по деревянному перекрытию нужно усиление — оценивает инженер на замере."
+  },
+  {
+   "q": "Сколько времени занимает работа?",
+   "a": "Керамика изготавливается 4–8 недель, кладка ядра и монтаж на объекте — 1–3 недели. Плюс первая неделя на замер и 3D-проект."
+  },
+  {
+   "q": "Можно облицевать существующую печь?",
+   "a": "Если ядро в хорошем состоянии и геометрия позволяет — да. Пришлите фото и размеры, печник даст честный ответ. Иногда дешевле переложить ядро, чем облицовывать печь с трещинами."
+  },
+  {
+   "q": "Отправляете в регионы?",
+   "a": "Да, керамику отгружаем по всей России с раскладкой и инструкцией. Кладку выполняет ваш печник — мы ведём его по проекту и консультируем."
+  }
+ ],
+ "gallery": [
+  "img/01.webp",
+  "img/02.webp",
+  "img/03.webp",
+  "img/04.webp",
+  "img/05.webp",
+  "img/06.webp",
+  "img/07.webp",
+  "img/08.webp",
+  "img/09.webp",
+  "img/10.webp"
+ ]
+};

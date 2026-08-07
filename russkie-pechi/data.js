@@ -1,0 +1,364 @@
+/* Контент направления «Русские печи». Правится здесь — вёрстка и логика общие. */
+window.LP = {
+ "slug": "russkie-pechi",
+ "title": "Русские печи",
+ "brand": {
+  "phone": "+7 (495) 229-30-46",
+  "worktime": "Ежедневно 9:00–21:00",
+  "address": "Москва · производство в Королёве",
+  "site": "https://ceramicadecor.ru",
+  "whatsapp": "",
+  "telegram": "",
+  "maxUrl": "",
+  "endpoint": "",
+  "metrikaId": 0
+ },
+ "priceLabel1": "Облицовка",
+ "quiz": {
+  "title": "Рассчитайте свою печь",
+  "sub": "Минута — и вы знаете вилку цены. Без звонков и регистраций.",
+  "note": "Вилка, а не финальная цена: точную смету считаем после замера и согласования 3D-проекта.",
+  "base": 0,
+  "spread": 1.26,
+  "turnkeyFactor": 1.75,
+  "matchBy": null,
+  "fields": [
+   {
+    "id": "width",
+    "type": "range",
+    "step": 1,
+    "label": "Ширина печи",
+    "min": 1.2,
+    "max": 2.8,
+    "stepSize": 0.1,
+    "dec": 1,
+    "unit": "м",
+    "pricePerUnit": 470000,
+    "hint": "Классическая русская печь с лежанкой — от 1,8 метра по фасаду.",
+    "def": 1.8
+   },
+   {
+    "id": "scheme",
+    "type": "radio",
+    "step": 2,
+    "label": "Исполнение",
+    "options": [
+     {
+      "id": "plain",
+      "label": "Без лежанки",
+      "hint": "Компактный вариант",
+      "k": 1
+     },
+     {
+      "id": "bench",
+      "label": "С лежанкой",
+      "hint": "Классика",
+      "k": 1.35
+     },
+     {
+      "id": "full",
+      "label": "С лежанкой и подтопком",
+      "hint": "Готовит и отапливает круглый год",
+      "k": 1.6
+     }
+    ]
+   },
+   {
+    "id": "decor",
+    "type": "radio",
+    "step": 3,
+    "label": "Декор облицовки",
+    "options": [
+     {
+      "id": "plain",
+      "label": "Однотонная глазурь",
+      "k": 1
+     },
+     {
+      "id": "relief",
+      "label": "Лепной рельеф",
+      "k": 1.3
+     },
+     {
+      "id": "painted",
+      "label": "Художественная роспись",
+      "hint": "Русская Этника, Камея, Птички",
+      "k": 1.9
+     }
+    ]
+   },
+   {
+    "id": "extra",
+    "type": "checks",
+    "label": "Дополнить печь",
+    "collapsed": true,
+    "options": [
+     {
+      "id": "niche",
+      "label": "Ниши и печурки",
+      "add": 92000
+     },
+     {
+      "id": "pipe",
+      "label": "Изразцовая труба",
+      "hint": "Облицовка дымохода в интерьере",
+      "add": 185000
+     },
+     {
+      "id": "wood",
+      "label": "Дровница в облицовке",
+      "add": 74000
+     },
+     {
+      "id": "mount",
+      "label": "Кладка и монтаж на объекте",
+      "add": 260000,
+      "def": true
+     }
+    ]
+   }
+  ]
+ },
+ "catalog": [
+  {
+   "title": "Русская печь в облицовке изразцами в коллекции Русская Этника",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kol",
+   "p1": 5094314,
+   "p2": 0,
+   "img": "img/01.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/"
+  },
+  {
+   "title": "Русская печь в облицовке Камея с художественной росписью",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v",
+   "p1": 2181909,
+   "p2": 0,
+   "img": "img/02.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/"
+  },
+  {
+   "title": "Русская печь в облицовке белыми изразцами коллекции Тюльпан",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
+   "p1": 963875,
+   "p2": 0,
+   "img": "img/03.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/"
+  },
+  {
+   "title": "Русская печь в облицовке белыми изразцами коллекции Неаполь",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitso",
+   "p1": 1046948,
+   "p2": 0,
+   "img": "img/04.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/"
+  },
+  {
+   "title": "Русская печь с частичной облицовкой изразцами коллекции Усадьба",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovym",
+   "p1": 1329259,
+   "p2": 0,
+   "img": "img/05.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/"
+  },
+  {
+   "title": "Русская печь в изразцовой облицовке Византия",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
+   "p1": 2371049,
+   "p2": 0,
+   "img": "img/06.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/"
+  },
+  {
+   "title": "Русская печь с частичной облицовкой изразцами коллекции Арт Нуво",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-",
+   "p1": 2169294,
+   "p2": 0,
+   "img": "img/07.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/"
+  },
+  {
+   "title": "Русская печь в изразцовой облицовке в зеленой майоликовой глазури",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-maj",
+   "p1": 4168727,
+   "p2": 0,
+   "img": "img/08.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/"
+  },
+  {
+   "title": "Русская печь в облицовке изразцами в коллекции Русская Этника",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-ko",
+   "p1": 2543257,
+   "p2": 0,
+   "img": "img/09.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/"
+  },
+  {
+   "title": "Русская печь в облицовке изразцами коллекции Тюльпан",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyu",
+   "p1": 3966639,
+   "p2": 0,
+   "img": "img/10.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/"
+  },
+  {
+   "title": "Русская печь в облицовке белыми изразцами в коллекции Русская Этника",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-koll",
+   "p1": 2631640,
+   "p2": 0,
+   "img": "img/11.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/"
+  }
+ ],
+ "filters": [
+  {
+   "key": "price",
+   "label": "Бюджет",
+   "field": "p1",
+   "options": [
+    {
+     "id": "p0",
+     "label": "До 700 тыс",
+     "min": 0,
+     "max": 700000
+    },
+    {
+     "id": "p1",
+     "label": "700 тыс – 1,5 млн",
+     "min": 700000,
+     "max": 1500000
+    },
+    {
+     "id": "p2",
+     "label": "1,5 – 3 млн",
+     "min": 1500000,
+     "max": 3000000
+    },
+    {
+     "id": "p3",
+     "label": "От 3 млн",
+     "min": 3000000,
+     "max": 1000000000
+    }
+   ]
+  }
+ ],
+ "why": {
+  "badTitle": "Побелённая печь",
+  "goodTitle": "Изразцовая русская печь",
+  "bad": [
+   "Побелка пачкает всё, что к ней прислонилось, и обновляется каждый год.",
+   "Швы кладки собирают копоть, отмываться она перестаёт на второй сезон.",
+   "Печь выглядит утилитарно и не тянет на центр гостиной.",
+   "Трещины по штукатурке появляются уже после первой зимы протопки."
+  ],
+  "good": [
+   "Глазурь моется тряпкой и не пачкает одежду, ухода не требует.",
+   "Керамика не темнеет от копоти и не требует обновления.",
+   "Изразцовая печь становится главным объектом дома — её показывают гостям.",
+   "Изразец с румпой держит тепло часами, гарантия на керамику 50 лет."
+  ],
+  "media": "img/02.webp"
+ },
+ "steps": [
+  {
+   "title": "Заявка и замер",
+   "text": "Обсуждаем задачу, снимаем размеры. По Москве и МО выезд замерщика бесплатный.",
+   "day": "День 1–2"
+  },
+  {
+   "title": "3D-проект и смета",
+   "text": "Показываем объект в вашем интерьере и фиксируем стоимость. Правки — до согласования.",
+   "day": "День 3–5"
+  },
+  {
+   "title": "Производство",
+   "text": "Формуем, обжигаем и расписываем в собственном цехе. Каждый изразец проходит контроль.",
+   "day": "4–8 недель"
+  },
+  {
+   "title": "Монтаж и сдача",
+   "text": "Привозим, собираем, сдаём объект. Выдаём паспорт изделия и гарантию.",
+   "day": "3–10 дней"
+  }
+ ],
+ "guarantees": [
+  {
+   "b": "50",
+   "title": "Лет гарантии на керамику",
+   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."
+  },
+  {
+   "b": "₽",
+   "title": "Смета фиксируется в договоре",
+   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."
+  },
+  {
+   "b": "3D",
+   "title": "Проект до оплаты",
+   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."
+  },
+  {
+   "b": "РФ",
+   "title": "Доставка и монтаж по России",
+   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Сколько стоит русская печь в изразцах?",
+   "a": "Облицовка начинается от 963 875 ₽, самые сложные проекты с ручной росписью доходят до 5 094 314 ₽. Под ключ с кладкой ядра — примерно в 1,7–1,8 раза дороже облицовки. Посчитайте свою конфигурацию в калькуляторе выше."
+  },
+  {
+   "q": "Русская печь реально топится и готовит или это декор?",
+   "a": "Реально. Мы делаем облицовку на действующее печное ядро: горнило, под, лежанка работают как положено. Подтопок добавляют, чтобы отапливать дом в межсезонье, не разжигая горнило целиком."
+  },
+  {
+   "q": "Какую площадь отапливает?",
+   "a": "Классическая русская печь с лежанкой уверенно держит 60–100 м² при нормальном утеплении. Точный расчёт делает печник на замере: важны планировка, высота потолков и расположение печи относительно комнат."
+  },
+  {
+   "q": "Нужен ли отдельный фундамент?",
+   "a": "Да. Печь с облицовкой весит несколько тонн, под неё нужен собственный фундамент, не связанный с фундаментом дома. Если дом уже построен, вариант решается на замере — иногда усиливают перекрытие."
+  },
+  {
+   "q": "Сколько времени занимает вся работа?",
+   "a": "Изготовление керамики 6–8 недель, кладка ядра и монтаж облицовки на объекте 2–4 недели. Плюс первая неделя на замер и 3D-проект. В сумме закладывайте 2,5–3 месяца."
+  },
+  {
+   "q": "Можно облицевать печь, которая уже стоит?",
+   "a": "Иногда да, если геометрия ядра позволяет и оно в хорошем состоянии. Пришлите фото и размеры — печник скажет честно. Чаще выгоднее переложить ядро: старая кладка часто уже с трещинами."
+  },
+  {
+   "q": "Лежанка действительно тёплая?",
+   "a": "Да, это её смысл. Изразец с румпой набирает тепло от массива печи и отдаёт его равномерно — лежанка остаётся тёплой много часов после протопки, при этом не обжигает."
+  },
+  {
+   "q": "Отправляете в регионы?",
+   "a": "Керамику отгружаем по всей России с полной раскладкой. Кладку ядра в этом случае выполняет ваш печник, мы ведём его по проекту и консультируем на каждом этапе."
+  }
+ ],
+ "gallery": [
+  "img/01.webp",
+  "img/02.webp",
+  "img/03.webp",
+  "img/04.webp",
+  "img/05.webp",
+  "img/06.webp",
+  "img/07.webp",
+  "img/08.webp",
+  "img/09.webp",
+  "img/10.webp",
+  "img/11.webp"
+ ]
+};

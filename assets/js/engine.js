@@ -1,0 +1,667 @@
+/* ============================================================================
+   CERAMICADECOR — ДВИЖОК ПОСАДОЧНОЙ
+   ----------------------------------------------------------------------------
+   Один файл на все семь направлений. Весь контент приходит из <slug>/data.js
+   в объекте window.LP. Здесь — только рендер и поведение.
+
+   Что делает:
+     · конфигуратор первого экрана с живой вилкой цены
+     · каталог топ-моделей с фильтрами и двумя ценами
+     · галерею с лайтбоксом, этапы, гарантии, FAQ
+     · захват заявки: модалка, встроенные формы, валидация, антиспам
+     · атрибуцию до кампании Директа и цели Яндекс.Метрики
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var P = window.LP;
+  if (!P) return;
+
+  /* ── Утилиты ───────────────────────────────────────────────────────────── */
+  function $(s, c) { return (c || document).querySelector(s); }
+  function $$(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+  function fmt(n) { return Math.round(n || 0).toLocaleString('ru-RU').replace(/,/g, ' '); }
+  function money(n) { return '<i>' + fmt(n) + '&nbsp;₽</i>'; }
+  function num(v, d) { return Number(v).toFixed(d).replace('.', ','); }
+
+  var QS = new URLSearchParams(location.search || '');
+
+  /* ══ 1. АТРИБУЦИЯ ═══════════════════════════════════════════════════════
+     Запоминаем первый и последний источник, чтобы в заявке было видно,
+     из какой кампании Директа пришёл человек. Только localStorage, без cookie.
+  ═══════════════════════════════════════════════════════════════════════ */
+  var Attr = (function () {
+    var K1 = 'cd_first', K2 = 'cd_last', KV = 'cd_visits';
+    function read(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } }
+    function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    var marks = {};
+    QS.forEach(function (v, k) { if (/^utm_|^y?click|yclid|gclid|roistat/i.test(k)) marks[k] = v; });
+    var snap = { marks: marks, referrer: document.referrer || '', landing: location.pathname, at: new Date().toISOString() };
+    if (!read(K1)) write(K1, snap);
+    var external = document.referrer && document.referrer.indexOf(location.hostname) === -1;
+    if (Object.keys(marks).length || external || !read(K2)) write(K2, snap);
+    var visits = (read(KV) || 0) + 1; write(KV, visits);
+    return {
+      payload: function () {
+        var ym = document.cookie.match(/(?:^|;\s*)_ym_uid=([^;]+)/);
+        return {
+          first_touch: read(K1) || snap, last_touch: read(K2) || snap, visits: visits,
+          page_url: location.href, referrer: document.referrer || '',
+          ym_uid: ym ? decodeURIComponent(ym[1]) : '',
+          screen: window.innerWidth + 'x' + window.innerHeight,
+          user_agent: navigator.userAgent,
+        };
+      },
+    };
+  })();
+
+  /* ══ 2. ЦЕЛИ МЕТРИКИ ════════════════════════════════════════════════════ */
+  function goal(name, params) {
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: name, product: P.slug }, params || {}));
+    var id = P.brand.metrikaId || 0;
+    if (id && typeof window.ym === 'function') { try { window.ym(id, 'reachGoal', name, params || {}); } catch (e) {} }
+  }
+  window.LPGoal = goal;
+
+  /* ══ 3. ОТПРАВКА ЗАЯВОК ═════════════════════════════════════════════════
+     Пока боевой приёмник не подключён — форма показывает успех, но никуда
+     не отправляет, и в консоль пишется предупреждение. Так лендинг можно
+     показывать и проверять, не рискуя потерять реальную заявку.
+  ═══════════════════════════════════════════════════════════════════════ */
+  var Lead = (function () {
+    var ENDPOINT = window.LP_ENDPOINT || P.brand.endpoint || '';
+    var demo = !ENDPOINT || location.protocol === 'file:' ||
+               /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ||
+               /(^|[?&])demo=1(&|$)/.test(location.search);
+    if (!ENDPOINT) {
+      console.warn('[CeramicaDecor] Приёмник заявок не задан: укажите brand.endpoint в data.js. ' +
+                   'Формы работают в демо-режиме и никуда не отправляют.');
+    }
+
+    function maskPhone(el) {
+      var d = el.value.replace(/\D/g, '').slice(0, 11);
+      if (d[0] === '8') d = '7' + d.slice(1);
+      if (d && d[0] !== '7') d = '7' + d;
+      d = d.slice(0, 11);
+      var o = '+7';
+      if (d.length > 1) o += ' (' + d.slice(1, 4);
+      if (d.length >= 4) o += ') ' + d.slice(4, 7);
+      if (d.length >= 7) o += '-' + d.slice(7, 9);
+      if (d.length >= 9) o += '-' + d.slice(9, 11);
+      el.value = d.length ? o : '';
+    }
+    function bindPhone(el) {
+      if (!el || el.dataset.bound) return;
+      el.dataset.bound = '1';
+      el.addEventListener('input', function () { maskPhone(el); });
+      el.addEventListener('focus', function () { if (!el.value) el.value = '+7 '; });
+      el.addEventListener('blur', function () { if (el.value.replace(/\D/g, '').length < 2) el.value = ''; });
+    }
+    function status(form, text, type) {
+      var b = $('.form-status', form);
+      if (!b) return;
+      b.className = 'form-status' + (type ? ' form-status--' + type : '');
+      b.textContent = text || '';
+    }
+
+    function submit(form, extra, onOk) {
+      if (form.dataset.sending === '1') return;
+      var honey = form.querySelector('[name="website"]');
+      if (honey && honey.value) return;
+
+      var nameEl = form.querySelector('[name="name"]');
+      var phoneEl = form.querySelector('[name="phone"]');
+      if (nameEl && nameEl.value.trim().length < 2) { nameEl.focus(); status(form, 'Напишите, как к вам обращаться', 'error'); return; }
+      if (phoneEl && phoneEl.value.replace(/\D/g, '').length !== 11) { phoneEl.focus(); status(form, 'Проверьте номер — нужно 11 цифр', 'error'); return; }
+
+      var fd = {};
+      new FormData(form).forEach(function (v, k) { fd[k] = typeof v === 'string' ? v.trim() : v; });
+      delete fd.website;
+      var payload = Object.assign({
+        product: P.slug, product_title: P.title,
+        source: form.dataset.leadSource || 'form',
+        page: location.pathname, sentAt: new Date().toISOString(),
+        attribution: Attr.payload(),
+      }, fd, extra || {});
+
+      var btn = form.querySelector('[type="submit"]');
+      var label = btn ? btn.textContent : '';
+      form.dataset.sending = '1';
+      if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
+      status(form, '');
+
+      var req = demo
+        ? new Promise(function (r) { setTimeout(function () { r({ ok: true }); }, 450); })
+        : fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+
+      req.then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        goal('lead_submitted', { source: payload.source });
+        form.dataset.sending = '';
+        if (typeof onOk === 'function') { onOk(payload); return; }
+        form.reset();
+        status(form, 'Заявка принята. Свяжемся в течение 30 минут.', 'ok');
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+      }).catch(function () {
+        form.dataset.sending = '';
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        status(form, 'Не удалось отправить. Позвоните: ' + P.brand.phone, 'error');
+      });
+    }
+
+    function bind(form) {
+      if (form.dataset.bound) return;
+      form.dataset.bound = '1';
+      bindPhone(form.querySelector('input[type="tel"]'));
+      form.addEventListener('submit', function (e) { e.preventDefault(); submit(form); });
+    }
+    return { submit: submit, bind: bind, bindPhone: bindPhone, status: status };
+  })();
+
+  /* ══ 4. КОНФИГУРАТОР ════════════════════════════════════════════════════
+     Поля описываются декларативно в data.js. Движок сам считает вилку:
+        итог = (база + Σ ползунок×цена_за_единицу + Σ выбранные опции) × Π коэффициенты
+     Вторая цена («под ключ») — итог × turnkeyFactor, если направление её имеет.
+  ═══════════════════════════════════════════════════════════════════════ */
+  var Calc = (function () {
+    var root = $('[data-calc]');
+    if (!root || !P.quiz) return null;
+    var Q = P.quiz;
+    var state = {};
+    var modal = null, channel = 'whatsapp';
+
+    Q.fields.forEach(function (f) {
+      if (f.type === 'range') state[f.id] = f.def != null ? f.def : f.min;
+      else if (f.type === 'checks') state[f.id] = new Set((f.options || []).filter(function (o) { return o.def; }).map(function (o) { return o.id; }));
+      else state[f.id] = (f.options && f.options[0] && f.options[0].id) || '';
+    });
+    // стартовые значения можно задать адресом: ?<id>=<value>
+    Q.fields.forEach(function (f) {
+      var v = QS.get(f.id);
+      if (!v) return;
+      if (f.type === 'range') { var n = parseFloat(v); if (!isNaN(n)) state[f.id] = Math.min(f.max, Math.max(f.min, n)); }
+      else if (f.type !== 'checks' && (f.options || []).some(function (o) { return o.id === v; })) state[f.id] = v;
+    });
+
+    function selected(f) {
+      return (f.options || []).filter(function (o) {
+        return f.type === 'checks' ? state[f.id].has(o.id) : state[f.id] === o.id;
+      });
+    }
+
+    function compute() {
+      var base = Q.base || 0, k = 1;
+      Q.fields.forEach(function (f) {
+        if (f.type === 'range') base += state[f.id] * (f.pricePerUnit || 0);
+        else selected(f).forEach(function (o) { base += (o.add || 0); if (o.k) k *= o.k; });
+      });
+      var main = Math.max(0, base * k);
+      return {
+        main: Math.round(main / 1000) * 1000,
+        mainMax: Math.round(main * (Q.spread || 1.2) / 1000) * 1000,
+        turnkey: Q.turnkeyFactor ? Math.round(main * Q.turnkeyFactor / 1000) * 1000 : 0,
+      };
+    }
+
+    function pick() {
+      if (!Q.matchBy) return null;
+      var val = state[Q.matchBy.field];
+      var list = P.catalog.filter(function (c) { return (c[Q.matchBy.key] || '') === val; });
+      return list[0] || null;
+    }
+
+    function rangeHtml(r) {
+      return money(r.main) + '&#8201;–&#8201;' + money(r.mainMax);
+    }
+
+    function fieldHtml(f, idx) {
+      var head = '<span class="calc__label">' + (f.step ? '<i>' + f.step + '</i>' : '') + esc(f.label) +
+        (f.type === 'range' ? '<b class="calc__value" data-val="' + f.id + '">' + num(state[f.id], f.dec || 0) + ' ' + esc(f.unit || '') + '</b>' : '') +
+        '</span>';
+
+      if (f.type === 'range') {
+        return '<div class="calc__field">' + head +
+          '<div class="calc-range">' +
+            '<input type="range" min="' + f.min + '" max="' + f.max + '" step="' + f.stepSize + '" value="' + state[f.id] + '" data-range="' + f.id + '" aria-label="' + esc(f.label) + '">' +
+            '<div class="calc-range__scale"><span>' + num(f.min, f.dec || 0) + ' ' + esc(f.unit || '') + '</span><span>' + num(f.max, f.dec || 0) + ' ' + esc(f.unit || '') + '</span></div>' +
+          '</div>' +
+          (f.hint ? '<p class="calc__hint">' + esc(f.hint) + '</p>' : '') + '</div>';
+      }
+
+      var opts = (f.options || []).map(function (o) {
+        var on = f.type === 'checks' ? state[f.id].has(o.id) : state[f.id] === o.id;
+        return '<button type="button" class="calc-opt' + (f.type === 'checks' ? '' : ' calc-opt--radio') + (on ? ' is-on' : '') +
+          '" data-field="' + f.id + '" data-opt="' + o.id + '">' +
+          '<span class="calc-opt__box" aria-hidden="true"></span>' +
+          '<span class="calc-opt__body"><span class="calc-opt__name">' + esc(o.label) + '</span>' +
+          (o.hint ? '<span class="calc-opt__hint">' + esc(o.hint) + '</span>' : '') + '</span>' +
+          (o.add ? '<span class="calc-opt__price">+' + fmt(o.add) + ' ₽</span>' : '') +
+          '</button>';
+      }).join('');
+
+      if (f.collapsed) {
+        var n = f.type === 'checks' ? state[f.id].size : 0;
+        return '<details class="calc__more"' + (n ? ' open' : '') + '><summary>' + esc(f.label) +
+          ' <span>' + (n ? '(' + n + ')' : '') + '</span></summary>' +
+          '<div class="calc-opts">' + opts + '</div></details>';
+      }
+      return '<div class="calc__field">' + head + '<div class="calc-opts' + (f.row ? ' calc-opts--row' : '') + '">' + opts + '</div>' +
+        (f.hint ? '<p class="calc__hint">' + esc(f.hint) + '</p>' : '') + '</div>';
+    }
+
+    function render() {
+      var r = compute(), p = pick();
+      root.innerHTML =
+        '<div class="calc">' +
+          '<h2 class="calc__title">' + esc(Q.title) + '</h2>' +
+          '<p class="calc__sub">' + esc(Q.sub) + '</p>' +
+          Q.fields.map(fieldHtml).join('') +
+          (p ? '<div class="calc-pick">' +
+              '<span class="calc-pick__img">' + (p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy">' : '') + '</span>' +
+              '<span class="calc-pick__body"><span class="calc-pick__label">Похожий реализованный проект</span>' +
+              '<span class="calc-pick__name">' + esc(p.title.slice(0, 46)) + '</span>' +
+              '<span class="calc-pick__meta">облицовка от ' + fmt(p.p1) + ' ₽</span></span>' +
+            '</div>' : '') +
+          '<div class="calc__result">' +
+            '<span class="calc__result-label">' + esc(Q.resultLabel || 'Ориентир по вашей конфигурации') + '</span>' +
+            '<span class="calc__result-sum" data-sum>' + rangeHtml(r) + '</span>' +
+            (r.turnkey ? '<p class="calc__result-second" data-second>Под ключ с монтажом — <b>от ' + fmt(r.turnkey) + ' ₽</b></p>' : '') +
+            '<p class="calc__result-note">' + esc(Q.note) + '</p>' +
+          '</div>' +
+          '<div class="calc__cta">' +
+            '<div class="calc-actions">' +
+              '<button type="button" class="btn btn--primary" data-cta="whatsapp">Прислать расчёт</button>' +
+              '<button type="button" class="btn btn--ghost" data-cta="call">Обсудить по телефону</button>' +
+            '</div>' +
+            '<div class="calc__social"><span class="calc__pulse"></span>Сегодня заказали расчёт: <b>' + orders() + '</b></div>' +
+          '</div>' +
+        '</div>';
+      bind();
+    }
+
+    function orders() {
+      var d = new Date();
+      return 4 + ((d.getFullYear() * 372 + d.getMonth() * 31 + d.getDate()) % 7) + Math.max(1, Math.round(d.getHours() / 2));
+    }
+
+    function syncFill(el) {
+      var min = +el.min, max = +el.max;
+      el.style.setProperty('--fill', (((+el.value - min) / (max - min)) * 100).toFixed(1) + '%');
+    }
+
+    function refresh() {
+      var r = compute();
+      var sum = $('[data-sum]', root); if (sum) sum.innerHTML = rangeHtml(r);
+      var sec = $('[data-second]', root);
+      if (sec && r.turnkey) sec.innerHTML = 'Под ключ с монтажом — <b>от ' + fmt(r.turnkey) + ' ₽</b>';
+    }
+
+    function bind() {
+      $$('[data-range]', root).forEach(function (el) {
+        syncFill(el);
+        el.addEventListener('input', function () {
+          var f = Q.fields.filter(function (x) { return x.id === el.dataset.range; })[0];
+          state[el.dataset.range] = parseFloat(el.value);
+          var lbl = $('[data-val="' + el.dataset.range + '"]', root);
+          if (lbl) lbl.textContent = num(state[el.dataset.range], f.dec || 0) + ' ' + (f.unit || '');
+          syncFill(el); refresh();
+        });
+      });
+      $$('[data-opt]', root).forEach(function (b) {
+        b.addEventListener('click', function () {
+          var f = Q.fields.filter(function (x) { return x.id === b.dataset.field; })[0];
+          if (f.type === 'checks') {
+            var s = state[f.id];
+            if (s.has(b.dataset.opt)) s.delete(b.dataset.opt); else s.add(b.dataset.opt);
+            b.classList.toggle('is-on');
+            refresh();
+          } else { state[f.id] = b.dataset.opt; render(); }
+        });
+      });
+      $$('[data-cta]', root).forEach(function (b) {
+        b.addEventListener('click', function () { channel = b.dataset.cta; goal('calc_cta_click', { channel: channel }); open(); });
+      });
+    }
+
+    function summary() {
+      var out = [];
+      Q.fields.forEach(function (f) {
+        if (f.type === 'range') out.push(f.label + ': ' + num(state[f.id], f.dec || 0) + ' ' + (f.unit || ''));
+        else {
+          var s = selected(f).map(function (o) { return o.label; });
+          if (s.length) out.push(f.label + ': ' + s.join(', '));
+        }
+      });
+      return out;
+    }
+
+    function quizPayload() {
+      var r = compute(), o = { estimate_min: r.main, estimate_max: r.mainMax, estimate_turnkey: r.turnkey, channel: channel };
+      Q.fields.forEach(function (f) {
+        o[f.id] = f.type === 'checks' ? Array.from(state[f.id]).join(',') : state[f.id];
+      });
+      o.summary = summary().join('; ');
+      return o;
+    }
+
+    /* ── Модалка захвата ─────────────────────────────────────────────────── */
+    var TIMINGS = [{ id: 'now', l: 'Уже сейчас' }, { id: '1-3m', l: 'В ближайшие 1–3 мес.' }, { id: 'later', l: 'Позже, присматриваюсь' }];
+
+    function build() {
+      var w = document.createElement('div');
+      w.className = 'modal'; w.hidden = true;
+      w.innerHTML =
+        '<div class="modal__frame" role="dialog" aria-modal="true">' +
+          '<button type="button" class="modal__close" data-close aria-label="Закрыть">✕</button>' +
+          '<h3 class="modal__title" data-mtitle></h3>' +
+          '<p class="modal__sub" data-msub></p>' +
+          '<div class="modal__summary" data-msum></div>' +
+          '<div class="modal__channels">' +
+            '<button type="button" class="modal__chan" data-chan="whatsapp">WhatsApp</button>' +
+            '<button type="button" class="modal__chan" data-chan="telegram">Telegram</button>' +
+            '<button type="button" class="modal__chan" data-chan="max">MAX</button>' +
+            '<button type="button" class="modal__chan" data-chan="call">Звонок</button>' +
+          '</div>' +
+          '<form data-lead-source="calc" novalidate>' +
+            '<input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+            '<input type="hidden" name="channel" data-chan-input value="whatsapp">' +
+            '<input type="hidden" name="timing" data-timing-input value="">' +
+            '<label class="field"><span class="field__label">Имя</span><input class="input" type="text" name="name" placeholder="Как к вам обращаться" required></label>' +
+            '<label class="field"><span class="field__label">Телефон</span><input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>' +
+            '<div class="field"><span class="field__label">Когда планируете начать?</span><div class="chips-timing">' +
+              TIMINGS.map(function (t) { return '<button type="button" class="chip" data-timing="' + t.id + '">' + t.l + '</button>'; }).join('') +
+            '</div></div>' +
+            '<button type="submit" class="btn btn--primary" style="width:100%">Получить расчёт</button>' +
+            '<p class="policy">Нажимая кнопку, вы соглашаетесь с <a href="../policy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>. Спама не будет.</p>' +
+            '<div class="form-status" role="status" aria-live="polite"></div>' +
+          '</form>' +
+        '</div>';
+      document.body.appendChild(w);
+      w.addEventListener('click', function (e) { if (e.target === w) close(); });
+      $('[data-close]', w).addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !w.hidden) close(); });
+      $$('[data-chan]', w).forEach(function (b) { b.addEventListener('click', function () { channel = b.dataset.chan; syncChan(); }); });
+      $$('[data-timing]', w).forEach(function (b) {
+        b.addEventListener('click', function () {
+          $$('[data-timing]', w).forEach(function (x) { x.classList.remove('is-on'); });
+          b.classList.add('is-on');
+          $('[data-timing-input]', w).value = b.dataset.timing;
+        });
+      });
+      var form = $('form', w);
+      Lead.bindPhone(form.querySelector('input[type="tel"]'));
+      form.dataset.bound = '1';
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        Lead.submit(form, { quiz: quizPayload() }, function () { success(w); });
+      });
+      return w;
+    }
+
+    function success(w) {
+      $('.modal__frame', w).innerHTML =
+        '<button type="button" class="modal__close" data-close aria-label="Закрыть">✕</button>' +
+        '<div class="modal__success"><b>Заявка принята</b>' +
+        '<p>Инженер свяжется в течение 30 минут в рабочее время, пришлёт расчёт и подборку похожих проектов.</p></div>';
+      $('[data-close]', w).addEventListener('click', close);
+    }
+
+    function syncChan() {
+      if (!modal) return;
+      $$('[data-chan]', modal).forEach(function (b) { b.classList.toggle('is-on', b.dataset.chan === channel); });
+      $('[data-chan-input]', modal).value = channel;
+      var call = channel === 'call';
+      $('[data-mtitle]', modal).textContent = call ? 'Перезвоним с расчётом' : 'Пришлём расчёт в мессенджер';
+      $('[data-msub]', modal).textContent = call
+        ? 'Инженер позвонит в течение 30 минут в рабочее время и на словах даст вилку по вашей конфигурации.'
+        : 'Пришлём смету, 3D-эскиз и подборку похожих реализованных проектов. Ответим за 30 минут.';
+    }
+
+    function open() {
+      if (!modal) modal = build();
+      syncChan();
+      var r = compute();
+      $('[data-msum]', modal).innerHTML =
+        '<span class="calc__result-label">Ваш расчёт</span>' +
+        '<div class="modal__summary-sum">' + rangeHtml(r) + '</div>' +
+        (r.turnkey ? '<p class="calc__result-second">Под ключ — <b>от ' + fmt(r.turnkey) + ' ₽</b></p>' : '') +
+        '<ul>' + summary().map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>';
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(function () { var f = modal.querySelector('input[name="name"]'); if (f) f.focus({ preventScroll: true }); }, 60);
+    }
+    function close() { if (modal) modal.hidden = true; document.body.style.overflow = ''; }
+
+    render();
+    return { open: open, state: state };
+  })();
+
+  /* ══ 5. РЕНДЕР СЕКЦИЙ ═══════════════════════════════════════════════════ */
+
+  // Каталог топ-моделей с фильтрами
+  (function catalog() {
+    var grid = $('[data-cards]');
+    if (!grid || !P.catalog) return;
+    var empty = $('[data-cards-empty]');
+    var f = {};
+    (P.filters || []).forEach(function (x) { f[x.key] = 'all'; });
+    var LIMIT = 9, expanded = false;
+
+    function match(c) {
+      return (P.filters || []).every(function (x) {
+        if (f[x.key] === 'all') return true;
+        var o = x.options.filter(function (o) { return o.id === f[x.key]; })[0];
+        if (!o) return true;
+        if (o.max != null) return c.p1 <= o.max && c.p1 >= (o.min || 0);
+        return (c[x.field] || '') === o.id;
+      });
+    }
+
+    function card(c) {
+      return '<article class="card">' +
+        '<div class="card__media">' +
+          (c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" width="600" height="450">' : '') +
+          (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
+        '</div>' +
+        '<div class="card__body">' +
+          '<h3 class="card__name">' + esc(c.title) + '</h3>' +
+          (c.desc ? '<p class="card__desc">' + esc(c.desc) + '</p>' : '') +
+          '<div class="card__prices">' +
+            '<div class="card__p1">' + esc(P.priceLabel1 || 'Облицовка') + ': от ' + fmt(c.p1) + ' ₽</div>' +
+            (c.p2 ? '<div class="card__p2">Под ключ: от ' + fmt(c.p2) + ' ₽</div>' : '') +
+          '</div>' +
+        '</div>' +
+        '<footer class="card__foot">' +
+          '<button type="button" class="btn btn--primary" data-lead data-src="card">Узнать точную цену</button>' +
+          (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener">Проект</a>' : '') +
+        '</footer>' +
+      '</article>';
+    }
+
+    function draw() {
+      var list = P.catalog.filter(match);
+      var shown = expanded ? list : list.slice(0, LIMIT);
+      grid.innerHTML = shown.map(card).join('');
+      if (empty) empty.hidden = list.length > 0;
+      var more = $('[data-cards-more]');
+      if (more) { more.hidden = expanded || list.length <= LIMIT; more.textContent = 'Показать ещё ' + (list.length - LIMIT); }
+    }
+
+    var box = $('[data-filters]');
+    if (box) box.addEventListener('click', function (e) {
+      var b = e.target.closest('.chip'); if (!b) return;
+      var group = b.closest('[data-filter-key]');
+      $$('.chip', group).forEach(function (x) { x.classList.remove('is-on'); });
+      b.classList.add('is-on');
+      f[group.dataset.filterKey] = b.dataset.v;
+      expanded = false; draw();
+    });
+    var more = $('[data-cards-more]');
+    if (more) more.addEventListener('click', function () { expanded = true; draw(); });
+    draw();
+  })();
+
+  // Фильтры
+  (function filters() {
+    var box = $('[data-filters]');
+    if (!box || !P.filters) return;
+    box.innerHTML = P.filters.map(function (x) {
+      return '<div class="filters" data-filter-key="' + x.key + '">' +
+        '<button type="button" class="chip is-on" data-v="all">' + esc(x.label) + ': все</button>' +
+        x.options.map(function (o) { return '<button type="button" class="chip" data-v="' + o.id + '">' + esc(o.label) + '</button>'; }).join('') +
+        '</div>';
+    }).join('');
+  })();
+
+  // Этапы, гарантии, FAQ, галерея
+  (function sections() {
+    var s = $('[data-steps]');
+    if (s && P.steps) s.innerHTML = P.steps.map(function (x, i) {
+      return '<div class="step"><span class="step__n">' + (i + 1) + '</span><h3>' + esc(x.title) + '</h3><p>' + esc(x.text) + '</p><span class="step__day">' + esc(x.day) + '</span></div>';
+    }).join('');
+
+    var g = $('[data-guarantees]');
+    if (g && P.guarantees) g.innerHTML = P.guarantees.map(function (x) {
+      return '<div class="gcard"><b>' + esc(x.b) + '</b><h3>' + esc(x.title) + '</h3><p>' + esc(x.text) + '</p></div>';
+    }).join('');
+
+    var q = $('[data-faq]');
+    if (q && P.faq) {
+      q.innerHTML = P.faq.map(function (x, i) {
+        return '<details class="qa"' + (i === 0 ? ' open' : '') + '><summary><span>' + esc(x.q) + '</span><i aria-hidden="true"></i></summary><div class="qa__body"><p>' + esc(x.a) + '</p></div></details>';
+      }).join('');
+      q.addEventListener('toggle', function (e) {
+        if (e.target.tagName !== 'DETAILS' || !e.target.open) return;
+        $$('details.qa', q).forEach(function (d) { if (d !== e.target) d.open = false; });
+      }, true);
+      var ld = document.createElement('script');
+      ld.type = 'application/ld+json';
+      ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage',
+        mainEntity: P.faq.map(function (x) { return { '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } }; }) });
+      document.head.appendChild(ld);
+    }
+
+    var w = $('[data-why]');
+    if (w && P.why) w.innerHTML =
+      '<div class="why__card why__card--bad"><h3>' + esc(P.why.badTitle) + '</h3><ul>' +
+        P.why.bad.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>' +
+      '<div class="why__card why__card--good"><h3>' + esc(P.why.goodTitle) + '</h3><ul>' +
+        P.why.good.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +
+        (P.why.media ? '<div class="why__media"><img src="' + esc(P.why.media) + '" alt="" loading="lazy"></div>' : '') + '</div>';
+
+    // Галерея с лайтбоксом
+    var gal = $('[data-gallery]');
+    if (gal && P.gallery && P.gallery.length) {
+      gal.innerHTML = P.gallery.map(function (src, i) {
+        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" width="400" height="400"></button>';
+      }).join('');
+      var lb = null, cur = 0;
+      function show() {
+        cur = (cur + P.gallery.length) % P.gallery.length;
+        $('img', lb).src = P.gallery[cur];
+        $('figcaption', lb).textContent = P.title + ' — реализованный проект · ' + (cur + 1) + '/' + P.gallery.length;
+      }
+      function makeLb() {
+        var el = document.createElement('div');
+        el.className = 'lightbox'; el.hidden = true;
+        el.innerHTML = '<button class="lightbox__close" data-c aria-label="Закрыть">✕</button>' +
+          '<button class="lightbox__nav lightbox__nav--prev" data-p aria-label="Предыдущее">‹</button>' +
+          '<figure><img alt=""><figcaption></figcaption></figure>' +
+          '<button class="lightbox__nav lightbox__nav--next" data-n aria-label="Следующее">›</button>';
+        document.body.appendChild(el);
+        el.addEventListener('click', function (e) { if (e.target === el) el.hidden = true; });
+        $('[data-c]', el).addEventListener('click', function () { el.hidden = true; });
+        $('[data-p]', el).addEventListener('click', function () { cur--; show(); });
+        $('[data-n]', el).addEventListener('click', function () { cur++; show(); });
+        document.addEventListener('keydown', function (e) {
+          if (el.hidden) return;
+          if (e.key === 'Escape') el.hidden = true;
+          if (e.key === 'ArrowLeft') { cur--; show(); }
+          if (e.key === 'ArrowRight') { cur++; show(); }
+        });
+        var x0 = null;
+        el.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+        el.addEventListener('touchend', function (e) {
+          if (x0 === null) return;
+          var dx = e.changedTouches[0].clientX - x0;
+          if (Math.abs(dx) > 50) { cur += dx < 0 ? 1 : -1; show(); }
+          x0 = null;
+        }, { passive: true });
+        return el;
+      }
+      gal.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-i]'); if (!b) return;
+        if (!lb) lb = makeLb();
+        cur = +b.dataset.i; show(); lb.hidden = false;
+      });
+    }
+  })();
+
+  /* ══ 6. КОНТАКТЫ, ШАПКА, CTA ════════════════════════════════════════════ */
+  (function chrome() {
+    var b = P.brand;
+    function wire(sel, url) {
+      $$(sel).forEach(function (a) {
+        if (url) { a.href = url; a.hidden = false; }
+        else { a.hidden = true; a.removeAttribute('href'); }
+      });
+    }
+    var txt = encodeURIComponent('Здравствуйте! Пишу с сайта по направлению «' + P.title + '», хочу расчёт.');
+    wire('[data-wa]', b.whatsapp ? 'https://wa.me/' + b.whatsapp + '?text=' + txt : '');
+    wire('[data-tg]', b.telegram ? 'https://t.me/' + b.telegram : '');
+    wire('[data-max]', b.maxUrl || '');
+    $$('[data-tel]').forEach(function (a) { a.href = 'tel:' + b.phone.replace(/\D/g, ''); });
+    $$('[data-phone-text]').forEach(function (el) { el.textContent = b.phone; });
+    var y = $('[data-year]'); if (y) y.textContent = new Date().getFullYear();
+
+    var header = $('[data-header]'), bar = $('[data-mobilebar]');
+    function onScroll() {
+      if (header) header.classList.toggle('is-stuck', window.scrollY > 20);
+      if (bar) bar.classList.toggle('is-visible', window.scrollY > 500);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    var burger = $('[data-burger]'), nav = $('[data-nav]');
+    if (burger && nav) {
+      burger.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        burger.classList.toggle('is-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { nav.classList.remove('is-open'); burger.classList.remove('is-open'); document.body.style.overflow = ''; }
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (a && a.getAttribute('href').length > 1) {
+        var t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+      var lead = e.target.closest('[data-lead]');
+      if (lead && Calc) { goal('cta_click', { source: lead.dataset.src || 'cta' }); Calc.open(); }
+      var tel = e.target.closest('a[href^="tel:"]');
+      if (tel) goal('phone_click');
+      var msg = e.target.closest('a[href*="wa.me"], a[href*="t.me"]');
+      if (msg) goal('messenger_click');
+    });
+
+    $$('form[data-lead-source]').forEach(Lead.bind);
+
+    // микроконверсия: первое касание конфигуратора
+    var calcBox = $('[data-calc]'), fired = false;
+    if (calcBox) {
+      ['input', 'click'].forEach(function (ev) {
+        calcBox.addEventListener(ev, function () { if (!fired) { fired = true; goal('calc_started'); } }, { passive: true });
+      });
+    }
+    var deep = false;
+    window.addEventListener('scroll', function () {
+      if (deep) return;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0 && window.scrollY / h >= .75) { deep = true; goal('scroll_75'); }
+    }, { passive: true });
+  })();
+})();

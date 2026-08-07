@@ -1,0 +1,342 @@
+/* Контент направления «Порталы для банных печей». Правится здесь — вёрстка и логика общие. */
+window.LP = {
+ "slug": "bannye-portaly",
+ "title": "Порталы для банных печей",
+ "brand": {
+  "phone": "+7 (495) 229-30-46",
+  "worktime": "Ежедневно 9:00–21:00",
+  "address": "Москва · производство в Королёве",
+  "site": "https://ceramicadecor.ru",
+  "whatsapp": "",
+  "telegram": "",
+  "maxUrl": "",
+  "endpoint": "",
+  "metrikaId": 0
+ },
+ "priceLabel1": "Облицовка",
+ "quiz": {
+  "title": "Рассчитайте свой портал",
+  "sub": "Минута — и вы знаете вилку цены. Без звонков и регистраций.",
+  "note": "Вилка, а не финальная цена: точную смету считаем после замера печи и согласования эскиза.",
+  "base": 0,
+  "spread": 1.24,
+  "turnkeyFactor": 1.85,
+  "matchBy": null,
+  "fields": [
+   {
+    "id": "height",
+    "type": "range",
+    "step": 1,
+    "label": "Высота портала",
+    "min": 1.0,
+    "max": 2.4,
+    "stepSize": 0.1,
+    "dec": 1,
+    "unit": "м",
+    "pricePerUnit": 240000,
+    "hint": "От пола до верха облицовки. Портал до потолка смотрится дороже и лучше держит тепло.",
+    "def": 1.6
+   },
+   {
+    "id": "scheme",
+    "type": "radio",
+    "step": 2,
+    "label": "Что облицовываем",
+    "options": [
+     {
+      "id": "portal",
+      "label": "Только портал вокруг топки",
+      "k": 1
+     },
+     {
+      "id": "full",
+      "label": "Печь целиком",
+      "hint": "Больше керамики — больше тепла",
+      "k": 1.45
+     },
+     {
+      "id": "wall",
+      "label": "Портал плюс стена за печью",
+      "k": 1.3
+     }
+    ]
+   },
+   {
+    "id": "decor",
+    "type": "radio",
+    "step": 3,
+    "label": "Декор",
+    "options": [
+     {
+      "id": "plain",
+      "label": "Однотонная глазурь",
+      "k": 1
+     },
+     {
+      "id": "relief",
+      "label": "Лепной рельеф",
+      "k": 1.28
+     },
+     {
+      "id": "painted",
+      "label": "Художественная роспись",
+      "hint": "Сюжет по вашему эскизу",
+      "k": 1.85
+     }
+    ]
+   },
+   {
+    "id": "extra",
+    "type": "checks",
+    "label": "Дополнить портал",
+    "collapsed": true,
+    "options": [
+     {
+      "id": "panno",
+      "label": "Изразцовое панно",
+      "hint": "Центральный сюжет ручной кисти",
+      "add": 125000
+     },
+     {
+      "id": "wood",
+      "label": "Дровница в облицовке",
+      "add": 74000
+     },
+     {
+      "id": "shelf",
+      "label": "Полка из натурального камня",
+      "add": 48000
+     },
+     {
+      "id": "mount",
+      "label": "Монтаж на объекте",
+      "add": 65000,
+      "def": true
+     }
+    ]
+   }
+  ]
+ },
+ "catalog": [
+  {
+   "title": "Банный портал в изразцах с панно с художественной росписью",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-ind",
+   "p1": 1113067,
+   "p2": 0,
+   "img": "img/01.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке Сувенир",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suven",
+   "p1": 410384,
+   "p2": 0,
+   "img": "img/02.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке Усадьба",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami",
+   "p1": 530997,
+   "p2": 0,
+   "img": "img/03.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/"
+  },
+  {
+   "title": "Белый изразцовый портал для банной печи в облицовке Пастораль",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kolle",
+   "p1": 381944,
+   "p2": 0,
+   "img": "img/04.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке Камея с художественной росписью",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy",
+   "p1": 613386,
+   "p2": 0,
+   "img": "img/05.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке с художественной росписью в стиле Прованс",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
+   "p1": 572034,
+   "p2": 0,
+   "img": "img/06.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке Арт Нуво",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamen",
+   "p1": 222779,
+   "p2": 0,
+   "img": "img/07.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке Арт Нуво в лазурной росписи",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazur",
+   "p1": 281886,
+   "p2": 0,
+   "img": "img/08.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/"
+  },
+  {
+   "title": "Банный портал в изразцовой облицовке Дорф в муравленом цвете",
+   "collection": "",
+   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-",
+   "p1": 523447,
+   "p2": 0,
+   "img": "img/09.webp",
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/"
+  }
+ ],
+ "filters": [
+  {
+   "key": "price",
+   "label": "Бюджет",
+   "field": "p1",
+   "options": [
+    {
+     "id": "p0",
+     "label": "До 700 тыс",
+     "min": 0,
+     "max": 700000
+    },
+    {
+     "id": "p1",
+     "label": "700 тыс – 1,5 млн",
+     "min": 700000,
+     "max": 1500000
+    },
+    {
+     "id": "p2",
+     "label": "1,5 – 3 млн",
+     "min": 1500000,
+     "max": 3000000
+    },
+    {
+     "id": "p3",
+     "label": "От 3 млн",
+     "min": 3000000,
+     "max": 1000000000
+    }
+   ]
+  }
+ ],
+ "why": {
+  "badTitle": "Металл и кирпич",
+  "goodTitle": "Изразцовый портал",
+  "bad": [
+   "Голый металл жарит инфракрасным излучением: рядом с печью не посидеть.",
+   "Кирпич копит копоть, отмыть его в парной невозможно.",
+   "Банная печь — самый заметный объект в интерьере, а выглядит как техника.",
+   "Тепло уходит быстро: остыла печь — остыла парная."
+  ],
+  "good": [
+   "Керамика снимает жёсткое излучение — тепло становится мягким и ровным.",
+   "Глазурь моется тряпкой, копоть в неё не въедается.",
+   "Портал превращает печь в главный элемент интерьера бани.",
+   "Изразец держит тепло часами после протопки, гарантия 50 лет."
+  ],
+  "media": "img/02.webp"
+ },
+ "steps": [
+  {
+   "title": "Заявка и замер",
+   "text": "Обсуждаем задачу, снимаем размеры. По Москве и МО выезд замерщика бесплатный.",
+   "day": "День 1–2"
+  },
+  {
+   "title": "3D-проект и смета",
+   "text": "Показываем объект в вашем интерьере и фиксируем стоимость. Правки — до согласования.",
+   "day": "День 3–5"
+  },
+  {
+   "title": "Производство",
+   "text": "Формуем, обжигаем и расписываем в собственном цехе. Каждый изразец проходит контроль.",
+   "day": "4–8 недель"
+  },
+  {
+   "title": "Монтаж и сдача",
+   "text": "Привозим, собираем, сдаём объект. Выдаём паспорт изделия и гарантию.",
+   "day": "3–10 дней"
+  }
+ ],
+ "guarantees": [
+  {
+   "b": "50",
+   "title": "Лет гарантии на керамику",
+   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."
+  },
+  {
+   "b": "₽",
+   "title": "Смета фиксируется в договоре",
+   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."
+  },
+  {
+   "b": "3D",
+   "title": "Проект до оплаты",
+   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."
+  },
+  {
+   "b": "РФ",
+   "title": "Доставка и монтаж по России",
+   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Сколько стоит изразцовый портал для банной печи?",
+   "a": "Облицовка начинается от 222 779 ₽, комплект под ключ с монтажом — примерно от 420 000 ₽. Цена зависит от высоты портала, объёма облицовки и декора: художественная роспись почти вдвое дороже однотонной глазури."
+  },
+  {
+   "q": "Портал подойдёт к моей печи?",
+   "a": "Мы делаем облицовку под конкретную модель — пришлите фото и марку печи, инженер скажет, что возможно. Работали с большинством распространённых банных печей, включая варианты с выносной топкой."
+  },
+  {
+   "q": "Зачем вообще облицовывать банную печь?",
+   "a": "Ради качества тепла. Голый металл даёт жёсткое инфракрасное излучение: рядом с печью находиться некомфортно, а прогрев неравномерный. Керамика это излучение смягчает и накапливает тепло, отдавая его после протопки."
+  },
+  {
+   "q": "Керамика выдержит температуру в парной?",
+   "a": "Да, обжиг при 1000 °C — рабочий режим парной для изразца безопасен. Важнее правильный монтаж с температурным зазором: керамика и металл расширяются по-разному, зазор закладываем на этапе замера."
+  },
+  {
+   "q": "Можно поставить портал на уже работающую печь?",
+   "a": "Обычно да. Печь не разбираем, портал собирается вокруг неё на своём каркасе. На замере проверяем отступы, вентиляционные зазоры и доступ к топке для обслуживания."
+  },
+  {
+   "q": "Сколько ждать?",
+   "a": "4–8 недель на изготовление керамики, 2–4 дня на монтаж. Роспись по индивидуальному сюжету добавляет 1–2 недели: эскиз сначала согласовываем с вами."
+  },
+  {
+   "q": "Что с гарантией?",
+   "a": "50 лет на керамику, гарантия по договору на монтажные работы. Отдельный изразец при необходимости заменяется точечно, без разбора всего портала."
+  },
+  {
+   "q": "Отправляете в регионы?",
+   "a": "Да, отгружаем по всей России с раскладкой и инструкцией по монтажу. Вашего мастера консультируем по телефону."
+  }
+ ],
+ "gallery": [
+  "img/01.webp",
+  "img/02.webp",
+  "img/03.webp",
+  "img/04.webp",
+  "img/05.webp",
+  "img/06.webp",
+  "img/07.webp",
+  "img/08.webp",
+  "img/09.webp"
+ ]
+};
