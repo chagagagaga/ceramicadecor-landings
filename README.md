@@ -10,7 +10,7 @@
 
 | № | Направление | Адрес | Статус | Прайс |
 |---|---|---|---|---|
-| 1 | Банные печи и отделка парной | [1luch-banya-landing](https://chagagagaga.github.io/1luch-banya-landing/) | готова | 16 печей |
+| 1 | Банные печи и отделка парной | [1luch-banya-landing](https://chagagagaga.github.io/1luch-banya-landing/) | на согласовании | 16 печей |
 | 2 | Барбекю-комплексы | [/barbekyu-kompleksy/](https://chagagagaga.github.io/ceramicadecor-landings/barbekyu-kompleksy/) | в работе | 18 |
 | 3 | Камины | [/kaminy/](https://chagagagaga.github.io/ceramicadecor-landings/kaminy/) | в работе | 24 |
 | 4 | Изразцы | [/izraztsy/](https://chagagagaga.github.io/ceramicadecor-landings/izraztsy/) | в очереди | 22 |

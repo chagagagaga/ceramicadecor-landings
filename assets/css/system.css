@@ -86,5 +86,6 @@ img { display: block; max-width: 100%; height: auto; }
 .status { display: inline-flex; align-items: center; gap: .45em; font-size: .8rem; white-space: nowrap; }
 .status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 .status--live    { color: var(--green); }
+.status--review  { color: #6ea8ff; }
 .status--work    { color: var(--amber); }
 .status--planned { color: var(--text-dim); }
