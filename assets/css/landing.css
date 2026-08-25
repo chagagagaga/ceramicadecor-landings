@@ -19,6 +19,19 @@
 .grid-center { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .nb { white-space: nowrap; }
 
+/* Пальцем в ссылку высотой 20 px не попасть: расширяем зону нажатия,
+   не меняя вид. Правило эталона — минимум 32 px по высоте. */
+.nav a, .footer a, .contacts__list a, .header__phone a { display: inline-block; padding-block: .5rem; }
+.logo { padding-block: .35rem; }
+
+/* Заголовок не роняет последнее слово на отдельную строку, абзац не
+   заканчивается одиноким предлогом. Старые браузеры правило игнорируют. */
+h1, h2, h3, .section__title, .hero__title { text-wrap: balance; }
+p, li, .section__lead, .hero__sub { text-wrap: pretty; }
+
+/* Скорость: секции ниже первого экрана браузер рисует по мере прокрутки */
+main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+
 /* ── Шапка ───────────────────────────────────────────────────────────────── */
 .header {
   position: sticky; top: 0; z-index: 60;
@@ -159,7 +172,7 @@
 
 /* ── Каталог топ-моделей ─────────────────────────────────────────────────── */
 .filters { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 2rem; }
-.chip { padding: .5em 1em; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-size: .82rem; transition: all var(--transition); }
+.chip { padding: .7em 1.05em; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-size: .82rem; transition: all var(--transition); }
 .chip:hover { border-color: var(--border-light); color: var(--white); }
 .chip.is-on { background: var(--primary); border-color: var(--primary); color: var(--white); }
 
@@ -181,6 +194,10 @@
 .card__foot { display: flex; gap: .5rem; padding: 0 1.2rem 1.2rem; }
 .card__foot .btn { flex: 1; }
 .cards__empty { text-align: center; color: var(--text-muted); margin-top: 1.5rem; }
+
+/* Цена до первого касания: спокойное приглашение вместо крупной суммы */
+.calc__result--hidden { display: grid; gap: .8rem; }
+.calc__reveal-text { font-size: .9rem; color: var(--text-muted); line-height: 1.45; }
 
 /* ── Как обычно / как у нас ──────────────────────────────────────────────── */
 .why { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
@@ -246,7 +263,7 @@
 .input:focus { outline: none; border-color: var(--primary); }
 textarea.input { resize: vertical; min-height: 84px; }
 .policy { margin-top: .8rem; font-size: .74rem; color: var(--text-dim); line-height: 1.45; }
-.policy a { color: var(--amber); text-decoration: underline; }
+.policy a { color: var(--amber); text-decoration: underline; display: inline-block; padding-block: .5rem; }
 .form-status { margin-top: .7rem; font-size: .85rem; min-height: 1.2em; }
 .form-status--error { color: #ff7a63; }
 .form-status--ok { color: var(--green); }
@@ -351,10 +368,14 @@ textarea.input { resize: vertical; min-height: 84px; }
   .logo__text b { font-size: .95rem; white-space: nowrap; }
   .header__right { gap: .5rem; }
   .header__right .btn { padding: .65em .85em; font-size: .8rem; }
+  /* Текстовые карточки во всю ширину, визуальные по два в ряд: сетка на
+     min-width 290px оставляла карточку посреди экрана с воздухом по бокам. */
   .cards > *, .steps > *, .guarantees > *, .why > * { flex-basis: 100%; min-width: 0; }
   .gallery button { flex-basis: calc((100% - .6rem) / 2); min-width: 0; }
   .calc-actions { grid-template-columns: 1fr; }
-  .stats div { flex-basis: calc(50% - 1px); }
+  /* Цифры доверия в два столбца — столбиком они съедают пол-экрана */
+  .stats { display: grid; grid-template-columns: 1fr 1fr; }
+  .stats div { flex-basis: auto; }
   .footer__inner { grid-template-columns: minmax(0,1fr); }
   .lightbox__nav { width: 40px; height: 40px; font-size: 1.5rem; }
 }

@@ -170,6 +170,9 @@
     var Q = P.quiz;
     var state = {};
     var modal = null, channel = 'whatsapp';
+    // Цена показывается по первому же действию в конфигураторе или по кнопке.
+    // При загрузке крупная сумма перебивает всё остальное на экране.
+    var priceShown = false;
 
     Q.fields.forEach(function (f) {
       if (f.type === 'range') state[f.id] = f.def != null ? f.def : f.min;
@@ -258,16 +261,19 @@
           '<p class="calc__sub">' + esc(Q.sub) + '</p>' +
           Q.fields.map(fieldHtml).join('') +
           (p ? '<div class="calc-pick">' +
-              '<span class="calc-pick__img">' + (p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy">' : '') + '</span>' +
+              '<span class="calc-pick__img">' + (p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy" decoding="async" width="200" height="150">' : '') + '</span>' +
               '<span class="calc-pick__body"><span class="calc-pick__label">Похожий реализованный проект</span>' +
               '<span class="calc-pick__name">' + esc(p.title.slice(0, 46)) + '</span>' +
               '<span class="calc-pick__meta">облицовка от ' + fmt(p.p1) + ' ₽</span></span>' +
             '</div>' : '') +
-          '<div class="calc__result">' +
-            '<span class="calc__result-label">' + esc(Q.resultLabel || 'Ориентир по вашей конфигурации') + '</span>' +
-            '<span class="calc__result-sum" data-sum>' + rangeHtml(r) + '</span>' +
-            (r.turnkey ? '<p class="calc__result-second" data-second>Под ключ с монтажом — <b>от ' + fmt(r.turnkey) + ' ₽</b></p>' : '') +
-            '<p class="calc__result-note">' + esc(Q.note) + '</p>' +
+          '<div class="calc__result' + (priceShown ? '' : ' calc__result--hidden') + '">' +
+            (priceShown
+              ? '<span class="calc__result-label">' + esc(Q.resultLabel || 'Ориентир по вашей конфигурации') + '</span>' +
+                '<span class="calc__result-sum" data-sum>' + rangeHtml(r) + '</span>' +
+                (r.turnkey ? '<p class="calc__result-second" data-second>Под ключ с монтажом — <b>от ' + fmt(r.turnkey) + ' ₽</b></p>' : '') +
+                '<p class="calc__result-note">' + esc(Q.note) + '</p>'
+              : '<p class="calc__reveal-text">Расчёт готов. Цену показываем сразу, без звонка и заявки.</p>' +
+                '<button type="button" class="btn btn--primary" style="width:100%" data-reveal>Показать стоимость</button>') +
           '</div>' +
           '<div class="calc__cta">' +
             '<div class="calc-actions">' +
@@ -305,7 +311,9 @@
           state[el.dataset.range] = parseFloat(el.value);
           var lbl = $('[data-val="' + el.dataset.range + '"]', root);
           if (lbl) lbl.textContent = num(state[el.dataset.range], f.dec || 0) + ' ' + (f.unit || '');
-          syncFill(el); refresh();
+          syncFill(el);
+          if (!priceShown) { priceShown = true; render(); return; }
+          refresh();
         });
       });
       $$('[data-opt]', root).forEach(function (b) {
@@ -315,10 +323,14 @@
             var s = state[f.id];
             if (s.has(b.dataset.opt)) s.delete(b.dataset.opt); else s.add(b.dataset.opt);
             b.classList.toggle('is-on');
+            if (!priceShown) { priceShown = true; render(); return; }
             refresh();
-          } else { state[f.id] = b.dataset.opt; render(); }
+          } else { state[f.id] = b.dataset.opt; priceShown = true; render(); }
         });
       });
+      var rev = $('[data-reveal]', root);
+      if (rev) rev.addEventListener('click', function () { priceShown = true; render(); });
+
       $$('[data-cta]', root).forEach(function (b) {
         b.addEventListener('click', function () { channel = b.dataset.cta; goal('calc_cta_click', { channel: channel }); open(); });
       });
@@ -356,7 +368,7 @@
           '<button type="button" class="modal__close" data-close aria-label="Закрыть">✕</button>' +
           '<h3 class="modal__title" data-mtitle></h3>' +
           '<p class="modal__sub" data-msub></p>' +
-          '<div class="modal__summary" data-msum></div>' +
+
           '<div class="modal__channels">' +
             '<button type="button" class="modal__chan" data-chan="whatsapp">WhatsApp</button>' +
             '<button type="button" class="modal__chan" data-chan="telegram">Telegram</button>' +
@@ -421,12 +433,6 @@
     function open() {
       if (!modal) modal = build();
       syncChan();
-      var r = compute();
-      $('[data-msum]', modal).innerHTML =
-        '<span class="calc__result-label">Ваш расчёт</span>' +
-        '<div class="modal__summary-sum">' + rangeHtml(r) + '</div>' +
-        (r.turnkey ? '<p class="calc__result-second">Под ключ — <b>от ' + fmt(r.turnkey) + ' ₽</b></p>' : '') +
-        '<ul>' + summary().map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>';
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
       setTimeout(function () { var f = modal.querySelector('input[name="name"]'); if (f) f.focus({ preventScroll: true }); }, 60);
@@ -461,7 +467,7 @@
     function card(c) {
       return '<article class="card">' +
         '<div class="card__media">' +
-          (c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" width="600" height="450">' : '') +
+          (c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="450">' : '') +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
         '</div>' +
         '<div class="card__body">' +
@@ -529,17 +535,60 @@
     var q = $('[data-faq]');
     if (q && P.faq) {
       q.innerHTML = P.faq.map(function (x, i) {
-        return '<details class="qa"' + (i === 0 ? ' open' : '') + '><summary><span>' + esc(x.q) + '</span><i aria-hidden="true"></i></summary><div class="qa__body"><p>' + esc(x.a) + '</p></div></details>';
+        // Длинная простыня вопросов режет конверсию: сразу видно шесть,
+        // остальные открываются кнопкой. В микроразметке остаются все.
+        return '<details class="qa' + (i >= 6 ? ' qa--extra' : '') + '"' +
+          (i === 0 ? ' open' : '') + (i >= 6 ? ' hidden' : '') +
+          '><summary><span>' + esc(x.q) + '</span><i aria-hidden="true"></i></summary><div class="qa__body"><p>' + esc(x.a) + '</p></div></details>';
       }).join('');
       q.addEventListener('toggle', function (e) {
         if (e.target.tagName !== 'DETAILS' || !e.target.open) return;
         $$('details.qa', q).forEach(function (d) { if (d !== e.target) d.open = false; });
       }, true);
+
+      if (P.faq.length > 6) {
+        var rest = P.faq.length - 6;
+        var tail = rest % 10, tens = rest % 100;
+        var word = (tail === 1 && tens !== 11) ? 'вопрос'
+                 : (tail >= 2 && tail <= 4 && (tens < 12 || tens > 14)) ? 'вопроса' : 'вопросов';
+        var more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'btn btn--ghost';
+        more.style.width = '100%';
+        more.style.marginTop = '.6rem';
+        more.textContent = 'Ещё ' + rest + ' ' + word;
+        more.addEventListener('click', function () {
+          $$('.qa--extra', q).forEach(function (d) { d.hidden = false; });
+          more.remove();
+        });
+        q.appendChild(more);
+      }
       var ld = document.createElement('script');
       ld.type = 'application/ld+json';
       ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: P.faq.map(function (x) { return { '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } }; }) });
       document.head.appendChild(ld);
+    }
+
+    /* Русский текст роняет предлог на следующую строку: «и», «в», «по»
+       повисают в конце. Один проход по DOM после отрисовки приклеивает
+       короткие слова к следующему и не даёт разорвать число с единицей. */
+    function typography() {
+      var SHORT = /(^|[\s(«"])([А-Яа-яЁё]{1,2}|из|под|над|при|про|без|для|как|что|это|уже|или|его|её|их)\s+/g;
+      var UNITS = /(\d)\s+(₽|м²|м³|мм|см|м|кг|шт|дней|дня|день|мес|лет|года|год|тыс|млн|°C|%)/g;
+      var SKIP = { SCRIPT: 1, STYLE: 1, TEXTAREA: 1, INPUT: 1, CODE: 1, PRE: 1 };
+      function walk(node) {
+        for (var n = node.firstChild; n; n = n.nextSibling) {
+          if (n.nodeType === 3) {
+            var t = n.nodeValue.replace(SHORT, '$1$2\u00A0').replace(UNITS, '$1\u00A0$2');
+            if (t !== n.nodeValue) n.nodeValue = t;
+          } else if (n.nodeType === 1 && !SKIP[n.tagName]) walk(n);
+        }
+      }
+      ['.section__title', '.section__lead', '.hero__title', '.hero__sub', '.hero__badge',
+       '.hero__usp li', '.card__desc', '.why', '.steps', '.guarantees', '.cta__list li',
+       '.qa__body', '.contacts__list', '.calc__result-note', '.calc__sub'
+      ].forEach(function (sel) { $$(sel).forEach(walk); });
     }
 
     var w = $('[data-why]');
@@ -548,13 +597,13 @@
         P.why.bad.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>' +
       '<div class="why__card why__card--good"><h3>' + esc(P.why.goodTitle) + '</h3><ul>' +
         P.why.good.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +
-        (P.why.media ? '<div class="why__media"><img src="' + esc(P.why.media) + '" alt="" loading="lazy"></div>' : '') + '</div>';
+        (P.why.media ? '<div class="why__media"><img src="' + esc(P.why.media) + '" alt="" loading="lazy" decoding="async" width="800" height="600"></div>' : '') + '</div>';
 
     // Галерея с лайтбоксом
     var gal = $('[data-gallery]');
     if (gal && P.gallery && P.gallery.length) {
       gal.innerHTML = P.gallery.map(function (src, i) {
-        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" width="400" height="400"></button>';
+        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
       }).join('');
       var lb = null, cur = 0;
       function show() {
@@ -567,7 +616,7 @@
         el.className = 'lightbox'; el.hidden = true;
         el.innerHTML = '<button class="lightbox__close" data-c aria-label="Закрыть">✕</button>' +
           '<button class="lightbox__nav lightbox__nav--prev" data-p aria-label="Предыдущее">‹</button>' +
-          '<figure><img alt=""><figcaption></figcaption></figure>' +
+          '<figure><img alt="" width="1200" height="900"><figcaption></figcaption></figure>' +
           '<button class="lightbox__nav lightbox__nav--next" data-n aria-label="Следующее">›</button>';
         document.body.appendChild(el);
         el.addEventListener('click', function (e) { if (e.target === el) el.hidden = true; });
@@ -596,6 +645,10 @@
         cur = +b.dataset.i; show(); lb.hidden = false;
       });
     }
+
+    // Вызываем в самом конце: к этому моменту отрисованы все блоки,
+    // включая те, что собираются из data.js.
+    typography();
   })();
 
   /* ══ 6. КОНТАКТЫ, ШАПКА, CTA ════════════════════════════════════════════ */

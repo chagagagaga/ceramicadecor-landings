@@ -1,0 +1,16 @@
+{
+  "name": "ceramicadecor-landings",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Семь посадочных CeramicaDecor: изразцы, камины, печи, барбекю. Один сборщик, одна дизайн-система.",
+  "scripts": {
+    "build": "python3 build.py",
+    "test": "node docs/audit.mjs",
+    "visual": "node docs/visual.mjs",
+    "start": "python3 -m http.server 8099"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1",
+    "playwright": "^1.62.1"
+  }
+}

@@ -515,8 +515,8 @@ INDEX_TPL = """<!DOCTYPE html>
 <meta property="og:image" content="https://chagagagaga.github.io/ceramicadecor-landings/@SLUG@/@HERO@">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="image" href="@HERO@" fetchpriority="high">
-<link rel="stylesheet" href="../assets/css/system.css?v=2">
-<link rel="stylesheet" href="../assets/css/landing.css?v=2">
+<link rel="stylesheet" href="../assets/css/system.css?v=3">
+<link rel="stylesheet" href="../assets/css/landing.css?v=3">
 </head>
 <body>
 
@@ -527,9 +527,9 @@ INDEX_TPL = """<!DOCTYPE html>
       <span class="logo__text"><b>CERAMICA DECOR</b><i>Керамика ручной работы</i></span>
     </a>
     <nav class="nav" data-nav>
+      <a href="#works">Работы</a>
       <a href="#catalog">Каталог</a>
       <a href="#why">Почему керамика</a>
-      <a href="#works">Работы</a>
       <a href="#steps">Как работаем</a>
       <a href="#faq">Вопросы</a>
       <a href="#contacts">Контакты</a>
@@ -561,6 +561,17 @@ INDEX_TPL = """<!DOCTYPE html>
   </div>
 </section>
 
+<section class="section section--tint" id="works">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <span class="kicker">Наши работы</span>
+      <h2 class="section__title">Реализованные проекты</h2>
+      <p class="section__lead">Настоящие объекты, а не рендеры. Нажмите на фото — откроется галерея.</p>
+    </div>
+    <div class="gallery" data-gallery></div>
+  </div>
+</section>
+
 <section class="section" id="catalog">
   <div class="container">
     <div class="section__head section__head--center">
@@ -577,7 +588,7 @@ INDEX_TPL = """<!DOCTYPE html>
   </div>
 </section>
 
-<section class="section section--tint" id="why">
+<section class="section" id="why">
   <div class="container">
     <div class="section__head section__head--center">
       <span class="kicker">Почему керамика</span>
@@ -587,16 +598,6 @@ INDEX_TPL = """<!DOCTYPE html>
   </div>
 </section>
 
-<section class="section" id="works">
-  <div class="container">
-    <div class="section__head section__head--center">
-      <span class="kicker">Наши работы</span>
-      <h2 class="section__title">Реализованные проекты</h2>
-      <p class="section__lead">Настоящие объекты, а не рендеры. Нажмите на фото — откроется галерея.</p>
-    </div>
-    <div class="gallery" data-gallery></div>
-  </div>
-</section>
 
 <section class="section section--tint" id="steps">
   <div class="container">
@@ -637,7 +638,7 @@ INDEX_TPL = """<!DOCTYPE html>
         <input class="input" type="text" name="name" placeholder="Имя" required></label>
       <label class="field"><span class="field__label">Телефон или WhatsApp</span>
         <input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>
-      <button type="submit" class="btn btn--primary" style="width:100%">Отправить заявку</button>
+      <button type="submit" class="btn btn--primary" style="width:100%">Получить 3D-проект и смету</button>
       <p class="policy">Нажимая кнопку, вы соглашаетесь с <a href="../policy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>. Спама не будет.</p>
       <div class="form-status" role="status" aria-live="polite"></div>
     </form>
@@ -648,7 +649,7 @@ INDEX_TPL = """<!DOCTYPE html>
   <div class="container faq__inner">
     <div class="section__head">
       <span class="kicker">Частые вопросы</span>
-      <h2 class="section__title">Отвечаем честно, до звонка</h2>
+      <h2 class="section__title">Что чаще всего спрашивают</h2>
       <p class="section__lead">Если вопроса нет в списке — позвоните, ответим сразу. <span class="nb">@WORKTIME@.</span></p>
       <a class="btn btn--ghost" data-tel>Позвонить</a>
     </div>
