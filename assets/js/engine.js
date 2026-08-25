@@ -664,6 +664,17 @@
     wire('[data-wa]', b.whatsapp ? 'https://wa.me/' + b.whatsapp + '?text=' + txt : '');
     wire('[data-tg]', b.telegram ? 'https://t.me/' + b.telegram : '');
     wire('[data-max]', b.maxUrl || '');
+    // В нижней панели один слот под мессенджер: MAX в приоритете,
+    // WhatsApp — запасной. Обе сразу не помещаются рядом с телефоном
+    // и кнопкой расчёта.
+    (function barMessenger() {
+      var max = document.querySelector('.mobilebar [data-max]');
+      var wa = document.querySelector('.mobilebar [data-wa]');
+      if (!max || !wa) return;
+      if (b.maxUrl) { max.hidden = false; wa.hidden = true; }
+      else { max.hidden = true; wa.hidden = !b.whatsapp; }
+    })();
+
     $$('[data-tel]').forEach(function (a) { a.href = 'tel:' + b.phone.replace(/\D/g, ''); });
     $$('[data-phone-text]').forEach(function (el) { el.textContent = b.phone; });
     var y = $('[data-year]'); if (y) y.textContent = new Date().getFullYear();

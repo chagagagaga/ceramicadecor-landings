@@ -30,6 +30,19 @@
       <a href="#steps">Как работаем</a>
       <a href="#faq">Вопросы</a>
       <a href="#contacts">Контакты</a>
+
+      <!-- Хвост меню на телефоне: после списка разделов человек упирался
+           в пустоту. Здесь телефон, мессенджеры и действие. -->
+      <div class="nav__foot">
+        <a class="nav__phone" data-tel data-phone-text>+7 (495) 229-30-46</a>
+        <span class="nav__worktime">Ежедневно 9:00–21:00</span>
+        <div class="nav__msg">
+          <a class="btn btn--ghost" data-wa target="_blank" rel="noopener" hidden>WhatsApp</a>
+          <a class="btn btn--ghost" data-tg target="_blank" rel="noopener" hidden>Telegram</a>
+          <a class="btn btn--ghost" data-max target="_blank" rel="noopener" hidden>MAX</a>
+        </div>
+        <button type="button" class="btn btn--primary" style="width:100%" data-lead data-src="burger">Получить расчёт</button>
+      </div>
     </nav>
     <div class="header__right">
       <div class="header__phone">
@@ -44,7 +57,7 @@
 
 <main id="top">
 
-<section class="hero" id="calc">
+<section class="hero" id="top-hero">
   <div class="hero__bg"><img src="img/01.webp" alt="" fetchpriority="high" width="1400" height="1050"></div>
   <div class="container hero__inner">
     <div>
@@ -52,9 +65,13 @@
       <h1 class="hero__title">Русская печь с&nbsp;лежанкой<br>в <em>изразцовой&nbsp;облицовке</em></h1>
       <p class="hero__sub">Соберите конфигурацию — за минуту получите вилку цены и подбор коллекции под ваш дом.</p>
       <ul class="hero__usp"><li>С лежанкой и подтопком</li><li>Ручная роспись</li><li>Свой цех</li><li>Гарантия 50 лет</li></ul>
+      <div class="hero__cta">
+        <button type="button" class="btn btn--primary" data-lead data-src="hero-cta">Рассчитать стоимость</button>
+        <span>Минута — и вы знаете вилку цены</span>
+      </div>
       <div class="stats"><div><b>14 лет</b><span>на рынке керамики</span></div><div><b>>3000</b><span>реализованных проектов</span></div><div><b>>100</b><span>сотрудников и свой цех</span></div><div><b>50 лет</b><span>гарантия на керамику</span></div></div>
     </div>
-    <div data-calc></div>
+    <div id="calc" data-calc></div>
   </div>
 </section>
 
@@ -217,7 +234,10 @@
   <a data-tel>
     <svg viewBox="0 0 24 24"><path d="M20.5 15.4 17 14.6c-.5-.1-1 0-1.4.4l-2.3 2.3c-3.5-1.8-6.4-4.6-8.2-8.2l2.3-2.3c.4-.4.5-.9.4-1.4L7 1.9C6.9 1.2 6.2.7 5.5.7H2.8C1.9.7 1.1 1.4 1.1 2.4 1.1 14.4 9.7 23 22 23c1 0 1.7-.8 1.7-1.7v-2.7c0-.7-.5-1.4-1.2-1.6Z"/></svg>
     Позвонить</a>
-  <a data-wa hidden>
+  <a data-max data-bar-msg hidden>
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 13.7-2.1-3.1-2.2 2.6a.9.9 0 0 1-1.4 0l-2.2-2.6-2.1 3.1a.85.85 0 1 1-1.4-.95l2.8-4.1a.9.9 0 0 1 1.4-.1l2.2 2.6 2.2-2.6a.9.9 0 0 1 1.4.1l2.8 4.1a.85.85 0 1 1-1.4.95Z"/></svg>
+    MAX</a>
+  <a data-wa data-bar-msg hidden>
     <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-11.9 0-3.2-1.2-6.2-3.5-8.5Z"/></svg>
     WhatsApp</a>
   <button type="button" class="is-primary" data-lead data-src="mobilebar">Рассчитать</button>
