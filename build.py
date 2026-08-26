@@ -738,6 +738,8 @@ INDEX_TPL = """<!DOCTYPE html>
 <div class="msgdock" data-msgdock hidden>
   <a class="msgdock__btn msgdock__btn--max" data-max target="_blank" rel="noopener" aria-label="Написать в MAX" hidden>
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 13.7-2.1-3.1-2.2 2.6a.9.9 0 0 1-1.4 0l-2.2-2.6-2.1 3.1a.85.85 0 1 1-1.4-.95l2.8-4.1a.9.9 0 0 1 1.4-.1l2.2 2.6 2.2-2.6a.9.9 0 0 1 1.4.1l2.8 4.1a.85.85 0 1 1-1.4.95Z"/></svg><span>MAX</span></a>
+  <a class="msgdock__btn msgdock__btn--wa" data-wa target="_blank" rel="noopener" aria-label="Написать в WhatsApp" hidden>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-11.9 0-3.2-1.2-6.2-3.5-8.5Z"/></svg><span>WhatsApp</span></a>
   <a class="msgdock__btn msgdock__btn--tg" data-tg target="_blank" rel="noopener" aria-label="Написать в Telegram" hidden>
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.1 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.4 1Z"/></svg><span>Telegram</span></a>
 </div>

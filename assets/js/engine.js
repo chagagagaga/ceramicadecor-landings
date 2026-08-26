@@ -668,7 +668,7 @@
     // ссылка. Пустой кружок хуже, чем его отсутствие.
     (function msgDock() {
       var dock = $('[data-msgdock]');
-      if (dock) dock.hidden = !(b.maxUrl || b.telegram);
+      if (dock) dock.hidden = !(b.maxUrl || b.telegram || b.whatsapp);
     })();
 
     // В нижней панели один слот под мессенджер: MAX в приоритете,

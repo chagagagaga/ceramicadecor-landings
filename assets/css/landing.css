@@ -38,6 +38,7 @@
 .msgdock__btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 0, 0, .55); }
 .msgdock__btn--max { background: #3b5bff; }
 .msgdock__btn--tg { background: #2aabee; }
+.msgdock__btn--wa { background: #25d366; }
 /* Подпись выезжает при наведении: кружок остаётся компактным, но
    человеку не нужно гадать, куда он попадёт. */
 .msgdock__btn span {
