@@ -19,6 +19,40 @@
 .grid-center { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .nb { white-space: nowrap; }
 
+/* ═══ Плавающие мессенджеры (только десктоп) ══════════════════════════════
+   Два кружка в нижнем правом углу: клик уводит прямо в переписку.
+   На телефоне их нет — там снизу липкая панель, кружки налезали бы. */
+.msgdock {
+  position: fixed; right: clamp(1rem, .5rem + 1.2vw, 1.75rem);
+  bottom: clamp(1rem, .5rem + 1.2vw, 1.75rem);
+  z-index: 55; display: flex; flex-direction: column-reverse; gap: .6rem;
+}
+.msgdock[hidden] { display: none; }
+.msgdock__btn {
+  position: relative; display: grid; place-items: center;
+  width: 54px; height: 54px; border-radius: 50%; color: #fff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .45);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.msgdock__btn svg { width: 26px; height: 26px; }
+.msgdock__btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 0, 0, .55); }
+.msgdock__btn--max { background: #3b5bff; }
+.msgdock__btn--tg { background: #2aabee; }
+/* Подпись выезжает при наведении: кружок остаётся компактным, но
+   человеку не нужно гадать, куда он попадёт. */
+.msgdock__btn span {
+  position: absolute; right: calc(100% + .55rem); white-space: nowrap;
+  padding: .4em .75em; border-radius: 2px;
+  background: var(--bg-lighter); color: var(--white); border: 1px solid var(--border);
+  font-size: .74rem; font-weight: 500;
+  opacity: 0; transform: translateX(6px); pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.msgdock__btn:hover span, .msgdock__btn:focus-visible span { opacity: 1; transform: none; }
+
+/* Иконка MAX в шапке — видна только на телефоне, рядом с «Рассчитать» */
+.header__max { display: none; }
+
 /* Липкая шапка накрывала верх блока, к которому ведёт ссылка. Отступ
    задаём через scroll-margin-top: ручной расчёт спорит с нативной
    плавной прокруткой браузера. */
@@ -393,7 +427,13 @@ textarea.input { resize: vertical; min-height: 84px; }
   .logo__text i { display: none; }
   .logo__text b { font-size: .95rem; white-space: nowrap; }
   .header__right { gap: .5rem; }
-  .header__right .btn { padding: .65em .85em; font-size: .8rem; }
+  .header__right .btn { padding: .8em .85em; font-size: .8rem; }
+  /* MAX рядом с «Рассчитать»: на телефоне шапка — единственное место,
+     где мессенджер виден без прокрутки. */
+  .header__max { display: grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 50%; background: #3b5bff; color: #fff; }
+  .header__max svg { width: 22px; height: 22px; }
+  /* Плавающие кружки перекрывали бы нижнюю панель */
+  .msgdock { display: none !important; }
   /* Текстовые карточки во всю ширину, визуальные по два в ряд: сетка на
      min-width 290px оставляла карточку посреди экрана с воздухом по бокам. */
   .cards > *, .steps > *, .guarantees > *, .why > * { flex-basis: 100%; min-width: 0; }
@@ -415,7 +455,7 @@ textarea.input { resize: vertical; min-height: 84px; }
   .hero__title { font-size: clamp(1.7rem, 1.1rem + 2.4vw, 2.2rem); }
   .logo { flex: 0 1 auto; min-width: 0; }
   .logo__text { display: none; }
-  .header__right .btn { padding: .6em .75em; font-size: .78rem; }
+  .header__right .btn { padding: .78em .75em; font-size: .78rem; }
   .header__inner { gap: .5rem; }
 }
 

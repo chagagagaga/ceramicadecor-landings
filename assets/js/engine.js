@@ -664,6 +664,13 @@
     wire('[data-wa]', b.whatsapp ? 'https://wa.me/' + b.whatsapp + '?text=' + txt : '');
     wire('[data-tg]', b.telegram ? 'https://t.me/' + b.telegram : '');
     wire('[data-max]', b.maxUrl || '');
+    // Плавающие кружки в углу: показываем только если есть хоть одна
+    // ссылка. Пустой кружок хуже, чем его отсутствие.
+    (function msgDock() {
+      var dock = $('[data-msgdock]');
+      if (dock) dock.hidden = !(b.maxUrl || b.telegram);
+    })();
+
     // В нижней панели один слот под мессенджер: MAX в приоритете,
     // WhatsApp — запасной. Обе сразу не помещаются рядом с телефоном
     // и кнопкой расчёта.
