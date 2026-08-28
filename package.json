@@ -7,7 +7,8 @@
     "build": "python3 build.py",
     "test": "node docs/audit.mjs",
     "visual": "node docs/visual.mjs",
-    "start": "python3 -m http.server 8099"
+    "start": "python3 -m http.server 8099",
+    "drive": "node docs/drive.mjs"
   },
   "devDependencies": {
     "jsdom": "^29.1.1",
