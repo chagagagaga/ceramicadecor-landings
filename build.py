@@ -870,13 +870,22 @@ def clean_text(v, fallback=""):
     return v or fallback
 
 
+# Позиции, которые не идут на лендинг: на сайте у них вместо фотографии
+# объекта лежит технический чертёж комплекта — в каталоге работ это
+# выглядит как незаконченный проект.
+SKIP_ITEMS = {"kaminy": {8}}
+
+
 def build():
     catalog = json.load(io.open(os.path.join(ROOT, 'catalog.json'), encoding='utf-8'))
     for slug, P in PRODUCTS.items():
         items = catalog[slug]['items']
         # ── data.js ──────────────────────────────────────────────────────────
         cards = []
-        for it in items:
+        skip = SKIP_ITEMS.get(slug, set())
+        for pos, it in enumerate(items, 1):
+            if pos in skip:
+                continue
             fb = FALLBACK_DESC.get(slug, "")
             title = clean_text(it.get("title"), "")
             if not title:

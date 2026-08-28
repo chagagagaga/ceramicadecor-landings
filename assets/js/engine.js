@@ -513,7 +513,7 @@
           '</div>' +
         '</div>' +
         '<footer class="card__foot">' +
-          '<button type="button" class="btn btn--primary" data-lead data-src="card">Узнать точную цену</button>' +
+          '<button type="button" class="btn btn--primary" data-lead data-src="card">Узнать цену</button>' +
           (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener">Проект</a>' : '') +
         '</footer>' +
       '</article>';

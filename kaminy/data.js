@@ -196,15 +196,6 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_dekorativnyj-kamin-s-ochagom-airtone-andalle-1000-oblitsovan-izraztsami-kollektsii-dorf-spetsialno-dlya-restorana-5013/"
   },
   {
-   "title": "Комплект каминной облицовки Дорф. Цвет: Муравленый",
-   "collection": "Дорф",
-   "desc": "Изразцовый камин ручной работы: керамика собственного цеха, обжиг при 1000 °C.",
-   "p1": 1303647,
-   "p2": 2100000,
-   "img": "img/08.webp",
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_komplekt-kaminnoj-oblitsovki-dorf-tsvet-muravlenyj/"
-  },
-  {
    "title": "Арт Нуво",
    "collection": "Арт Нуво",
    "desc": "Комплект каминной облицовки Арт Нуво. Декоративная палитра: Фисташковая",
@@ -563,10 +554,10 @@ window.LP = {
   "img/05.webp",
   "img/06.webp",
   "img/07.webp",
-  "img/08.webp",
   "img/09.webp",
   "img/10.webp",
   "img/11.webp",
-  "img/12.webp"
+  "img/12.webp",
+  "img/13.webp"
  ]
 };
