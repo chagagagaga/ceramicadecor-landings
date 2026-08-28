@@ -27,8 +27,8 @@
 
   /* Текст */
   --white:         #ffffff;
-  --text-muted:    rgba(255, 255, 255, .6);
-  --text-dim:      rgba(255, 255, 255, .4);
+  --text-muted:    rgba(255, 255, 255, .78);
+  --text-dim:      rgba(255, 255, 255, .58);
 
   /* Линии */
   --border:        rgba(255, 255, 255, .1);
@@ -52,8 +52,8 @@ body {
   background: var(--bg);
   color: var(--white);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 

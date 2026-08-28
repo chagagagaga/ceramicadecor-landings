@@ -121,7 +121,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцах с панно с художественной росписью",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-ind",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 1113067,
    "p2": 0,
    "img": "img/01.webp",
@@ -130,7 +130,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке Сувенир",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suven",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 410384,
    "p2": 0,
    "img": "img/02.webp",
@@ -139,7 +139,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке Усадьба",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 530997,
    "p2": 0,
    "img": "img/03.webp",
@@ -148,7 +148,7 @@ window.LP = {
   {
    "title": "Белый изразцовый портал для банной печи в облицовке Пастораль",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kolle",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 381944,
    "p2": 0,
    "img": "img/04.webp",
@@ -157,7 +157,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке Камея с художественной росписью",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 613386,
    "p2": 0,
    "img": "img/05.webp",
@@ -166,7 +166,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке с художественной росписью в стиле Прованс",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 572034,
    "p2": 0,
    "img": "img/06.webp",
@@ -175,7 +175,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamen",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 222779,
    "p2": 0,
    "img": "img/07.webp",
@@ -184,7 +184,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво в лазурной росписи",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazur",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 281886,
    "p2": 0,
    "img": "img/08.webp",
@@ -193,7 +193,7 @@ window.LP = {
   {
    "title": "Банный портал в изразцовой облицовке Дорф в муравленом цвете",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-",
+   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
    "p1": 523447,
    "p2": 0,
    "img": "img/09.webp",
@@ -274,24 +274,32 @@ window.LP = {
  ],
  "guarantees": [
   {
-   "b": "50",
-   "title": "Лет гарантии на керамику",
-   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."
+   "icon": "shield",
+   "b": "",
+   "title": "Гарантия 50 лет на керамику",
+   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.8 19.2 6v6.2c0 4.2-3 7-7.2 8.9-4.2-1.9-7.2-4.7-7.2-8.9V6z\"/><path d=\"M8.8 12.1l2.3 2.3 4-4.4\"/></svg>"
   },
   {
-   "b": "₽",
+   "icon": "doc",
+   "b": "",
    "title": "Смета фиксируется в договоре",
-   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."
+   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4.6\" y=\"2.8\" width=\"14.8\" height=\"18.4\" rx=\"1.4\"/><path d=\"M8.4 8h7.2M8.4 12h7.2M8.4 16h4.2\"/></svg>"
   },
   {
-   "b": "3D",
-   "title": "Проект до оплаты",
-   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."
+   "icon": "cube",
+   "b": "",
+   "title": "3D-проект до оплаты",
+   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.6 20.5 7v10L12 21.4 3.5 17V7z\"/><path d=\"M3.5 7 12 11.5 20.5 7M12 11.5V21.4\"/></svg>"
   },
   {
-   "b": "РФ",
+   "icon": "truck",
+   "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."
+   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],
  "faq": [

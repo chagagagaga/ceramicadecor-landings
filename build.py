@@ -33,14 +33,25 @@ STATS = [
     {"v": "50 лет", "l": "гарантия на керамику"},
 ]
 
+ICONS = {
+    'shield': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 19.2 6v6.2c0 4.2-3 7-7.2 8.9-4.2-1.9-7.2-4.7-7.2-8.9V6z"/><path d="M8.8 12.1l2.3 2.3 4-4.4"/></svg>',
+    'doc': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.6" y="2.8" width="14.8" height="18.4" rx="1.4"/><path d="M8.4 8h7.2M8.4 12h7.2M8.4 16h4.2"/></svg>',
+    'cube': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6 20.5 7v10L12 21.4 3.5 17V7z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5V21.4"/></svg>',
+    'truck': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17.4" cy="18" r="2"/></svg>',
+    'fire': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6c3.4 4.6 5.7 6.4 5.7 10.2a5.7 5.7 0 0 1-11.4 0c0-3.8 2.3-5.6 5.7-10.2z"/><path d="M12 12.4c1.3 1.8 2.2 2.5 2.2 4a2.2 2.2 0 0 1-4.4 0c0-1.5.9-2.2 2.2-4z"/></svg>',
+    'brush': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.6 3.4 20.6 9.4 10.8 19.2H4.8v-6z"/><path d="M12.6 5.4 18.6 11.4"/></svg>',
+    'clock': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12.6" r="8.4"/><path d="M12 7.8v4.8l3.2 2M9.4 2.6h5.2"/></svg>',
+    'ruler': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.4" y="8.4" width="19.2" height="7.2" rx="1.2"/><path d="M6.6 8.4v3M10.2 8.4v4.4M13.8 8.4v3M17.4 8.4v4.4"/></svg>',
+}
+
 GUARANTEES = [
-    {"b": "50", "title": "Лет гарантии на керамику",
+    {"icon": "shield", "b": "", "title": "Гарантия 50 лет на керамику",
      "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."},
-    {"b": "₽", "title": "Смета фиксируется в договоре",
+    {"icon": "doc", "b": "", "title": "Смета фиксируется в договоре",
      "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."},
-    {"b": "3D", "title": "Проект до оплаты",
+    {"icon": "cube", "b": "", "title": "3D-проект до оплаты",
      "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."},
-    {"b": "РФ", "title": "Доставка и монтаж по России",
+    {"icon": "truck", "b": "", "title": "Доставка и монтаж по России",
      "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."},
 ]
 
@@ -523,7 +534,7 @@ INDEX_TPL = """<!DOCTYPE html>
 <header class="header" data-header>
   <div class="container header__inner">
     <a href="#top" class="logo">
-      <img class="logo__mark" src="../assets/favicon.svg" alt="" width="34" height="34">
+<span class="logo__mark">@LOGO_SVG@</span>
       <span class="logo__text"><b>CERAMICA DECOR</b><i>Керамика ручной работы</i></span>
     </a>
     <nav class="nav" data-nav>
@@ -714,7 +725,7 @@ INDEX_TPL = """<!DOCTYPE html>
 <footer class="footer">
   <div class="container footer__inner">
     <div>
-      <a href="#top" class="logo"><img class="logo__mark" src="../assets/favicon.svg" alt="" width="34" height="34">
+      <a href="#top" class="logo"><span class="logo__mark">@LOGO_SVG@</span>
         <span class="logo__text"><b>CERAMICA DECOR</b><i>Керамика ручной работы</i></span></a>
       <p style="margin-top:1rem">Изразцы, камины, печи и барбекю-комплексы в керамической облицовке ручной работы. Производство в Королёве, отгрузка по всей России.</p>
     </div>
@@ -836,6 +847,29 @@ def no_orphan(html):
         return ''.join(parts)
     return '<br>'.join(fix(x) for x in html.split('<br>'))
 
+# Запасные описания по направлениям: в выгрузке у трети позиций вместо
+# текста лежит URL страницы объекта — на странице это выглядело как
+# «https://ceramicadecor.ru/nashi-raboti/...» прямо в карточке товара.
+FALLBACK_DESC = {
+    "kaminy":             "Изразцовый камин ручной работы: керамика собственного цеха, обжиг при 1000 °C.",
+    "barbekyu-kompleksy": "Барбекю-комплекс в изразцовой облицовке: керамика своего производства, монтаж под ключ.",
+    "izraztsy":           "Изразцы ручной формовки: своя глина, обжиг при 1000 °C, роспись в собственной мастерской.",
+    "pechi-kaminy":       "Печь-камин в керамической облицовке: готовое решение с доставкой и монтажом.",
+    "bannye-portaly":     "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
+    "russkie-pechi":      "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
+    "otopitelnye-pechi":  "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
+}
+
+def clean_text(v, fallback=""):
+    """Убирает из выгрузки ссылки и служебный мусор, оставляя живой текст."""
+    v = (v or "").strip()
+    if not v or v.startswith("http") or "ceramicadecor.ru/" in v or v.startswith("cd_"):
+        return fallback
+    # хвост вида «| CeramicaDecor» в описании ничего не добавляет
+    v = v.split("|")[0].strip()
+    return v or fallback
+
+
 def build():
     catalog = json.load(io.open(os.path.join(ROOT, 'catalog.json'), encoding='utf-8'))
     for slug, P in PRODUCTS.items():
@@ -843,10 +877,16 @@ def build():
         # ── data.js ──────────────────────────────────────────────────────────
         cards = []
         for it in items:
+            fb = FALLBACK_DESC.get(slug, "")
+            title = clean_text(it.get("title"), "")
+            if not title:
+                # и заголовок иногда приходит ссылкой — собираем из коллекции
+                coll = it.get("collection", "")
+                title = ("Облицовка «%s»" % coll) if coll else P["title"]
             cards.append({
-                "title": it["title"][:96],
+                "title": title[:96],
                 "collection": it.get("collection", ""),
-                "desc": (it.get("desc") or "")[:130],
+                "desc": clean_text(it.get("desc"), fb)[:150],
                 "p1": it["price_ceramic"],
                 "p2": it.get("price_turnkey") or 0,
                 "img": it.get("img", ""),
@@ -881,7 +921,8 @@ def build():
             "why": {"badTitle": P["why"]["badTitle"], "goodTitle": P["why"]["goodTitle"],
                     "bad": P["why"]["bad"], "good": P["why"]["good"],
                     "media": cards[1]["img"] if len(cards) > 1 else ""},
-            "steps": STEPS, "guarantees": GUARANTEES,
+            "steps": STEPS,
+            "guarantees": [dict(g, svg=ICONS.get(g.get("icon", ""), "")) for g in GUARANTEES],
             "faq": [{"q": a, "a": b} for a, b in P["faq"]],
             "gallery": [c["img"] for c in cards if c["img"]][:12],
         }
@@ -895,7 +936,12 @@ def build():
         stats = ''.join('<div><b>%s</b><span>%s</span></div>' % (s["v"], s["l"]) for s in STATS)
         links = ''.join('<a href="../%s/">%s</a>' % (s, t) for s, t in FOOTER_ORDER if s != slug)
         ct, cl = CATALOG_COPY[slug]
+        # Знак читается инлайном, чтобы красился через currentColor
+        # и не грузился отдельным запросом.
+        logo_svg = io.open(os.path.join(ROOT, 'assets', 'logo.svg'), encoding='utf-8').read()
+        logo_svg = logo_svg.split('?>')[-1].strip()
         html = (INDEX_TPL
+                .replace('@LOGO_SVG@', logo_svg)
                 .replace('@TITLE@', P["title"]).replace('@SEO@', P["seo"])
                 .replace('@SLUG@', slug).replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])

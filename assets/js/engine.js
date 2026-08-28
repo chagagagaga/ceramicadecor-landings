@@ -232,6 +232,25 @@
           (f.hint ? '<p class="calc__hint">' + esc(f.hint) + '</p>' : '') + '</div>';
       }
 
+      // Компактный select вместо трёх строк радио: помещается в одну
+      // строку и не растягивает калькулятор. Применяем там, где у
+      // вариантов нет ни цен, ни длинных подсказок.
+      var plain = f.type === 'radio' && (f.options || []).length > 2 &&
+                  !(f.options || []).some(function (o) { return o.add; });
+      if (plain) {
+        return '<div class="calc__field">' + head +
+          '<div class="calc-select">' +
+            '<select data-select="' + f.id + '" aria-label="' + esc(f.label) + '">' +
+              (f.options || []).map(function (o) {
+                return '<option value="' + esc(o.id) + '"' + (state[f.id] === o.id ? ' selected' : '') + '>' +
+                  esc(o.label) + (o.hint ? ' — ' + esc(o.hint) : '') + '</option>';
+              }).join('') +
+            '</select>' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</div>' +
+          (f.hint ? '<p class="calc__hint">' + esc(f.hint) + '</p>' : '') + '</div>';
+      }
+
       var opts = (f.options || []).map(function (o) {
         var on = f.type === 'checks' ? state[f.id].has(o.id) : state[f.id] === o.id;
         return '<button type="button" class="calc-opt' + (f.type === 'checks' ? '' : ' calc-opt--radio') + (on ? ' is-on' : '') +
@@ -247,9 +266,10 @@
         var n = f.type === 'checks' ? state[f.id].size : 0;
         return '<details class="calc__more"' + (n ? ' open' : '') + '><summary>' + esc(f.label) +
           ' <span>' + (n ? '(' + n + ')' : '') + '</span></summary>' +
-          '<div class="calc-opts">' + opts + '</div></details>';
+          '<div class="calc-opts' + ((f.options || []).length > 3 ? ' calc-opts--grid' : '') + '">' + opts + '</div></details>';
       }
-      return '<div class="calc__field">' + head + '<div class="calc-opts' + (f.row ? ' calc-opts--row' : '') + '">' + opts + '</div>' +
+      var grid = f.type === 'checks' && (f.options || []).length > 3 ? ' calc-opts--grid' : '';
+      return '<div class="calc__field">' + head + '<div class="calc-opts' + (f.row ? ' calc-opts--row' : '') + grid + '">' + opts + '</div>' +
         (f.hint ? '<p class="calc__hint">' + esc(f.hint) + '</p>' : '') + '</div>';
     }
 
@@ -314,6 +334,12 @@
           syncFill(el);
           if (!priceShown) { priceShown = true; render(); return; }
           refresh();
+        });
+      });
+      $$('[data-select]', root).forEach(function (sel) {
+        sel.addEventListener('change', function () {
+          state[sel.dataset.select] = sel.value;
+          priceShown = true; render();
         });
       });
       $$('[data-opt]', root).forEach(function (b) {
@@ -537,7 +563,11 @@
 
     var g = $('[data-guarantees]');
     if (g && P.guarantees) g.innerHTML = P.guarantees.map(function (x) {
-      return '<div class="gcard"><b>' + esc(x.b) + '</b><h3>' + esc(x.title) + '</h3><p>' + esc(x.text) + '</p></div>';
+      // Иконка вместо буквенной заглушки: смысл считывается до чтения.
+      return '<div class="gcard">' +
+        (x.svg ? '<span class="gcard__icon">' + x.svg + '</span>' : '') +
+        (x.b ? '<b>' + esc(x.b) + '</b>' : '') +
+        '<h3>' + esc(x.title) + '</h3><p>' + esc(x.text) + '</p></div>';
     }).join('');
 
     var q = $('[data-faq]');

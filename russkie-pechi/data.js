@@ -123,7 +123,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке изразцами в коллекции Русская Этника",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kol",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 5094314,
    "p2": 0,
    "img": "img/01.webp",
@@ -132,7 +132,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке Камея с художественной росписью",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 2181909,
    "p2": 0,
    "img": "img/02.webp",
@@ -141,7 +141,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке белыми изразцами коллекции Тюльпан",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 963875,
    "p2": 0,
    "img": "img/03.webp",
@@ -150,7 +150,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке белыми изразцами коллекции Неаполь",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitso",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 1046948,
    "p2": 0,
    "img": "img/04.webp",
@@ -159,7 +159,7 @@ window.LP = {
   {
    "title": "Русская печь с частичной облицовкой изразцами коллекции Усадьба",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovym",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 1329259,
    "p2": 0,
    "img": "img/05.webp",
@@ -168,7 +168,7 @@ window.LP = {
   {
    "title": "Русская печь в изразцовой облицовке Византия",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 2371049,
    "p2": 0,
    "img": "img/06.webp",
@@ -177,7 +177,7 @@ window.LP = {
   {
    "title": "Русская печь с частичной облицовкой изразцами коллекции Арт Нуво",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 2169294,
    "p2": 0,
    "img": "img/07.webp",
@@ -186,7 +186,7 @@ window.LP = {
   {
    "title": "Русская печь в изразцовой облицовке в зеленой майоликовой глазури",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-maj",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 4168727,
    "p2": 0,
    "img": "img/08.webp",
@@ -195,7 +195,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке изразцами в коллекции Русская Этника",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-ko",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 2543257,
    "p2": 0,
    "img": "img/09.webp",
@@ -204,7 +204,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке изразцами коллекции Тюльпан",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyu",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 3966639,
    "p2": 0,
    "img": "img/10.webp",
@@ -213,7 +213,7 @@ window.LP = {
   {
    "title": "Русская печь в облицовке белыми изразцами в коллекции Русская Этника",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-koll",
+   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг при 1000 °C.",
    "p1": 2631640,
    "p2": 0,
    "img": "img/11.webp",
@@ -294,24 +294,32 @@ window.LP = {
  ],
  "guarantees": [
   {
-   "b": "50",
-   "title": "Лет гарантии на керамику",
-   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."
+   "icon": "shield",
+   "b": "",
+   "title": "Гарантия 50 лет на керамику",
+   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.8 19.2 6v6.2c0 4.2-3 7-7.2 8.9-4.2-1.9-7.2-4.7-7.2-8.9V6z\"/><path d=\"M8.8 12.1l2.3 2.3 4-4.4\"/></svg>"
   },
   {
-   "b": "₽",
+   "icon": "doc",
+   "b": "",
    "title": "Смета фиксируется в договоре",
-   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."
+   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4.6\" y=\"2.8\" width=\"14.8\" height=\"18.4\" rx=\"1.4\"/><path d=\"M8.4 8h7.2M8.4 12h7.2M8.4 16h4.2\"/></svg>"
   },
   {
-   "b": "3D",
-   "title": "Проект до оплаты",
-   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."
+   "icon": "cube",
+   "b": "",
+   "title": "3D-проект до оплаты",
+   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.6 20.5 7v10L12 21.4 3.5 17V7z\"/><path d=\"M3.5 7 12 11.5 20.5 7M12 11.5V21.4\"/></svg>"
   },
   {
-   "b": "РФ",
+   "icon": "truck",
+   "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."
+   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],
  "faq": [

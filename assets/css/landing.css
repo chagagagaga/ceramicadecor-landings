@@ -13,11 +13,31 @@
 .section__head { max-width: 780px; margin-bottom: clamp(2rem, 1.4rem + 2.4vw, 3.5rem); }
 .section__head--center { margin-inline: auto; text-align: center; }
 .section__title { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 3rem); margin-top: .8rem; }
-.section__lead { margin-top: 1.1rem; color: var(--text-muted); font-size: 1.05rem; }
+.section__lead { margin-top: 1.1rem; color: var(--text-muted); font-size: 1.12rem; line-height: 1.6; }
 .section__lead b { color: var(--white); font-weight: 500; }
 
 .grid-center { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .nb { white-space: nowrap; }
+
+/* Допы в две колонки: семь пунктов в столбик занимали пол-экрана. */
+.calc-opts--grid { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; }
+.calc-opts--grid .calc-opt { padding: .6rem .7rem; }
+.calc-opts--grid .calc-opt__price { font-size: .8rem; }
+@media (max-width: 480px) { .calc-opts--grid { grid-template-columns: 1fr; } }
+
+/* Компактный выпадающий список в калькуляторе: три радио-строки
+   превращаются в одну. Стрелку рисуем сами — нативная выглядит
+   по-разному в каждом браузере. */
+.calc-select { position: relative; }
+.calc-select select {
+  appearance: none; width: 100%; padding: .85em 2.4em .85em 1em;
+  border: 1px solid var(--border); border-radius: 2px;
+  background: var(--bg); color: var(--white);
+  font: inherit; font-size: .98rem; cursor: pointer;
+}
+.calc-select select:hover { border-color: var(--border-light); }
+.calc-select select:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.calc-select svg { position: absolute; right: .85em; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-muted); pointer-events: none; }
 
 /* ═══ Плавающие мессенджеры (только десктоп) ══════════════════════════════
    Два кружка в нижнем правом углу: клик уводит прямо в переписку.
@@ -104,12 +124,13 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .header__inner > * { min-width: 0; }
 
 .logo { display: inline-flex; align-items: center; gap: .7rem; flex: none; }
-.logo__mark { width: 34px; height: 34px; flex: none; }
+.logo__mark { display: block; width: 34px; height: 34px; flex: none; color: var(--white); }
+.logo__mark svg { display: block; width: 100%; height: 100%; }
 .logo__text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo__text b { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 400; letter-spacing: .08em; }
 .logo__text i { font-style: normal; font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--text-dim); }
 
-.nav { display: flex; gap: 1.4rem; margin-inline: auto; font-size: .88rem; }
+.nav { display: flex; gap: 1.4rem; margin-inline: auto; font-size: .95rem; }
 .nav a { color: var(--text-muted); transition: color var(--transition); }
 .nav a:hover { color: var(--white); }
 
@@ -149,18 +170,18 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .hero__title em { font-style: normal; color: var(--amber); }
 .hero__sub { color: var(--text-muted); font-size: 1.05rem; max-width: 46ch; }
 .hero__usp { display: flex; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.6rem; }
-.hero__usp li { display: flex; align-items: baseline; gap: .5rem; font-size: .88rem; color: var(--text-muted); }
+.hero__usp li { display: flex; align-items: baseline; gap: .5rem; font-size: .98rem; color: var(--text-muted); }
 .hero__usp li::before { content: '✓'; color: var(--primary); }
 
 .stats { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 2rem; }
 .stats div { background: var(--bg); padding: 1rem 1.3rem; flex: 1 1 auto; }
-.stats b { display: block; font-family: var(--font-heading); font-size: 1.6rem; font-weight: 300; color: var(--amber); }
-.stats span { font-size: .74rem; color: var(--text-dim); }
+.stats b { display: block; font-family: var(--font-heading); font-size: 1.9rem; font-weight: 300; color: var(--amber); }
+.stats span { font-size: .85rem; color: var(--text-dim); line-height: 1.35; }
 
 /* ── Конфигуратор ────────────────────────────────────────────────────────── */
 .calc { background: var(--bg-lighter); border: 1px solid var(--border); padding: clamp(1.15rem, .9rem + .8vw, 1.7rem); }
 .calc__title { font-size: 1.35rem; }
-.calc__sub { margin-top: .35rem; font-size: .85rem; color: var(--text-muted); }
+.calc__sub { margin-top: .4rem; font-size: .93rem; color: var(--text-muted); }
 .calc__field { margin-top: 1.3rem; }
 .calc__label { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: .6rem; }
 .calc__label i { font-style: normal; display: grid; place-items: center; width: 17px; height: 17px; background: var(--primary); color: var(--white); font-size: .6rem; letter-spacing: 0; }
@@ -202,7 +223,7 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .calc-opt--radio.is-on .calc-opt__box::after { left: 4px; top: 4px; width: 6px; height: 6px; border: 0; border-radius: 50%; background: var(--white); transform: none; }
 
 .calc__more { border-top: 1px solid var(--border); padding-top: .9rem; margin-top: 1.2rem; }
-.calc__more summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: .5rem; font-size: .85rem; }
+.calc__more summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: .5rem; font-size: .93rem; }
 .calc__more summary::-webkit-details-marker { display: none; }
 .calc__more summary::after { content: '+'; margin-left: auto; color: var(--primary); font-size: 1.1rem; line-height: 1; }
 .calc__more[open] summary::after { content: '–'; }
@@ -227,13 +248,22 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 
 .calc__cta { margin-top: 1.2rem; }
 .calc-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+/* Вторая кнопка расчёта была белым по белому: btn--ghost рассчитан на
+   тёмный фон, а карточка калькулятора светлее остальной страницы.
+   Даём ей явную заливку и читаемый текст. */
+.calc-actions .btn--ghost { background: var(--bg); border-color: var(--border-light); color: var(--white); }
+.calc-actions .btn--ghost:hover { background: var(--bg-lighter); border-color: var(--white); }
+/* Длинное название коллекции обрезалось многоточием — уменьшаем кегль,
+   чтобы вариант читался целиком. */
+.calc-select select { text-overflow: ellipsis; }
+@media (min-width: 981px) { .calc-select select { font-size: .93rem; } }
 .calc__social { display: flex; align-items: center; gap: .45rem; margin-top: .7rem; font-size: .74rem; color: var(--text-dim); }
 .calc__pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(147,210,0,.5); } 50% { box-shadow: 0 0 0 6px rgba(147,210,0,0); } }
 
 /* ── Каталог топ-моделей ─────────────────────────────────────────────────── */
 .filters { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 2rem; }
-.chip { padding: .7em 1.05em; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-size: .82rem; transition: all var(--transition); }
+.chip { padding: .7em 1.05em; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-size: .9rem; transition: all var(--transition); }
 .chip:hover { border-color: var(--border-light); color: var(--white); }
 .chip.is-on { background: var(--primary); border-color: var(--primary); color: var(--white); }
 
@@ -247,11 +277,11 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .card__tag { position: absolute; top: .7rem; left: .7rem; padding: .25em .6em; background: rgba(16,16,16,.8); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--amber); }
 .card__body { padding: 1.1rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
 .card__collection { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
-.card__name { font-size: 1.05rem; margin-top: .35rem; font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
-.card__desc { margin-top: .5rem; font-size: .84rem; color: var(--text-muted); line-height: 1.5; }
+.card__name { font-size: 1.12rem; margin-top: .35rem; font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
+.card__desc { margin-top: .5rem; font-size: .93rem; color: var(--text-muted); line-height: 1.55; }
 .card__prices { margin-top: auto; padding-top: 1rem; }
-.card__p1 { font-size: 1.05rem; color: var(--primary-hover); }
-.card__p2 { font-size: .85rem; color: var(--text-muted); margin-top: .2rem; }
+.card__p1 { font-size: 1.15rem; font-weight: 600; color: var(--primary-hover); }
+.card__p2 { font-size: .95rem; color: var(--text-muted); margin-top: .2rem; }
 .card__foot { display: flex; gap: .5rem; padding: 0 1.2rem 1.2rem; }
 .card__foot .btn { flex: 1; }
 .cards__empty { text-align: center; color: var(--text-muted); margin-top: 1.5rem; }
@@ -279,7 +309,7 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .step { padding: 1.4rem; border: 1px solid var(--border); display: flex; flex-direction: column; gap: .7rem; }
 .step__n { font-family: var(--font-heading); font-size: 2rem; font-weight: 300; color: var(--primary); line-height: 1; }
 .step h3 { font-size: 1.02rem; font-family: var(--font-body); font-weight: 500; }
-.step p { font-size: .85rem; color: var(--text-muted); line-height: 1.5; }
+.step p { font-size: .95rem; color: var(--text-muted); line-height: 1.55; }
 .step__day { margin-top: auto; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); }
 
 /* ── Галерея ─────────────────────────────────────────────────────────────── */
@@ -291,7 +321,7 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .lightbox { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center; background: rgba(8,8,8,.95); padding: clamp(1rem, 4vw, 3rem); }
 .lightbox figure { margin: 0; display: flex; flex-direction: column; gap: .9rem; max-width: min(1100px, 100%); }
 .lightbox img { max-height: 74vh; width: auto; margin-inline: auto; object-fit: contain; }
-.lightbox figcaption { text-align: center; color: var(--text-muted); font-size: .85rem; }
+.lightbox figcaption { text-align: center; color: var(--text-muted); font-size: .95rem; }
 .lightbox__close { position: absolute; top: 1rem; right: 1rem; width: 42px; height: 42px; border: 0; background: rgba(255,255,255,.1); color: var(--white); font-size: 1.1rem; cursor: pointer; }
 .lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border: 0; background: rgba(255,255,255,.1); color: var(--white); font-size: 1.8rem; line-height: 1; cursor: pointer; }
 .lightbox__nav--prev { left: clamp(.5rem, 2vw, 2rem); }
@@ -301,9 +331,11 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .guarantees { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .guarantees > * { flex: 0 1 calc((100% - 4.5rem) / 4); min-width: 260px; }
 .gcard { padding: 1.6rem; border: 1px solid var(--border); }
-.gcard b { display: block; font-family: var(--font-heading); font-size: 1.9rem; font-weight: 300; color: var(--amber); margin-bottom: .7rem; }
+.gcard__icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 2px; background: rgba(203,59,37,.12); color: var(--primary); margin-bottom: 1rem; }
+.gcard__icon svg { width: 24px; height: 24px; }
+.gcard b { display: block; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 300; color: var(--amber); margin-bottom: .4rem; }
 .gcard h3 { font-size: 1rem; font-family: var(--font-body); font-weight: 500; }
-.gcard p { margin-top: .5rem; font-size: .85rem; color: var(--text-muted); line-height: 1.5; }
+.gcard p { margin-top: .5rem; font-size: .95rem; color: var(--text-muted); line-height: 1.55; }
 
 /* ── Форма и CTA ─────────────────────────────────────────────────────────── */
 .cta { background: var(--bg-lighter); }
@@ -323,7 +355,7 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .input::placeholder { color: var(--text-dim); }
 .input:focus { outline: none; border-color: var(--primary); }
 textarea.input { resize: vertical; min-height: 84px; }
-.policy { margin-top: .8rem; font-size: .74rem; color: var(--text-dim); line-height: 1.45; }
+.policy { margin-top: .8rem; font-size: .8rem; color: var(--text-dim); line-height: 1.5; }
 .policy a { color: var(--amber); text-decoration: underline; display: inline-block; padding-block: .5rem; }
 .form-status { margin-top: .7rem; font-size: .85rem; min-height: 1.2em; }
 .form-status--error { color: #ff7a63; }
@@ -352,7 +384,7 @@ textarea.input { resize: vertical; min-height: 84px; }
 
 .footer { border-top: 1px solid var(--border); padding-block: 3rem 1.5rem; }
 .footer__inner { display: grid; grid-template-columns: minmax(0,1.5fr) repeat(2, minmax(0,1fr)); gap: 2rem; }
-.footer p, .footer a { font-size: .85rem; color: var(--text-muted); }
+.footer p, .footer a { font-size: .92rem; color: var(--text-muted); }
 .footer h4 { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--white); margin-bottom: 1rem; }
 .footer nav { display: flex; flex-direction: column; gap: .5rem; }
 .footer a:hover { color: var(--amber); }
@@ -364,7 +396,7 @@ textarea.input { resize: vertical; min-height: 84px; }
 .modal__close { position: absolute; top: .7rem; right: .7rem; width: 34px; height: 34px; border: 0; background: transparent; color: var(--text-muted); font-size: 1rem; cursor: pointer; }
 .modal__close:hover { color: var(--white); }
 .modal__title { font-size: 1.3rem; padding-right: 2rem; }
-.modal__sub { margin-top: .5rem; margin-bottom: 1.4rem; font-size: .85rem; color: var(--text-muted); line-height: 1.5; }
+.modal__sub { margin-top: .5rem; margin-bottom: 1.4rem; font-size: .95rem; color: var(--text-muted); line-height: 1.55; }
 .modal__summary { margin: 1.15rem 0; padding: .9rem 1rem; background: var(--bg); border: 1px solid var(--border); }
 .modal__summary-sum { font-family: var(--font-heading); font-weight: 300; font-size: 1.35rem; color: var(--amber); }
 .modal__summary-sum i { font-style: normal; white-space: nowrap; }
@@ -387,12 +419,16 @@ textarea.input { resize: vertical; min-height: 84px; }
 }
 .mobilebar.is-visible { transform: none; }
 .mobilebar a, .mobilebar button {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: .15rem;
-  padding: .55rem .3rem; border: 1px solid var(--border); background: transparent;
-  color: var(--white); font: inherit; font-size: .66rem; cursor: pointer;
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: .2rem;
+  padding: .6rem .3rem; border: 1px solid var(--border); background: transparent;
+  color: var(--white); font: inherit; font-size: .78rem; cursor: pointer;
 }
-.mobilebar svg { width: 17px; height: 17px; fill: currentColor; }
-.mobilebar .is-primary { flex: 1.5; background: var(--primary); border-color: var(--primary); font-size: .8rem; }
+.mobilebar svg { width: 19px; height: 19px; fill: currentColor; }
+.mobilebar .is-primary { flex: 1.5; background: var(--primary); border-color: var(--primary); font-size: .88rem; font-weight: 600; }
+/* Подпись под иконкой была 10,5 px — нечитаемо. Мессенджер получает
+   свой фирменный цвет, чтобы панель не выглядела пустой. */
+.mobilebar [data-wa] { background: rgba(37,211,102,.14); border-color: rgba(37,211,102,.4); }
+.mobilebar [data-max] { background: rgba(59,91,255,.16); border-color: rgba(59,91,255,.45); }
 
 /* ── Адаптив ─────────────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {

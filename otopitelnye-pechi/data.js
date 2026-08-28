@@ -122,7 +122,7 @@ window.LP = {
   {
    "title": "Отопительная печь с лежанкой в облицовке Птицы с росписью ручной работы",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pech",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 1370832,
    "p2": 0,
    "img": "img/01.webp",
@@ -131,7 +131,7 @@ window.LP = {
   {
    "title": "Облицовка печи изразцами с художественной росписью Прованс",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 295243,
    "p2": 0,
    "img": "img/02.webp",
@@ -140,7 +140,7 @@ window.LP = {
   {
    "title": "Облицовка печи Арт Нуво в лазурной росписи",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 876023,
    "p2": 0,
    "img": "img/03.webp",
@@ -149,7 +149,7 @@ window.LP = {
   {
    "title": "Изразцовая печь в облицовке Усадьба с росписью ручной работы",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-53",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 912750,
    "p2": 0,
    "img": "img/04.webp",
@@ -158,7 +158,7 @@ window.LP = {
   {
    "title": "Облицовка отопительной печи в коллекции Универсал",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topoch",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 680401,
    "p2": 0,
    "img": "img/05.webp",
@@ -167,7 +167,7 @@ window.LP = {
   {
    "title": "Облицовка отопительной печи в коллекции Птички",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 785852,
    "p2": 0,
    "img": "img/06.webp",
@@ -176,7 +176,7 @@ window.LP = {
   {
    "title": "Облицовка отопительной печи в коллекции Арт Нуво",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 691369,
    "p2": 0,
    "img": "img/07.webp",
@@ -185,7 +185,7 @@ window.LP = {
   {
    "title": "Облицовка отопительной печи в коллекции Модерн",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 375169,
    "p2": 0,
    "img": "img/08.webp",
@@ -194,7 +194,7 @@ window.LP = {
   {
    "title": "Облицовка отопительной печи в коллекции Дорф",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 1368434,
    "p2": 0,
    "img": "img/09.webp",
@@ -203,7 +203,7 @@ window.LP = {
   {
    "title": "Облицовка отопительной печи белыми изразцами коллекции Неаполь",
    "collection": "",
-   "desc": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/",
+   "desc": "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
    "p1": 968320,
    "p2": 0,
    "img": "img/10.webp",
@@ -284,24 +284,32 @@ window.LP = {
  ],
  "guarantees": [
   {
-   "b": "50",
-   "title": "Лет гарантии на керамику",
-   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры."
+   "icon": "shield",
+   "b": "",
+   "title": "Гарантия 50 лет на керамику",
+   "text": "Обжиг при 1000 °C. Глазурь не выцветает и не трескается от перепадов температуры.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.8 19.2 6v6.2c0 4.2-3 7-7.2 8.9-4.2-1.9-7.2-4.7-7.2-8.9V6z\"/><path d=\"M8.8 12.1l2.3 2.3 4-4.4\"/></svg>"
   },
   {
-   "b": "₽",
+   "icon": "doc",
+   "b": "",
    "title": "Смета фиксируется в договоре",
-   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию."
+   "text": "Цена в договоре окончательная. Дополнительные работы — только по вашему письменному согласию.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4.6\" y=\"2.8\" width=\"14.8\" height=\"18.4\" rx=\"1.4\"/><path d=\"M8.4 8h7.2M8.4 12h7.2M8.4 16h4.2\"/></svg>"
   },
   {
-   "b": "3D",
-   "title": "Проект до оплаты",
-   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите."
+   "icon": "cube",
+   "b": "",
+   "title": "3D-проект до оплаты",
+   "text": "Бесплатный 3D-проект за 2–3 дня. Видите объект в своём интерьере до того, как платите.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.6 20.5 7v10L12 21.4 3.5 17V7z\"/><path d=\"M3.5 7 12 11.5 20.5 7M12 11.5V21.4\"/></svg>"
   },
   {
-   "b": "РФ",
+   "icon": "truck",
+   "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас."
+   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],
  "faq": [
