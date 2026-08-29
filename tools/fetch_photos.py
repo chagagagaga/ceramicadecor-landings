@@ -19,6 +19,7 @@ import urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://ceramicadecor.ru'
+MAX_FRAMES = 6      # больше шести на карточку в галерее не нужно
 UA = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
                     'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36'}
 # hash в пути превью: /userdata/product/preview/48/bc/48bc…bc_1200.jpg
@@ -70,12 +71,18 @@ def to_webp(raw, dst, width=1400, quality=82):
     io.open(src, 'wb').write(raw)
     try:
         cmd = ['cwebp', '-quiet', '-q', str(quality), '-resize', str(width), '0', src, '-o', dst]
-        subprocess.run(cmd, check=True)
-        return True
-    except subprocess.CalledProcessError:
+        # Часть исходников на сайте — битые JPEG: cwebp на них ругается
+        # в stderr и выходит с ошибкой. Такой кадр просто пропускаем,
+        # иначе один плохой файл валит весь обход.
+        r = subprocess.run(cmd, capture_output=True)
+        return r.returncode == 0 and os.path.exists(dst)
+    except Exception:
         return False
     finally:
-        os.unlink(src)
+        try:
+            os.unlink(src)
+        except OSError:
+            pass
 
 
 def main(slugs):
@@ -85,10 +92,9 @@ def main(slugs):
         outdir = os.path.join(ROOT, slug, 'img')
         os.makedirs(outdir, exist_ok=True)
         print('\n▸ %s — объектов %d' % (slug, len(items)))
-        got = 0
+        got = frames = 0
         for i, it in enumerate(items, 1):
             url = it.get('url')
-            dst = os.path.join(outdir, '%02d.webp' % i)
             if not url:
                 print('  %02d  нет ссылки на объект — оставляю как было' % i)
                 continue
@@ -96,17 +102,26 @@ def main(slugs):
             if not photos:
                 print('  %02d  фото на странице не найдены' % i)
                 continue
-            # первый кадр страницы — главный, он и идёт в карточку
-            try:
-                raw = fetch_original(photos[0])
-            except Exception as e:
-                print('  %02d  не скачалось: %s' % (i, e))
-                continue
-            if to_webp(raw, dst):
+            # Качаем ВСЕ кадры объекта, не только первый: у объекта их
+            # обычно 4–8, и галерея из них — сильнее одной картинки.
+            # Первый кадр остаётся главным (NN.webp), остальные — NN-2, NN-3…
+            saved = 0
+            for k, base in enumerate(photos[:MAX_FRAMES], 1):
+                dst = os.path.join(outdir, '%02d.webp' % i if k == 1 else '%02d-%d.webp' % (i, k))
+                try:
+                    raw = fetch_original(base)
+                except Exception as e:
+                    if k == 1:
+                        print('  %02d  не скачалось: %s' % (i, e))
+                    break
+                if to_webp(raw, dst):
+                    saved += 1
+                time.sleep(0.25)   # не долбим чужой сайт
+            if saved:
                 got += 1
-                print('  %02d  ✓ %d КБ → %s' % (i, len(raw) // 1024, os.path.basename(dst)))
-            time.sleep(0.3)   # не долбим чужой сайт
-        print('  итого заменено: %d из %d' % (got, len(items)))
+                frames += saved
+                print('  %02d  ✓ кадров: %d' % (i, saved))
+        print('  итого объектов %d из %d, кадров %d' % (got, len(items), frames))
 
 
 if __name__ == '__main__':

@@ -109,6 +109,11 @@ window.LP = {
    "p1": 439000,
    "p2": 0,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik/"
   },
   {
@@ -118,6 +123,11 @@ window.LP = {
    "p1": 439000,
    "p2": 0,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp",
+    "img/02-2.webp",
+    "img/02-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2/"
   },
   {
@@ -127,6 +137,11 @@ window.LP = {
    "p1": 439000,
    "p2": 0,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp",
+    "img/03-2.webp",
+    "img/03-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-1/"
   },
   {
@@ -136,6 +151,11 @@ window.LP = {
    "p1": 449000,
    "p2": 0,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp",
+    "img/04-2.webp",
+    "img/04-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1/"
   },
   {
@@ -145,6 +165,11 @@ window.LP = {
    "p1": 449000,
    "p2": 0,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp",
+    "img/05-2.webp",
+    "img/05-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1-1/"
   },
   {
@@ -154,6 +179,11 @@ window.LP = {
    "p1": 449000,
    "p2": 0,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp",
+    "img/06-2.webp",
+    "img/06-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1/"
   }
  ],
@@ -263,10 +293,22 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
   "img/02.webp",
+  "img/02-2.webp",
+  "img/02-3.webp",
   "img/03.webp",
+  "img/03-2.webp",
+  "img/03-3.webp",
   "img/04.webp",
+  "img/04-2.webp",
+  "img/04-3.webp",
   "img/05.webp",
-  "img/06.webp"
+  "img/05-2.webp",
+  "img/05-3.webp",
+  "img/06.webp",
+  "img/06-2.webp",
+  "img/06-3.webp"
  ]
 };

@@ -139,6 +139,13 @@ window.LP = {
    "p1": 767994,
    "p2": 1350000,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp",
+    "img/01-4.webp",
+    "img/01-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-belyj-kamin-albion-s-topkoj-liseo-castiron/"
   },
   {
@@ -148,6 +155,14 @@ window.LP = {
    "p1": 722464,
    "p2": 1355786,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp",
+    "img/02-2.webp",
+    "img/02-3.webp",
+    "img/02-4.webp",
+    "img/02-5.webp",
+    "img/02-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-biokamina-izraztsami-albion-v-majolikovoj-glazuri/"
   },
   {
@@ -157,6 +172,14 @@ window.LP = {
    "p1": 1095310,
    "p2": 1850000,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp",
+    "img/03-2.webp",
+    "img/03-3.webp",
+    "img/03-4.webp",
+    "img/03-5.webp",
+    "img/03-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-tyulpan-s-g-obraznoj-topkoj-ekokamin-alfa-1000-rb/"
   },
   {
@@ -166,6 +189,13 @@ window.LP = {
    "p1": 793469,
    "p2": 1150000,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp",
+    "img/04-2.webp",
+    "img/04-3.webp",
+    "img/04-4.webp",
+    "img/04-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_komplekt-kaminnoj-oblitsovki-tyulpan-tsvet-arktika/"
   },
   {
@@ -175,6 +205,9 @@ window.LP = {
    "p1": 1001758,
    "p2": 2084728,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-versal-v-sinem-tsvete/"
   },
   {
@@ -184,6 +217,14 @@ window.LP = {
    "p1": 969760,
    "p2": 1950000,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp",
+    "img/06-2.webp",
+    "img/06-3.webp",
+    "img/06-4.webp",
+    "img/06-5.webp",
+    "img/06-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-s-p-obraznoj-topkoj-v-oblitsovke-bristol-v-tsvete-chernaya-noch/"
   },
   {
@@ -193,6 +234,12 @@ window.LP = {
    "p1": 1800849,
    "p2": 2650000,
    "img": "img/07.webp",
+   "photos": [
+    "img/07.webp",
+    "img/07-2.webp",
+    "img/07-3.webp",
+    "img/07-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_dekorativnyj-kamin-s-ochagom-airtone-andalle-1000-oblitsovan-izraztsami-kollektsii-dorf-spetsialno-dlya-restorana-5013/"
   },
   {
@@ -202,6 +249,9 @@ window.LP = {
    "p1": 612738,
    "p2": 1433372,
    "img": "img/09.webp",
+   "photos": [
+    "img/09.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-art-nuvo-1/"
   },
   {
@@ -211,6 +261,14 @@ window.LP = {
    "p1": 1464041,
    "p2": 2552550,
    "img": "img/10.webp",
+   "photos": [
+    "img/10.webp",
+    "img/10-2.webp",
+    "img/10-3.webp",
+    "img/10-4.webp",
+    "img/10-5.webp",
+    "img/10-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-astov-p2s-v-oblitsovke-ptitsy/"
   },
   {
@@ -220,6 +278,13 @@ window.LP = {
    "p1": 1426640,
    "p2": 2241366,
    "img": "img/11.webp",
+   "photos": [
+    "img/11.webp",
+    "img/11-2.webp",
+    "img/11-3.webp",
+    "img/11-4.webp",
+    "img/11-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-vizantiya-v-rospisi-oliva/"
   },
   {
@@ -229,6 +294,14 @@ window.LP = {
    "p1": 920251,
    "p2": 1850000,
    "img": "img/12.webp",
+   "photos": [
+    "img/12.webp",
+    "img/12-2.webp",
+    "img/12-3.webp",
+    "img/12-4.webp",
+    "img/12-5.webp",
+    "img/12-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-klassicheskom-stile-iz-kollektsii-luna-i-topkoj-spartherm-linear-4s-arte-1672/"
   },
   {
@@ -238,6 +311,11 @@ window.LP = {
    "p1": 381912,
    "p2": 950000,
    "img": "img/13.webp",
+   "photos": [
+    "img/13.webp",
+    "img/13-2.webp",
+    "img/13-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnyj-portal-universal-tsvet-arktika/"
   },
   {
@@ -247,6 +325,13 @@ window.LP = {
    "p1": 356866,
    "p2": 950000,
    "img": "img/14.webp",
+   "photos": [
+    "img/14.webp",
+    "img/14-2.webp",
+    "img/14-3.webp",
+    "img/14-4.webp",
+    "img/14-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-uglovogo-kamina-izraztsami-universal/"
   },
   {
@@ -256,6 +341,13 @@ window.LP = {
    "p1": 734935,
    "p2": 1220000,
    "img": "img/15.webp",
+   "photos": [
+    "img/15.webp",
+    "img/15-2.webp",
+    "img/15-3.webp",
+    "img/15-4.webp",
+    "img/15-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izraztsovyj-kamin-kollektsii-gollandiya-s-drovnikom-i-ruchnoj-rospisyu/"
   },
   {
@@ -265,6 +357,13 @@ window.LP = {
    "p1": 835350,
    "p2": 1580000,
    "img": "img/16.webp",
+   "photos": [
+    "img/16.webp",
+    "img/16-2.webp",
+    "img/16-3.webp",
+    "img/16-4.webp",
+    "img/16-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-izraztsami-kollektsii-bravo-s-rospisyu/"
   },
   {
@@ -274,6 +373,13 @@ window.LP = {
    "p1": 1712668,
    "p2": 2830000,
    "img": "img/17.webp",
+   "photos": [
+    "img/17.webp",
+    "img/17-2.webp",
+    "img/17-3.webp",
+    "img/17-4.webp",
+    "img/17-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-kamina-do-polki-s-drovnikami-po-bokam-v-kollektsii-soho-6749/"
   },
   {
@@ -283,6 +389,11 @@ window.LP = {
    "p1": 875523,
    "p2": 1470000,
    "img": "img/18.webp",
+   "photos": [
+    "img/18.webp",
+    "img/18-3.webp",
+    "img/18-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-usadba-s-podiumami-i-prizmatichnoj-uglovoj-topkoj/"
   },
   {
@@ -292,6 +403,13 @@ window.LP = {
    "p1": 808246,
    "p2": 1450000,
    "img": "img/19.webp",
+   "photos": [
+    "img/19.webp",
+    "img/19-2.webp",
+    "img/19-3.webp",
+    "img/19-4.webp",
+    "img/19-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnaya-oblitsovka-ptichki-dekorativnaya-palitra-lesnaya/"
   },
   {
@@ -301,6 +419,9 @@ window.LP = {
    "p1": 949823,
    "p2": 1945720,
    "img": "img/20.webp",
+   "photos": [
+    "img/20.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-elegans-v-glazuri-lesnoj-tuman/"
   },
   {
@@ -310,6 +431,9 @@ window.LP = {
    "p1": 907913,
    "p2": 1367144,
    "img": "img/21.webp",
+   "photos": [
+    "img/21.webp"
+   ],
    "url": ""
   },
   {
@@ -319,6 +443,11 @@ window.LP = {
    "p1": 810963,
    "p2": 1380000,
    "img": "img/22.webp",
+   "photos": [
+    "img/22.webp",
+    "img/22-2.webp",
+    "img/22-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-elektrokamina-v-interere/cd_elektrokamin-belogo-tsveta-v-izraztsah-kollektsii-venskaya-99999/"
   },
   {
@@ -328,6 +457,14 @@ window.LP = {
    "p1": 2100676,
    "p2": 3130000,
    "img": "img/23.webp",
+   "photos": [
+    "img/23.webp",
+    "img/23-2.webp",
+    "img/23-3.webp",
+    "img/23-4.webp",
+    "img/23-5.webp",
+    "img/23-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-kamin-v-oblitsovke-iz-kollektsii-dorf-s-topkoj-brunner-stil-kamin-classic-6282/"
   }
  ],
@@ -548,16 +685,28 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
+  "img/01-4.webp",
+  "img/01-5.webp",
   "img/02.webp",
+  "img/02-2.webp",
+  "img/02-3.webp",
+  "img/02-4.webp",
+  "img/02-5.webp",
+  "img/02-6.webp",
   "img/03.webp",
+  "img/03-2.webp",
+  "img/03-3.webp",
+  "img/03-4.webp",
+  "img/03-5.webp",
+  "img/03-6.webp",
   "img/04.webp",
+  "img/04-2.webp",
+  "img/04-3.webp",
+  "img/04-4.webp",
+  "img/04-5.webp",
   "img/05.webp",
-  "img/06.webp",
-  "img/07.webp",
-  "img/09.webp",
-  "img/10.webp",
-  "img/11.webp",
-  "img/12.webp",
-  "img/13.webp"
+  "img/06.webp"
  ]
 };

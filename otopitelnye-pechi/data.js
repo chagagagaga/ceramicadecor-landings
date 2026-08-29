@@ -126,6 +126,9 @@ window.LP = {
    "p1": 1370832,
    "p2": 0,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/"
   },
   {
@@ -135,6 +138,12 @@ window.LP = {
    "p1": 295243,
    "p2": 0,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp",
+    "img/02-2.webp",
+    "img/02-3.webp",
+    "img/02-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/"
   },
   {
@@ -144,6 +153,13 @@ window.LP = {
    "p1": 876023,
    "p2": 0,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp",
+    "img/03-2.webp",
+    "img/03-3.webp",
+    "img/03-4.webp",
+    "img/03-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/"
   },
   {
@@ -153,6 +169,14 @@ window.LP = {
    "p1": 912750,
    "p2": 0,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp",
+    "img/04-2.webp",
+    "img/04-3.webp",
+    "img/04-4.webp",
+    "img/04-5.webp",
+    "img/04-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-5393/"
   },
   {
@@ -162,6 +186,11 @@ window.LP = {
    "p1": 680401,
    "p2": 0,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp",
+    "img/05-2.webp",
+    "img/05-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topochnoj-dverkoj-vezuvij-9525/"
   },
   {
@@ -171,6 +200,12 @@ window.LP = {
    "p1": 785852,
    "p2": 0,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp",
+    "img/06-2.webp",
+    "img/06-3.webp",
+    "img/06-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-lesnaya/"
   },
   {
@@ -180,6 +215,9 @@ window.LP = {
    "p1": 691369,
    "p2": 0,
    "img": "img/07.webp",
+   "photos": [
+    "img/07.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/"
   },
   {
@@ -189,6 +227,12 @@ window.LP = {
    "p1": 375169,
    "p2": 0,
    "img": "img/08.webp",
+   "photos": [
+    "img/08.webp",
+    "img/08-2.webp",
+    "img/08-3.webp",
+    "img/08-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/"
   },
   {
@@ -198,6 +242,12 @@ window.LP = {
    "p1": 1368434,
    "p2": 0,
    "img": "img/09.webp",
+   "photos": [
+    "img/09.webp",
+    "img/09-2.webp",
+    "img/09-3.webp",
+    "img/09-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf/"
   },
   {
@@ -207,6 +257,12 @@ window.LP = {
    "p1": 968320,
    "p2": 0,
    "img": "img/10.webp",
+   "photos": [
+    "img/10.webp",
+    "img/10-2.webp",
+    "img/10-3.webp",
+    "img/10-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/"
   }
  ],
@@ -349,13 +405,27 @@ window.LP = {
  "gallery": [
   "img/01.webp",
   "img/02.webp",
+  "img/02-2.webp",
+  "img/02-3.webp",
+  "img/02-4.webp",
   "img/03.webp",
+  "img/03-2.webp",
+  "img/03-3.webp",
+  "img/03-4.webp",
+  "img/03-5.webp",
   "img/04.webp",
+  "img/04-2.webp",
+  "img/04-3.webp",
+  "img/04-4.webp",
+  "img/04-5.webp",
+  "img/04-6.webp",
   "img/05.webp",
+  "img/05-2.webp",
+  "img/05-3.webp",
   "img/06.webp",
-  "img/07.webp",
-  "img/08.webp",
-  "img/09.webp",
-  "img/10.webp"
+  "img/06-2.webp",
+  "img/06-3.webp",
+  "img/06-4.webp",
+  "img/07.webp"
  ]
 };

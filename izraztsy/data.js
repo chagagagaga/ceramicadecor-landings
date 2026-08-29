@@ -140,6 +140,11 @@ window.LP = {
    "p1": 4190,
    "p2": 0,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_relefnyj-izrazets-v-goluboj-rospisi-s-sinej-ramkoj-kollektsii-pastoral-150h150-art-71157-52089-11455/"
   },
   {
@@ -149,6 +154,9 @@ window.LP = {
    "p1": 2881,
    "p2": 0,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-s-lepnym-relefom-tyulpany-belogo-tsveta-kollektsii-tyulpan-art-77073-51201/"
   },
   {
@@ -158,6 +166,9 @@ window.LP = {
    "p1": 2864,
    "p2": 0,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/soho/izraztsy-soho-v-hvojnom-tsvete/cd_sovremennyj-odnotonnyj-relefnyj-izrazets-soho-v-zelenom-tsvete-kollektsii-soho-art-77150-50567/"
   },
   {
@@ -167,6 +178,9 @@ window.LP = {
    "p1": 5682,
    "p2": 0,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_muravlenyj-izrazets-kollektsii-dorf-art-77275-53050/"
   },
   {
@@ -176,6 +190,9 @@ window.LP = {
    "p1": 4735,
    "p2": 0,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_belyj-izrazets-s-lepnym-relefom-kollektsii-dorf-art-77275-51201/"
   },
   {
@@ -185,6 +202,9 @@ window.LP = {
    "p1": 5445,
    "p2": 0,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-tsvete-seryj-grafit-kollektsii-dorf-art-77275-50474/"
   },
   {
@@ -194,6 +214,9 @@ window.LP = {
    "p1": 1424,
    "p2": 0,
    "img": "img/07.webp",
+   "photos": [
+    "img/07.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/albion/izraztsy-albion-v-tsvete-belyj-antik/cd_vstavka-s-lepnym-relefom-albion-white-76046-51201/"
   },
   {
@@ -203,6 +226,9 @@ window.LP = {
    "p1": 1771,
    "p2": 0,
    "img": "img/08.webp",
+   "photos": [
+    "img/08.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-v-belom-tsvete-15x15-s-lepnym-relefom-kollektsii-albion-art-71068-51201/"
   },
   {
@@ -212,6 +238,9 @@ window.LP = {
    "p1": 3713,
    "p2": 0,
    "img": "img/09.webp",
+   "photos": [
+    "img/09.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-lepnoj-obemnyj-20h20-kollektsii-russkaya-etnika-art-77874-53050/"
   },
   {
@@ -221,6 +250,11 @@ window.LP = {
    "p1": 4468,
    "p2": 0,
    "img": "img/10.webp",
+   "photos": [
+    "img/10.webp",
+    "img/10-2.webp",
+    "img/10-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_plitka-relefnaya-200h200h12-mm-azulezhu-77641-52151-12125/"
   },
   {
@@ -230,6 +264,9 @@ window.LP = {
    "p1": 5231,
    "p2": 0,
    "img": "img/11.webp",
+   "photos": [
+    "img/11.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_Kaminnoe-panno-Versal-5-9-relefnyj-izrazec-dlya-dekora-77255-50554/"
   },
   {
@@ -239,6 +276,11 @@ window.LP = {
    "p1": 3891,
    "p2": 0,
    "img": "img/12.webp",
+   "photos": [
+    "img/12.webp",
+    "img/12-2.webp",
+    "img/12-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-krasnogo-tsveta-s-sinej-rospisyu-relefnyj-kollektsii-suvenir-art-71139-50555-11940-1/"
   },
   {
@@ -248,6 +290,9 @@ window.LP = {
    "p1": 4919,
    "p2": 0,
    "img": "img/13.webp",
+   "photos": [
+    "img/13.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-s-rumpoj/cd_izrazets-s-lepnym-relefom-v-krasno-zelenoj-rospisi-kollektsii-art-nuvo-art-71014r-52091-11505/"
   },
   {
@@ -257,6 +302,14 @@ window.LP = {
    "p1": 4230,
    "p2": 0,
    "img": "img/14.webp",
+   "photos": [
+    "img/14.webp",
+    "img/14-2.webp",
+    "img/14-3.webp",
+    "img/14-4.webp",
+    "img/14-5.webp",
+    "img/14-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnoj-liliej-v-korichnevoj-rospisi-kollektsii-art-nuvo-art-71023-52095-11506/"
   },
   {
@@ -266,6 +319,9 @@ window.LP = {
    "p1": 4276,
    "p2": 0,
    "img": "img/15.webp",
+   "photos": [
+    "img/15.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_belyj-izrazets-s-lepnym-relefom-kollektsii-venskaya-art-77919-51261/"
   },
   {
@@ -275,6 +331,14 @@ window.LP = {
    "p1": 8545,
    "p2": 0,
    "img": "img/16.webp",
+   "photos": [
+    "img/16.webp",
+    "img/16-2.webp",
+    "img/16-3.webp",
+    "img/16-4.webp",
+    "img/16-5.webp",
+    "img/16-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-v-stile-provans-s-buketom-tsvetov-v-okantovke-kollektsii-kameya-art-77133-52150-12005-10/"
   },
   {
@@ -284,6 +348,14 @@ window.LP = {
    "p1": 10745,
    "p2": 0,
    "img": "img/17.webp",
+   "photos": [
+    "img/17.webp",
+    "img/17-2.webp",
+    "img/17-3.webp",
+    "img/17-4.webp",
+    "img/17-5.webp",
+    "img/17-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-s-goluboj-rospisyu-s-syuzhetom-zima-kollektsii-kameya-art-77133-52089-11736-6/"
   },
   {
@@ -293,6 +365,13 @@ window.LP = {
    "p1": 6147,
    "p2": 0,
    "img": "img/18.webp",
+   "photos": [
+    "img/18.webp",
+    "img/18-2.webp",
+    "img/18-3.webp",
+    "img/18-4.webp",
+    "img/18-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnymi-balyasinami-s-oranzhevoj-rospisyu-15h15-kollektsii-usadba-art-76111-52089-11589/"
   },
   {
@@ -302,6 +381,9 @@ window.LP = {
    "p1": 2248,
    "p2": 0,
    "img": "img/19.webp",
+   "photos": [
+    "img/19.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-hudozhestvennym-relefnym-dekorom-serogo-tsveta-kollektsii-elegans-150h150-art-71010-50518/"
   },
   {
@@ -311,6 +393,10 @@ window.LP = {
    "p1": 8398,
    "p2": 0,
    "img": "img/20.webp",
+   "photos": [
+    "img/20.webp",
+    "img/20-2.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/radiusnye-kruglye-izraztsy/cd_izrazets-relefnyj-dlya-krugloj-pechi-s-yarkoj-rospisyu-neapol-kollektsii-neapol-art-77853-52089-11711/"
   },
   {
@@ -320,6 +406,14 @@ window.LP = {
    "p1": 4465,
    "p2": 0,
    "img": "img/21.webp",
+   "photos": [
+    "img/21.webp",
+    "img/21-2.webp",
+    "img/21-3.webp",
+    "img/21-4.webp",
+    "img/21-5.webp",
+    "img/21-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-krasnoj-okantovke-s-rospisyu-zolotom-kollektsii-vizantiya-art-77459-52111-11725g/"
   },
   {
@@ -329,6 +423,13 @@ window.LP = {
    "p1": 6772,
    "p2": 0,
    "img": "img/22.webp",
+   "photos": [
+    "img/22.webp",
+    "img/22-2.webp",
+    "img/22-3.webp",
+    "img/22-4.webp",
+    "img/22-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefnymi-ptitsami-v-zheltoj-rospisi-kollektsii-ptitsy-200h200-art-77012-50555-12131/"
   }
  ],
@@ -464,6 +565,8 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
   "img/02.webp",
   "img/03.webp",
   "img/04.webp",
@@ -473,7 +576,17 @@ window.LP = {
   "img/08.webp",
   "img/09.webp",
   "img/10.webp",
+  "img/10-2.webp",
+  "img/10-3.webp",
   "img/11.webp",
-  "img/12.webp"
+  "img/12.webp",
+  "img/12-2.webp",
+  "img/12-3.webp",
+  "img/13.webp",
+  "img/14.webp",
+  "img/14-2.webp",
+  "img/14-3.webp",
+  "img/14-4.webp",
+  "img/14-5.webp"
  ]
 };

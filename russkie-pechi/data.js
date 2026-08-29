@@ -127,6 +127,14 @@ window.LP = {
    "p1": 5094314,
    "p2": 0,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp",
+    "img/01-4.webp",
+    "img/01-5.webp",
+    "img/01-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/"
   },
   {
@@ -136,6 +144,13 @@ window.LP = {
    "p1": 2181909,
    "p2": 0,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp",
+    "img/02-2.webp",
+    "img/02-3.webp",
+    "img/02-4.webp",
+    "img/02-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/"
   },
   {
@@ -145,6 +160,11 @@ window.LP = {
    "p1": 963875,
    "p2": 0,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp",
+    "img/03-2.webp",
+    "img/03-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/"
   },
   {
@@ -154,6 +174,13 @@ window.LP = {
    "p1": 1046948,
    "p2": 0,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp",
+    "img/04-2.webp",
+    "img/04-3.webp",
+    "img/04-4.webp",
+    "img/04-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/"
   },
   {
@@ -163,6 +190,10 @@ window.LP = {
    "p1": 1329259,
    "p2": 0,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp",
+    "img/05-2.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/"
   },
   {
@@ -172,6 +203,12 @@ window.LP = {
    "p1": 2371049,
    "p2": 0,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp",
+    "img/06-2.webp",
+    "img/06-3.webp",
+    "img/06-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/"
   },
   {
@@ -181,6 +218,12 @@ window.LP = {
    "p1": 2169294,
    "p2": 0,
    "img": "img/07.webp",
+   "photos": [
+    "img/07.webp",
+    "img/07-2.webp",
+    "img/07-3.webp",
+    "img/07-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/"
   },
   {
@@ -190,6 +233,14 @@ window.LP = {
    "p1": 4168727,
    "p2": 0,
    "img": "img/08.webp",
+   "photos": [
+    "img/08.webp",
+    "img/08-2.webp",
+    "img/08-3.webp",
+    "img/08-4.webp",
+    "img/08-5.webp",
+    "img/08-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/"
   },
   {
@@ -199,6 +250,12 @@ window.LP = {
    "p1": 2543257,
    "p2": 0,
    "img": "img/09.webp",
+   "photos": [
+    "img/09.webp",
+    "img/09-2.webp",
+    "img/09-3.webp",
+    "img/09-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/"
   },
   {
@@ -208,6 +265,13 @@ window.LP = {
    "p1": 3966639,
    "p2": 0,
    "img": "img/10.webp",
+   "photos": [
+    "img/10.webp",
+    "img/10-2.webp",
+    "img/10-3.webp",
+    "img/10-4.webp",
+    "img/10-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/"
   },
   {
@@ -217,6 +281,13 @@ window.LP = {
    "p1": 2631640,
    "p2": 0,
    "img": "img/11.webp",
+   "photos": [
+    "img/11.webp",
+    "img/11-2.webp",
+    "img/11-3.webp",
+    "img/11-4.webp",
+    "img/11-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/"
   }
  ],
@@ -358,15 +429,28 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
+  "img/01-4.webp",
+  "img/01-5.webp",
+  "img/01-6.webp",
   "img/02.webp",
+  "img/02-2.webp",
+  "img/02-3.webp",
+  "img/02-4.webp",
+  "img/02-5.webp",
   "img/03.webp",
+  "img/03-2.webp",
+  "img/03-3.webp",
   "img/04.webp",
+  "img/04-2.webp",
+  "img/04-3.webp",
+  "img/04-4.webp",
+  "img/04-5.webp",
   "img/05.webp",
+  "img/05-2.webp",
   "img/06.webp",
-  "img/07.webp",
-  "img/08.webp",
-  "img/09.webp",
-  "img/10.webp",
-  "img/11.webp"
+  "img/06-2.webp",
+  "img/06-3.webp"
  ]
 };

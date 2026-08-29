@@ -498,12 +498,15 @@
       });
     }
 
-    function card(c) {
-      return '<article class="card">' +
-        '<div class="card__media">' +
+    function card(c, idx) {
+      var n = (c.photos || []).length;
+      return '<article class="card" data-card="' + idx + '">' +
+        '<button type="button" class="card__media" ' + (n > 1 ? 'data-gal="' + idx + '"' : 'disabled') +
+          ' aria-label="' + (n > 1 ? 'Открыть галерею: ' + esc(c.title) : esc(c.title)) + '">' +
           (c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="450">' : '') +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
-        '</div>' +
+          (n > 1 ? '<span class="card__count">' + n + ' фото</span>' : '') +
+        '</button>' +
         '<div class="card__body">' +
           '<h3 class="card__name">' + esc(c.title) + '</h3>' +
           (c.desc ? '<p class="card__desc">' + esc(c.desc) + '</p>' : '') +
@@ -522,7 +525,8 @@
     function draw() {
       var list = P.catalog.filter(match);
       var shown = expanded ? list : list.slice(0, LIMIT);
-      grid.innerHTML = shown.map(card).join('');
+      // индекс в общем каталоге — чтобы галерея открыла кадры нужного объекта
+      grid.innerHTML = shown.map(function (c) { return card(c, P.catalog.indexOf(c)); }).join('');
       if (empty) empty.hidden = list.length > 0;
       var more = $('[data-cards-more]');
       if (more) { more.hidden = expanded || list.length <= LIMIT; more.textContent = 'Показать ещё ' + (list.length - LIMIT); }
@@ -644,11 +648,21 @@
         return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
       }).join('');
       var lb = null, cur = 0;
+      // Набор кадров и подпись задаются при открытии: из общей галереи
+      // раздела или из фотографий конкретного объекта.
+      var set = P.gallery, caption = P.title + ' — реализованный проект';
       function show() {
-        cur = (cur + P.gallery.length) % P.gallery.length;
-        $('img', lb).src = P.gallery[cur];
-        $('figcaption', lb).textContent = P.title + ' — реализованный проект · ' + (cur + 1) + '/' + P.gallery.length;
+        cur = (cur + set.length) % set.length;
+        $('img', lb).src = set[cur];
+        $('figcaption', lb).textContent = caption + ' · ' + (cur + 1) + '/' + set.length;
       }
+      // Открыть галерею конкретного объекта — вызывается из карточки каталога
+      window.LPGallery = function (photos, title, start) {
+        if (!photos || !photos.length) return;
+        set = photos; caption = title; cur = start || 0;
+        if (!lb) lb = makeLb();
+        show(); lb.hidden = false;
+      };
       function makeLb() {
         var el = document.createElement('div');
         el.className = 'lightbox'; el.hidden = true;
@@ -680,6 +694,7 @@
       gal.addEventListener('click', function (e) {
         var b = e.target.closest('[data-i]'); if (!b) return;
         if (!lb) lb = makeLb();
+        set = P.gallery; caption = P.title + ' — реализованный проект';
         cur = +b.dataset.i; show(); lb.hidden = false;
       });
     }
@@ -748,6 +763,16 @@
       if (a && a.getAttribute('href').length > 1) {
         var t = document.querySelector(a.getAttribute('href'));
         if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+      // Клик по фото карточки открывает галерею объекта, а не форму
+      var gal = e.target.closest('[data-gal]');
+      if (gal && window.LPGallery && window.LP) {
+        var it = window.LP.catalog[+gal.dataset.gal];
+        if (it && it.photos && it.photos.length > 1) {
+          goal('gallery_open', { item: it.title });
+          window.LPGallery(it.photos, it.title, 0);
+          return;
+        }
       }
       var lead = e.target.closest('[data-lead]');
       if (lead && Calc) { goal('cta_click', { source: lead.dataset.src || 'cta' }); Calc.open(); }

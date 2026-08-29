@@ -899,8 +899,22 @@ def build():
                 "p1": it["price_ceramic"],
                 "p2": it.get("price_turnkey") or 0,
                 "img": it.get("img", ""),
+                "photos": [],          # заполняется ниже по факту наличия файлов
                 "url": it.get("url", ""),
             })
+        # Кадров у объекта обычно 4–8: первый — главный (NN.webp), остальные
+        # NN-2…NN-6. Галерея из них убедительнее одной картинки.
+        for pos, c in zip([p for p in range(1, len(items) + 1) if p not in skip], cards):
+            frames = []
+            main = os.path.join(ROOT, slug, 'img', '%02d.webp' % pos)
+            if os.path.exists(main):
+                frames.append('img/%02d.webp' % pos)
+            for k in range(2, 7):
+                f = os.path.join(ROOT, slug, 'img', '%02d-%d.webp' % (pos, k))
+                if os.path.exists(f):
+                    frames.append('img/%02d-%d.webp' % (pos, k))
+            c["photos"] = frames
+
         collections = []
         for c in cards:
             if c["collection"] and c["collection"] not in collections:
@@ -933,7 +947,7 @@ def build():
             "steps": STEPS,
             "guarantees": [dict(g, svg=ICONS.get(g.get("icon", ""), "")) for g in GUARANTEES],
             "faq": [{"q": a, "a": b} for a, b in P["faq"]],
-            "gallery": [c["img"] for c in cards if c["img"]][:12],
+            "gallery": [f for c in cards for f in (c["photos"] or [c["img"]]) if f][:24],
         }
         io.open(os.path.join(ROOT, slug, 'data.js'), 'w', encoding='utf-8').write(
             "/* Контент направления «%s». Правится здесь — вёрстка и логика общие. */\n"

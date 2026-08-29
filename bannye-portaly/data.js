@@ -125,6 +125,14 @@ window.LP = {
    "p1": 1113067,
    "p2": 0,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp",
+    "img/01-4.webp",
+    "img/01-5.webp",
+    "img/01-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/"
   },
   {
@@ -134,6 +142,13 @@ window.LP = {
    "p1": 410384,
    "p2": 0,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp",
+    "img/02-2.webp",
+    "img/02-3.webp",
+    "img/02-4.webp",
+    "img/02-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/"
   },
   {
@@ -143,6 +158,13 @@ window.LP = {
    "p1": 530997,
    "p2": 0,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp",
+    "img/03-2.webp",
+    "img/03-3.webp",
+    "img/03-4.webp",
+    "img/03-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/"
   },
   {
@@ -152,6 +174,13 @@ window.LP = {
    "p1": 381944,
    "p2": 0,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp",
+    "img/04-2.webp",
+    "img/04-3.webp",
+    "img/04-4.webp",
+    "img/04-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/"
   },
   {
@@ -161,6 +190,13 @@ window.LP = {
    "p1": 613386,
    "p2": 0,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp",
+    "img/05-2.webp",
+    "img/05-3.webp",
+    "img/05-4.webp",
+    "img/05-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/"
   },
   {
@@ -170,6 +206,9 @@ window.LP = {
    "p1": 572034,
    "p2": 0,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/"
   },
   {
@@ -179,6 +218,14 @@ window.LP = {
    "p1": 222779,
    "p2": 0,
    "img": "img/07.webp",
+   "photos": [
+    "img/07.webp",
+    "img/07-2.webp",
+    "img/07-3.webp",
+    "img/07-4.webp",
+    "img/07-5.webp",
+    "img/07-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/"
   },
   {
@@ -188,6 +235,13 @@ window.LP = {
    "p1": 281886,
    "p2": 0,
    "img": "img/08.webp",
+   "photos": [
+    "img/08.webp",
+    "img/08-2.webp",
+    "img/08-3.webp",
+    "img/08-4.webp",
+    "img/08-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/"
   },
   {
@@ -197,6 +251,13 @@ window.LP = {
    "p1": 523447,
    "p2": 0,
    "img": "img/09.webp",
+   "photos": [
+    "img/09.webp",
+    "img/09-2.webp",
+    "img/09-3.webp",
+    "img/09-4.webp",
+    "img/09-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/"
   }
  ],
@@ -338,13 +399,28 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
+  "img/01-4.webp",
+  "img/01-5.webp",
+  "img/01-6.webp",
   "img/02.webp",
+  "img/02-2.webp",
+  "img/02-3.webp",
+  "img/02-4.webp",
+  "img/02-5.webp",
   "img/03.webp",
+  "img/03-2.webp",
+  "img/03-3.webp",
+  "img/03-4.webp",
+  "img/03-5.webp",
   "img/04.webp",
+  "img/04-2.webp",
+  "img/04-3.webp",
+  "img/04-4.webp",
+  "img/04-5.webp",
   "img/05.webp",
-  "img/06.webp",
-  "img/07.webp",
-  "img/08.webp",
-  "img/09.webp"
+  "img/05-2.webp",
+  "img/05-3.webp"
  ]
 };

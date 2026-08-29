@@ -271,7 +271,17 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .cards > * { flex: 0 1 calc((100% - 3rem) / 3); min-width: 290px; }
 .card { display: flex; flex-direction: column; background: var(--bg-lighter); border: 1px solid var(--border); transition: border-color var(--transition); }
 .card:hover { border-color: var(--border-light); }
-.card__media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #f4f2ee; }
+.card__media { position: relative; display: block; width: 100%; padding: 0; border: 0; aspect-ratio: 4 / 3; overflow: hidden; background: #f4f2ee; cursor: pointer; }
+.card__media[disabled] { cursor: default; }
+/* Счётчик кадров: объект с восемью фотографиями доказывает реальность
+   лучше любого текста — но только если видно, что их восемь. */
+.card__count {
+  position: absolute; right: .6rem; bottom: .6rem; z-index: 2;
+  padding: .3em .65em; border-radius: 2px;
+  background: rgba(16,16,16,.82); backdrop-filter: blur(6px);
+  color: #fff; font-size: .78rem; font-weight: 500; letter-spacing: .02em;
+}
+.card__media:not([disabled]):hover .card__count { background: var(--primary); }
 .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.3,1); }
 .card:hover .card__media img { transform: scale(1.04); }
 .card__tag { position: absolute; top: .7rem; left: .7rem; padding: .25em .6em; background: rgba(16,16,16,.8); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--amber); }

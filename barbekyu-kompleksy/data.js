@@ -145,6 +145,14 @@ window.LP = {
    "p1": 1368000,
    "p2": 3020000,
    "img": "img/01.webp",
+   "photos": [
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp",
+    "img/01-4.webp",
+    "img/01-5.webp",
+    "img/01-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/"
   },
   {
@@ -154,6 +162,13 @@ window.LP = {
    "p1": 1194000,
    "p2": 2890000,
    "img": "img/02.webp",
+   "photos": [
+    "img/02.webp",
+    "img/02-2.webp",
+    "img/02-3.webp",
+    "img/02-4.webp",
+    "img/02-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/"
   },
   {
@@ -163,6 +178,12 @@ window.LP = {
    "p1": 3434000,
    "p2": 6355000,
    "img": "img/03.webp",
+   "photos": [
+    "img/03.webp",
+    "img/03-2.webp",
+    "img/03-3.webp",
+    "img/03-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/"
   },
   {
@@ -172,6 +193,11 @@ window.LP = {
    "p1": 1628000,
    "p2": 2190000,
    "img": "img/04.webp",
+   "photos": [
+    "img/04.webp",
+    "img/04-2.webp",
+    "img/04-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-versal-tsvet-bolotnyj-1311/"
   },
   {
@@ -181,6 +207,14 @@ window.LP = {
    "p1": 4243000,
    "p2": 7893000,
    "img": "img/05.webp",
+   "photos": [
+    "img/05.webp",
+    "img/05-2.webp",
+    "img/05-3.webp",
+    "img/05-4.webp",
+    "img/05-5.webp",
+    "img/05-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/"
   },
   {
@@ -190,6 +224,11 @@ window.LP = {
    "p1": 1172000,
    "p2": 2610000,
    "img": "img/06.webp",
+   "photos": [
+    "img/06.webp",
+    "img/06-2.webp",
+    "img/06-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/"
   },
   {
@@ -199,6 +238,14 @@ window.LP = {
    "p1": 4629000,
    "p2": 8184000,
    "img": "img/07.webp",
+   "photos": [
+    "img/07.webp",
+    "img/07-2.webp",
+    "img/07-3.webp",
+    "img/07-4.webp",
+    "img/07-5.webp",
+    "img/07-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/"
   },
   {
@@ -208,6 +255,14 @@ window.LP = {
    "p1": 1658000,
    "p2": 2820000,
    "img": "img/08.webp",
+   "photos": [
+    "img/08.webp",
+    "img/08-2.webp",
+    "img/08-3.webp",
+    "img/08-4.webp",
+    "img/08-5.webp",
+    "img/08-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/"
   },
   {
@@ -217,6 +272,13 @@ window.LP = {
    "p1": 1159000,
    "p2": 2140000,
    "img": "img/09.webp",
+   "photos": [
+    "img/09.webp",
+    "img/09-2.webp",
+    "img/09-3.webp",
+    "img/09-4.webp",
+    "img/09-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/"
   },
   {
@@ -226,6 +288,13 @@ window.LP = {
    "p1": 1778000,
    "p2": 2940000,
    "img": "img/10.webp",
+   "photos": [
+    "img/10.webp",
+    "img/10-2.webp",
+    "img/10-3.webp",
+    "img/10-4.webp",
+    "img/10-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/"
   },
   {
@@ -235,6 +304,14 @@ window.LP = {
    "p1": 3748000,
    "p2": 5750000,
    "img": "img/11.webp",
+   "photos": [
+    "img/11.webp",
+    "img/11-2.webp",
+    "img/11-3.webp",
+    "img/11-4.webp",
+    "img/11-5.webp",
+    "img/11-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/"
   },
   {
@@ -244,6 +321,13 @@ window.LP = {
    "p1": 830000,
    "p2": 2497000,
    "img": "img/12.webp",
+   "photos": [
+    "img/12.webp",
+    "img/12-2.webp",
+    "img/12-3.webp",
+    "img/12-4.webp",
+    "img/12-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/izraztsovye-pechi/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-vizantiya/"
   },
   {
@@ -253,6 +337,14 @@ window.LP = {
    "p1": 7302000,
    "p2": 9430000,
    "img": "img/13.webp",
+   "photos": [
+    "img/13.webp",
+    "img/13-2.webp",
+    "img/13-3.webp",
+    "img/13-4.webp",
+    "img/13-5.webp",
+    "img/13-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/"
   },
   {
@@ -262,6 +354,13 @@ window.LP = {
    "p1": 5066000,
    "p2": 9814000,
    "img": "img/14.webp",
+   "photos": [
+    "img/14.webp",
+    "img/14-2.webp",
+    "img/14-3.webp",
+    "img/14-4.webp",
+    "img/14-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_izraztsovaya-oblitsovka-vizantiya-dlya-pechnogo-kompleksa/"
   },
   {
@@ -271,6 +370,13 @@ window.LP = {
    "p1": 649000,
    "p2": 1320000,
    "img": "img/15.webp",
+   "photos": [
+    "img/15.webp",
+    "img/15-2.webp",
+    "img/15-3.webp",
+    "img/15-4.webp",
+    "img/15-5.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/"
   },
   {
@@ -280,6 +386,14 @@ window.LP = {
    "p1": 3014000,
    "p2": 7560000,
    "img": "img/16.webp",
+   "photos": [
+    "img/16.webp",
+    "img/16-2.webp",
+    "img/16-3.webp",
+    "img/16-4.webp",
+    "img/16-5.webp",
+    "img/16-6.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/"
   },
   {
@@ -289,6 +403,12 @@ window.LP = {
    "p1": 863000,
    "p2": 1880000,
    "img": "img/17.webp",
+   "photos": [
+    "img/17.webp",
+    "img/17-2.webp",
+    "img/17-3.webp",
+    "img/17-4.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/"
   },
   {
@@ -298,6 +418,11 @@ window.LP = {
    "p1": 1759000,
    "p2": 2560000,
    "img": "img/18.webp",
+   "photos": [
+    "img/18.webp",
+    "img/18-2.webp",
+    "img/18-3.webp"
+   ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/"
   }
  ],
@@ -486,16 +611,28 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
+  "img/01-4.webp",
+  "img/01-5.webp",
+  "img/01-6.webp",
   "img/02.webp",
+  "img/02-2.webp",
+  "img/02-3.webp",
+  "img/02-4.webp",
+  "img/02-5.webp",
   "img/03.webp",
+  "img/03-2.webp",
+  "img/03-3.webp",
+  "img/03-4.webp",
   "img/04.webp",
+  "img/04-2.webp",
+  "img/04-3.webp",
   "img/05.webp",
-  "img/06.webp",
-  "img/07.webp",
-  "img/08.webp",
-  "img/09.webp",
-  "img/10.webp",
-  "img/11.webp",
-  "img/12.webp"
+  "img/05-2.webp",
+  "img/05-3.webp",
+  "img/05-4.webp",
+  "img/05-5.webp",
+  "img/05-6.webp"
  ]
 };
