@@ -1,0 +1,3202 @@
+{
+ "bannye-portaly/img/01-2.webp": {
+  "score": 92.5,
+  "k": 72,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/01-3.webp": {
+  "score": 91.8,
+  "k": 66,
+  "r": 737,
+  "s": 80,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/01-4.webp": {
+  "score": 89.1,
+  "k": 56,
+  "r": 735,
+  "s": 79,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/01-5.webp": {
+  "score": 91.7,
+  "k": 72,
+  "r": 734,
+  "s": 82,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/01-6.webp": {
+  "score": 91.7,
+  "k": 75,
+  "r": 735,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/01.webp": {
+  "score": 92.5,
+  "k": 65,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/02-2.webp": {
+  "score": 92.8,
+  "k": 64,
+  "r": 784,
+  "s": 83,
+  "a": 1.4,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/02-3.webp": {
+  "score": 91.8,
+  "k": 65,
+  "r": 1068,
+  "s": 84,
+  "a": 1.03,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/02-4.webp": {
+  "score": 91.7,
+  "k": 72,
+  "r": 735,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/02-5.webp": {
+  "score": 93.0,
+  "k": 67,
+  "r": 794,
+  "s": 82,
+  "a": 1.39,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/02.webp": {
+  "score": 92.5,
+  "k": 62,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/03-2.webp": {
+  "score": 91.7,
+  "k": 71,
+  "r": 734,
+  "s": 82,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/03-3.webp": {
+  "score": 91.7,
+  "k": 80,
+  "r": 734,
+  "s": 77,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/03-4.webp": {
+  "score": 94.2,
+  "k": 75,
+  "r": 843,
+  "s": 86,
+  "a": 1.3,
+  "size": "1x1"
+ },
+ "bannye-portaly/img/03-5.webp": {
+  "score": 89.5,
+  "k": 78,
+  "r": 970,
+  "s": 87,
+  "a": 1.13,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/03.webp": {
+  "score": 93.7,
+  "k": 81,
+  "r": 821,
+  "s": 88,
+  "a": 1.34,
+  "size": "1x1"
+ },
+ "bannye-portaly/img/04-2.webp": {
+  "score": 95.0,
+  "k": 70,
+  "r": 881,
+  "s": 74,
+  "a": 1.25,
+  "size": "1x1"
+ },
+ "bannye-portaly/img/04-3.webp": {
+  "score": 89.9,
+  "k": 57,
+  "r": 734,
+  "s": 73,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/04-4.webp": {
+  "score": 92.4,
+  "k": 71,
+  "r": 810,
+  "s": 67,
+  "a": 1.36,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/04-5.webp": {
+  "score": 93.0,
+  "k": 69,
+  "r": 792,
+  "s": 78,
+  "a": 1.39,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/04.webp": {
+  "score": 88.9,
+  "k": 68,
+  "r": 940,
+  "s": 82,
+  "a": 1.17,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/05-2.webp": {
+  "score": 92.5,
+  "k": 69,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/05-3.webp": {
+  "score": 91.7,
+  "k": 68,
+  "r": 734,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/05-4.webp": {
+  "score": 91.7,
+  "k": 72,
+  "r": 736,
+  "s": 83,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/05-5.webp": {
+  "score": 91.8,
+  "k": 74,
+  "r": 737,
+  "s": 89,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/05.webp": {
+  "score": 92.5,
+  "k": 70,
+  "r": 1100,
+  "s": 80,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/06-2.webp": {
+  "score": 93.3,
+  "k": 65,
+  "r": 807,
+  "s": 85,
+  "a": 1.36,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/06-3.webp": {
+  "score": 90.0,
+  "k": 70,
+  "r": 992,
+  "s": 85,
+  "a": 1.11,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/06-4.webp": {
+  "score": 90.8,
+  "k": 58,
+  "r": 1096,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/06.webp": {
+  "score": 92.4,
+  "k": 81,
+  "r": 1097,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/07-2.webp": {
+  "score": 92.0,
+  "k": 64,
+  "r": 746,
+  "s": 80,
+  "a": 1.47,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/07-3.webp": {
+  "score": 91.7,
+  "k": 74,
+  "r": 736,
+  "s": 88,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/07-4.webp": {
+  "score": 91.7,
+  "k": 62,
+  "r": 736,
+  "s": 75,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/07-5.webp": {
+  "score": 91.5,
+  "k": 60,
+  "r": 736,
+  "s": 83,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/07-6.webp": {
+  "score": 91.7,
+  "k": 63,
+  "r": 734,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/07.webp": {
+  "score": 92.5,
+  "k": 70,
+  "r": 1100,
+  "s": 90,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/08-2.webp": {
+  "score": 91.7,
+  "k": 59,
+  "r": 1100,
+  "s": 79,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/08-3.webp": {
+  "score": 83.0,
+  "k": 50,
+  "r": 735,
+  "s": 63,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/08-4.webp": {
+  "score": 94.4,
+  "k": 64,
+  "r": 854,
+  "s": 85,
+  "a": 1.29,
+  "size": "1x1"
+ },
+ "bannye-portaly/img/08-5.webp": {
+  "score": 91.7,
+  "k": 76,
+  "r": 735,
+  "s": 92,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/08.webp": {
+  "score": 92.0,
+  "k": 59,
+  "r": 1100,
+  "s": 79,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/09-2.webp": {
+  "score": 92.5,
+  "k": 77,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/09-3.webp": {
+  "score": 92.5,
+  "k": 70,
+  "r": 1100,
+  "s": 73,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/09-4.webp": {
+  "score": 92.5,
+  "k": 77,
+  "r": 1100,
+  "s": 84,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "bannye-portaly/img/09-5.webp": {
+  "score": 87.0,
+  "k": 53,
+  "r": 737,
+  "s": 88,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "bannye-portaly/img/09.webp": {
+  "score": 92.5,
+  "k": 77,
+  "r": 1100,
+  "s": 79,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/01-2.webp": {
+  "score": 92.5,
+  "k": 78,
+  "r": 1100,
+  "s": 75,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/01-3.webp": {
+  "score": 91.7,
+  "k": 63,
+  "r": 734,
+  "s": 80,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/01-4.webp": {
+  "score": 92.5,
+  "k": 75,
+  "r": 1100,
+  "s": 81,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/01-5.webp": {
+  "score": 54.2,
+  "k": 15,
+  "r": 734,
+  "s": 43,
+  "a": 1.5,
+  "size": "fragment"
+ },
+ "barbekyu-kompleksy/img/01-6.webp": {
+  "score": 92.5,
+  "k": 72,
+  "r": 1100,
+  "s": 76,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/01.webp": {
+  "score": 89.0,
+  "k": 75,
+  "r": 616,
+  "s": 76,
+  "a": 1.79,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/02-2.webp": {
+  "score": 76.0,
+  "k": 78,
+  "r": 704,
+  "s": 85,
+  "a": 0.64,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/02-3.webp": {
+  "score": 77.0,
+  "k": 76,
+  "r": 750,
+  "s": 87,
+  "a": 0.68,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/02-4.webp": {
+  "score": 77.5,
+  "k": 81,
+  "r": 768,
+  "s": 83,
+  "a": 0.7,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/02-5.webp": {
+  "score": 78.0,
+  "k": 83,
+  "r": 794,
+  "s": 76,
+  "a": 0.72,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/02.webp": {
+  "score": 81.2,
+  "k": 80,
+  "r": 932,
+  "s": 86,
+  "a": 0.85,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/03-2.webp": {
+  "score": 91.8,
+  "k": 69,
+  "r": 737,
+  "s": 95,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/03-3.webp": {
+  "score": 91.8,
+  "k": 70,
+  "r": 738,
+  "s": 88,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/03-4.webp": {
+  "score": 91.7,
+  "k": 68,
+  "r": 735,
+  "s": 85,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/03.webp": {
+  "score": 91.7,
+  "k": 80,
+  "r": 736,
+  "s": 89,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/04-2.webp": {
+  "score": 92.5,
+  "k": 74,
+  "r": 1100,
+  "s": 89,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/04-3.webp": {
+  "score": 92.5,
+  "k": 73,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/04.webp": {
+  "score": 92.5,
+  "k": 71,
+  "r": 1100,
+  "s": 87,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/05-2.webp": {
+  "score": 77.8,
+  "k": 56,
+  "r": 886,
+  "s": 81,
+  "a": 0.81,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/05-3.webp": {
+  "score": 91.7,
+  "k": 71,
+  "r": 735,
+  "s": 83,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/05-4.webp": {
+  "score": 92.2,
+  "k": 67,
+  "r": 756,
+  "s": 86,
+  "a": 1.46,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/05-5.webp": {
+  "score": 91.7,
+  "k": 66,
+  "r": 734,
+  "s": 78,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/05-6.webp": {
+  "score": 92.0,
+  "k": 73,
+  "r": 747,
+  "s": 89,
+  "a": 1.47,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/05.webp": {
+  "score": 92.0,
+  "k": 69,
+  "r": 748,
+  "s": 82,
+  "a": 1.47,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/06-2.webp": {
+  "score": 76.9,
+  "k": 53,
+  "r": 938,
+  "s": 77,
+  "a": 0.85,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/06-3.webp": {
+  "score": 80.0,
+  "k": 62,
+  "r": 879,
+  "s": 77,
+  "a": 0.8,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/06.webp": {
+  "score": 79.1,
+  "k": 69,
+  "r": 842,
+  "s": 82,
+  "a": 0.77,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/07-2.webp": {
+  "score": 86.7,
+  "k": 53,
+  "r": 735,
+  "s": 76,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/07-3.webp": {
+  "score": 90.9,
+  "k": 59,
+  "r": 735,
+  "s": 80,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/07-4.webp": {
+  "score": 91.6,
+  "k": 57,
+  "r": 822,
+  "s": 79,
+  "a": 1.34,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/07-5.webp": {
+  "score": 89.0,
+  "k": 55,
+  "r": 756,
+  "s": 80,
+  "a": 1.46,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/07-6.webp": {
+  "score": 91.7,
+  "k": 66,
+  "r": 734,
+  "s": 83,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/07.webp": {
+  "score": 94.0,
+  "k": 63,
+  "r": 836,
+  "s": 80,
+  "a": 1.32,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/08-2.webp": {
+  "score": 92.5,
+  "k": 69,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/08-3.webp": {
+  "score": 92.5,
+  "k": 76,
+  "r": 1100,
+  "s": 87,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/08-4.webp": {
+  "score": 80.1,
+  "k": 62,
+  "r": 884,
+  "s": 82,
+  "a": 0.8,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/08-5.webp": {
+  "score": 81.5,
+  "k": 67,
+  "r": 944,
+  "s": 78,
+  "a": 0.86,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/08-6.webp": {
+  "score": 81.5,
+  "k": 76,
+  "r": 944,
+  "s": 87,
+  "a": 0.86,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/08.webp": {
+  "score": 90.7,
+  "k": 64,
+  "r": 1020,
+  "s": 85,
+  "a": 0.93,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/09-2.webp": {
+  "score": 92.1,
+  "k": 74,
+  "r": 752,
+  "s": 89,
+  "a": 1.46,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/09-3.webp": {
+  "score": 91.9,
+  "k": 76,
+  "r": 742,
+  "s": 78,
+  "a": 1.48,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/09-4.webp": {
+  "score": 91.9,
+  "k": 66,
+  "r": 744,
+  "s": 87,
+  "a": 1.48,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/09-5.webp": {
+  "score": 91.8,
+  "k": 68,
+  "r": 737,
+  "s": 88,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/09.webp": {
+  "score": 91.7,
+  "k": 74,
+  "r": 735,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/10-2.webp": {
+  "score": 93.8,
+  "k": 64,
+  "r": 827,
+  "s": 76,
+  "a": 1.33,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/10-3.webp": {
+  "score": 89.6,
+  "k": 53,
+  "r": 838,
+  "s": 80,
+  "a": 1.31,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/10-4.webp": {
+  "score": 93.8,
+  "k": 71,
+  "r": 828,
+  "s": 84,
+  "a": 1.33,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/10-5.webp": {
+  "score": 94.9,
+  "k": 61,
+  "r": 874,
+  "s": 77,
+  "a": 1.26,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/10.webp": {
+  "score": 92.5,
+  "k": 66,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/11-2.webp": {
+  "score": 81.5,
+  "k": 88,
+  "r": 945,
+  "s": 89,
+  "a": 0.86,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/11-3.webp": {
+  "score": 77.0,
+  "k": 57,
+  "r": 827,
+  "s": 79,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/11-4.webp": {
+  "score": 80.1,
+  "k": 64,
+  "r": 883,
+  "s": 86,
+  "a": 0.8,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/11-5.webp": {
+  "score": 79.6,
+  "k": 72,
+  "r": 862,
+  "s": 86,
+  "a": 0.78,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/11-6.webp": {
+  "score": 80.1,
+  "k": 80,
+  "r": 886,
+  "s": 85,
+  "a": 0.81,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/11.webp": {
+  "score": 90.1,
+  "k": 69,
+  "r": 996,
+  "s": 82,
+  "a": 0.91,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/12-2.webp": {
+  "score": 91.7,
+  "k": 72,
+  "r": 736,
+  "s": 91,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/12-3.webp": {
+  "score": 91.8,
+  "k": 79,
+  "r": 738,
+  "s": 83,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/12-4.webp": {
+  "score": 91.8,
+  "k": 73,
+  "r": 737,
+  "s": 84,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/12-5.webp": {
+  "score": 91.7,
+  "k": 73,
+  "r": 734,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/12.webp": {
+  "score": 91.7,
+  "k": 82,
+  "r": 736,
+  "s": 91,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/13-2.webp": {
+  "score": 94.0,
+  "k": 63,
+  "r": 836,
+  "s": 84,
+  "a": 1.32,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/13-3.webp": {
+  "score": 86.5,
+  "k": 52,
+  "r": 735,
+  "s": 79,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/13-4.webp": {
+  "score": 92.2,
+  "k": 62,
+  "r": 756,
+  "s": 75,
+  "a": 1.46,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/13-5.webp": {
+  "score": 91.0,
+  "k": 57,
+  "r": 784,
+  "s": 73,
+  "a": 1.4,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/13-6.webp": {
+  "score": 91.4,
+  "k": 58,
+  "r": 792,
+  "s": 74,
+  "a": 1.39,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/13.webp": {
+  "score": 83.9,
+  "k": 45,
+  "r": 893,
+  "s": 65,
+  "a": 1.23,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/14-2.webp": {
+  "score": 91.7,
+  "k": 63,
+  "r": 736,
+  "s": 82,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/14-3.webp": {
+  "score": 91.7,
+  "k": 62,
+  "r": 734,
+  "s": 77,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/14-4.webp": {
+  "score": 91.2,
+  "k": 59,
+  "r": 737,
+  "s": 79,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/14-5.webp": {
+  "score": 91.8,
+  "k": 60,
+  "r": 737,
+  "s": 78,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/14.webp": {
+  "score": 91.7,
+  "k": 65,
+  "r": 735,
+  "s": 83,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/15-2.webp": {
+  "score": 92.5,
+  "k": 70,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/15-3.webp": {
+  "score": 92.5,
+  "k": 66,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/15-4.webp": {
+  "score": 85.5,
+  "k": 53,
+  "r": 801,
+  "s": 59,
+  "a": 1.37,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/15-5.webp": {
+  "score": 92.0,
+  "k": 68,
+  "r": 748,
+  "s": 84,
+  "a": 1.47,
+  "size": "2x1"
+ },
+ "barbekyu-kompleksy/img/15.webp": {
+  "score": 92.5,
+  "k": 69,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/16-2.webp": {
+  "score": 94.1,
+  "k": 74,
+  "r": 842,
+  "s": 83,
+  "a": 1.31,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/16-3.webp": {
+  "score": 95.7,
+  "k": 73,
+  "r": 912,
+  "s": 81,
+  "a": 1.21,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/16-4.webp": {
+  "score": 93.8,
+  "k": 77,
+  "r": 828,
+  "s": 90,
+  "a": 1.33,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/16-5.webp": {
+  "score": 93.8,
+  "k": 68,
+  "r": 827,
+  "s": 85,
+  "a": 1.33,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/16-6.webp": {
+  "score": 93.8,
+  "k": 78,
+  "r": 827,
+  "s": 86,
+  "a": 1.33,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/16.webp": {
+  "score": 95.4,
+  "k": 73,
+  "r": 896,
+  "s": 85,
+  "a": 1.23,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/17-2.webp": {
+  "score": 77.0,
+  "k": 57,
+  "r": 827,
+  "s": 87,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/17-3.webp": {
+  "score": 78.5,
+  "k": 60,
+  "r": 826,
+  "s": 96,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/17-4.webp": {
+  "score": 78.8,
+  "k": 75,
+  "r": 827,
+  "s": 98,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/17.webp": {
+  "score": 78.8,
+  "k": 67,
+  "r": 827,
+  "s": 85,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/18-2.webp": {
+  "score": 78.8,
+  "k": 85,
+  "r": 828,
+  "s": 84,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "barbekyu-kompleksy/img/18-3.webp": {
+  "score": 92.5,
+  "k": 89,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "barbekyu-kompleksy/img/18.webp": {
+  "score": 92.5,
+  "k": 87,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/01-2.webp": {
+  "score": 91.3,
+  "k": 56,
+  "r": 842,
+  "s": 72,
+  "a": 1.31,
+  "size": "1x1"
+ },
+ "izraztsy/img/01-3.webp": {
+  "score": 79.7,
+  "k": 52,
+  "r": 1100,
+  "s": 44,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/01.webp": {
+  "score": 74.1,
+  "k": 65,
+  "r": 725,
+  "s": 62,
+  "a": 0.89,
+  "size": "1x1"
+ },
+ "izraztsy/img/02.webp": {
+  "score": 63.7,
+  "k": 16,
+  "r": 890,
+  "s": 61,
+  "a": 1.24,
+  "size": "fragment"
+ },
+ "izraztsy/img/03.webp": {
+  "score": 76.3,
+  "k": 60,
+  "r": 897,
+  "s": 56,
+  "a": 0.82,
+  "size": "1x1"
+ },
+ "izraztsy/img/04.webp": {
+  "score": 75.0,
+  "k": 95,
+  "r": 662,
+  "s": 87,
+  "a": 0.82,
+  "size": "1x1"
+ },
+ "izraztsy/img/05.webp": {
+  "score": 76.4,
+  "k": 31,
+  "r": 903,
+  "s": 76,
+  "a": 1.22,
+  "size": "1x1"
+ },
+ "izraztsy/img/06.webp": {
+  "score": 88.7,
+  "k": 84,
+  "r": 931,
+  "s": 80,
+  "a": 0.94,
+  "size": "2x2"
+ },
+ "izraztsy/img/07.webp": {
+  "score": 34.9,
+  "k": 14,
+  "r": 679,
+  "s": 36,
+  "a": 0.89,
+  "size": "fragment"
+ },
+ "izraztsy/img/08.webp": {
+  "score": 33.9,
+  "k": 14,
+  "r": 717,
+  "s": 30,
+  "a": 0.8,
+  "size": "fragment"
+ },
+ "izraztsy/img/09.webp": {
+  "score": 82.7,
+  "k": 90,
+  "r": 977,
+  "s": 45,
+  "a": 1.13,
+  "size": "2x2"
+ },
+ "izraztsy/img/10-2.webp": {
+  "score": 84.2,
+  "k": 65,
+  "r": 1100,
+  "s": 41,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/10-3.webp": {
+  "score": 87.0,
+  "k": 68,
+  "r": 858,
+  "s": 71,
+  "a": 1.01,
+  "size": "1x1"
+ },
+ "izraztsy/img/10.webp": {
+  "score": 84.3,
+  "k": 73,
+  "r": 1100,
+  "s": 41,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/11.webp": {
+  "score": 74.0,
+  "k": 93,
+  "r": 618,
+  "s": 75,
+  "a": 0.72,
+  "size": "1x1"
+ },
+ "izraztsy/img/12-2.webp": {
+  "score": 86.2,
+  "k": 52,
+  "r": 833,
+  "s": 61,
+  "a": 1.32,
+  "size": "1x1"
+ },
+ "izraztsy/img/12-3.webp": {
+  "score": 91.6,
+  "k": 85,
+  "r": 835,
+  "s": 62,
+  "a": 1.32,
+  "size": "1x1"
+ },
+ "izraztsy/img/12.webp": {
+  "score": 91.1,
+  "k": 66,
+  "r": 831,
+  "s": 60,
+  "a": 1.32,
+  "size": "1x1"
+ },
+ "izraztsy/img/13.webp": {
+  "score": 75.4,
+  "k": 65,
+  "r": 677,
+  "s": 80,
+  "a": 0.88,
+  "size": "1x1"
+ },
+ "izraztsy/img/14-2.webp": {
+  "score": 93.9,
+  "k": 70,
+  "r": 897,
+  "s": 65,
+  "a": 1.23,
+  "size": "1x1"
+ },
+ "izraztsy/img/14-3.webp": {
+  "score": 81.8,
+  "k": 73,
+  "r": 627,
+  "s": 89,
+  "a": 0.92,
+  "size": "1x1"
+ },
+ "izraztsy/img/14-4.webp": {
+  "score": 65.7,
+  "k": 47,
+  "r": 722,
+  "s": 63,
+  "a": 0.88,
+  "size": "1x1"
+ },
+ "izraztsy/img/14-5.webp": {
+  "score": 70.2,
+  "k": 55,
+  "r": 720,
+  "s": 61,
+  "a": 0.87,
+  "size": "1x1"
+ },
+ "izraztsy/img/14-6.webp": {
+  "score": 88.7,
+  "k": 73,
+  "r": 1100,
+  "s": 57,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/14.webp": {
+  "score": 87.4,
+  "k": 67,
+  "r": 875,
+  "s": 73,
+  "a": 1.01,
+  "size": "1x1"
+ },
+ "izraztsy/img/15.webp": {
+  "score": 34.9,
+  "k": 16,
+  "r": 609,
+  "s": 37,
+  "a": 0.73,
+  "size": "fragment"
+ },
+ "izraztsy/img/16-2.webp": {
+  "score": 59.2,
+  "k": 27,
+  "r": 1100,
+  "s": 30,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "izraztsy/img/16-3.webp": {
+  "score": 46.0,
+  "k": 13,
+  "r": 1023,
+  "s": 23,
+  "a": 1.08,
+  "size": "fragment"
+ },
+ "izraztsy/img/16-4.webp": {
+  "score": 48.7,
+  "k": 13,
+  "r": 1100,
+  "s": 26,
+  "a": 1.0,
+  "size": "fragment"
+ },
+ "izraztsy/img/16-5.webp": {
+  "score": 50.5,
+  "k": 31,
+  "r": 681,
+  "s": 50,
+  "a": 0.83,
+  "size": "1x1"
+ },
+ "izraztsy/img/16-6.webp": {
+  "score": 62.0,
+  "k": 41,
+  "r": 890,
+  "s": 51,
+  "a": 0.81,
+  "size": "1x1"
+ },
+ "izraztsy/img/16.webp": {
+  "score": 77.3,
+  "k": 44,
+  "r": 1100,
+  "s": 55,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "izraztsy/img/17-2.webp": {
+  "score": 59.2,
+  "k": 27,
+  "r": 1100,
+  "s": 30,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "izraztsy/img/17-3.webp": {
+  "score": 46.0,
+  "k": 13,
+  "r": 1023,
+  "s": 23,
+  "a": 1.08,
+  "size": "fragment"
+ },
+ "izraztsy/img/17-4.webp": {
+  "score": 48.7,
+  "k": 13,
+  "r": 1100,
+  "s": 26,
+  "a": 1.0,
+  "size": "fragment"
+ },
+ "izraztsy/img/17-5.webp": {
+  "score": 50.5,
+  "k": 31,
+  "r": 681,
+  "s": 50,
+  "a": 0.83,
+  "size": "1x1"
+ },
+ "izraztsy/img/17-6.webp": {
+  "score": 74.4,
+  "k": 70,
+  "r": 634,
+  "s": 83,
+  "a": 0.82,
+  "size": "1x1"
+ },
+ "izraztsy/img/17.webp": {
+  "score": 69.0,
+  "k": 56,
+  "r": 684,
+  "s": 56,
+  "a": 0.83,
+  "size": "1x1"
+ },
+ "izraztsy/img/18-2.webp": {
+  "score": 65.3,
+  "k": 56,
+  "r": 616,
+  "s": 48,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "izraztsy/img/18-3.webp": {
+  "score": 85.7,
+  "k": 54,
+  "r": 1100,
+  "s": 61,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/18-4.webp": {
+  "score": 68.8,
+  "k": 66,
+  "r": 386,
+  "s": 70,
+  "a": 0.43,
+  "size": "1x1"
+ },
+ "izraztsy/img/18-5.webp": {
+  "score": 67.7,
+  "k": 33,
+  "r": 838,
+  "s": 68,
+  "a": 0.99,
+  "size": "1x1"
+ },
+ "izraztsy/img/18.webp": {
+  "score": 71.2,
+  "k": 37,
+  "r": 1100,
+  "s": 48,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "izraztsy/img/19.webp": {
+  "score": 92.0,
+  "k": 55,
+  "r": 885,
+  "s": 76,
+  "a": 1.24,
+  "size": "1x1"
+ },
+ "izraztsy/img/20-2.webp": {
+  "score": 83.1,
+  "k": 64,
+  "r": 832,
+  "s": 58,
+  "a": 0.92,
+  "size": "1x1"
+ },
+ "izraztsy/img/20.webp": {
+  "score": 83.0,
+  "k": 69,
+  "r": 1100,
+  "s": 37,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/21-2.webp": {
+  "score": 95.3,
+  "k": 93,
+  "r": 908,
+  "s": 69,
+  "a": 1.21,
+  "size": "2x2"
+ },
+ "izraztsy/img/21-3.webp": {
+  "score": 74.5,
+  "k": 62,
+  "r": 690,
+  "s": 66,
+  "a": 0.83,
+  "size": "1x1"
+ },
+ "izraztsy/img/21-4.webp": {
+  "score": 74.9,
+  "k": 93,
+  "r": 657,
+  "s": 72,
+  "a": 0.84,
+  "size": "1x1"
+ },
+ "izraztsy/img/21-5.webp": {
+  "score": 87.1,
+  "k": 70,
+  "r": 1100,
+  "s": 51,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/21-6.webp": {
+  "score": 73.7,
+  "k": 73,
+  "r": 617,
+  "s": 69,
+  "a": 0.84,
+  "size": "1x1"
+ },
+ "izraztsy/img/21.webp": {
+  "score": 75.4,
+  "k": 89,
+  "r": 677,
+  "s": 77,
+  "a": 0.84,
+  "size": "1x1"
+ },
+ "izraztsy/img/22-2.webp": {
+  "score": 72.3,
+  "k": 67,
+  "r": 628,
+  "s": 63,
+  "a": 0.84,
+  "size": "1x1"
+ },
+ "izraztsy/img/22-3.webp": {
+  "score": 89.5,
+  "k": 76,
+  "r": 865,
+  "s": 52,
+  "a": 1.27,
+  "size": "1x1"
+ },
+ "izraztsy/img/22-4.webp": {
+  "score": 71.5,
+  "k": 59,
+  "r": 605,
+  "s": 64,
+  "a": 0.84,
+  "size": "1x1"
+ },
+ "izraztsy/img/22-5.webp": {
+  "score": 81.9,
+  "k": 71,
+  "r": 1100,
+  "s": 33,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "izraztsy/img/22.webp": {
+  "score": 71.8,
+  "k": 59,
+  "r": 612,
+  "s": 65,
+  "a": 0.71,
+  "size": "1x1"
+ },
+ "kaminy/img/01-2.webp": {
+  "score": 91.2,
+  "k": 58,
+  "r": 1100,
+  "s": 74,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/01-3.webp": {
+  "score": 88.2,
+  "k": 52,
+  "r": 813,
+  "s": 70,
+  "a": 1.35,
+  "size": "2x1"
+ },
+ "kaminy/img/01-4.webp": {
+  "score": 63.5,
+  "k": 24,
+  "r": 770,
+  "s": 54,
+  "a": 1.43,
+  "size": "fragment"
+ },
+ "kaminy/img/01-5.webp": {
+  "score": 87.0,
+  "k": 52,
+  "r": 1100,
+  "s": 70,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/01.webp": {
+  "score": 89.9,
+  "k": 56,
+  "r": 1100,
+  "s": 76,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/02-2.webp": {
+  "score": 92.9,
+  "k": 60,
+  "r": 801,
+  "s": 83,
+  "a": 1.37,
+  "size": "2x1"
+ },
+ "kaminy/img/02-3.webp": {
+  "score": 92.5,
+  "k": 62,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/02-4.webp": {
+  "score": 92.0,
+  "k": 59,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/02-5.webp": {
+  "score": 90.8,
+  "k": 61,
+  "r": 738,
+  "s": 67,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/02-6.webp": {
+  "score": 92.5,
+  "k": 73,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/02.webp": {
+  "score": 92.5,
+  "k": 62,
+  "r": 1100,
+  "s": 79,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/03-2.webp": {
+  "score": 92.5,
+  "k": 65,
+  "r": 1100,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/03-3.webp": {
+  "score": 92.5,
+  "k": 74,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/03-4.webp": {
+  "score": 93.5,
+  "k": 80,
+  "r": 814,
+  "s": 93,
+  "a": 1.35,
+  "size": "2x1"
+ },
+ "kaminy/img/03-5.webp": {
+  "score": 95.4,
+  "k": 75,
+  "r": 898,
+  "s": 82,
+  "a": 1.22,
+  "size": "1x1"
+ },
+ "kaminy/img/03-6.webp": {
+  "score": 91.7,
+  "k": 76,
+  "r": 735,
+  "s": 96,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/03.webp": {
+  "score": 92.5,
+  "k": 76,
+  "r": 1100,
+  "s": 87,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/04-2.webp": {
+  "score": 92.5,
+  "k": 73,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/04-3.webp": {
+  "score": 89.4,
+  "k": 60,
+  "r": 770,
+  "s": 59,
+  "a": 1.43,
+  "size": "2x1"
+ },
+ "kaminy/img/04-4.webp": {
+  "score": 91.7,
+  "k": 70,
+  "r": 734,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/04-5.webp": {
+  "score": 93.0,
+  "k": 62,
+  "r": 792,
+  "s": 76,
+  "a": 1.39,
+  "size": "2x1"
+ },
+ "kaminy/img/04.webp": {
+  "score": 92.5,
+  "k": 63,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/05-2.webp": {
+  "score": 91.8,
+  "k": 86,
+  "r": 737,
+  "s": 85,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/05-3.webp": {
+  "score": 91.7,
+  "k": 73,
+  "r": 734,
+  "s": 95,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/05.webp": {
+  "score": 91.7,
+  "k": 84,
+  "r": 734,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/06-2.webp": {
+  "score": 92.5,
+  "k": 96,
+  "r": 1100,
+  "s": 92,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/06-3.webp": {
+  "score": 82.6,
+  "k": 46,
+  "r": 735,
+  "s": 72,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/06-4.webp": {
+  "score": 91.7,
+  "k": 78,
+  "r": 734,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/06-5.webp": {
+  "score": 91.8,
+  "k": 84,
+  "r": 737,
+  "s": 74,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/06-6.webp": {
+  "score": 83.8,
+  "k": 58,
+  "r": 1100,
+  "s": 44,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/06.webp": {
+  "score": 92.5,
+  "k": 87,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/07-2.webp": {
+  "score": 71.3,
+  "k": 51,
+  "r": 752,
+  "s": 78,
+  "a": 0.68,
+  "size": "1x1"
+ },
+ "kaminy/img/07-3.webp": {
+  "score": 75.2,
+  "k": 55,
+  "r": 808,
+  "s": 73,
+  "a": 0.73,
+  "size": "1x1"
+ },
+ "kaminy/img/07-4.webp": {
+  "score": 84.9,
+  "k": 49,
+  "r": 1100,
+  "s": 78,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/07.webp": {
+  "score": 74.0,
+  "k": 56,
+  "r": 744,
+  "s": 76,
+  "a": 0.68,
+  "size": "1x1"
+ },
+ "kaminy/img/08.webp": {
+  "score": 69.1,
+  "k": 26,
+  "r": 1100,
+  "s": 67,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "kaminy/img/09-2.webp": {
+  "score": 92.8,
+  "k": 81,
+  "r": 781,
+  "s": 90,
+  "a": 1.41,
+  "size": "2x1"
+ },
+ "kaminy/img/09-3.webp": {
+  "score": 88.9,
+  "k": 71,
+  "r": 943,
+  "s": 85,
+  "a": 1.17,
+  "size": "2x2"
+ },
+ "kaminy/img/09.webp": {
+  "score": 79.2,
+  "k": 80,
+  "r": 847,
+  "s": 89,
+  "a": 0.77,
+  "size": "1x1"
+ },
+ "kaminy/img/10-2.webp": {
+  "score": 92.5,
+  "k": 86,
+  "r": 1100,
+  "s": 81,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/10-3.webp": {
+  "score": 92.3,
+  "k": 74,
+  "r": 1100,
+  "s": 69,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/10-4.webp": {
+  "score": 92.5,
+  "k": 90,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/10-5.webp": {
+  "score": 91.2,
+  "k": 58,
+  "r": 1100,
+  "s": 77,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/10-6.webp": {
+  "score": 92.5,
+  "k": 74,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/10.webp": {
+  "score": 91.7,
+  "k": 86,
+  "r": 734,
+  "s": 86,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/11-2.webp": {
+  "score": 92.5,
+  "k": 71,
+  "r": 1100,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/11-3.webp": {
+  "score": 92.5,
+  "k": 77,
+  "r": 1100,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/11-4.webp": {
+  "score": 87.1,
+  "k": 54,
+  "r": 736,
+  "s": 67,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/11-5.webp": {
+  "score": 91.7,
+  "k": 73,
+  "r": 736,
+  "s": 86,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/11.webp": {
+  "score": 92.5,
+  "k": 68,
+  "r": 1100,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/12-2.webp": {
+  "score": 75.4,
+  "k": 62,
+  "r": 676,
+  "s": 84,
+  "a": 0.61,
+  "size": "1x1"
+ },
+ "kaminy/img/12-3.webp": {
+  "score": 93.8,
+  "k": 65,
+  "r": 826,
+  "s": 80,
+  "a": 1.33,
+  "size": "1x1"
+ },
+ "kaminy/img/12-4.webp": {
+  "score": 92.5,
+  "k": 71,
+  "r": 1100,
+  "s": 81,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/12-5.webp": {
+  "score": 88.4,
+  "k": 58,
+  "r": 966,
+  "s": 81,
+  "a": 1.14,
+  "size": "2x2"
+ },
+ "kaminy/img/12-6.webp": {
+  "score": 94.7,
+  "k": 60,
+  "r": 868,
+  "s": 84,
+  "a": 1.27,
+  "size": "1x1"
+ },
+ "kaminy/img/12.webp": {
+  "score": 92.5,
+  "k": 67,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/13-2.webp": {
+  "score": 91.7,
+  "k": 67,
+  "r": 734,
+  "s": 86,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/13-3.webp": {
+  "score": 91.7,
+  "k": 67,
+  "r": 734,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/13.webp": {
+  "score": 91.7,
+  "k": 69,
+  "r": 734,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/14-2.webp": {
+  "score": 91.7,
+  "k": 81,
+  "r": 736,
+  "s": 89,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/14-3.webp": {
+  "score": 87.9,
+  "k": 54,
+  "r": 738,
+  "s": 79,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/14-4.webp": {
+  "score": 91.7,
+  "k": 62,
+  "r": 736,
+  "s": 82,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/14-5.webp": {
+  "score": 92.5,
+  "k": 76,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/14.webp": {
+  "score": 92.5,
+  "k": 78,
+  "r": 1100,
+  "s": 89,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/15-2.webp": {
+  "score": 91.7,
+  "k": 80,
+  "r": 734,
+  "s": 81,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/15-3.webp": {
+  "score": 92.5,
+  "k": 66,
+  "r": 1100,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/15-4.webp": {
+  "score": 91.8,
+  "k": 64,
+  "r": 738,
+  "s": 78,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/15-5.webp": {
+  "score": 91.7,
+  "k": 78,
+  "r": 734,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/15.webp": {
+  "score": 91.7,
+  "k": 87,
+  "r": 734,
+  "s": 83,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/16-2.webp": {
+  "score": 92.5,
+  "k": 78,
+  "r": 1100,
+  "s": 87,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/16-3.webp": {
+  "score": 92.5,
+  "k": 85,
+  "r": 1100,
+  "s": 97,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/16-4.webp": {
+  "score": 91.7,
+  "k": 71,
+  "r": 734,
+  "s": 89,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/16-5.webp": {
+  "score": 95.0,
+  "k": 63,
+  "r": 882,
+  "s": 86,
+  "a": 1.25,
+  "size": "1x1"
+ },
+ "kaminy/img/16.webp": {
+  "score": 92.5,
+  "k": 77,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/17-2.webp": {
+  "score": 92.5,
+  "k": 82,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/17-3.webp": {
+  "score": 93.4,
+  "k": 82,
+  "r": 810,
+  "s": 82,
+  "a": 1.36,
+  "size": "2x1"
+ },
+ "kaminy/img/17-4.webp": {
+  "score": 88.7,
+  "k": 60,
+  "r": 946,
+  "s": 90,
+  "a": 1.16,
+  "size": "2x2"
+ },
+ "kaminy/img/17-5.webp": {
+  "score": 88.3,
+  "k": 55,
+  "r": 736,
+  "s": 85,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/17.webp": {
+  "score": 92.5,
+  "k": 76,
+  "r": 1100,
+  "s": 81,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/18-3.webp": {
+  "score": 94.2,
+  "k": 63,
+  "r": 846,
+  "s": 83,
+  "a": 1.3,
+  "size": "1x1"
+ },
+ "kaminy/img/18-4.webp": {
+  "score": 91.7,
+  "k": 69,
+  "r": 735,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/18.webp": {
+  "score": 92.5,
+  "k": 87,
+  "r": 1100,
+  "s": 96,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/19-2.webp": {
+  "score": 94.9,
+  "k": 65,
+  "r": 877,
+  "s": 82,
+  "a": 1.25,
+  "size": "1x1"
+ },
+ "kaminy/img/19-3.webp": {
+  "score": 94.3,
+  "k": 75,
+  "r": 851,
+  "s": 79,
+  "a": 1.29,
+  "size": "1x1"
+ },
+ "kaminy/img/19-4.webp": {
+  "score": 91.0,
+  "k": 55,
+  "r": 842,
+  "s": 86,
+  "a": 1.31,
+  "size": "1x1"
+ },
+ "kaminy/img/19-5.webp": {
+  "score": 87.0,
+  "k": 49,
+  "r": 852,
+  "s": 78,
+  "a": 1.29,
+  "size": "1x1"
+ },
+ "kaminy/img/19.webp": {
+  "score": 87.5,
+  "k": 53,
+  "r": 1100,
+  "s": 78,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/20-2.webp": {
+  "score": 91.8,
+  "k": 91,
+  "r": 737,
+  "s": 97,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/20-3.webp": {
+  "score": 91.8,
+  "k": 73,
+  "r": 737,
+  "s": 78,
+  "a": 1.49,
+  "size": "2x1"
+ },
+ "kaminy/img/20.webp": {
+  "score": 91.7,
+  "k": 75,
+  "r": 734,
+  "s": 89,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "kaminy/img/21.webp": {
+  "score": 76.4,
+  "k": 68,
+  "r": 720,
+  "s": 80,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "kaminy/img/22-2.webp": {
+  "score": 77.2,
+  "k": 53,
+  "r": 954,
+  "s": 72,
+  "a": 0.87,
+  "size": "2x2"
+ },
+ "kaminy/img/22-3.webp": {
+  "score": 92.5,
+  "k": 67,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/22.webp": {
+  "score": 89.6,
+  "k": 56,
+  "r": 1100,
+  "s": 77,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "kaminy/img/23-2.webp": {
+  "score": 81.2,
+  "k": 68,
+  "r": 934,
+  "s": 89,
+  "a": 0.85,
+  "size": "2x2"
+ },
+ "kaminy/img/23-3.webp": {
+  "score": 77.2,
+  "k": 85,
+  "r": 758,
+  "s": 84,
+  "a": 0.69,
+  "size": "1x1"
+ },
+ "kaminy/img/23-4.webp": {
+  "score": 79.5,
+  "k": 76,
+  "r": 860,
+  "s": 83,
+  "a": 0.78,
+  "size": "1x1"
+ },
+ "kaminy/img/23-5.webp": {
+  "score": 78.9,
+  "k": 82,
+  "r": 830,
+  "s": 81,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "kaminy/img/23-6.webp": {
+  "score": 79.9,
+  "k": 72,
+  "r": 874,
+  "s": 79,
+  "a": 0.79,
+  "size": "1x1"
+ },
+ "kaminy/img/23.webp": {
+  "score": 79.6,
+  "k": 67,
+  "r": 864,
+  "s": 84,
+  "a": 0.79,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/01-2.webp": {
+  "score": 90.1,
+  "k": 56,
+  "r": 1100,
+  "s": 73,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/01-3.webp": {
+  "score": 92.5,
+  "k": 79,
+  "r": 1098,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/01-4.webp": {
+  "score": 92.2,
+  "k": 77,
+  "r": 1085,
+  "s": 85,
+  "a": 1.01,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/01.webp": {
+  "score": 92.5,
+  "k": 70,
+  "r": 1098,
+  "s": 75,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/02-2.webp": {
+  "score": 86.2,
+  "k": 51,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/02-3.webp": {
+  "score": 91.7,
+  "k": 67,
+  "r": 734,
+  "s": 85,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "otopitelnye-pechi/img/02-4.webp": {
+  "score": 77.1,
+  "k": 42,
+  "r": 734,
+  "s": 60,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "otopitelnye-pechi/img/02.webp": {
+  "score": 92.5,
+  "k": 65,
+  "r": 1100,
+  "s": 84,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/03-2.webp": {
+  "score": 91.7,
+  "k": 68,
+  "r": 734,
+  "s": 82,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "otopitelnye-pechi/img/03-3.webp": {
+  "score": 94.2,
+  "k": 60,
+  "r": 856,
+  "s": 75,
+  "a": 1.29,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/03-4.webp": {
+  "score": 91.7,
+  "k": 75,
+  "r": 734,
+  "s": 87,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "otopitelnye-pechi/img/03-5.webp": {
+  "score": 91.7,
+  "k": 76,
+  "r": 735,
+  "s": 82,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "otopitelnye-pechi/img/03.webp": {
+  "score": 77.0,
+  "k": 78,
+  "r": 748,
+  "s": 83,
+  "a": 0.68,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/04-2.webp": {
+  "score": 92.5,
+  "k": 75,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/04-3.webp": {
+  "score": 92.5,
+  "k": 70,
+  "r": 1100,
+  "s": 73,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/04-4.webp": {
+  "score": 92.5,
+  "k": 69,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/04-5.webp": {
+  "score": 92.5,
+  "k": 71,
+  "r": 1100,
+  "s": 74,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/04-6.webp": {
+  "score": 92.2,
+  "k": 72,
+  "r": 756,
+  "s": 73,
+  "a": 1.46,
+  "size": "2x1"
+ },
+ "otopitelnye-pechi/img/04.webp": {
+  "score": 92.5,
+  "k": 78,
+  "r": 1100,
+  "s": 84,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/05-2.webp": {
+  "score": 78.6,
+  "k": 39,
+  "r": 1100,
+  "s": 75,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/05-3.webp": {
+  "score": 86.7,
+  "k": 51,
+  "r": 1100,
+  "s": 83,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/05.webp": {
+  "score": 84.4,
+  "k": 48,
+  "r": 1100,
+  "s": 84,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/06-2.webp": {
+  "score": 92.5,
+  "k": 73,
+  "r": 1100,
+  "s": 90,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/06-3.webp": {
+  "score": 92.5,
+  "k": 73,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/06-4.webp": {
+  "score": 92.5,
+  "k": 83,
+  "r": 1100,
+  "s": 97,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/06.webp": {
+  "score": 78.5,
+  "k": 65,
+  "r": 814,
+  "s": 81,
+  "a": 0.74,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/07-2.webp": {
+  "score": 78.8,
+  "k": 69,
+  "r": 826,
+  "s": 83,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/07-3.webp": {
+  "score": 92.5,
+  "k": 71,
+  "r": 1100,
+  "s": 74,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/07.webp": {
+  "score": 78.8,
+  "k": 70,
+  "r": 826,
+  "s": 81,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/08-2.webp": {
+  "score": 75.3,
+  "k": 63,
+  "r": 674,
+  "s": 87,
+  "a": 0.61,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/08-3.webp": {
+  "score": 92.5,
+  "k": 60,
+  "r": 1100,
+  "s": 76,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "otopitelnye-pechi/img/08-4.webp": {
+  "score": 81.0,
+  "k": 43,
+  "r": 1100,
+  "s": 74,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/08.webp": {
+  "score": 77.9,
+  "k": 57,
+  "r": 878,
+  "s": 83,
+  "a": 0.8,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/09-2.webp": {
+  "score": 75.2,
+  "k": 56,
+  "r": 812,
+  "s": 68,
+  "a": 0.74,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/09-3.webp": {
+  "score": 77.2,
+  "k": 67,
+  "r": 755,
+  "s": 72,
+  "a": 0.69,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/09-4.webp": {
+  "score": 78.7,
+  "k": 72,
+  "r": 824,
+  "s": 79,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/09.webp": {
+  "score": 77.0,
+  "k": 71,
+  "r": 747,
+  "s": 80,
+  "a": 0.68,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/10-2.webp": {
+  "score": 74.1,
+  "k": 61,
+  "r": 620,
+  "s": 78,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/10-3.webp": {
+  "score": 71.0,
+  "k": 55,
+  "r": 632,
+  "s": 78,
+  "a": 0.57,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/10-4.webp": {
+  "score": 71.0,
+  "k": 55,
+  "r": 620,
+  "s": 80,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "otopitelnye-pechi/img/10.webp": {
+  "score": 74.1,
+  "k": 61,
+  "r": 620,
+  "s": 79,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/01-2.webp": {
+  "score": 92.5,
+  "k": 68,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/01-3.webp": {
+  "score": 68.5,
+  "k": 41,
+  "r": 1100,
+  "s": 31,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/01.webp": {
+  "score": 87.8,
+  "k": 53,
+  "r": 1100,
+  "s": 79,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/02-2.webp": {
+  "score": 92.5,
+  "k": 66,
+  "r": 1100,
+  "s": 80,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/02-3.webp": {
+  "score": 68.5,
+  "k": 41,
+  "r": 1100,
+  "s": 31,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/02.webp": {
+  "score": 92.5,
+  "k": 68,
+  "r": 1100,
+  "s": 82,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/03-2.webp": {
+  "score": 92.5,
+  "k": 67,
+  "r": 1100,
+  "s": 80,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/03-3.webp": {
+  "score": 68.5,
+  "k": 41,
+  "r": 1100,
+  "s": 31,
+  "a": 1.0,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/03.webp": {
+  "score": 92.5,
+  "k": 67,
+  "r": 1100,
+  "s": 81,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/04-2.webp": {
+  "score": 92.5,
+  "k": 91,
+  "r": 1100,
+  "s": 94,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/04-3.webp": {
+  "score": 61.9,
+  "k": 42,
+  "r": 778,
+  "s": 58,
+  "a": 0.72,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/04.webp": {
+  "score": 92.5,
+  "k": 89,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/05-2.webp": {
+  "score": 92.5,
+  "k": 96,
+  "r": 1100,
+  "s": 95,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/05-3.webp": {
+  "score": 61.9,
+  "k": 42,
+  "r": 778,
+  "s": 58,
+  "a": 0.72,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/05.webp": {
+  "score": 92.5,
+  "k": 93,
+  "r": 1100,
+  "s": 95,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/06-2.webp": {
+  "score": 92.5,
+  "k": 93,
+  "r": 1100,
+  "s": 95,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "pechi-kaminy/img/06-3.webp": {
+  "score": 61.9,
+  "k": 42,
+  "r": 778,
+  "s": 58,
+  "a": 0.72,
+  "size": "1x1"
+ },
+ "pechi-kaminy/img/06.webp": {
+  "score": 92.5,
+  "k": 92,
+  "r": 1100,
+  "s": 90,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/01-2.webp": {
+  "score": 89.5,
+  "k": 60,
+  "r": 966,
+  "s": 84,
+  "a": 1.14,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/01-3.webp": {
+  "score": 95.5,
+  "k": 67,
+  "r": 904,
+  "s": 86,
+  "a": 1.22,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/01-4.webp": {
+  "score": 92.3,
+  "k": 65,
+  "r": 762,
+  "s": 85,
+  "a": 1.44,
+  "size": "2x1"
+ },
+ "russkie-pechi/img/01-5.webp": {
+  "score": 91.7,
+  "k": 64,
+  "r": 735,
+  "s": 84,
+  "a": 1.5,
+  "size": "2x1"
+ },
+ "russkie-pechi/img/01-6.webp": {
+  "score": 95.7,
+  "k": 64,
+  "r": 912,
+  "s": 84,
+  "a": 1.21,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/01.webp": {
+  "score": 89.0,
+  "k": 67,
+  "r": 947,
+  "s": 84,
+  "a": 1.16,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/02-2.webp": {
+  "score": 90.7,
+  "k": 67,
+  "r": 1020,
+  "s": 87,
+  "a": 0.93,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/02-3.webp": {
+  "score": 91.2,
+  "k": 67,
+  "r": 1044,
+  "s": 92,
+  "a": 0.95,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/02-4.webp": {
+  "score": 90.1,
+  "k": 65,
+  "r": 996,
+  "s": 84,
+  "a": 0.91,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/02-5.webp": {
+  "score": 80.9,
+  "k": 65,
+  "r": 920,
+  "s": 74,
+  "a": 0.84,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/02.webp": {
+  "score": 90.2,
+  "k": 71,
+  "r": 1000,
+  "s": 89,
+  "a": 0.91,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/03-2.webp": {
+  "score": 93.0,
+  "k": 58,
+  "r": 862,
+  "s": 88,
+  "a": 1.28,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/03-3.webp": {
+  "score": 93.6,
+  "k": 70,
+  "r": 820,
+  "s": 97,
+  "a": 1.34,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/03.webp": {
+  "score": 92.5,
+  "k": 75,
+  "r": 1100,
+  "s": 98,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/04-2.webp": {
+  "score": 93.3,
+  "k": 58,
+  "r": 852,
+  "s": 79,
+  "a": 1.29,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/04-3.webp": {
+  "score": 92.2,
+  "k": 60,
+  "r": 1100,
+  "s": 88,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/04-4.webp": {
+  "score": 93.5,
+  "k": 62,
+  "r": 815,
+  "s": 70,
+  "a": 1.35,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/04-5.webp": {
+  "score": 92.5,
+  "k": 72,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/04.webp": {
+  "score": 92.5,
+  "k": 77,
+  "r": 1100,
+  "s": 89,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/05-2.webp": {
+  "score": 77.5,
+  "k": 72,
+  "r": 770,
+  "s": 90,
+  "a": 0.7,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/05.webp": {
+  "score": 78.0,
+  "k": 73,
+  "r": 794,
+  "s": 91,
+  "a": 0.72,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/06-2.webp": {
+  "score": 79.7,
+  "k": 64,
+  "r": 866,
+  "s": 77,
+  "a": 0.79,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/06-3.webp": {
+  "score": 78.2,
+  "k": 72,
+  "r": 803,
+  "s": 80,
+  "a": 0.73,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/06-4.webp": {
+  "score": 89.2,
+  "k": 69,
+  "r": 953,
+  "s": 89,
+  "a": 1.15,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/06.webp": {
+  "score": 80.5,
+  "k": 68,
+  "r": 900,
+  "s": 86,
+  "a": 0.82,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/07-2.webp": {
+  "score": 92.5,
+  "k": 65,
+  "r": 1100,
+  "s": 94,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/07-3.webp": {
+  "score": 88.6,
+  "k": 54,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/07-4.webp": {
+  "score": 90.7,
+  "k": 57,
+  "r": 1100,
+  "s": 77,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/07.webp": {
+  "score": 92.5,
+  "k": 62,
+  "r": 1100,
+  "s": 85,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/08-2.webp": {
+  "score": 78.8,
+  "k": 68,
+  "r": 828,
+  "s": 79,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/08-3.webp": {
+  "score": 81.1,
+  "k": 75,
+  "r": 928,
+  "s": 88,
+  "a": 0.84,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/08-4.webp": {
+  "score": 91.2,
+  "k": 82,
+  "r": 1042,
+  "s": 85,
+  "a": 0.95,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/08-5.webp": {
+  "score": 78.8,
+  "k": 77,
+  "r": 827,
+  "s": 93,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/08-6.webp": {
+  "score": 92.5,
+  "k": 71,
+  "r": 1100,
+  "s": 86,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/08.webp": {
+  "score": 78.8,
+  "k": 62,
+  "r": 828,
+  "s": 82,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/09-2.webp": {
+  "score": 78.7,
+  "k": 59,
+  "r": 844,
+  "s": 84,
+  "a": 0.77,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/09-3.webp": {
+  "score": 75.1,
+  "k": 55,
+  "r": 826,
+  "s": 84,
+  "a": 0.75,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/09-4.webp": {
+  "score": 76.6,
+  "k": 56,
+  "r": 836,
+  "s": 75,
+  "a": 0.76,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/09.webp": {
+  "score": 77.0,
+  "k": 56,
+  "r": 850,
+  "s": 84,
+  "a": 0.77,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/10-2.webp": {
+  "score": 72.3,
+  "k": 57,
+  "r": 620,
+  "s": 74,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/10-3.webp": {
+  "score": 81.2,
+  "k": 67,
+  "r": 934,
+  "s": 80,
+  "a": 0.85,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/10-4.webp": {
+  "score": 92.5,
+  "k": 67,
+  "r": 1100,
+  "s": 78,
+  "a": 1.0,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/10-5.webp": {
+  "score": 74.1,
+  "k": 75,
+  "r": 620,
+  "s": 85,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/10.webp": {
+  "score": 74.6,
+  "k": 78,
+  "r": 643,
+  "s": 88,
+  "a": 0.58,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/11-2.webp": {
+  "score": 74.1,
+  "k": 74,
+  "r": 620,
+  "s": 81,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/11-3.webp": {
+  "score": 74.1,
+  "k": 87,
+  "r": 620,
+  "s": 83,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/11-4.webp": {
+  "score": 74.1,
+  "k": 63,
+  "r": 620,
+  "s": 79,
+  "a": 0.56,
+  "size": "1x1"
+ },
+ "russkie-pechi/img/11-5.webp": {
+  "score": 85.0,
+  "k": 65,
+  "r": 1100,
+  "s": 77,
+  "a": 0.56,
+  "size": "2x2"
+ },
+ "russkie-pechi/img/11.webp": {
+  "score": 74.1,
+  "k": 79,
+  "r": 620,
+  "s": 88,
+  "a": 0.56,
+  "size": "1x1"
+ }
+}
