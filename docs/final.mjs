@@ -74,7 +74,7 @@ for (const slug of SLUGS) {
   const clone = d.body.cloneNode(true);
   clone.querySelectorAll('script,style').forEach(n => n.remove());
   const txt = clone.textContent.replace(/\s+/g,' ');
-  ['Здесь будет','undefined','NaN','[object','ЗАГЛУШКА','Lorem'].forEach(x=>{
+  ['Здесь будет','undefined','NaN','[object','ЗАГЛУШКА','Lorem','КерамикаДекор','CeramicaDecor'].forEach(x=>{
     if (txt.includes(x)) errs.push('в тексте «'+x+'»');
   });
   ['эксклюзив','премиальн','уникальн'].forEach(x=>{

@@ -848,6 +848,12 @@ FALLBACK_DESC = {
 BANNED_WORDS = ('эксклюзивн', 'уникальн', 'премиальн', 'элитн', 'роскошн')
 
 
+def normalize_brand(v):
+    """Бренд пишется в два слова. В выгрузке встречается слитно
+    кириллицей — «КерамикаДекор», это читается как опечатка."""
+    return re.sub(r'[Кк]ерамика[Дд]екор', 'Ceramica Decor', v or '')
+
+
 def clean_text(v, fallback=""):
     """Убирает из выгрузки ссылки, служебный мусор и рекламные эпитеты.
     Дирекция запрещает прилагательные: материальность доказывается
@@ -948,6 +954,21 @@ def why_media(slug, cards):
     return best or (cards[1]['img'] if len(cards) > 1 else '')
 
 
+def card_desc(raw, title, fallback):
+    """Описание карточки.
+
+    В выгрузке у типовых моделей описание совпадает с названием другого
+    товара — все шесть печей-каминов получили текст про «Дорф в цвете
+    Белый Антик». Описание, повторяющее заголовок или явно от другой
+    позиции, заменяем на осмысленное по направлению.
+    """
+    v = normalize_brand(clean_text(raw, fallback))
+    t = (title or '').strip().lower()
+    if v.strip().lower() == t or (t and v.strip().lower() in t):
+        return fallback
+    return v
+
+
 def build():
     catalog = json.load(io.open(os.path.join(ROOT, 'catalog.json'), encoding='utf-8'))
     specs_path = os.path.join(ROOT, 'specs.json')
@@ -966,10 +987,11 @@ def build():
                 # и заголовок иногда приходит ссылкой — собираем из коллекции
                 coll = it.get("collection", "")
                 title = ("Облицовка «%s»" % coll) if coll else P["title"]
+            title = normalize_brand(title)
             cards.append({
                 "title": title[:96],
                 "collection": it.get("collection", ""),
-                "desc": clean_text(it.get("desc"), fb)[:150],
+                "desc": card_desc(it.get("desc"), title, fb)[:150],
                 "p1": it["price_ceramic"],
                 "p2": it.get("price_turnkey") or 0,
                 "img": it.get("img", ""),
@@ -990,6 +1012,16 @@ def build():
             c["photos"] = frames
             c["tiles"] = spec_tiles(all_specs.get(slug, {}).get(str(pos)),
                                     c["p1"], c["p2"], frames)
+
+        # Одно и то же описание у нескольких карточек — признак того, что
+        # в выгрузке оно скопировано от первой позиции и к остальным
+        # отношения не имеет.
+        seen = {}
+        for c in cards:
+            seen[c["desc"]] = seen.get(c["desc"], 0) + 1
+        for c in cards:
+            if c["desc"] and seen[c["desc"]] > 1:
+                c["desc"] = FALLBACK_DESC.get(slug, "")
 
         collections = []
         for c in cards:

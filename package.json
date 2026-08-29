@@ -10,7 +10,8 @@
     "start": "python3 -m http.server 8099",
     "drive": "node docs/drive.mjs",
     "checklist": "node docs/checklist.mjs",
-    "all": "npm test && npm run visual && npm run drive && npm run checklist"
+    "all": "npm test && npm run visual && npm run drive && npm run checklist && npm run mobile",
+    "mobile": "node docs/mobile.mjs"
   },
   "devDependencies": {
     "jsdom": "^29.1.1",
