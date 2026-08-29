@@ -533,9 +533,9 @@ INDEX_TPL = """<!DOCTYPE html>
         <a class="nav__phone" data-tel data-phone-text>@PHONE@</a>
         <span class="nav__worktime">@WORKTIME@</span>
         <div class="nav__msg">
-          <a class="btn btn--ghost" data-wa target="_blank" rel="noopener" hidden>WhatsApp</a>
-          <a class="btn btn--ghost" data-tg target="_blank" rel="noopener" hidden>Telegram</a>
           <a class="btn btn--ghost" data-max target="_blank" rel="noopener" hidden>MAX</a>
+          <a class="btn btn--ghost" data-tg target="_blank" rel="noopener" hidden>Telegram</a>
+          <a class="btn btn--ghost" data-wa target="_blank" rel="noopener" hidden>WhatsApp</a>
         </div>
         <button type="button" class="btn btn--primary" style="width:100%" data-lead data-src="burger">Получить расчёт</button>
       </div>

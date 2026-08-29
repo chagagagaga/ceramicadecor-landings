@@ -40,6 +40,8 @@ for (const slug of SLUGS) {
       whyImgFull: getComputedStyle(q('.why__media img') || document.body).objectFit,
       heroSubWidth: q('.hero__sub') ? getComputedStyle(q('.hero__sub')).maxWidth : '',
       uspGrid: q('.hero__usp') ? getComputedStyle(q('.hero__usp')).display : '',
+      picFit: q('.card__pic') ? getComputedStyle(q('.card__pic')).objectFit : '',
+      navMsgOrder: qa('.nav__msg a').map(a => a.textContent.trim()),
     };
   });
 
@@ -54,6 +56,8 @@ for (const slug of SLUGS) {
   check(r1.maxLogoReal, 'знак MAX не настоящий (нет градиента)');
   check(r1.galleryUniq === r1.galleryTotal, `в галерее повторы объектов: ${r1.galleryUniq} из ${r1.galleryTotal}`);
   check(r1.uspGrid === 'grid', 'преимущества не сеткой');
+  check(r1.picFit === 'contain', 'изделие в карточке обрезается (object-fit: ' + r1.picFit + ')');
+  check(r1.navMsgOrder.join() === 'MAX,Telegram,WhatsApp', 'порядок в меню: ' + r1.navMsgOrder);
   check(!jsErr.length, 'JS-ошибки: ' + jsErr.slice(0,2).join('; '));
   // порядок каналов в окне заявки: звонок первым, дальше по популярности
   await d.evaluate(() => document.querySelector('[data-cta]')?.click());

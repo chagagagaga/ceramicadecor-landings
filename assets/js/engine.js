@@ -503,7 +503,10 @@
       return '<article class="card" data-card="' + idx + '">' +
         '<button type="button" class="card__media" ' + (n > 1 ? 'data-gal="' + idx + '"' : 'disabled') +
           ' aria-label="' + (n > 1 ? 'Открыть галерею: ' + esc(c.title) : esc(c.title)) + '">' +
-          (c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="450">' : '') +
+          (c.img
+            ? '<img class="card__bg" src="' + esc(c.img) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
+              '<img class="card__pic" src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
+            : '') +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
           (n > 1 ? '<span class="card__count">' + n + ' фото</span>' : '') +
         '</button>' +
