@@ -851,7 +851,9 @@ BANNED_WORDS = ('эксклюзивн', 'уникальн', 'премиальн'
 def normalize_brand(v):
     """Бренд пишется в два слова. В выгрузке встречается слитно
     кириллицей — «КерамикаДекор», это читается как опечатка."""
-    return re.sub(r'[Кк]ерамика[Дд]екор', 'Ceramica Decor', v or '')
+    v = re.sub(r'[Кк]ерамика[Дд]екор', 'Ceramica Decor', v or '')
+    # и латиницей: в выгрузке встречается «CeramicaDecor» слитно
+    return re.sub(r'\bCeramicaDecor\b', 'Ceramica Decor', v)
 
 
 def clean_text(v, fallback=""):

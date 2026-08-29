@@ -75,7 +75,7 @@
                /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ||
                /(^|[?&])demo=1(&|$)/.test(location.search);
     if (!ENDPOINT) {
-      console.warn('[CeramicaDecor] Приёмник заявок не задан: укажите brand.endpoint в data.js. ' +
+      console.warn('[Ceramica Decor] Приёмник заявок не задан: укажите brand.endpoint в data.js. ' +
                    'Формы работают в демо-режиме и никуда не отправляют.');
     }
 
