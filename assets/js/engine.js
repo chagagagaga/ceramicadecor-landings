@@ -555,12 +555,28 @@
   (function filters() {
     var box = $('[data-filters]');
     if (!box || !P.filters) return;
+    var VISIBLE_CHIPS = 6;
     box.innerHTML = P.filters.map(function (x) {
+      var extra = x.options.length - VISIBLE_CHIPS;
       return '<div class="filters" data-filter-key="' + x.key + '">' +
         '<button type="button" class="chip is-on" data-v="all">' + esc(x.label) + ': все</button>' +
-        x.options.map(function (o) { return '<button type="button" class="chip" data-v="' + o.id + '">' + esc(o.label) + '</button>'; }).join('') +
+        x.options.map(function (o, i) {
+          return '<button type="button" class="chip' + (i >= VISIBLE_CHIPS ? ' chip--extra' : '') + '"' +
+            (i >= VISIBLE_CHIPS ? ' hidden' : '') + ' data-v="' + o.id + '">' + esc(o.label) + '</button>';
+        }).join('') +
+        (extra > 0 ? '<button type="button" class="chip chip--more" data-more>Ещё ' + extra + '</button>' : '') +
         '</div>';
     }).join('');
+
+    // «Ещё N» раскрывает остальные коллекции: список из четырнадцати
+    // чипов занимал на телефоне три строки и выглядел стеной.
+    box.addEventListener('click', function (e) {
+      var m = e.target.closest('[data-more]');
+      if (!m) return;
+      var row = m.closest('.filters');
+      $$('.chip--extra', row).forEach(function (c) { c.hidden = false; });
+      m.remove();
+    });
   })();
 
   // Этапы, гарантии, FAQ, галерея

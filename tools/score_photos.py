@@ -61,7 +61,12 @@ def metrics(path):
     bg = max(set(px), key=px.count)
     S = sum(1 for v in px if abs(v - bg) > 8) * 100 / len(px)
 
-    return K, min(w, h), S, w / h
+    # средняя насыщенность: бледный кадр технически «правильный»,
+    # но в крупный блок нужен сочный
+    hsv = im.convert('HSV').resize((64, 64))
+    sat = sum(p[1] for p in hsv.getdata()) / (64 * 64)
+
+    return K, min(w, h), S, w / h, sat
 
 
 def fit_a(a):
@@ -98,13 +103,14 @@ def main():
     for f in sorted(glob.glob(os.path.join(ROOT, '*', 'img', '*.webp'))):
         rel = os.path.relpath(f, ROOT)
         try:
-            K, R, S, A = metrics(f)
+            K, R, S, A, SAT = metrics(f)
         except Exception as e:
             print('  ! %s: %s' % (rel, e))
             continue
         sc = score(K, R, S, A)
         out[rel] = {'score': round(sc, 1), 'k': round(K), 'r': R,
-                    's': round(S), 'a': round(A, 2), 'size': bucket(sc, K, R, A)}
+                    's': round(S), 'a': round(A, 2), 'sat': round(SAT),
+                    'size': bucket(sc, K, R, A)}
 
     path = os.path.join(ROOT, 'photo_scores.json')
     io.open(path, 'w', encoding='utf-8').write(

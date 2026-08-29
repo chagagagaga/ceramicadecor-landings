@@ -78,13 +78,13 @@ PRODUCTS = {
     h1="Барбекю-комплекс<br>в <em>изразцовой облицовке</em>",
     badge="Москва и МО · выезд замерщика бесплатно",
     sub="Соберите конфигурацию — за минуту получите вилку цены, подбор коллекции и похожие реализованные проекты.",
-    usp=["3D-проект бесплатно", "Свой керамический цех", "Монтаж под ключ", "Гарантия 50 лет"],
+    usp=["Смета и 3D-эскиз за 2 дня", "Замер по Москве и МО — 0 ₽", "Цена в договоре не растёт", "Гарантия 50 лет на керамику"],
     seo="Барбекю-комплексы и летние кухни в изразцовой облицовке ручной работы. 3D-проект бесплатно, монтаж под ключ, гарантия 50 лет.",
     priceLabel1="Облицовка",
     quiz=dict(
         title="Рассчитайте свой комплекс",
         sub="Минута — и вы знаете вилку цены. Без звонков и регистраций.",
-        note="Вилка, а не финальная цена: точную смету считаем после замера и согласования 3D-проекта.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.25, turnkeyFactor=2.0,
         matchBy={"field": "collection", "key": "collection"},
         fields=[
@@ -95,10 +95,6 @@ PRODUCTS = {
                 dict(id="terrace", label="Открытая терраса", k=1),
                 dict(id="pavilion", label="Беседка с крышей", k=1.1),
                 dict(id="outdoor", label="Отдельно на участке", k=1.2)]),
-            dict(id="collection", type="radio", step=3, label="Коллекция облицовки", options=[
-                dict(id="Альбион", label="Классическая глазурь", hint="Альбион, Тюльпан, Азулежу", k=1),
-                dict(id="Версаль", label="Рельеф и майолика", hint="Версаль, Элеганс, Дорф", k=1.5),
-                dict(id="Птицы", label="Художественная роспись", hint="Птицы, Византия, Сценки", k=2.2)]),
             dict(id="modules", type="checks", label="Модули комплекса", collapsed=True, options=[
                 dict(id="mangal", label="Мангал", hint="Основа комплекса", add=180000, default=True),
                 dict(id="kazan", label="Печь под казан", add=120000),
@@ -110,7 +106,7 @@ PRODUCTS = {
         ]),
     why=dict(
         badTitle="Кирпич и штукатурка",
-        goodTitle="Керамика CeramicaDecor",
+        goodTitle="Керамика Ceramica Decor",
         bad=["Через две зимы штукатурка идёт трещинами: улица, перепад от −30 до +400 °C.",
              "Кирпич впитывает жир и копоть, отмыть нельзя — комплекс темнеет за сезон.",
              "Каждый комплекс уникален только на словах: у соседа будет такой же.",
@@ -144,13 +140,13 @@ PRODUCTS = {
     h1="Изразцовый камин,<br>который <em>становится сердцем дома</em>",
     badge="Москва и МО · 3D-проект бесплатно",
     sub="Соберите конфигурацию — за минуту получите вилку цены, подбор коллекции и похожие реализованные проекты.",
-    usp=["Дровяные, электро и био", "Свой керамический цех", "Монтаж под ключ", "Гарантия 50 лет"],
+    usp=["Смета и 3D-эскиз за 2 дня", "Замер по Москве и МО — 0 ₽", "Цена в договоре не растёт", "Гарантия 50 лет на керамику"],
     seo="Изразцовые камины ручной работы: дровяные, электрические и биокамины в керамической облицовке. 3D-проект бесплатно, монтаж под ключ.",
     priceLabel1="Облицовка",
     quiz=dict(
         title="Рассчитайте свой камин",
         sub="Минута — и вы знаете вилку цены. Без звонков и регистраций.",
-        note="Вилка, а не финальная цена: точную смету считаем после замера и согласования 3D-проекта.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.22, turnkeyFactor=1.95,
         matchBy={"field": "collection", "key": "collection"},
         fields=[
@@ -161,10 +157,6 @@ PRODUCTS = {
                 dict(id="wood", label="Дровяной", hint="Нужен дымоход", k=1),
                 dict(id="electric", label="Электрический", hint="Без дымохода", k=0.9),
                 dict(id="bio", label="Биокамин", hint="Без дымохода", k=0.85)]),
-            dict(id="collection", type="radio", step=3, label="Декор облицовки", options=[
-                dict(id="Универсал", label="Однотонная глазурь", hint="Универсал, Минималист, Луна", k=1),
-                dict(id="Тюльпан", label="Рельеф и майолика", hint="Тюльпан, Бристоль, Элеганс", k=1.35),
-                dict(id="Птицы", label="Художественная роспись", hint="Птицы, Византия, Дорф", k=1.9)]),
             dict(id="extra", type="checks", label="Дополнить камин", collapsed=True, options=[
                 dict(id="firebox", label="Каминная топка в комплект", hint="Astov, Hoxter, Spartherm", add=185000, default=True),
                 dict(id="wood", label="Дровница в облицовке", add=72000),
@@ -174,7 +166,7 @@ PRODUCTS = {
         ]),
     why=dict(
         badTitle="Готовая облицовка из магазина",
-        goodTitle="Изразцы CeramicaDecor",
+        goodTitle="Изразцы Ceramica Decor",
         bad=["Мрамор и гипс глухие: камин греет только пока горит, тепло уходит в трубу.",
              "Типовой портал не сядет в проём — придётся подгонять стену под камин.",
              "Одинаковые облицовки стоят в тысячах квартир, индивидуальности ноль.",
@@ -208,13 +200,13 @@ PRODUCTS = {
     h1="Изразцы ручной формовки<br><em>для стен, каминов и кухни</em>",
     badge="Отгрузка по всей России",
     sub="Посчитайте комплект под свою площадь — за минуту увидите вилку цены и подходящие коллекции.",
-    usp=["Ручная формовка и роспись", "Свой цех в Королёве", "Отгрузка по РФ", "Гарантия 50 лет"],
+    usp=["Смета и раскладка за 2 дня", "Образец изразца почтой — 0 ₽", "Отгрузка по России", "Гарантия 50 лет на керамику"],
     seo="Изразцы и керамическая плитка ручной формовки: рельеф, майолика, художественная роспись. Отгрузка по России, свой цех.",
     priceLabel1="Цена за штуку",
     quiz=dict(
         title="Рассчитайте комплект изразцов",
         sub="Минута — и вы знаете вилку цены. Без звонков и регистраций.",
-        note="Расчёт ориентировочный: точное количество зависит от раскладки, углов и подрезки. Раскладку делаем бесплатно.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.28, turnkeyFactor=0,
         matchBy=None,
         fields=[
@@ -226,10 +218,6 @@ PRODUCTS = {
                 dict(id="fireplace", label="Камин или печь", hint="Нужна жаростойкая румпа", k=1.15),
                 dict(id="wall", label="Стена или ниша в интерьере", k=1),
                 dict(id="facade", label="Фасад или уличный объект", hint="Морозостойкая серия", k=1.2)]),
-            dict(id="decor", type="radio", step=3, label="Тип изразца", options=[
-                dict(id="plain", label="Однотонная глазурь", hint="Ровный цвет, 40+ оттенков палитры", k=1),
-                dict(id="relief", label="Лепной рельеф", hint="Пастораль, Тюльпан, Сохо, Дорф", k=1.3),
-                dict(id="painted", label="Художественная роспись", hint="Ручная кисть, сюжет на выбор", k=1.95)]),
             dict(id="extra", type="checks", label="Добавить к комплекту", collapsed=True, options=[
                 dict(id="corner", label="Угловые элементы", hint="Для внешних углов и торцов", add=19000),
                 dict(id="border", label="Карниз и плинтус", add=24000),
@@ -273,13 +261,13 @@ PRODUCTS = {
     h1="Печь-камин в изразцах<br><em>с готовой ценой и сроком</em>",
     badge="Заводская модель · срок от 2 недель",
     sub="Выберите модель и цвет — увидите итоговую цену сразу, без замера и проектирования.",
-    usp=["Готовая модель", "Цена без сюрпризов", "Срок от 2 недель", "Гарантия 50 лет"],
+    usp=["Цена окончательная, сразу", "Со склада — от 2 недель", "Доставка и монтаж по РФ", "Гарантия 50 лет на керамику"],
     seo="Типовые печи-камины КерамикаДекор в изразцовой облицовке: готовые модели, фиксированная цена, срок от 2 недель.",
     priceLabel1="Цена",
     quiz=dict(
         title="Соберите свою печь-камин",
         sub="Готовая модель — цена сразу, без замера и проектирования.",
-        note="Цена по типовой модели фиксированная. Меняются только доставка и монтаж — зависят от адреса и этажа.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.1, turnkeyFactor=0,
         matchBy=None,
         fields=[
@@ -332,13 +320,13 @@ PRODUCTS = {
     h1="Изразцовый портал<br>для <em>банной печи</em>",
     badge="Москва и МО · выезд замерщика бесплатно",
     sub="Соберите конфигурацию — за минуту получите вилку цены и подбор коллекции под вашу печь.",
-    usp=["Под любую банную печь", "Ручная роспись", "Монтаж под ключ", "Гарантия 50 лет"],
+    usp=["Смета и 3D-эскиз за 2 дня", "Замер по Москве и МО — 0 ₽", "Под любую банную печь", "Гарантия 50 лет на керамику"],
     seo="Изразцовые порталы и облицовки для банных печей с художественной росписью. Изготовление под вашу печь, монтаж под ключ.",
     priceLabel1="Облицовка",
     quiz=dict(
         title="Рассчитайте свой портал",
         sub="Минута — и вы знаете вилку цены. Без звонков и регистраций.",
-        note="Вилка, а не финальная цена: точную смету считаем после замера печи и согласования эскиза.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.24, turnkeyFactor=1.85,
         matchBy=None,
         fields=[
@@ -349,10 +337,6 @@ PRODUCTS = {
                 dict(id="portal", label="Только портал вокруг топки", k=1),
                 dict(id="full", label="Печь целиком", hint="Больше керамики — больше тепла", k=1.45),
                 dict(id="wall", label="Портал плюс стена за печью", k=1.3)]),
-            dict(id="decor", type="radio", step=3, label="Декор", options=[
-                dict(id="plain", label="Однотонная глазурь", k=1),
-                dict(id="relief", label="Лепной рельеф", k=1.28),
-                dict(id="painted", label="Художественная роспись", hint="Сюжет по вашему эскизу", k=1.85)]),
             dict(id="extra", type="checks", label="Дополнить портал", collapsed=True, options=[
                 dict(id="panno", label="Изразцовое панно", hint="Центральный сюжет ручной кисти", add=125000),
                 dict(id="wood", label="Дровница в облицовке", add=74000),
@@ -395,13 +379,13 @@ PRODUCTS = {
     h1="Русская печь с лежанкой<br>в <em>изразцовой облицовке</em>",
     badge="Москва и МО · 3D-проект бесплатно",
     sub="Соберите конфигурацию — за минуту получите вилку цены и подбор коллекции под ваш дом.",
-    usp=["С лежанкой и подтопком", "Ручная роспись", "Свой цех", "Гарантия 50 лет"],
+    usp=["Смета и 3D-эскиз за 2 дня", "Замер по Москве и МО — 0 ₽", "Цена в договоре не растёт", "Гарантия 50 лет на керамику"],
     seo="Русские печи с лежанкой в изразцовой облицовке ручной работы. 3D-проект бесплатно, монтаж под ключ, гарантия 50 лет.",
     priceLabel1="Облицовка",
     quiz=dict(
         title="Рассчитайте свою печь",
         sub="Минута — и вы знаете вилку цены. Без звонков и регистраций.",
-        note="Вилка, а не финальная цена: точную смету считаем после замера и согласования 3D-проекта.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.26, turnkeyFactor=1.75,
         matchBy=None,
         fields=[
@@ -412,10 +396,6 @@ PRODUCTS = {
                 dict(id="plain", label="Без лежанки", hint="Компактный вариант", k=1),
                 dict(id="bench", label="С лежанкой", hint="Классика", k=1.35),
                 dict(id="full", label="С лежанкой и подтопком", hint="Готовит и отапливает круглый год", k=1.6)]),
-            dict(id="decor", type="radio", step=3, label="Декор облицовки", options=[
-                dict(id="plain", label="Однотонная глазурь", k=1),
-                dict(id="relief", label="Лепной рельеф", k=1.3),
-                dict(id="painted", label="Художественная роспись", hint="Русская Этника, Камея, Птички", k=1.9)]),
             dict(id="extra", type="checks", label="Дополнить печь", collapsed=True, options=[
                 dict(id="niche", label="Ниши и печурки", add=92000),
                 dict(id="pipe", label="Изразцовая труба", hint="Облицовка дымохода в интерьере", add=185000),
@@ -458,13 +438,13 @@ PRODUCTS = {
     h1="Отопительная печь<br>в <em>изразцах ручной работы</em>",
     badge="Москва и МО · 3D-проект бесплатно",
     sub="Соберите конфигурацию — за минуту получите вилку цены и подбор коллекции под ваш дом.",
-    usp=["Отопление и готовка", "Ручная роспись", "Монтаж под ключ", "Гарантия 50 лет"],
+    usp=["Смета и 3D-эскиз за 2 дня", "Замер по Москве и МО — 0 ₽", "Цена в договоре не растёт", "Гарантия 50 лет на керамику"],
     seo="Отопительные печи в изразцовой облицовке: с плитой, с лежанкой, с художественной росписью. Монтаж под ключ, гарантия 50 лет.",
     priceLabel1="Облицовка",
     quiz=dict(
         title="Рассчитайте свою печь",
         sub="Минута — и вы знаете вилку цены. Без звонков и регистраций.",
-        note="Вилка, а не финальная цена: точную смету считаем после замера и согласования 3D-проекта.",
+        note="Пришлём смету и 3D-эскиз в мессенджер или расскажем по телефону — как удобнее.",
         base=0, spread=1.24, turnkeyFactor=1.8,
         matchBy=None,
         fields=[
@@ -475,10 +455,6 @@ PRODUCTS = {
                 dict(id="heat", label="Только отопление", k=1),
                 dict(id="cook", label="С варочной плитой", hint="Отапливает и готовит", k=1.18),
                 dict(id="bench", label="С лежанкой", hint="Тёплая лежанка на массиве печи", k=1.45)]),
-            dict(id="decor", type="radio", step=3, label="Декор облицовки", options=[
-                dict(id="plain", label="Однотонная глазурь", k=1),
-                dict(id="relief", label="Лепной рельеф", k=1.28),
-                dict(id="painted", label="Художественная роспись", hint="Птицы, Прованс, Усадьба, Арт Нуво", k=1.9)]),
             dict(id="extra", type="checks", label="Дополнить печь", collapsed=True, options=[
                 dict(id="chimney", label="Дымоход с проходом кровли", add=72000, default=True),
                 dict(id="niche", label="Ниши и печурки", add=88000),
@@ -523,11 +499,11 @@ INDEX_TPL = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>@TITLE@ — CeramicaDecor</title>
+<title>@TITLE@ — Ceramica Decor</title>
 <meta name="description" content="@SEO@">
 <link rel="canonical" href="https://chagagagaga.github.io/ceramicadecor-landings/@SLUG@/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="@TITLE@ — CeramicaDecor">
+<meta property="og:title" content="@TITLE@ — Ceramica Decor">
 <meta property="og:description" content="@SEO@">
 <meta property="og:image" content="https://chagagagaga.github.io/ceramicadecor-landings/@SLUG@/@HERO@">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -570,7 +546,7 @@ INDEX_TPL = """<!DOCTYPE html>
         <span>@WORKTIME@</span>
       </div>
       <button type="button" class="btn btn--primary" data-lead data-src="header">Рассчитать</button>
-      <a class="header__max" data-max target="_blank" rel="noopener" aria-label="Написать в MAX" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 13.7-2.1-3.1-2.2 2.6a.9.9 0 0 1-1.4 0l-2.2-2.6-2.1 3.1a.85.85 0 1 1-1.4-.95l2.8-4.1a.9.9 0 0 1 1.4-.1l2.2 2.6 2.2-2.6a.9.9 0 0 1 1.4.1l2.8 4.1a.85.85 0 1 1-1.4.95Z"/></svg></a>
+      <a class="header__max" data-max target="_blank" rel="noopener" aria-label="Написать в MAX" hidden>@MAX_SVG@</a>
       <button class="burger" data-burger aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -696,7 +672,7 @@ INDEX_TPL = """<!DOCTYPE html>
   <div class="container contacts__inner">
     <div>
       <span class="kicker">Контакты</span>
-      <h2 class="section__title">CeramicaDecor</h2>
+      <h2 class="section__title">Ceramica Decor</h2>
       <p class="section__lead">Керамика ручной формовки с 2013 года. Собственное производство, свои монтажные бригады, отгрузка по всей России.</p>
       <dl class="contacts__list">
         <div><dt>Телефон</dt><dd><a data-tel data-phone-text>@PHONE@</a></dd></div>
@@ -746,7 +722,7 @@ INDEX_TPL = """<!DOCTYPE html>
     </div>
   </div>
   <div class="container footer__bottom">
-    <span>© <span data-year>2026</span> CeramicaDecor</span>
+    <span>© <span data-year>2026</span> Ceramica Decor</span>
     <span>Информация на сайте не является публичной офертой.</span>
   </div>
 </footer>
@@ -754,11 +730,11 @@ INDEX_TPL = """<!DOCTYPE html>
 <!-- Плавающие мессенджеры: только десктоп, нижний правый угол -->
 <div class="msgdock" data-msgdock hidden>
   <a class="msgdock__btn msgdock__btn--max" data-max target="_blank" rel="noopener" aria-label="Написать в MAX" hidden>
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 13.7-2.1-3.1-2.2 2.6a.9.9 0 0 1-1.4 0l-2.2-2.6-2.1 3.1a.85.85 0 1 1-1.4-.95l2.8-4.1a.9.9 0 0 1 1.4-.1l2.2 2.6 2.2-2.6a.9.9 0 0 1 1.4.1l2.8 4.1a.85.85 0 1 1-1.4.95Z"/></svg><span>MAX</span></a>
-  <a class="msgdock__btn msgdock__btn--wa" data-wa target="_blank" rel="noopener" aria-label="Написать в WhatsApp" hidden>
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-11.9 0-3.2-1.2-6.2-3.5-8.5Z"/></svg><span>WhatsApp</span></a>
+    @MAX_SVG@<span>MAX</span></a>
   <a class="msgdock__btn msgdock__btn--tg" data-tg target="_blank" rel="noopener" aria-label="Написать в Telegram" hidden>
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.1 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.4 1Z"/></svg><span>Telegram</span></a>
+  <a class="msgdock__btn msgdock__btn--wa" data-wa target="_blank" rel="noopener" aria-label="Написать в WhatsApp" hidden>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-11.9 0-3.2-1.2-6.2-3.5-8.5Z"/></svg><span>WhatsApp</span></a>
 </div>
 
 <div class="mobilebar" data-mobilebar>
@@ -766,7 +742,7 @@ INDEX_TPL = """<!DOCTYPE html>
     <svg viewBox="0 0 24 24"><path d="M20.5 15.4 17 14.6c-.5-.1-1 0-1.4.4l-2.3 2.3c-3.5-1.8-6.4-4.6-8.2-8.2l2.3-2.3c.4-.4.5-.9.4-1.4L7 1.9C6.9 1.2 6.2.7 5.5.7H2.8C1.9.7 1.1 1.4 1.1 2.4 1.1 14.4 9.7 23 22 23c1 0 1.7-.8 1.7-1.7v-2.7c0-.7-.5-1.4-1.2-1.6Z"/></svg>
     Позвонить</a>
   <a data-max data-bar-msg hidden>
-    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 13.7-2.1-3.1-2.2 2.6a.9.9 0 0 1-1.4 0l-2.2-2.6-2.1 3.1a.85.85 0 1 1-1.4-.95l2.8-4.1a.9.9 0 0 1 1.4-.1l2.2 2.6 2.2-2.6a.9.9 0 0 1 1.4.1l2.8 4.1a.85.85 0 1 1-1.4.95Z"/></svg>
+    @MAX_SVG@
     MAX</a>
   <a data-tg data-bar-msg hidden>
     <svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.1 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.4 1Z"/></svg>
@@ -892,7 +868,7 @@ def clean_text(v, fallback=""):
             low = v.lower()
     if not v or v.startswith("http") or "ceramicadecor.ru/" in v or v.startswith("cd_"):
         return fallback
-    # хвост вида «| CeramicaDecor» в описании ничего не добавляет
+    # хвост вида «| Ceramica Decor» в описании ничего не добавляет
     v = v.split("|")[0].strip()
     return v or fallback
 
@@ -944,14 +920,31 @@ def why_media(slug, cards):
     path = os.path.join(ROOT, 'photo_scores.json')
     if os.path.exists(path):
         scores = json.load(io.open(path, encoding='utf-8'))
+    # Кадр должен быть не просто контрастным, а живым: горизонтальным,
+    # крупным и снятым в готовом интерьере. Вертикальные и квадратные
+    # снимки в широком блоке смотрятся тесно, поэтому пропорция в весе.
     best, best_sc = '', -1
     for c in cards:
         for f in (c.get('photos') or [c.get('img')]):
             if not f:
                 continue
-            sc = scores.get('%s/%s' % (slug, f), {}).get('score', 0)
-            if sc > best_sc:
-                best, best_sc = f, sc
+            m = scores.get('%s/%s' % (slug, f))
+            if not m:
+                continue
+            a = m.get('a', 1)
+            if a < 1.25:          # только горизонтальные
+                continue
+            # Нужен объект целиком в готовом интерьере, а не фрагмент
+            # плитки и не стройплощадка. Признак интерьера — средняя доля
+            # объекта в кадре: если он занимает почти всё, это макро.
+            sv = m.get('s', 0)
+            fit_s = 1.0 if 45 <= sv <= 78 else (0.35 if sv < 45 else 0.15)
+            rank = (m.get('score', 0)
+                    + 20 * min(a, 1.8)                       # горизонталь
+                    + 26 * fit_s                             # объект в интерьере
+                    + 16 * min(m.get('sat', 0), 80) / 80)    # сочность
+            if rank > best_sc:
+                best, best_sc = f, rank
     return best or (cards[1]['img'] if len(cards) > 1 else '')
 
 
@@ -1030,7 +1023,11 @@ def build():
             "steps": STEPS,
             "guarantees": [dict(g, svg=ICONS.get(g.get("icon", ""), "")) for g in GUARANTEES],
             "faq": [{"q": a, "a": b} for a, b in P["faq"]],
-            "gallery": [f for c in cards for f in (c["photos"] or [c["img"]]) if f][:24],
+            # По одному кадру с объекта: раньше галерея брала все шесть подряд,
+            # и первые четыре объекта занимали её целиком — рядом висели почти
+            # одинаковые ракурсы одной и той же печи.
+            "gallery": [ (c["photos"] or [c["img"]])[0] for c in cards
+                         if (c["photos"] or [c["img"]])[0] ][:24],
         }
         io.open(os.path.join(ROOT, slug, 'data.js'), 'w', encoding='utf-8').write(
             "/* Контент направления «%s». Правится здесь — вёрстка и логика общие. */\n"
@@ -1046,8 +1043,13 @@ def build():
         # и не грузился отдельным запросом.
         logo_svg = io.open(os.path.join(ROOT, 'assets', 'logo.svg'), encoding='utf-8').read()
         logo_svg = logo_svg.split('?>')[-1].strip()
+        # Знак MAX — официальный, снят с max.ru: нарисованный на глаз
+        # люди не опознают, а MAX сейчас основной канал связи.
+        max_svg = io.open(os.path.join(ROOT, 'assets', 'max.svg'), encoding='utf-8').read()
+        max_svg = max_svg.split('?>')[-1].strip()
         html = (INDEX_TPL
                 .replace('@LOGO_SVG@', logo_svg)
+                .replace('@MAX_SVG@', max_svg)
                 .replace('@TITLE@', P["title"]).replace('@SEO@', P["seo"])
                 .replace('@SLUG@', slug).replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
