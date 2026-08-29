@@ -70,7 +70,6 @@ window.LP = {
    {
     "id": "extra",
     "type": "checks",
-    "step": 3,
     "label": "Обвязка и доставка",
     "options": [
      {

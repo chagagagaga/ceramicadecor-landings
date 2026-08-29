@@ -581,7 +581,7 @@ textarea.input { resize: vertical; min-height: 84px; }
      не выбрасываем: голое слово опознаётся хуже, чем знак с подписью. */
   .logo { flex: 0 1 auto; min-width: 0; gap: .45rem; }
   .logo__mark { width: 28px; height: 28px; }
-  .logo__text b { font-size: .82rem; letter-spacing: .03em; }
+  .logo__text b { font-size: 1.02rem; letter-spacing: .03em; }
   .header__right .btn { padding: .78em .75em; font-size: .78rem; }
   .header__inner { gap: .5rem; }
 }

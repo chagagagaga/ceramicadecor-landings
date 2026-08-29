@@ -8,7 +8,9 @@
     "test": "node docs/audit.mjs && node docs/final.mjs",
     "visual": "node docs/visual.mjs",
     "start": "python3 -m http.server 8099",
-    "drive": "node docs/drive.mjs"
+    "drive": "node docs/drive.mjs",
+    "checklist": "node docs/checklist.mjs",
+    "all": "npm test && npm run visual && npm run drive && npm run checklist"
   },
   "devDependencies": {
     "jsdom": "^29.1.1",

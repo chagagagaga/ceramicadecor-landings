@@ -278,7 +278,7 @@ PRODUCTS = {
                 dict(id="antik", label="Белый антик", k=1),
                 dict(id="choco", label="Горький шоколад", k=1),
                 dict(id="murav", label="Муравленый", hint="Глубокий зелёный", k=1.04)]),
-            dict(id="extra", type="checks", step=3, label="Обвязка и доставка", options=[
+            dict(id="extra", type="checks", label="Обвязка и доставка", options=[
                 dict(id="chimney", label="Дымоход-сэндвич", hint="Нержавейка, с проходом кровли", add=68000, default=True),
                 dict(id="mount", label="Монтаж и пусконаладка", add=42000, default=True),
                 dict(id="screen", label="Защитный экран из камня", add=55000),
@@ -334,13 +334,13 @@ PRODUCTS = {
                  dec=1, unit="м", default=1.6, pricePerUnit=240000,
                  hint="От пола до верха облицовки. Портал до потолка смотрится дороже и лучше держит тепло."),
             dict(id="scheme", type="radio", step=2, label="Что облицовываем", options=[
-                dict(id="portal", label="Только портал вокруг топки", k=1),
+                dict(id="portal", label="Портал вокруг топки", k=1),
                 dict(id="full", label="Печь целиком", hint="Больше керамики — больше тепла", k=1.45),
-                dict(id="wall", label="Портал плюс стена за печью", k=1.3)]),
+                dict(id="wall", label="Портал и стена за печью", k=1.3)]),
             dict(id="extra", type="checks", label="Дополнить портал", collapsed=True, options=[
                 dict(id="panno", label="Изразцовое панно", hint="Центральный сюжет ручной кисти", add=125000),
                 dict(id="wood", label="Дровница в облицовке", add=74000),
-                dict(id="shelf", label="Полка из натурального камня", add=48000),
+                dict(id="shelf", label="Полка из камня", add=48000),
                 dict(id="mount", label="Монтаж на объекте", add=65000, default=True)]),
         ]),
     why=dict(
@@ -395,12 +395,12 @@ PRODUCTS = {
             dict(id="scheme", type="radio", step=2, label="Исполнение", options=[
                 dict(id="plain", label="Без лежанки", hint="Компактный вариант", k=1),
                 dict(id="bench", label="С лежанкой", hint="Классика", k=1.35),
-                dict(id="full", label="С лежанкой и подтопком", hint="Готовит и отапливает круглый год", k=1.6)]),
+                dict(id="full", label="С лежанкой", hint="Готовит и отапливает круглый год", k=1.6)]),
             dict(id="extra", type="checks", label="Дополнить печь", collapsed=True, options=[
                 dict(id="niche", label="Ниши и печурки", add=92000),
                 dict(id="pipe", label="Изразцовая труба", hint="Облицовка дымохода в интерьере", add=185000),
                 dict(id="wood", label="Дровница в облицовке", add=74000),
-                dict(id="mount", label="Кладка и монтаж на объекте", add=260000, default=True)]),
+                dict(id="mount", label="Кладка и монтаж", add=260000, default=True)]),
         ]),
     why=dict(
         badTitle="Побелённая печь",
