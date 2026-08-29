@@ -23,7 +23,9 @@ MAX_FRAMES = 6      # больше шести на карточку в гале�
 UA = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
                     'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36'}
 # hash в пути превью: /userdata/product/preview/48/bc/48bc…bc_1200.jpg
-RE_PREVIEW = re.compile(r'/userdata/product/preview/([0-9a-f]{2})/([0-9a-f]{2})/([0-9a-f]{32})_\d+\.(jpg|jpeg|png)', re.I)
+# Идентификатор кадра бывает двух видов: 32-символьный hex у старых
+# объектов и короткий буквенно-цифровой у новых — ловим оба.
+RE_PREVIEW = re.compile(r'/userdata/product/preview/([0-9a-z]{2})/([0-9a-z]{2})/([0-9a-z]{8,40})_\d+\.(jpg|jpeg|png|webp)', re.I)
 
 
 def get(url, timeout=60):

@@ -127,7 +127,10 @@ window.LP = {
    "p2": 0,
    "img": "img/01.webp",
    "photos": [
-    "img/01.webp"
+    "img/01.webp",
+    "img/01-2.webp",
+    "img/01-3.webp",
+    "img/01-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/",
    "spec": ""
@@ -222,7 +225,9 @@ window.LP = {
    "p2": 0,
    "img": "img/07.webp",
    "photos": [
-    "img/07.webp"
+    "img/07.webp",
+    "img/07-2.webp",
+    "img/07-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
    "spec": ""
@@ -414,6 +419,9 @@ window.LP = {
  ],
  "gallery": [
   "img/01.webp",
+  "img/01-2.webp",
+  "img/01-3.webp",
+  "img/01-4.webp",
   "img/02.webp",
   "img/02-2.webp",
   "img/02-3.webp",
@@ -433,9 +441,6 @@ window.LP = {
   "img/05-2.webp",
   "img/05-3.webp",
   "img/06.webp",
-  "img/06-2.webp",
-  "img/06-3.webp",
-  "img/06-4.webp",
-  "img/07.webp"
+  "img/06-2.webp"
  ]
 };

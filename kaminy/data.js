@@ -210,7 +210,9 @@ window.LP = {
    "p2": 2084728,
    "img": "img/05.webp",
    "photos": [
-    "img/05.webp"
+    "img/05.webp",
+    "img/05-2.webp",
+    "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-versal-v-sinem-tsvete/",
    "spec": ""
@@ -257,7 +259,9 @@ window.LP = {
    "p2": 1433372,
    "img": "img/09.webp",
    "photos": [
-    "img/09.webp"
+    "img/09.webp",
+    "img/09-2.webp",
+    "img/09-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-art-nuvo-1/",
    "spec": ""
@@ -438,7 +442,9 @@ window.LP = {
    "p2": 1945720,
    "img": "img/20.webp",
    "photos": [
-    "img/20.webp"
+    "img/20.webp",
+    "img/20-2.webp",
+    "img/20-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-elegans-v-glazuri-lesnoj-tuman/",
    "spec": ""
@@ -729,6 +735,6 @@ window.LP = {
   "img/04-4.webp",
   "img/04-5.webp",
   "img/05.webp",
-  "img/06.webp"
+  "img/05-2.webp"
  ]
 };

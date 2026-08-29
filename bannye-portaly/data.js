@@ -212,7 +212,10 @@ window.LP = {
    "p2": 0,
    "img": "img/06.webp",
    "photos": [
-    "img/06.webp"
+    "img/06.webp",
+    "img/06-2.webp",
+    "img/06-3.webp",
+    "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
    "spec": ""
