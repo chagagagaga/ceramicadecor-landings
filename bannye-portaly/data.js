@@ -3,7 +3,7 @@ window.LP = {
  "slug": "bannye-portaly",
  "title": "Порталы для банных печей",
  "brand": {
-  "phone": "+7 (495) 229-30-46",
+  "phone": "8 (800) 555-80-32",
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
@@ -267,12 +267,7 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
-   "tiles": [
-    {
-     "v": "4 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво",

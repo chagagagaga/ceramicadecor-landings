@@ -3,7 +3,7 @@ window.LP = {
  "slug": "otopitelnye-pechi",
  "title": "Отопительные печи",
  "brand": {
-  "phone": "+7 (495) 229-30-46",
+  "phone": "8 (800) 555-80-32",
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
@@ -133,12 +133,7 @@ window.LP = {
     "img/01-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/",
-   "tiles": [
-    {
-     "v": "4 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Облицовка печи изразцами с художественной росписью Прованс",
@@ -154,12 +149,7 @@ window.LP = {
     "img/02-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
-   "tiles": [
-    {
-     "v": "4 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Облицовка печи Арт Нуво в лазурной росписи",
@@ -292,12 +282,7 @@ window.LP = {
     "img/07-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Облицовка отопительной печи в коллекции Модерн",

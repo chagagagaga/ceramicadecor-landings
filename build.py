@@ -15,7 +15,8 @@ import io, json, os, re
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 BRAND = {
-    "phone": "+7 (495) 229-30-46",
+    # Федеральный номер с основного сайта ceramicadecor.ru
+    "phone": "8 (800) 555-80-32",
     "worktime": "Ежедневно 9:00–21:00",
     "address": "Москва · производство в Королёве",
     "site": "https://ceramicadecor.ru",
@@ -868,9 +869,27 @@ FALLBACK_DESC = {
     "otopitelnye-pechi":  "Отопительная печь в керамической облицовке: держит тепло и не боится перепадов температуры.",
 }
 
+BANNED_WORDS = ('эксклюзивн', 'уникальн', 'премиальн', 'элитн', 'роскошн')
+
+
 def clean_text(v, fallback=""):
-    """Убирает из выгрузки ссылки и служебный мусор, оставляя живой текст."""
+    """Убирает из выгрузки ссылки, служебный мусор и рекламные эпитеты.
+    Дирекция запрещает прилагательные: материальность доказывается
+    размерностью — сантиметрами, килограммами, штуками."""
     v = (v or "").strip()
+    low = v.lower()
+    for wbad in BANNED_WORDS:
+        if low.startswith(wbad):
+            # «Эксклюзивная кухня…» → «Кухня…»
+            v = v.split(' ', 1)[1] if ' ' in v else v
+            v = v[:1].upper() + v[1:]
+            low = v.lower()
+    for wbad in BANNED_WORDS:
+        i = low.find(' ' + wbad)
+        if i > 0:
+            end = v.find(' ', i + 1)
+            v = (v[:i] + (v[end:] if end > 0 else '')).strip()
+            low = v.lower()
     if not v or v.startswith("http") or "ceramicadecor.ru/" in v or v.startswith("cd_"):
         return fallback
     # хвост вида «| CeramicaDecor» в описании ничего не добавляет
@@ -913,7 +932,9 @@ def spec_tiles(sp, p1, p2, photos):
         tiles.append({'v': fmt_ru(p2 - p1) + ' \u20bd', 'l': 'монтаж и работы'})
     if len(tiles) < 3 and photos:
         tiles.append({'v': '%d фото' % len(photos), 'l': 'съёмка объекта'})
-    return tiles[:3] if len(tiles) >= 3 else tiles[:2]
+    # Одна плитка хуже, чем ни одной: в модульной сетке она читается
+    # как незагрузившийся блок.
+    return tiles[:3] if len(tiles) >= 2 else []
 
 
 def why_media(slug, cards):

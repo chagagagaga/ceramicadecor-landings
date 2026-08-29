@@ -714,8 +714,13 @@
     var b = P.brand;
     function wire(sel, url) {
       $$(sel).forEach(function (a) {
-        if (url) { a.href = url; a.hidden = false; }
-        else { a.hidden = true; a.removeAttribute('href'); }
+        if (url) {
+          a.href = url; a.hidden = false;
+          a.rel = 'noopener noreferrer';
+          if (!a.target) a.target = '_blank';
+        } else {
+          a.hidden = true; a.removeAttribute('href');
+        }
       });
     }
     var txt = encodeURIComponent('Здравствуйте! Пишу с сайта по направлению «' + P.title + '», хочу расчёт.');

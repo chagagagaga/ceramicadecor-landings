@@ -3,7 +3,7 @@ window.LP = {
  "slug": "pechi-kaminy",
  "title": "Типовые печи-камины",
  "brand": {
-  "phone": "+7 (495) 229-30-46",
+  "phone": "8 (800) 555-80-32",
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
@@ -115,12 +115,7 @@ window.LP = {
     "img/01-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Дорф в цвете Горький Шоколад",
@@ -135,12 +130,7 @@ window.LP = {
     "img/02-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Дорф в цвете Муравленый",
@@ -155,12 +145,7 @@ window.LP = {
     "img/03-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-1/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Ритм в цвете Белый Антик",
@@ -175,12 +160,7 @@ window.LP = {
     "img/04-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Ритм в цвете Бургундия",
@@ -195,12 +175,7 @@ window.LP = {
     "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1-1/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Ритм в цвете Лазурный",
@@ -215,12 +190,7 @@ window.LP = {
     "img/06-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   }
  ],
  "filters": [],

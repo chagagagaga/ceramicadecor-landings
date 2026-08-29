@@ -3,7 +3,7 @@ window.LP = {
  "slug": "kaminy",
  "title": "Камины",
  "brand": {
-  "phone": "+7 (495) 229-30-46",
+  "phone": "8 (800) 555-80-32",
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",

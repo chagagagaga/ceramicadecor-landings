@@ -3,7 +3,7 @@ window.LP = {
  "slug": "russkie-pechi",
  "title": "Русские печи",
  "brand": {
-  "phone": "+7 (495) 229-30-46",
+  "phone": "8 (800) 555-80-32",
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
@@ -194,12 +194,7 @@ window.LP = {
     "img/03-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
-   "tiles": [
-    {
-     "v": "3 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Русская печь в облицовке белыми изразцами коллекции Неаполь",
@@ -272,12 +267,7 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
-   "tiles": [
-    {
-     "v": "4 фото",
-     "l": "съёмка объекта"
-    }
-   ]
+   "tiles": []
   },
   {
    "title": "Русская печь с частичной облицовкой изразцами коллекции Арт Нуво",
