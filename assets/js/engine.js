@@ -555,7 +555,7 @@
   (function filters() {
     var box = $('[data-filters]');
     if (!box || !P.filters) return;
-    var VISIBLE_CHIPS = 6;
+    var VISIBLE_CHIPS = 4;
     box.innerHTML = P.filters.map(function (x) {
       var extra = x.options.length - VISIBLE_CHIPS;
       return '<div class="filters" data-filter-key="' + x.key + '">' +

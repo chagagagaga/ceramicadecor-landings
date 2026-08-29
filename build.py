@@ -545,8 +545,8 @@ INDEX_TPL = """<!DOCTYPE html>
         <a href="#" data-tel data-phone-text>@PHONE@</a>
         <span>@WORKTIME@</span>
       </div>
+      <a class="header__max" data-max target="_blank" rel="noopener" aria-label="Написать в MAX" hidden>@MAX_SVG@<i>MAX</i></a>
       <button type="button" class="btn btn--primary" data-lead data-src="header">Рассчитать</button>
-      <a class="header__max" data-max target="_blank" rel="noopener" aria-label="Написать в MAX" hidden>@MAX_SVG@</a>
       <button class="burger" data-burger aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -681,9 +681,9 @@ INDEX_TPL = """<!DOCTYPE html>
         <div><dt>Сайт</dt><dd><a href="@SITE@" target="_blank" rel="noopener">ceramicadecor.ru</a></dd></div>
       </dl>
       <div class="contacts__msg">
-        <a class="btn btn--ghost" data-wa target="_blank" rel="noopener" hidden>WhatsApp</a>
-        <a class="btn btn--ghost" data-tg target="_blank" rel="noopener" hidden>Telegram</a>
         <a class="btn btn--ghost" data-max target="_blank" rel="noopener" hidden>MAX</a>
+        <a class="btn btn--ghost" data-tg target="_blank" rel="noopener" hidden>Telegram</a>
+        <a class="btn btn--ghost" data-wa target="_blank" rel="noopener" hidden>WhatsApp</a>
       </div>
     </div>
     <form class="form" data-lead-source="contacts" novalidate>
@@ -807,11 +807,11 @@ COMMENT_PH = {
 }
 
 PRICE_FILTERS = {
- "izraztsy":     [("До 3 000 ₽", 0, 3000), ("3 000 – 6 000 ₽", 3000, 6000), ("От 6 000 ₽", 6000, 10**9)],
+ "izraztsy":     [("до 3 000 ₽", 0, 3000), ("3–6 тыс ₽", 3000, 6000), ("от 6 000 ₽", 6000, 10**9)],
  "pechi-kaminy": [],
 }
-DEFAULT_PRICE_FILTER = [("До 700 тыс", 0, 700000), ("700 тыс – 1,5 млн", 700000, 1500000),
-                        ("1,5 – 3 млн", 1500000, 3000000), ("От 3 млн", 3000000, 10**9)]
+DEFAULT_PRICE_FILTER = [("до 0,7 млн", 0, 700000), ("0,7–1,5 млн", 700000, 1500000),
+                        ("1,5–3 млн", 1500000, 3000000), ("от 3 млн", 3000000, 10**9)]
 
 
 
