@@ -170,9 +170,6 @@
     var Q = P.quiz;
     var state = {};
     var modal = null, channel = 'whatsapp';
-    // Цена показывается по первому же действию в конфигураторе или по кнопке.
-    // При загрузке крупная сумма перебивает всё остальное на экране.
-    var priceShown = false;
 
     Q.fields.forEach(function (f) {
       if (f.type === 'range') state[f.id] = f.def != null ? f.def : f.min;
@@ -286,14 +283,12 @@
               '<span class="calc-pick__name">' + esc(p.title.slice(0, 46)) + '</span>' +
               '<span class="calc-pick__meta">облицовка от ' + fmt(p.p1) + ' ₽</span></span>' +
             '</div>' : '') +
-          '<div class="calc__result' + (priceShown ? '' : ' calc__result--hidden') + '">' +
-            (priceShown
-              ? '<span class="calc__result-label">' + esc(Q.resultLabel || 'Ориентир по вашей конфигурации') + '</span>' +
-                '<span class="calc__result-sum" data-sum>' + rangeHtml(r) + '</span>' +
-                (r.turnkey ? '<p class="calc__result-second" data-second>Под ключ с монтажом — <b>от ' + fmt(r.turnkey) + ' ₽</b></p>' : '') +
-                '<p class="calc__result-note">' + esc(Q.note) + '</p>'
-              : '<p class="calc__reveal-text">Расчёт готов. Цену показываем сразу, без звонка и заявки.</p>' +
-                '<button type="button" class="btn btn--primary" style="width:100%" data-reveal>Показать стоимость</button>') +
+          // Цену в калькуляторе не показываем: расчёт уходит человеку
+          // в мессенджер или по телефону — так делает референс, и так
+          // разговор начинается с менеджером, а не с числом на экране.
+          // Цены при этом открыты в каталоге: страница не прячет их.
+          '<div class="calc__result">' +
+            '<p class="calc__result-note">' + esc(Q.note) + '</p>' +
           '</div>' +
           '<div class="calc__cta">' +
             '<div class="calc-actions">' +
@@ -331,15 +326,13 @@
           state[el.dataset.range] = parseFloat(el.value);
           var lbl = $('[data-val="' + el.dataset.range + '"]', root);
           if (lbl) lbl.textContent = num(state[el.dataset.range], f.dec || 0) + ' ' + (f.unit || '');
-          syncFill(el);
-          if (!priceShown) { priceShown = true; render(); return; }
-          refresh();
+          syncFill(el); refresh();
         });
       });
       $$('[data-select]', root).forEach(function (sel) {
         sel.addEventListener('change', function () {
           state[sel.dataset.select] = sel.value;
-          priceShown = true; render();
+          render();
         });
       });
       $$('[data-opt]', root).forEach(function (b) {
@@ -349,14 +342,10 @@
             var s = state[f.id];
             if (s.has(b.dataset.opt)) s.delete(b.dataset.opt); else s.add(b.dataset.opt);
             b.classList.toggle('is-on');
-            if (!priceShown) { priceShown = true; render(); return; }
             refresh();
-          } else { state[f.id] = b.dataset.opt; priceShown = true; render(); }
+          } else { state[f.id] = b.dataset.opt; render(); }
         });
       });
-      var rev = $('[data-reveal]', root);
-      if (rev) rev.addEventListener('click', function () { priceShown = true; render(); });
-
       $$('[data-cta]', root).forEach(function (b) {
         b.addEventListener('click', function () { channel = b.dataset.cta; goal('calc_cta_click', { channel: channel }); open(); });
       });
@@ -520,14 +509,20 @@
                 return '<div class="tile"><b>' + esc(t.v) + '</b><span>' + esc(t.l) + '</span></div>';
               }).join('') + '</div>'
             : '') +
+          // Главная цена — та, за которую покупают. Обычно это «под ключ»,
+          // но у направлений вроде изразцов монтажа нет и единственная
+          // цена — за материал: тогда главной становится она, иначе цена
+          // осталась бы набрана мелким серым и потерялась.
           '<div class="card__prices">' +
-            '<div class="card__p2"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>' +
-            (c.p2 ? '<div class="card__p1"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>' : '') +
+            (c.p2
+              ? '<div class="card__p2"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>' +
+                '<div class="card__p1"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>'
+              : '<div class="card__p1 card__p1--solo"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>') +
           '</div>' +
         '</div>' +
         '<footer class="card__foot">' +
-          '<button type="button" class="btn btn--primary" data-lead data-src="card">Узнать цену</button>' +
-          (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener">Проект</a>' : '') +
+          '<button type="button" class="btn btn--primary" data-lead data-src="card">Рассчитать такой же</button>' +
+          (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="Страница объекта">Объект</a>' : '') +
         '</footer>' +
       '</article>';
     }
@@ -738,11 +733,18 @@
     // WhatsApp — запасной. Обе сразу не помещаются рядом с телефоном
     // и кнопкой расчёта.
     (function barMessenger() {
-      var max = document.querySelector('.mobilebar [data-max]');
-      var wa = document.querySelector('.mobilebar [data-wa]');
-      if (!max || !wa) return;
-      if (b.maxUrl) { max.hidden = false; wa.hidden = true; }
-      else { max.hidden = true; wa.hidden = !b.whatsapp; }
+      // Слот один: показываем первый заполненный по приоритету MAX →
+      // Telegram → WhatsApp. Три кнопки подряд не помещаются рядом
+      // с телефоном и расчётом.
+      var slots = [['[data-max]', b.maxUrl], ['[data-tg]', b.telegram], ['[data-wa]', b.whatsapp]];
+      var taken = false;
+      slots.forEach(function (pair) {
+        var el = document.querySelector('.mobilebar ' + pair[0]);
+        if (!el) return;
+        var show = !taken && !!pair[1];
+        el.hidden = !show;
+        if (show) taken = true;
+      });
     })();
 
     $$('[data-tel]').forEach(function (a) { a.href = 'tel:' + b.phone.replace(/\D/g, ''); });

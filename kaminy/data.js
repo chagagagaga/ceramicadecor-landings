@@ -7,9 +7,9 @@ window.LP = {
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
-  "whatsapp": "",
-  "telegram": "",
-  "maxUrl": "",
+  "telegram": "+79950004488",
+  "whatsapp": "79950004488",
+  "maxUrl": "https://max.ru/ceramicadecor",
   "endpoint": "",
   "metrikaId": 0
  },
@@ -873,7 +873,7 @@ window.LP = {
    "Коллекция, цвет глазури и сюжет росписи подбираются под интерьер.",
    "Керамика с обжигом 1000 °C, гарантия 50 лет, отдельный изразец заменяется точечно."
   ],
-  "media": "img/02.webp"
+  "media": "img/03-5.webp"
  },
  "steps": [
   {

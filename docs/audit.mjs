@@ -32,10 +32,11 @@ for (const slug of SLUGS) {
   t(d.querySelectorAll('main > section').length >= 8, 'мало секций');
   const order = [...d.querySelectorAll('main > section[id]')].map(s => s.id);
   t(order.indexOf('works') < order.indexOf('catalog'), 'портфолио должно идти до каталога');
-  t(!d.querySelector('[data-sum]'), 'цена должна быть скрыта до касания');
-  t(!!d.querySelector('[data-reveal]'), 'нет кнопки «Показать стоимость»');
-  click('[data-reveal]');
-  t(!!d.querySelector('[data-sum]'), 'кнопка не раскрывает цену');
+  // Цены в калькуляторе нет по решению: расчёт уходит человеку в мессенджер
+  // или по телефону. Цены при этом открыты в каталоге.
+  t(!d.querySelector('[data-sum]'), 'в калькуляторе не должно быть суммы');
+  t(!!d.querySelector('[data-cta]'), 'нет кнопок отправки расчёта');
+  t(!!d.querySelector('.card__p1 b'), 'в каталоге должна быть цена «под ключ»');
   click('[data-cards-more]'); click('.faq__inner .btn--ghost');
   const imgs = [...d.querySelectorAll('img[src]')];
   const miss = imgs.map(i => i.getAttribute('src')).filter(s => !s.startsWith('http') && !fs.existsSync(path.resolve(dir, s)));

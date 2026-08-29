@@ -7,9 +7,9 @@ window.LP = {
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
-  "whatsapp": "",
-  "telegram": "",
-  "maxUrl": "",
+  "telegram": "+79950004488",
+  "whatsapp": "79950004488",
+  "maxUrl": "https://max.ru/ceramicadecor",
   "endpoint": "",
   "metrikaId": 0
  },
@@ -607,7 +607,7 @@ window.LP = {
    "Коллекцию, цвет и сюжет собираем под ваш интерьер, а не под склад.",
    "Обжиг 1000 °C: изразец штатно работает на камине и печи, гарантия 50 лет."
   ],
-  "media": "img/02.webp"
+  "media": "img/01.webp"
  },
  "steps": [
   {

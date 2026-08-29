@@ -7,9 +7,9 @@ window.LP = {
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
-  "whatsapp": "",
-  "telegram": "",
-  "maxUrl": "",
+  "telegram": "+79950004488",
+  "whatsapp": "79950004488",
+  "maxUrl": "https://max.ru/ceramicadecor",
   "endpoint": "",
   "metrikaId": 0
  },
@@ -749,7 +749,7 @@ window.LP = {
    "Своя формовка и роспись: коллекцию и цвет подбираем под ваш дом.",
    "Гарантия 50 лет на керамику, смета зафиксирована в договоре."
   ],
-  "media": "img/02.webp"
+  "media": "img/16-3.webp"
  },
  "steps": [
   {

@@ -14,21 +14,19 @@ for (const slug of SLUGS) {
 
   await p.goto(`http://localhost:8099/${slug}/`, { waitUntil: 'networkidle' });
 
-  // 1. Цена скрыта, кнопка раскрывает
-  const hidden = await p.$('[data-sum]') === null;
-  steps.push(hidden ? 'цена скрыта ✓' : 'цена видна сразу ✗');
-  await p.click('[data-reveal]');
-  await p.waitForTimeout(300);
-  const sum = await p.textContent('[data-sum]').catch(() => null);
-  steps.push(sum ? `цена: ${sum.replace(/\s+/g,' ').trim()} ✓` : 'цена не появилась ✗');
+  // 1. В калькуляторе суммы нет, цены живут в каталоге
+  steps.push(await p.$('[data-sum]') === null ? 'в калькуляторе нет суммы ✓' : 'сумма в калькуляторе ✗');
+  const sum = await p.textContent('.card__p1 b').catch(() => null);
+  steps.push(sum ? `цена в каталоге: ${sum.replace(/\s+/g,' ').trim()} ✓` : 'нет цены в каталоге ✗');
 
   // 2. Двигаю ползунок — цена меняется
   const range = await p.$('[data-range]');
   if (range) {
+    const before = await range.evaluate(el => el.value);
     await range.evaluate(el => { el.value = String(+el.max); el.dispatchEvent(new Event('input', {bubbles:true})); });
     await p.waitForTimeout(300);
-    const sum2 = await p.textContent('[data-sum]');
-    steps.push(sum2 !== sum ? 'ползунок меняет цену ✓' : 'ползунок не влияет ✗');
+    const after = await range.evaluate(el => el.value);
+    steps.push(after !== before ? 'ползунок работает ✓' : 'ползунок не двигается ✗');
   }
 
   // 3. Открываю форму из калькулятора и отправляю заявку

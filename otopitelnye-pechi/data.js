@@ -7,9 +7,9 @@ window.LP = {
   "worktime": "Ежедневно 9:00–21:00",
   "address": "Москва · производство в Королёве",
   "site": "https://ceramicadecor.ru",
-  "whatsapp": "",
-  "telegram": "",
-  "maxUrl": "",
+  "telegram": "+79950004488",
+  "whatsapp": "79950004488",
+  "maxUrl": "https://max.ru/ceramicadecor",
   "endpoint": "",
   "metrikaId": 0
  },
@@ -435,7 +435,7 @@ window.LP = {
    "Печь на изразцах служит десятилетиями, отдельный элемент меняется точечно.",
    "Становится центром интерьера, а не бытовым прибором в углу."
   ],
-  "media": "img/02.webp"
+  "media": "img/03-3.webp"
  },
  "steps": [
   {

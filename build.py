@@ -19,9 +19,14 @@ BRAND = {
     "worktime": "Ежедневно 9:00–21:00",
     "address": "Москва · производство в Королёве",
     "site": "https://ceramicadecor.ru",
-    "whatsapp": "",          # ⚠️ заполнить: только цифры
-    "telegram": "",          # ⚠️ заполнить: логин без собаки
-    "maxUrl": "",            # ⚠️ заполнить: ссылка на профиль MAX
+    # ✅ Telegram взят с основного сайта ceramicadecor.ru — там он ссылкой
+    # t.me/+79950004488. Логина у канала нет, поэтому храним номер.
+    "telegram": "+79950004488",
+    # ⚠️ ЗАГЛУШКИ. WhatsApp и MAX на основном сайте не нашлись; номер взят
+    # тот же, что у Telegram. Перед запуском заменить на подтверждённые —
+    # иначе кнопка уведёт человека в несуществующий чат.
+    "whatsapp": "79950004488",
+    "maxUrl": "https://max.ru/ceramicadecor",
     "endpoint": "",          # ⚠️ заполнить: адрес приёмника заявок
     "metrikaId": 0,          # ⚠️ заполнить: номер счётчика Метрики
 }
@@ -762,6 +767,9 @@ INDEX_TPL = """<!DOCTYPE html>
   <a data-max data-bar-msg hidden>
     <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 13.7-2.1-3.1-2.2 2.6a.9.9 0 0 1-1.4 0l-2.2-2.6-2.1 3.1a.85.85 0 1 1-1.4-.95l2.8-4.1a.9.9 0 0 1 1.4-.1l2.2 2.6 2.2-2.6a.9.9 0 0 1 1.4.1l2.8 4.1a.85.85 0 1 1-1.4.95Z"/></svg>
     MAX</a>
+  <a data-tg data-bar-msg hidden>
+    <svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.1 12.9l-4.5-1.4c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.4 1Z"/></svg>
+    Telegram</a>
   <a data-wa data-bar-msg hidden>
     <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-11.9 0-3.2-1.2-6.2-3.5-8.5Z"/></svg>
     WhatsApp</a>
@@ -908,6 +916,24 @@ def spec_tiles(sp, p1, p2, photos):
     return tiles[:3] if len(tiles) >= 3 else tiles[:2]
 
 
+def why_media(slug, cards):
+    """Кадр для блока «почему керамика» — самый сильный по score.
+    Раньше брался второй подряд, и в блок попадала стройплощадка."""
+    scores = {}
+    path = os.path.join(ROOT, 'photo_scores.json')
+    if os.path.exists(path):
+        scores = json.load(io.open(path, encoding='utf-8'))
+    best, best_sc = '', -1
+    for c in cards:
+        for f in (c.get('photos') or [c.get('img')]):
+            if not f:
+                continue
+            sc = scores.get('%s/%s' % (slug, f), {}).get('score', 0)
+            if sc > best_sc:
+                best, best_sc = f, sc
+    return best or (cards[1]['img'] if len(cards) > 1 else '')
+
+
 def build():
     catalog = json.load(io.open(os.path.join(ROOT, 'catalog.json'), encoding='utf-8'))
     specs_path = os.path.join(ROOT, 'specs.json')
@@ -979,7 +1005,7 @@ def build():
             "quiz": q, "catalog": cards, "filters": filters,
             "why": {"badTitle": P["why"]["badTitle"], "goodTitle": P["why"]["goodTitle"],
                     "bad": P["why"]["bad"], "good": P["why"]["good"],
-                    "media": cards[1]["img"] if len(cards) > 1 else ""},
+                    "media": why_media(slug, cards)},
             "steps": STEPS,
             "guarantees": [dict(g, svg=ICONS.get(g.get("icon", ""), "")) for g in GUARANTEES],
             "faq": [{"q": a, "a": b} for a, b in P["faq"]],
