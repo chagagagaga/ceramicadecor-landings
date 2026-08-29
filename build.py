@@ -278,7 +278,7 @@ PRODUCTS = {
                 dict(id="antik", label="Белый антик", k=1),
                 dict(id="choco", label="Горький шоколад", k=1),
                 dict(id="murav", label="Муравленый", hint="Глубокий зелёный", k=1.04)]),
-            dict(id="extra", type="checks", label="Обвязка и доставка", options=[
+            dict(id="extra", type="checks", label="Обвязка и доставка", collapsed=True, options=[
                 dict(id="chimney", label="Дымоход-сэндвич", hint="Нержавейка, с проходом кровли", add=68000),
                 dict(id="mount", label="Монтаж и пусконаладка", add=42000),
                 dict(id="screen", label="Защитный экран из камня", add=55000),

@@ -71,6 +71,7 @@ window.LP = {
     "id": "extra",
     "type": "checks",
     "label": "Обвязка и доставка",
+    "collapsed": true,
     "options": [
      {
       "id": "chimney",

@@ -100,7 +100,7 @@ for (const slug of SLUGS) {
       barBorder: q('.mobilebar a') ? getComputedStyle(q('.mobilebar a')).borderTopWidth : '',
       barCount: qa('.mobilebar a, .mobilebar button').filter(e => !e.hidden).length,
       calcCollapsed: q('.calc__more') ? q('.calc__more').open : false,
-      preselected: qa('.calc-opt.is-on').length,
+      preselected: qa('.calc-opt.is-on').filter(e => !e.className.includes('--radio')).length,
       moreHint: !!q('.calc__more summary')?.textContent.includes('нажмите'),
       maxCy: q('.header__max svg') ? q('.header__max svg').getBoundingClientRect().top + q('.header__max svg').getBoundingClientRect().height / 2 : 0,
       ctaCy: q('.header__right .btn') ? q('.header__right .btn').getBoundingClientRect().top + q('.header__right .btn').getBoundingClientRect().height / 2 : 0,
