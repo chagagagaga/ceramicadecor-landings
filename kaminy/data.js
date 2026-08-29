@@ -77,8 +77,7 @@ window.LP = {
       "id": "firebox",
       "label": "Каминная топка в комплект",
       "hint": "Astov, Hoxter, Spartherm",
-      "add": 185000,
-      "def": true
+      "add": 185000
      },
      {
       "id": "wood",

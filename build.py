@@ -96,7 +96,7 @@ PRODUCTS = {
                 dict(id="pavilion", label="Беседка с крышей", k=1.1),
                 dict(id="outdoor", label="Отдельно на участке", k=1.2)]),
             dict(id="modules", type="checks", label="Модули комплекса", collapsed=True, options=[
-                dict(id="mangal", label="Мангал", hint="Основа комплекса", add=180000, default=True),
+                dict(id="mangal", label="Мангал", hint="Основа комплекса", add=180000),
                 dict(id="kazan", label="Печь под казан", add=120000),
                 dict(id="smoker", label="Коптильня", add=140000),
                 dict(id="tandoor", label="Тандыр", add=190000),
@@ -158,7 +158,7 @@ PRODUCTS = {
                 dict(id="electric", label="Электрический", hint="Без дымохода", k=0.9),
                 dict(id="bio", label="Биокамин", hint="Без дымохода", k=0.85)]),
             dict(id="extra", type="checks", label="Дополнить камин", collapsed=True, options=[
-                dict(id="firebox", label="Каминная топка в комплект", hint="Astov, Hoxter, Spartherm", add=185000, default=True),
+                dict(id="firebox", label="Каминная топка в комплект", hint="Astov, Hoxter, Spartherm", add=185000),
                 dict(id="wood", label="Дровница в облицовке", add=72000),
                 dict(id="shelf", label="Каминная полка из камня", add=64000),
                 dict(id="podium", label="Подиум под камин", add=58000),
@@ -222,7 +222,7 @@ PRODUCTS = {
                 dict(id="corner", label="Угловые элементы", hint="Для внешних углов и торцов", add=19000),
                 dict(id="border", label="Карниз и плинтус", add=24000),
                 dict(id="panno", label="Панно на заказ", hint="Индивидуальный сюжет по вашему эскизу", add=88000),
-                dict(id="layout", label="Раскладка и подбор мастера", add=0, default=True),
+                dict(id="layout", label="Раскладка и подбор мастера", add=0),
                 dict(id="delivery", label="Доставка в регион", hint="Жёсткий каркас, страховка груза", add=14000)]),
         ]),
     why=dict(
@@ -279,10 +279,10 @@ PRODUCTS = {
                 dict(id="choco", label="Горький шоколад", k=1),
                 dict(id="murav", label="Муравленый", hint="Глубокий зелёный", k=1.04)]),
             dict(id="extra", type="checks", label="Обвязка и доставка", options=[
-                dict(id="chimney", label="Дымоход-сэндвич", hint="Нержавейка, с проходом кровли", add=68000, default=True),
-                dict(id="mount", label="Монтаж и пусконаладка", add=42000, default=True),
+                dict(id="chimney", label="Дымоход-сэндвич", hint="Нержавейка, с проходом кровли", add=68000),
+                dict(id="mount", label="Монтаж и пусконаладка", add=42000),
                 dict(id="screen", label="Защитный экран из камня", add=55000),
-                dict(id="delivery", label="Доставка по Москве и МО", add=15000, default=True)]),
+                dict(id="delivery", label="Доставка по Москве и МО", add=15000)]),
         ]),
     why=dict(
         badTitle="Индивидуальный проект",
@@ -341,7 +341,7 @@ PRODUCTS = {
                 dict(id="panno", label="Изразцовое панно", hint="Центральный сюжет ручной кисти", add=125000),
                 dict(id="wood", label="Дровница в облицовке", add=74000),
                 dict(id="shelf", label="Полка из камня", add=48000),
-                dict(id="mount", label="Монтаж на объекте", add=65000, default=True)]),
+                dict(id="mount", label="Монтаж на объекте", add=65000)]),
         ]),
     why=dict(
         badTitle="Металл и кирпич",
@@ -400,7 +400,7 @@ PRODUCTS = {
                 dict(id="niche", label="Ниши и печурки", add=92000),
                 dict(id="pipe", label="Изразцовая труба", hint="Облицовка дымохода в интерьере", add=185000),
                 dict(id="wood", label="Дровница в облицовке", add=74000),
-                dict(id="mount", label="Кладка и монтаж", add=260000, default=True)]),
+                dict(id="mount", label="Кладка и монтаж", add=260000)]),
         ]),
     why=dict(
         badTitle="Побелённая печь",
@@ -456,10 +456,10 @@ PRODUCTS = {
                 dict(id="cook", label="С варочной плитой", hint="Отапливает и готовит", k=1.18),
                 dict(id="bench", label="С лежанкой", hint="Тёплая лежанка на массиве печи", k=1.45)]),
             dict(id="extra", type="checks", label="Дополнить печь", collapsed=True, options=[
-                dict(id="chimney", label="Дымоход с проходом кровли", add=72000, default=True),
+                dict(id="chimney", label="Дымоход с проходом кровли", add=72000),
                 dict(id="niche", label="Ниши и печурки", add=88000),
                 dict(id="wood", label="Дровница в облицовке", add=68000),
-                dict(id="mount", label="Кладка ядра и монтаж", add=195000, default=True)]),
+                dict(id="mount", label="Кладка ядра и монтаж", add=195000)]),
         ]),
     why=dict(
         badTitle="Стальная печь из магазина",

@@ -74,8 +74,7 @@ window.LP = {
       "id": "mangal",
       "label": "Мангал",
       "hint": "Основа комплекса",
-      "add": 180000,
-      "def": true
+      "add": 180000
      },
      {
       "id": "kazan",

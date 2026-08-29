@@ -100,6 +100,8 @@ for (const slug of SLUGS) {
       barBorder: q('.mobilebar a') ? getComputedStyle(q('.mobilebar a')).borderTopWidth : '',
       barCount: qa('.mobilebar a, .mobilebar button').filter(e => !e.hidden).length,
       calcCollapsed: q('.calc__more') ? q('.calc__more').open : false,
+      preselected: qa('.calc-opt.is-on').length,
+      moreHint: !!q('.calc__more summary')?.textContent.includes('нажмите'),
       maxCy: q('.header__max svg') ? q('.header__max svg').getBoundingClientRect().top + q('.header__max svg').getBoundingClientRect().height / 2 : 0,
       ctaCy: q('.header__right .btn') ? q('.header__right .btn').getBoundingClientRect().top + q('.header__right .btn').getBoundingClientRect().height / 2 : 0,
       labelClipped: q('.header__max i') && q('.header')
@@ -120,6 +122,8 @@ for (const slug of SLUGS) {
   check(r2.barBorder !== '0px', 'у кнопок нижней панели нет обводки');
   check(r2.barCount === 3, 'в нижней панели не три кнопки: ' + r2.barCount);
   check(r2.calcCollapsed === false, 'блок допов открыт по умолчанию');
+  check(r2.preselected === 0, 'опции выбраны за человека: ' + r2.preselected);
+  check(r2.moreHint, 'нет подсказки «нажмите, чтобы увидеть список»');
   check(Math.abs(r2.maxCy - r2.ctaCy) <= 2, 'знак MAX не по центру с кнопкой');
   check(!r2.labelClipped, 'подпись MAX обрезается краем шапки');
   check(r2.gapFromLogo >= 20, 'знак MAX липнет к логотипу: ' + r2.gapFromLogo + 'px');

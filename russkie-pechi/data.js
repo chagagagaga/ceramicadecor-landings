@@ -88,8 +88,7 @@ window.LP = {
      {
       "id": "mount",
       "label": "Кладка и монтаж",
-      "add": 260000,
-      "def": true
+      "add": 260000
      }
     ]
    }

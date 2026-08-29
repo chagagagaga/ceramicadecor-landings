@@ -235,7 +235,10 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .calc-opt--radio.is-on .calc-opt__box::after { left: 4px; top: 4px; width: 6px; height: 6px; border: 0; border-radius: 50%; background: var(--white); transform: none; }
 
 .calc__more { border-top: 1px solid var(--border); padding-top: .9rem; margin-top: 1.2rem; }
-.calc__more summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: .5rem; font-size: .93rem; }
+/* Заголовок раскрывашки в одну строку, подсказка следом мелким кеглем:
+   на телефоне они делили ширину поровну и оба рвались надвое. */
+.calc__more summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; flex-wrap: wrap; gap: .1rem .45rem; font-size: .93rem; font-weight: 500; }
+.calc__more summary > span { font-size: .8rem; font-weight: 400; color: var(--text-dim); }
 .calc__more summary::-webkit-details-marker { display: none; }
 .calc__more summary::after { content: '+'; margin-left: auto; color: var(--primary); font-size: 1.1rem; line-height: 1; }
 .calc__more[open] summary::after { content: '–'; }
@@ -646,3 +649,5 @@ textarea.input { resize: vertical; min-height: 84px; }
 .calc-actions .btn--ghost:hover { background: #EFE9E1; color: var(--primary); }
 .calc .calc-opt__name { color: #17120E; }
 .calc .calc-opt__hint { color: #7A7066; }
+.calc .calc__more summary { color: #17120E; }
+.calc .calc__more summary > span { color: #8A8076; }

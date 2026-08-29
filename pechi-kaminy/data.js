@@ -76,14 +76,12 @@ window.LP = {
       "id": "chimney",
       "label": "Дымоход-сэндвич",
       "hint": "Нержавейка, с проходом кровли",
-      "add": 68000,
-      "def": true
+      "add": 68000
      },
      {
       "id": "mount",
       "label": "Монтаж и пусконаладка",
-      "add": 42000,
-      "def": true
+      "add": 42000
      },
      {
       "id": "screen",
@@ -93,8 +91,7 @@ window.LP = {
      {
       "id": "delivery",
       "label": "Доставка по Москве и МО",
-      "add": 15000,
-      "def": true
+      "add": 15000
      }
     ]
    }

@@ -264,9 +264,11 @@
 
       if (f.collapsed) {
         var n = f.type === 'checks' ? state[f.id].size : 0;
+        // Пока ничего не выбрано, в скобках подсказка: свёрнутый блок
+        // без неё выглядит как заголовок, а не как раскрывающийся список.
         return '<details class="calc__more" data-more-id="' + f.id + '"' +
           (opened[f.id] ? ' open' : '') + '><summary>' + esc(f.label) +
-          ' <span>' + (n ? '(' + n + ')' : '') + '</span></summary>' +
+          ' <span>' + (n ? '(' + n + ')' : '(нажмите, чтобы увидеть список)') + '</span></summary>' +
           '<div class="calc-opts' + ((f.options || []).length > 3 ? ' calc-opts--grid' : '') + '">' + opts + '</div></details>';
       }
       var grid = f.type === 'checks' && (f.options || []).length > 3 ? ' calc-opts--grid' : '';

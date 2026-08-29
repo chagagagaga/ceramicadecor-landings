@@ -86,8 +86,7 @@ window.LP = {
      {
       "id": "mount",
       "label": "Монтаж на объекте",
-      "add": 65000,
-      "def": true
+      "add": 65000
      }
     ]
    }

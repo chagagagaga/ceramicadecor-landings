@@ -71,8 +71,7 @@ window.LP = {
      {
       "id": "chimney",
       "label": "Дымоход с проходом кровли",
-      "add": 72000,
-      "def": true
+      "add": 72000
      },
      {
       "id": "niche",
@@ -87,8 +86,7 @@ window.LP = {
      {
       "id": "mount",
       "label": "Кладка ядра и монтаж",
-      "add": 195000,
-      "def": true
+      "add": 195000
      }
     ]
    }

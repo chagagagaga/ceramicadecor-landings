@@ -93,8 +93,7 @@ window.LP = {
      {
       "id": "layout",
       "label": "Раскладка и подбор мастера",
-      "add": 0,
-      "def": true
+      "add": 0
      },
      {
       "id": "delivery",
