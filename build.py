@@ -1045,11 +1045,17 @@ def build():
         logo_svg = logo_svg.split('?>')[-1].strip()
         # Знак MAX — официальный, снят с max.ru: нарисованный на глаз
         # люди не опознают, а MAX сейчас основной канал связи.
-        max_svg = io.open(os.path.join(ROOT, 'assets', 'max.svg'), encoding='utf-8').read()
-        max_svg = max_svg.split('?>')[-1].strip()
+        max_svg_raw = io.open(os.path.join(ROOT, 'assets', 'max.svg'), encoding='utf-8').read()
+        max_svg_raw = max_svg_raw.split('?>')[-1].strip()
+
+        def max_svg_uniq(tag):
+            """Знак вставляется в трёх местах; одинаковый id градиента
+            заставляет браузер брать первый, и остальные копии теряют
+            заливку. Делаем id уникальным для каждой вставки."""
+            return max_svg_raw.replace('maxGrad', 'maxGrad-' + tag)
         html = (INDEX_TPL
                 .replace('@LOGO_SVG@', logo_svg)
-                .replace('@MAX_SVG@', max_svg)
+                
                 .replace('@TITLE@', P["title"]).replace('@SEO@', P["seo"])
                 .replace('@SLUG@', slug).replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
@@ -1060,6 +1066,9 @@ def build():
                 .replace('@FOOTER_LINKS@', links)
                 .replace('@PHONE@', BRAND["phone"]).replace('@WORKTIME@', BRAND["worktime"])
                 .replace('@ADDRESS@', BRAND["address"]).replace('@SITE@', BRAND["site"]))
+        # каждая вставка знака получает свой id градиента
+        for i in range(html.count('@MAX_SVG@')):
+            html = html.replace('@MAX_SVG@', max_svg_uniq('%d' % i), 1)
         io.open(os.path.join(ROOT, slug, 'index.html'), 'w', encoding='utf-8').write(html)
         print('%-22s карточек %2d  фильтров %d  фото в галерее %2d' %
               (slug, len(cards), len(filters), len(data["gallery"])))

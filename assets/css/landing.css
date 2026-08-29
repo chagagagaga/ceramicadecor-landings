@@ -48,7 +48,7 @@
 .msgdock {
   position: fixed; right: clamp(1rem, .5rem + 1.2vw, 1.75rem);
   bottom: clamp(1rem, .5rem + 1.2vw, 1.75rem);
-  z-index: 55; display: flex; flex-direction: column-reverse; gap: .6rem;
+  z-index: 55; display: flex; flex-direction: column; gap: .6rem;
 }
 .msgdock[hidden] { display: none; }
 .msgdock__btn {
@@ -58,8 +58,11 @@
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .msgdock__btn svg { width: 26px; height: 26px; }
+/* У знака MAX своя фирменная плашка с градиентом: круглый синий фон
+   под ней превращал логотип в белое пятно. Знак занимает кнопку целиком. */
+.msgdock__btn--max { background: none; box-shadow: none; }
+.msgdock__btn--max svg { width: 100%; height: 100%; border-radius: 22%; box-shadow: 0 8px 22px rgba(0,0,0,.45); }
 .msgdock__btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 0, 0, .55); }
-.msgdock__btn--max { background: #3b5bff; }
 .msgdock__btn--tg { background: #2aabee; }
 .msgdock__btn--wa { background: #25d366; }
 /* Подпись выезжает при наведении: кружок остаётся компактным, но
@@ -546,10 +549,23 @@ textarea.input { resize: vertical; min-height: 84px; }
   /* MAX рядом с «Рассчитать»: на телефоне шапка — единственное место,
      где мессенджер виден без прокрутки. */
   /* Знак MAX с подписью: без неё иконку принимают за абстрактную.
-     Фон не нужен — у самого знака он свой, фирменный. */
-  .header__max { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; flex: none; min-width: 40px; padding: 0 .3rem; background: none; }
-  .header__max svg { width: 30px; height: 30px; display: block; }
-  .header__max i { font-style: normal; font-size: .52rem; font-weight: 700; letter-spacing: .1em; color: var(--text-muted); line-height: 1; }
+     Фон не нужен — у самого знака он свой, фирменный. Блок центрируется
+     по высоте кнопки «Рассчитать», иначе подпись тянет его вверх. */
+  .header__right { align-items: center; gap: .7rem; }
+  /* Подпись остаётся в потоке — абсолютом она обрезалась нижним краем
+     шапки. Блок сдвинут вниз на половину её высоты, чтобы сам знак
+     совпал по центру с кнопкой «Рассчитать», а не встал выше неё. */
+  .header__max {
+    position: relative; top: 4px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 2px; flex: none; width: 44px;
+    margin-left: .9rem; padding: 0; background: none;
+  }
+  .header__max svg { width: 28px; height: 28px; display: block; }
+  .header__max i {
+    font-style: normal; font-size: .5rem; font-weight: 700; letter-spacing: .12em;
+    color: var(--text-muted); line-height: 1; text-align: center;
+  }
   /* Плавающие кружки перекрывали бы нижнюю панель */
   .msgdock { display: none !important; }
   /* Модульные сетки схлопываются в одну колонку: на телефоне четыре

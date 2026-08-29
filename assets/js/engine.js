@@ -170,6 +170,9 @@
     var Q = P.quiz;
     var state = {};
     var modal = null, channel = 'whatsapp';
+    // Какие раскрывашки человек открыл сам: при перерисовке они должны
+    // остаться открытыми, а закрытые — закрытыми.
+    var opened = {};
 
     Q.fields.forEach(function (f) {
       if (f.type === 'range') state[f.id] = f.def != null ? f.def : f.min;
@@ -261,7 +264,8 @@
 
       if (f.collapsed) {
         var n = f.type === 'checks' ? state[f.id].size : 0;
-        return '<details class="calc__more"' + (n ? ' open' : '') + '><summary>' + esc(f.label) +
+        return '<details class="calc__more" data-more-id="' + f.id + '"' +
+          (opened[f.id] ? ' open' : '') + '><summary>' + esc(f.label) +
           ' <span>' + (n ? '(' + n + ')' : '') + '</span></summary>' +
           '<div class="calc-opts' + ((f.options || []).length > 3 ? ' calc-opts--grid' : '') + '">' + opts + '</div></details>';
       }
@@ -329,6 +333,9 @@
           syncFill(el); refresh();
         });
       });
+      $$('[data-more-id]', root).forEach(function (dt) {
+        dt.addEventListener('toggle', function () { opened[dt.dataset.moreId] = dt.open; });
+      });
       $$('[data-select]', root).forEach(function (sel) {
         sel.addEventListener('change', function () {
           state[sel.dataset.select] = sel.value;
@@ -385,10 +392,12 @@
           '<p class="modal__sub" data-msub></p>' +
 
           '<div class="modal__channels">' +
-            '<button type="button" class="modal__chan" data-chan="whatsapp">WhatsApp</button>' +
-            '<button type="button" class="modal__chan" data-chan="telegram">Telegram</button>' +
-            '<button type="button" class="modal__chan" data-chan="max">MAX</button>' +
+            // Звонок первым: он не требует от человека ничего, кроме номера.
+            // Дальше мессенджеры в порядке популярности в России.
             '<button type="button" class="modal__chan" data-chan="call">Звонок</button>' +
+            '<button type="button" class="modal__chan" data-chan="max">MAX</button>' +
+            '<button type="button" class="modal__chan" data-chan="telegram">Telegram</button>' +
+            '<button type="button" class="modal__chan" data-chan="whatsapp">WhatsApp</button>' +
           '</div>' +
           '<form data-lead-source="calc" novalidate>' +
             '<input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +

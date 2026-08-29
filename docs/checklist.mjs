@@ -55,6 +55,13 @@ for (const slug of SLUGS) {
   check(r1.galleryUniq === r1.galleryTotal, `в галерее повторы объектов: ${r1.galleryUniq} из ${r1.galleryTotal}`);
   check(r1.uspGrid === 'grid', 'преимущества не сеткой');
   check(!jsErr.length, 'JS-ошибки: ' + jsErr.slice(0,2).join('; '));
+  // порядок каналов в окне заявки: звонок первым, дальше по популярности
+  await d.evaluate(() => document.querySelector('[data-cta]')?.click());
+  await d.waitForTimeout(300);
+  const chans = await d.evaluate(() =>
+    [...document.querySelectorAll('.modal__chan')].map(b => b.dataset.chan));
+  check(JSON.stringify(chans) === '["call","max","telegram","whatsapp"]',
+    'порядок каналов в форме: ' + chans);
   await d.close();
 
   // ── МОБИЛЬНЫЙ ──────────────────────────────────────────────────────
@@ -92,6 +99,13 @@ for (const slug of SLUGS) {
       wrappedNames: wrapped,
       barBorder: q('.mobilebar a') ? getComputedStyle(q('.mobilebar a')).borderTopWidth : '',
       barCount: qa('.mobilebar a, .mobilebar button').filter(e => !e.hidden).length,
+      calcCollapsed: q('.calc__more') ? q('.calc__more').open : false,
+      maxCy: q('.header__max svg') ? q('.header__max svg').getBoundingClientRect().top + q('.header__max svg').getBoundingClientRect().height / 2 : 0,
+      ctaCy: q('.header__right .btn') ? q('.header__right .btn').getBoundingClientRect().top + q('.header__right .btn').getBoundingClientRect().height / 2 : 0,
+      labelClipped: q('.header__max i') && q('.header')
+        ? q('.header__max i').getBoundingClientRect().bottom > q('.header').getBoundingClientRect().bottom : false,
+      gapFromLogo: q('.header__max') && q('.logo')
+        ? q('.header__max').getBoundingClientRect().left - q('.logo').getBoundingClientRect().right : 99,
     };
   });
 
@@ -105,6 +119,10 @@ for (const slug of SLUGS) {
   check(r2.wrappedNames === 0, 'названия модулей переносятся: ' + r2.wrappedNames);
   check(r2.barBorder !== '0px', 'у кнопок нижней панели нет обводки');
   check(r2.barCount === 3, 'в нижней панели не три кнопки: ' + r2.barCount);
+  check(r2.calcCollapsed === false, 'блок допов открыт по умолчанию');
+  check(Math.abs(r2.maxCy - r2.ctaCy) <= 2, 'знак MAX не по центру с кнопкой');
+  check(!r2.labelClipped, 'подпись MAX обрезается краем шапки');
+  check(r2.gapFromLogo >= 20, 'знак MAX липнет к логотипу: ' + r2.gapFromLogo + 'px');
   await m.close();
 
   if (bad.length) { fails.push([slug, bad]); console.log(`✗ ${slug}`); bad.forEach(x => console.log('   ✗', x)); }
