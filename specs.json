@@ -1,0 +1,288 @@
+{
+ "kaminy": {
+  "1": {
+   "weight": 218,
+   "width": 1325,
+   "height": 2535,
+   "depth": 700
+  },
+  "2": {
+   "weight": 175,
+   "width": 1273,
+   "height": 2528,
+   "depth": 562
+  },
+  "3": {
+   "weight": 243,
+   "width": 1377,
+   "height": 2499,
+   "depth": 789
+  },
+  "6": {
+   "weight": 236,
+   "width": 1260,
+   "height": 2745,
+   "depth": 800
+  },
+  "7": {
+   "weight": 432,
+   "width": 1680,
+   "height": 3691,
+   "depth": 740
+  },
+  "12": {
+   "weight": 194,
+   "width": 1122,
+   "height": 2657,
+   "depth": 864
+  },
+  "13": {
+   "weight": 117,
+   "width": 1658,
+   "height": 1876,
+   "depth": 295
+  },
+  "14": {
+   "weight": 108,
+   "width": 1348,
+   "height": 2022,
+   "depth": 751
+  },
+  "15": {
+   "weight": 136,
+   "width": 1454,
+   "height": 1418,
+   "depth": 618
+  },
+  "16": {
+   "weight": 165,
+   "width": 1310,
+   "height": 1510,
+   "depth": 760
+  },
+  "17": {
+   "weight": 309,
+   "width": 2620,
+   "height": 1820,
+   "depth": 760
+  },
+  "18": {
+   "weight": 172,
+   "width": 1390,
+   "height": 2370,
+   "depth": 336
+  },
+  "22": {
+   "width": 0,
+   "height": 0,
+   "depth": 0
+  },
+  "23": {
+   "width": 1618,
+   "height": 3566,
+   "depth": 708
+  }
+ },
+ "barbekyu-kompleksy": {
+  "1": {
+   "weight": 423,
+   "width": 3709,
+   "height": 2799,
+   "depth": 20
+  },
+  "2": {
+   "weight": 386,
+   "width": 3220,
+   "height": 2900,
+   "depth": 993
+  },
+  "4": {
+   "weight": 382,
+   "width": 2141,
+   "height": 2079,
+   "depth": 1064
+  },
+  "5": {
+   "weight": 981,
+   "width": 4930,
+   "height": 3030,
+   "depth": 1922
+  },
+  "6": {
+   "width": 1762,
+   "height": 2529,
+   "depth": 931
+  },
+  "8": {
+   "weight": 378,
+   "width": 3294,
+   "height": 2658,
+   "depth": 623
+  },
+  "9": {
+   "weight": 253,
+   "width": 3065,
+   "height": 2025,
+   "depth": 2620
+  },
+  "10": {
+   "width": 3993,
+   "height": 2545,
+   "depth": 870
+  },
+  "11": {
+   "weight": 673,
+   "width": 3007,
+   "height": 2926,
+   "depth": 1969
+  },
+  "15": {
+   "width": 2150,
+   "height": 2250,
+   "depth": 910
+  },
+  "16": {
+   "weight": 653,
+   "width": 4386,
+   "height": 2779,
+   "depth": 1171
+  },
+  "17": {
+   "weight": 211,
+   "width": 2250,
+   "height": 2678,
+   "depth": 1050
+  }
+ },
+ "izraztsy": {},
+ "pechi-kaminy": {},
+ "bannye-portaly": {
+  "1": {
+   "weight": 172
+  },
+  "2": {
+   "weight": 83,
+   "width": 1276,
+   "height": 1163,
+   "depth": 256
+  },
+  "3": {
+   "weight": 100
+  },
+  "4": {
+   "weight": 120
+  },
+  "5": {
+   "weight": 96
+  },
+  "7": {
+   "weight": 45,
+   "width": 1280,
+   "height": 930,
+   "depth": 110
+  },
+  "8": {
+   "weight": 46,
+   "width": 980,
+   "height": 1445,
+   "depth": 110
+  },
+  "9": {
+   "weight": 120
+  }
+ },
+ "russkie-pechi": {
+  "1": {
+   "weight": 950,
+   "width": 1769,
+   "height": 3044,
+   "depth": 2575
+  },
+  "2": {
+   "width": 3050,
+   "height": 2500,
+   "depth": 1610
+  },
+  "4": {
+   "weight": 246,
+   "width": 1405,
+   "height": 1965,
+   "depth": 1147
+  },
+  "5": {
+   "weight": 217,
+   "width": 2466,
+   "height": 2728,
+   "depth": 1686
+  },
+  "7": {
+   "weight": 520,
+   "width": 3040,
+   "height": 2660,
+   "depth": 2860
+  },
+  "8": {
+   "weight": 900,
+   "width": 2929,
+   "height": 3021,
+   "depth": 1717
+  },
+  "9": {
+   "weight": 493,
+   "width": 1920,
+   "height": 1910,
+   "depth": 1525
+  },
+  "10": {
+   "width": 3078,
+   "height": 4396,
+   "depth": 2396
+  },
+  "11": {
+   "width": 1784,
+   "height": 2963,
+   "depth": 2039
+  }
+ },
+ "otopitelnye-pechi": {
+  "3": {
+   "weight": 218,
+   "width": 1308,
+   "height": 2768,
+   "depth": 985
+  },
+  "4": {
+   "width": 1283,
+   "height": 2264,
+   "depth": 868
+  },
+  "5": {
+   "width": 1390,
+   "height": 2120,
+   "depth": 930
+  },
+  "6": {
+   "weight": 193,
+   "width": 1425,
+   "height": 2142,
+   "depth": 565
+  },
+  "8": {
+   "weight": 103,
+   "width": 925,
+   "height": 2650,
+   "depth": 360
+  },
+  "9": {
+   "weight": 349,
+   "width": 1209,
+   "height": 2202,
+   "depth": 998
+  },
+  "10": {
+   "width": 1352,
+   "height": 3058,
+   "depth": 572
+  }
+ }
+}

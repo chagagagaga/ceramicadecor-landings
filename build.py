@@ -876,8 +876,25 @@ def clean_text(v, fallback=""):
 SKIP_ITEMS = {"kaminy": {8}}
 
 
+def spec_line(sp):
+    """Строка характеристик: «3,7 × 2,8 м · 423 кг».
+    Килограммы и метры доказывают ручную работу лучше прилагательных.
+    Глубину не показываем: в выгрузке она местами явно битая."""
+    if not sp:
+        return ''
+    parts = []
+    if sp.get('width') and sp.get('height'):
+        parts.append('%s × %s м' % (('%.1f' % (sp['width'] / 1000)).replace('.', ','),
+                                    ('%.1f' % (sp['height'] / 1000)).replace('.', ',')))
+    if sp.get('weight'):
+        parts.append('%d кг' % sp['weight'])
+    return ' · '.join(parts)
+
+
 def build():
     catalog = json.load(io.open(os.path.join(ROOT, 'catalog.json'), encoding='utf-8'))
+    specs_path = os.path.join(ROOT, 'specs.json')
+    all_specs = json.load(io.open(specs_path, encoding='utf-8')) if os.path.exists(specs_path) else {}
     for slug, P in PRODUCTS.items():
         items = catalog[slug]['items']
         # ── data.js ──────────────────────────────────────────────────────────
@@ -914,6 +931,7 @@ def build():
                 if os.path.exists(f):
                     frames.append('img/%02d-%d.webp' % (pos, k))
             c["photos"] = frames
+            c["spec"] = spec_line(all_specs.get(slug, {}).get(str(pos)))
 
         collections = []
         for c in cards:

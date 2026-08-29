@@ -510,9 +510,12 @@
         '<div class="card__body">' +
           '<h3 class="card__name">' + esc(c.title) + '</h3>' +
           (c.desc ? '<p class="card__desc">' + esc(c.desc) + '</p>' : '') +
+          // Размер и вес — проверяемые числа: они доказывают ручную работу
+          // убедительнее любого прилагательного.
+          (c.spec ? '<p class="card__spec">' + esc(c.spec) + '</p>' : '') +
           '<div class="card__prices">' +
-            '<div class="card__p1">' + esc(P.priceLabel1 || 'Облицовка') + ': от ' + fmt(c.p1) + ' ₽</div>' +
-            (c.p2 ? '<div class="card__p2">Под ключ: от ' + fmt(c.p2) + ' ₽</div>' : '') +
+            '<div class="card__p2"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>' +
+            (c.p2 ? '<div class="card__p1"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>' : '') +
           '</div>' +
         '</div>' +
         '<footer class="card__foot">' +

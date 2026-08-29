@@ -145,7 +145,8 @@ window.LP = {
     "img/01-2.webp",
     "img/01-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_relefnyj-izrazets-v-goluboj-rospisi-s-sinej-ramkoj-kollektsii-pastoral-150h150-art-71157-52089-11455/"
+   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_relefnyj-izrazets-v-goluboj-rospisi-s-sinej-ramkoj-kollektsii-pastoral-150h150-art-71157-52089-11455/",
+   "spec": ""
   },
   {
    "title": "Плитка с рельефными тюльпанами, коллекция Тюльпан, арт. 77073",
@@ -157,7 +158,8 @@ window.LP = {
    "photos": [
     "img/02.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-s-lepnym-relefom-tyulpany-belogo-tsveta-kollektsii-tyulpan-art-77073-51201/"
+   "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-s-lepnym-relefom-tyulpany-belogo-tsveta-kollektsii-tyulpan-art-77073-51201/",
+   "spec": ""
   },
   {
    "title": "Плитка с декоративным рельефом Сохо, арт. 77150",
@@ -169,7 +171,8 @@ window.LP = {
    "photos": [
     "img/03.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/soho/izraztsy-soho-v-hvojnom-tsvete/cd_sovremennyj-odnotonnyj-relefnyj-izrazets-soho-v-zelenom-tsvete-kollektsii-soho-art-77150-50567/"
+   "url": "https://ceramicadecor.ru/izrazcy/soho/izraztsy-soho-v-hvojnom-tsvete/cd_sovremennyj-odnotonnyj-relefnyj-izrazets-soho-v-zelenom-tsvete-kollektsii-soho-art-77150-50567/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Дорф, арт. 77275",
@@ -181,7 +184,8 @@ window.LP = {
    "photos": [
     "img/04.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_muravlenyj-izrazets-kollektsii-dorf-art-77275-53050/"
+   "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_muravlenyj-izrazets-kollektsii-dorf-art-77275-53050/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Дорф, арт. 77275",
@@ -193,7 +197,8 @@ window.LP = {
    "photos": [
     "img/05.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_belyj-izrazets-s-lepnym-relefom-kollektsii-dorf-art-77275-51201/"
+   "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_belyj-izrazets-s-lepnym-relefom-kollektsii-dorf-art-77275-51201/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Дорф, арт. 77275",
@@ -205,7 +210,8 @@ window.LP = {
    "photos": [
     "img/06.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-tsvete-seryj-grafit-kollektsii-dorf-art-77275-50474/"
+   "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-tsvete-seryj-grafit-kollektsii-dorf-art-77275-50474/",
+   "spec": ""
   },
   {
    "title": "Вставка с лепным рельефом Альбион, арт. 76046",
@@ -217,7 +223,8 @@ window.LP = {
    "photos": [
     "img/07.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/albion/izraztsy-albion-v-tsvete-belyj-antik/cd_vstavka-s-lepnym-relefom-albion-white-76046-51201/"
+   "url": "https://ceramicadecor.ru/izrazcy/albion/izraztsy-albion-v-tsvete-belyj-antik/cd_vstavka-s-lepnym-relefom-albion-white-76046-51201/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом из составного декора Альбион, арт. 71068",
@@ -229,7 +236,8 @@ window.LP = {
    "photos": [
     "img/08.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-v-belom-tsvete-15x15-s-lepnym-relefom-kollektsii-albion-art-71068-51201/"
+   "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-v-belom-tsvete-15x15-s-lepnym-relefom-kollektsii-albion-art-71068-51201/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Русская Этника, арт. 77874",
@@ -241,7 +249,8 @@ window.LP = {
    "photos": [
     "img/09.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-lepnoj-obemnyj-20h20-kollektsii-russkaya-etnika-art-77874-53050/"
+   "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-lepnoj-obemnyj-20h20-kollektsii-russkaya-etnika-art-77874-53050/",
+   "spec": ""
   },
   {
    "title": "Плитка рельефная Азулежу, арт. 77641",
@@ -255,7 +264,8 @@ window.LP = {
     "img/10-2.webp",
     "img/10-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_plitka-relefnaya-200h200h12-mm-azulezhu-77641-52151-12125/"
+   "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_plitka-relefnaya-200h200h12-mm-azulezhu-77641-52151-12125/",
+   "spec": ""
   },
   {
    "title": "Плитка с рельефным узором из составного панно Версаль, арт. 77255",
@@ -267,7 +277,8 @@ window.LP = {
    "photos": [
     "img/11.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_Kaminnoe-panno-Versal-5-9-relefnyj-izrazec-dlya-dekora-77255-50554/"
+   "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_Kaminnoe-panno-Versal-5-9-relefnyj-izrazec-dlya-dekora-77255-50554/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Сувенир, арт. 71139",
@@ -281,7 +292,8 @@ window.LP = {
     "img/12-2.webp",
     "img/12-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-krasnogo-tsveta-s-sinej-rospisyu-relefnyj-kollektsii-suvenir-art-71139-50555-11940-1/"
+   "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-krasnogo-tsveta-s-sinej-rospisyu-relefnyj-kollektsii-suvenir-art-71139-50555-11940-1/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Арт Нуво, арт. 71014",
@@ -293,7 +305,8 @@ window.LP = {
    "photos": [
     "img/13.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/izraztsy-s-rumpoj/cd_izrazets-s-lepnym-relefom-v-krasno-zelenoj-rospisi-kollektsii-art-nuvo-art-71014r-52091-11505/"
+   "url": "https://ceramicadecor.ru/izrazcy/izraztsy-s-rumpoj/cd_izrazets-s-lepnym-relefom-v-krasno-zelenoj-rospisi-kollektsii-art-nuvo-art-71014r-52091-11505/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепной лилией Арт Нуво, арт. 71023",
@@ -310,7 +323,8 @@ window.LP = {
     "img/14-5.webp",
     "img/14-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnoj-liliej-v-korichnevoj-rospisi-kollektsii-art-nuvo-art-71023-52095-11506/"
+   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnoj-liliej-v-korichnevoj-rospisi-kollektsii-art-nuvo-art-71023-52095-11506/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Венская, арт. 77919",
@@ -322,7 +336,8 @@ window.LP = {
    "photos": [
     "img/15.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_belyj-izrazets-s-lepnym-relefom-kollektsii-venskaya-art-77919-51261/"
+   "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_belyj-izrazets-s-lepnym-relefom-kollektsii-venskaya-art-77919-51261/",
+   "spec": ""
   },
   {
    "title": "Плитка с медальоном под сюжетную роспись, арт. 77133",
@@ -339,7 +354,8 @@ window.LP = {
     "img/16-5.webp",
     "img/16-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-v-stile-provans-s-buketom-tsvetov-v-okantovke-kollektsii-kameya-art-77133-52150-12005-10/"
+   "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-v-stile-provans-s-buketom-tsvetov-v-okantovke-kollektsii-kameya-art-77133-52150-12005-10/",
+   "spec": ""
   },
   {
    "title": "Плитка с медальоном под сюжетную роспись, арт. 77133",
@@ -356,7 +372,8 @@ window.LP = {
     "img/17-5.webp",
     "img/17-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-s-goluboj-rospisyu-s-syuzhetom-zima-kollektsii-kameya-art-77133-52089-11736-6/"
+   "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-s-goluboj-rospisyu-s-syuzhetom-zima-kollektsii-kameya-art-77133-52089-11736-6/",
+   "spec": ""
   },
   {
    "title": "Плитка с балясинами Усадьба, арт. 76111",
@@ -372,7 +389,8 @@ window.LP = {
     "img/18-4.webp",
     "img/18-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnymi-balyasinami-s-oranzhevoj-rospisyu-15h15-kollektsii-usadba-art-76111-52089-11589/"
+   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnymi-balyasinami-s-oranzhevoj-rospisyu-15h15-kollektsii-usadba-art-76111-52089-11589/",
+   "spec": ""
   },
   {
    "title": "Плитка с лепным рельефом Элеганс, арт. 71010",
@@ -384,7 +402,8 @@ window.LP = {
    "photos": [
     "img/19.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-hudozhestvennym-relefnym-dekorom-serogo-tsveta-kollektsii-elegans-150h150-art-71010-50518/"
+   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-hudozhestvennym-relefnym-dekorom-serogo-tsveta-kollektsii-elegans-150h150-art-71010-50518/",
+   "spec": ""
   },
   {
    "title": "Плитка рельефная Неаполь, арт. 77853",
@@ -397,7 +416,8 @@ window.LP = {
     "img/20.webp",
     "img/20-2.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/radiusnye-kruglye-izraztsy/cd_izrazets-relefnyj-dlya-krugloj-pechi-s-yarkoj-rospisyu-neapol-kollektsii-neapol-art-77853-52089-11711/"
+   "url": "https://ceramicadecor.ru/izrazcy/radiusnye-kruglye-izraztsy/cd_izrazets-relefnyj-dlya-krugloj-pechi-s-yarkoj-rospisyu-neapol-kollektsii-neapol-art-77853-52089-11711/",
+   "spec": ""
   },
   {
    "title": "Плитка с декоративным рельефом Византия",
@@ -414,7 +434,8 @@ window.LP = {
     "img/21-5.webp",
     "img/21-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-krasnoj-okantovke-s-rospisyu-zolotom-kollektsii-vizantiya-art-77459-52111-11725g/"
+   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-krasnoj-okantovke-s-rospisyu-zolotom-kollektsii-vizantiya-art-77459-52111-11725g/",
+   "spec": ""
   },
   {
    "title": "Плитка с рельефными птичками и ягодами Птички, арт. 77012",
@@ -430,7 +451,8 @@ window.LP = {
     "img/22-4.webp",
     "img/22-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefnymi-ptitsami-v-zheltoj-rospisi-kollektsii-ptitsy-200h200-art-77012-50555-12131/"
+   "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefnymi-ptitsami-v-zheltoj-rospisi-kollektsii-ptitsy-200h200-art-77012-50555-12131/",
+   "spec": ""
   }
  ],
  "filters": [

@@ -153,7 +153,8 @@ window.LP = {
     "img/01-5.webp",
     "img/01-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/",
+   "spec": "3,7 × 2,8 м · 423 кг"
   },
   {
    "title": "Облицовка маленького печного комплекса с мангалом. 6261",
@@ -169,7 +170,8 @@ window.LP = {
     "img/02-4.webp",
     "img/02-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/",
+   "spec": "3,2 × 2,9 м · 386 кг"
   },
   {
    "title": "Версаль",
@@ -184,7 +186,8 @@ window.LP = {
     "img/03-3.webp",
     "img/03-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/",
+   "spec": ""
   },
   {
    "title": "Летняя кухня \"Версаль\", цвет: Болотный 1311",
@@ -198,7 +201,8 @@ window.LP = {
     "img/04-2.webp",
     "img/04-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-versal-tsvet-bolotnyj-1311/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-versal-tsvet-bolotnyj-1311/",
+   "spec": "2,1 × 2,1 м · 382 кг"
   },
   {
    "title": "Летняя кухня в облицовке изразцами коллекции Версаль, цвет: Синий",
@@ -215,7 +219,8 @@ window.LP = {
     "img/05-5.webp",
     "img/05-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/",
+   "spec": "4,9 × 3,0 м · 981 кг"
   },
   {
    "title": "Тюльпан",
@@ -229,7 +234,8 @@ window.LP = {
     "img/06-2.webp",
     "img/06-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/",
+   "spec": "1,8 × 2,5 м"
   },
   {
    "title": "Дорф",
@@ -246,7 +252,8 @@ window.LP = {
     "img/07-5.webp",
     "img/07-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/",
+   "spec": ""
   },
   {
    "title": "Барбекю комплекс в коллекции Дорф с мангалом и дровником. 5397",
@@ -263,7 +270,8 @@ window.LP = {
     "img/08-5.webp",
     "img/08-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/",
+   "spec": "3,3 × 2,7 м · 378 кг"
   },
   {
    "title": "Птички",
@@ -279,7 +287,8 @@ window.LP = {
     "img/09-4.webp",
     "img/09-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/",
+   "spec": "3,1 × 2,0 м · 253 кг"
   },
   {
    "title": "Печной комплекс с мангалом и печью под казан в облицовке изразцами кол",
@@ -295,7 +304,8 @@ window.LP = {
     "img/10-4.webp",
     "img/10-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/",
+   "spec": "4,0 × 2,5 м"
   },
   {
    "title": "Птицы",
@@ -312,7 +322,8 @@ window.LP = {
     "img/11-5.webp",
     "img/11-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/",
+   "spec": "3,0 × 2,9 м · 673 кг"
   },
   {
    "title": "Византия",
@@ -328,7 +339,8 @@ window.LP = {
     "img/12-4.webp",
     "img/12-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/izraztsovye-pechi/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-vizantiya/"
+   "url": "https://ceramicadecor.ru/izraztsovye-pechi/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-vizantiya/",
+   "spec": ""
   },
   {
    "title": "Облицовка «Византия»",
@@ -345,7 +357,8 @@ window.LP = {
     "img/13-5.webp",
     "img/13-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/",
+   "spec": ""
   },
   {
    "title": "Изразцовая облицовка Византия для печного комплекса",
@@ -361,7 +374,8 @@ window.LP = {
     "img/14-4.webp",
     "img/14-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_izraztsovaya-oblitsovka-vizantiya-dlya-pechnogo-kompleksa/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_izraztsovaya-oblitsovka-vizantiya-dlya-pechnogo-kompleksa/",
+   "spec": ""
   },
   {
    "title": "Азулежу",
@@ -377,7 +391,8 @@ window.LP = {
     "img/15-4.webp",
     "img/15-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/",
+   "spec": "2,1 × 2,2 м"
   },
   {
    "title": "Элеганс",
@@ -394,7 +409,8 @@ window.LP = {
     "img/16-5.webp",
     "img/16-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/",
+   "spec": "4,4 × 2,8 м · 653 кг"
   },
   {
    "title": "Летняя кухня в изразцовой облицовке «Элеганс» со столешницей из гранит",
@@ -409,7 +425,8 @@ window.LP = {
     "img/17-3.webp",
     "img/17-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/",
+   "spec": "2,2 × 2,7 м · 211 кг"
   },
   {
    "title": "Сценки",
@@ -423,7 +440,8 @@ window.LP = {
     "img/18-2.webp",
     "img/18-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/",
+   "spec": ""
   }
  ],
  "filters": [

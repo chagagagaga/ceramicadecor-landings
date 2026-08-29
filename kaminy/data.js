@@ -146,7 +146,8 @@ window.LP = {
     "img/01-4.webp",
     "img/01-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-belyj-kamin-albion-s-topkoj-liseo-castiron/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-belyj-kamin-albion-s-topkoj-liseo-castiron/",
+   "spec": "1,3 × 2,5 м · 218 кг"
   },
   {
    "title": "Облицовка биокамина изразцами Альбион в майоликовой глазури",
@@ -163,7 +164,8 @@ window.LP = {
     "img/02-5.webp",
     "img/02-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-biokamina-izraztsami-albion-v-majolikovoj-glazuri/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-biokamina-izraztsami-albion-v-majolikovoj-glazuri/",
+   "spec": "1,3 × 2,5 м · 175 кг"
   },
   {
    "title": "Тюльпан",
@@ -180,7 +182,8 @@ window.LP = {
     "img/03-5.webp",
     "img/03-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-tyulpan-s-g-obraznoj-topkoj-ekokamin-alfa-1000-rb/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-tyulpan-s-g-obraznoj-topkoj-ekokamin-alfa-1000-rb/",
+   "spec": "1,4 × 2,5 м · 243 кг"
   },
   {
    "title": "Комплект каминной облицовки Тюльпан. Цвет: Арктика",
@@ -196,7 +199,8 @@ window.LP = {
     "img/04-4.webp",
     "img/04-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_komplekt-kaminnoj-oblitsovki-tyulpan-tsvet-arktika/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_komplekt-kaminnoj-oblitsovki-tyulpan-tsvet-arktika/",
+   "spec": ""
   },
   {
    "title": "Версаль",
@@ -208,7 +212,8 @@ window.LP = {
    "photos": [
     "img/05.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-versal-v-sinem-tsvete/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-versal-v-sinem-tsvete/",
+   "spec": ""
   },
   {
    "title": "Бристоль",
@@ -225,7 +230,8 @@ window.LP = {
     "img/06-5.webp",
     "img/06-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-s-p-obraznoj-topkoj-v-oblitsovke-bristol-v-tsvete-chernaya-noch/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-s-p-obraznoj-topkoj-v-oblitsovke-bristol-v-tsvete-chernaya-noch/",
+   "spec": "1,3 × 2,7 м · 236 кг"
   },
   {
    "title": "Дорф",
@@ -240,7 +246,8 @@ window.LP = {
     "img/07-3.webp",
     "img/07-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_dekorativnyj-kamin-s-ochagom-airtone-andalle-1000-oblitsovan-izraztsami-kollektsii-dorf-spetsialno-dlya-restorana-5013/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_dekorativnyj-kamin-s-ochagom-airtone-andalle-1000-oblitsovan-izraztsami-kollektsii-dorf-spetsialno-dlya-restorana-5013/",
+   "spec": "1,7 × 3,7 м · 432 кг"
   },
   {
    "title": "Арт Нуво",
@@ -252,7 +259,8 @@ window.LP = {
    "photos": [
     "img/09.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-art-nuvo-1/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-art-nuvo-1/",
+   "spec": ""
   },
   {
    "title": "Птицы",
@@ -269,7 +277,8 @@ window.LP = {
     "img/10-5.webp",
     "img/10-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-astov-p2s-v-oblitsovke-ptitsy/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-astov-p2s-v-oblitsovke-ptitsy/",
+   "spec": ""
   },
   {
    "title": "Византия",
@@ -285,7 +294,8 @@ window.LP = {
     "img/11-4.webp",
     "img/11-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-vizantiya-v-rospisi-oliva/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-vizantiya-v-rospisi-oliva/",
+   "spec": ""
   },
   {
    "title": "Луна",
@@ -302,7 +312,8 @@ window.LP = {
     "img/12-5.webp",
     "img/12-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-klassicheskom-stile-iz-kollektsii-luna-i-topkoj-spartherm-linear-4s-arte-1672/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-klassicheskom-stile-iz-kollektsii-luna-i-topkoj-spartherm-linear-4s-arte-1672/",
+   "spec": "1,1 × 2,7 м · 194 кг"
   },
   {
    "title": "Универсал",
@@ -316,7 +327,8 @@ window.LP = {
     "img/13-2.webp",
     "img/13-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnyj-portal-universal-tsvet-arktika/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnyj-portal-universal-tsvet-arktika/",
+   "spec": "1,7 × 1,9 м · 117 кг"
   },
   {
    "title": "Облицовка «Универсал»",
@@ -332,7 +344,8 @@ window.LP = {
     "img/14-4.webp",
     "img/14-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-uglovogo-kamina-izraztsami-universal/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-uglovogo-kamina-izraztsami-universal/",
+   "spec": "1,3 × 2,0 м · 108 кг"
   },
   {
    "title": "Прованс",
@@ -348,7 +361,8 @@ window.LP = {
     "img/15-4.webp",
     "img/15-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izraztsovyj-kamin-kollektsii-gollandiya-s-drovnikom-i-ruchnoj-rospisyu/"
+   "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izraztsovyj-kamin-kollektsii-gollandiya-s-drovnikom-i-ruchnoj-rospisyu/",
+   "spec": "1,5 × 1,4 м · 136 кг"
   },
   {
    "title": "Браво",
@@ -364,7 +378,8 @@ window.LP = {
     "img/16-4.webp",
     "img/16-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-izraztsami-kollektsii-bravo-s-rospisyu/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-izraztsami-kollektsii-bravo-s-rospisyu/",
+   "spec": "1,3 × 1,5 м · 165 кг"
   },
   {
    "title": "Сохо",
@@ -380,7 +395,8 @@ window.LP = {
     "img/17-4.webp",
     "img/17-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-kamina-do-polki-s-drovnikami-po-bokam-v-kollektsii-soho-6749/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-kamina-do-polki-s-drovnikami-po-bokam-v-kollektsii-soho-6749/",
+   "spec": "2,6 × 1,8 м · 309 кг"
   },
   {
    "title": "Усадьба",
@@ -394,7 +410,8 @@ window.LP = {
     "img/18-3.webp",
     "img/18-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-usadba-s-podiumami-i-prizmatichnoj-uglovoj-topkoj/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-usadba-s-podiumami-i-prizmatichnoj-uglovoj-topkoj/",
+   "spec": "1,4 × 2,4 м · 172 кг"
   },
   {
    "title": "Птички",
@@ -410,7 +427,8 @@ window.LP = {
     "img/19-4.webp",
     "img/19-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnaya-oblitsovka-ptichki-dekorativnaya-palitra-lesnaya/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnaya-oblitsovka-ptichki-dekorativnaya-palitra-lesnaya/",
+   "spec": ""
   },
   {
    "title": "Элеганс",
@@ -422,7 +440,8 @@ window.LP = {
    "photos": [
     "img/20.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-elegans-v-glazuri-lesnoj-tuman/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-elegans-v-glazuri-lesnoj-tuman/",
+   "spec": ""
   },
   {
    "title": "Минималист",
@@ -434,7 +453,8 @@ window.LP = {
    "photos": [
     "img/21.webp"
    ],
-   "url": ""
+   "url": "",
+   "spec": ""
   },
   {
    "title": "Венская",
@@ -448,7 +468,8 @@ window.LP = {
     "img/22-2.webp",
     "img/22-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-elektrokamina-v-interere/cd_elektrokamin-belogo-tsveta-v-izraztsah-kollektsii-venskaya-99999/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-elektrokamina-v-interere/cd_elektrokamin-belogo-tsveta-v-izraztsah-kollektsii-venskaya-99999/",
+   "spec": ""
   },
   {
    "title": "Облицовка «Венская»",
@@ -465,7 +486,8 @@ window.LP = {
     "img/23-5.webp",
     "img/23-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-kamin-v-oblitsovke-iz-kollektsii-dorf-s-topkoj-brunner-stil-kamin-classic-6282/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-kamin-v-oblitsovke-iz-kollektsii-dorf-s-topkoj-brunner-stil-kamin-classic-6282/",
+   "spec": "1,6 × 3,6 м"
   }
  ],
  "filters": [

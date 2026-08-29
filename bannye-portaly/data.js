@@ -133,7 +133,8 @@ window.LP = {
     "img/01-5.webp",
     "img/01-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/",
+   "spec": "172 кг"
   },
   {
    "title": "Банный портал в изразцовой облицовке Сувенир",
@@ -149,7 +150,8 @@ window.LP = {
     "img/02-4.webp",
     "img/02-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/",
+   "spec": "1,3 × 1,2 м · 83 кг"
   },
   {
    "title": "Банный портал в изразцовой облицовке Усадьба",
@@ -165,7 +167,8 @@ window.LP = {
     "img/03-4.webp",
     "img/03-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/",
+   "spec": "100 кг"
   },
   {
    "title": "Белый изразцовый портал для банной печи в облицовке Пастораль",
@@ -181,7 +184,8 @@ window.LP = {
     "img/04-4.webp",
     "img/04-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/",
+   "spec": "120 кг"
   },
   {
    "title": "Банный портал в изразцовой облицовке Камея с художественной росписью",
@@ -197,7 +201,8 @@ window.LP = {
     "img/05-4.webp",
     "img/05-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/",
+   "spec": "96 кг"
   },
   {
    "title": "Банный портал в изразцовой облицовке с художественной росписью в стиле Прованс",
@@ -209,7 +214,8 @@ window.LP = {
    "photos": [
     "img/06.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
+   "spec": ""
   },
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво",
@@ -226,7 +232,8 @@ window.LP = {
     "img/07-5.webp",
     "img/07-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/",
+   "spec": "1,3 × 0,9 м · 45 кг"
   },
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво в лазурной росписи",
@@ -242,7 +249,8 @@ window.LP = {
     "img/08-4.webp",
     "img/08-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/",
+   "spec": "1,0 × 1,4 м · 46 кг"
   },
   {
    "title": "Банный портал в изразцовой облицовке Дорф в муравленом цвете",
@@ -258,7 +266,8 @@ window.LP = {
     "img/09-4.webp",
     "img/09-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/",
+   "spec": "120 кг"
   }
  ],
  "filters": [

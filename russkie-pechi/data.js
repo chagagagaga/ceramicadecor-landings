@@ -135,7 +135,8 @@ window.LP = {
     "img/01-5.webp",
     "img/01-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/",
+   "spec": "1,8 × 3,0 м · 950 кг"
   },
   {
    "title": "Русская печь в облицовке Камея с художественной росписью",
@@ -151,7 +152,8 @@ window.LP = {
     "img/02-4.webp",
     "img/02-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/",
+   "spec": "3,0 × 2,5 м"
   },
   {
    "title": "Русская печь в облицовке белыми изразцами коллекции Тюльпан",
@@ -165,7 +167,8 @@ window.LP = {
     "img/03-2.webp",
     "img/03-3.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
+   "spec": ""
   },
   {
    "title": "Русская печь в облицовке белыми изразцами коллекции Неаполь",
@@ -181,7 +184,8 @@ window.LP = {
     "img/04-4.webp",
     "img/04-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/",
+   "spec": "1,4 × 2,0 м · 246 кг"
   },
   {
    "title": "Русская печь с частичной облицовкой изразцами коллекции Усадьба",
@@ -194,7 +198,8 @@ window.LP = {
     "img/05.webp",
     "img/05-2.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/",
+   "spec": "2,5 × 2,7 м · 217 кг"
   },
   {
    "title": "Русская печь в изразцовой облицовке Византия",
@@ -209,7 +214,8 @@ window.LP = {
     "img/06-3.webp",
     "img/06-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
+   "spec": ""
   },
   {
    "title": "Русская печь с частичной облицовкой изразцами коллекции Арт Нуво",
@@ -224,7 +230,8 @@ window.LP = {
     "img/07-3.webp",
     "img/07-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/",
+   "spec": "3,0 × 2,7 м · 520 кг"
   },
   {
    "title": "Русская печь в изразцовой облицовке в зеленой майоликовой глазури",
@@ -241,7 +248,8 @@ window.LP = {
     "img/08-5.webp",
     "img/08-6.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/",
+   "spec": "2,9 × 3,0 м · 900 кг"
   },
   {
    "title": "Русская печь в облицовке изразцами в коллекции Русская Этника",
@@ -256,7 +264,8 @@ window.LP = {
     "img/09-3.webp",
     "img/09-4.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/",
+   "spec": "1,9 × 1,9 м · 493 кг"
   },
   {
    "title": "Русская печь в облицовке изразцами коллекции Тюльпан",
@@ -272,7 +281,8 @@ window.LP = {
     "img/10-4.webp",
     "img/10-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/",
+   "spec": "3,1 × 4,4 м"
   },
   {
    "title": "Русская печь в облицовке белыми изразцами в коллекции Русская Этника",
@@ -288,7 +298,8 @@ window.LP = {
     "img/11-4.webp",
     "img/11-5.webp"
    ],
-   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/"
+   "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/",
+   "spec": "1,8 × 3,0 м"
   }
  ],
  "filters": [
