@@ -115,7 +115,12 @@ window.LP = {
     "img/01-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Дорф в цвете Горький Шоколад",
@@ -130,7 +135,12 @@ window.LP = {
     "img/02-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Дорф в цвете Муравленый",
@@ -145,7 +155,12 @@ window.LP = {
     "img/03-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-1/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Ритм в цвете Белый Антик",
@@ -160,7 +175,12 @@ window.LP = {
     "img/04-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Ритм в цвете Бургундия",
@@ -175,7 +195,12 @@ window.LP = {
     "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1-1/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Печь-камин типовая КерамикаДекор Ритм в цвете Лазурный",
@@ -190,7 +215,12 @@ window.LP = {
     "img/06-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   }
  ],
  "filters": [],

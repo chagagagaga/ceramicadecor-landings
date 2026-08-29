@@ -133,7 +133,12 @@ window.LP = {
     "img/01-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "4 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Облицовка печи изразцами с художественной росписью Прованс",
@@ -149,7 +154,12 @@ window.LP = {
     "img/02-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "4 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Облицовка печи Арт Нуво в лазурной росписи",
@@ -166,7 +176,20 @@ window.LP = {
     "img/03-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/",
-   "spec": "1,3 × 2,8 м · 218 кг"
+   "tiles": [
+    {
+     "v": "218 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "1,3 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,8 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Изразцовая печь в облицовке Усадьба с росписью ручной работы",
@@ -184,7 +207,20 @@ window.LP = {
     "img/04-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-5393/",
-   "spec": "1,3 × 2,3 м"
+   "tiles": [
+    {
+     "v": "1,3 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,3 м",
+     "l": "высота"
+    },
+    {
+     "v": "6 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Облицовка отопительной печи в коллекции Универсал",
@@ -199,7 +235,20 @@ window.LP = {
     "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topochnoj-dverkoj-vezuvij-9525/",
-   "spec": "1,4 × 2,1 м"
+   "tiles": [
+    {
+     "v": "1,4 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,1 м",
+     "l": "высота"
+    },
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Облицовка отопительной печи в коллекции Птички",
@@ -215,7 +264,20 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-lesnaya/",
-   "spec": "1,4 × 2,1 м · 193 кг"
+   "tiles": [
+    {
+     "v": "193 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "1,4 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,1 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Облицовка отопительной печи в коллекции Арт Нуво",
@@ -230,7 +292,12 @@ window.LP = {
     "img/07-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Облицовка отопительной печи в коллекции Модерн",
@@ -246,7 +313,20 @@ window.LP = {
     "img/08-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/",
-   "spec": "0,9 × 2,6 м · 103 кг"
+   "tiles": [
+    {
+     "v": "103 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "0,9 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,6 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Облицовка отопительной печи в коллекции Дорф",
@@ -262,7 +342,20 @@ window.LP = {
     "img/09-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf/",
-   "spec": "1,2 × 2,2 м · 349 кг"
+   "tiles": [
+    {
+     "v": "349 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "1,2 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,2 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Облицовка отопительной печи белыми изразцами коллекции Неаполь",
@@ -278,7 +371,20 @@ window.LP = {
     "img/10-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/",
-   "spec": "1,4 × 3,1 м"
+   "tiles": [
+    {
+     "v": "1,4 м",
+     "l": "ширина"
+    },
+    {
+     "v": "3,1 м",
+     "l": "высота"
+    },
+    {
+     "v": "4 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   }
  ],
  "filters": [

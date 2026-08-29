@@ -876,19 +876,36 @@ def clean_text(v, fallback=""):
 SKIP_ITEMS = {"kaminy": {8}}
 
 
-def spec_line(sp):
-    """Строка характеристик: «3,7 × 2,8 м · 423 кг».
-    Килограммы и метры доказывают ручную работу лучше прилагательных.
-    Глубину не показываем: в выгрузке она местами явно битая."""
-    if not sp:
-        return ''
-    parts = []
-    if sp.get('width') and sp.get('height'):
-        parts.append('%s × %s м' % (('%.1f' % (sp['width'] / 1000)).replace('.', ','),
-                                    ('%.1f' % (sp['height'] / 1000)).replace('.', ',')))
+def fmt_ru(n):
+    """Число с неразрывными пробелами по разрядам."""
+    return '{:,}'.format(int(n)).replace(',', '\u00a0')
+
+
+def spec_tiles(sp, p1, p2, photos):
+    """Плитки величин под названием объекта.
+
+    Килограммы и метры доказывают ручную работу лучше прилагательных,
+    но вес и габариты есть только у половины архива. Поэтому очередь
+    замен: вес → габариты → дельта монтажа → количество фото. Дельта
+    монтажа считается из двух цен и есть у каждого объекта без
+    исключения, так что плиток всегда хватает.
+
+    Плиток три или две, но никогда одна: одинокая плитка в модульной
+    сетке читается как ошибка загрузки.
+    """
+    sp = sp or {}
+    tiles = []
     if sp.get('weight'):
-        parts.append('%d кг' % sp['weight'])
-    return ' · '.join(parts)
+        tiles.append({'v': '%d кг' % sp['weight'], 'l': 'облицовка'})
+    if sp.get('width'):
+        tiles.append({'v': ('%.1f м' % (sp['width'] / 1000)).replace('.', ','), 'l': 'ширина'})
+    if sp.get('height') and len(tiles) < 3:
+        tiles.append({'v': ('%.1f м' % (sp['height'] / 1000)).replace('.', ','), 'l': 'высота'})
+    if len(tiles) < 3 and p2 and p1 and p2 > p1:
+        tiles.append({'v': fmt_ru(p2 - p1) + ' \u20bd', 'l': 'монтаж и работы'})
+    if len(tiles) < 3 and photos:
+        tiles.append({'v': '%d фото' % len(photos), 'l': 'съёмка объекта'})
+    return tiles[:3] if len(tiles) >= 3 else tiles[:2]
 
 
 def build():
@@ -931,7 +948,8 @@ def build():
                 if os.path.exists(f):
                     frames.append('img/%02d-%d.webp' % (pos, k))
             c["photos"] = frames
-            c["spec"] = spec_line(all_specs.get(slug, {}).get(str(pos)))
+            c["tiles"] = spec_tiles(all_specs.get(slug, {}).get(str(pos)),
+                                    c["p1"], c["p2"], frames)
 
         collections = []
         for c in cards:

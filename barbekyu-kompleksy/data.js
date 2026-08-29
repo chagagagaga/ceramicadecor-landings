@@ -154,7 +154,20 @@ window.LP = {
     "img/01-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/",
-   "spec": "3,7 × 2,8 м · 423 кг"
+   "tiles": [
+    {
+     "v": "423 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "3,7 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,8 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Облицовка маленького печного комплекса с мангалом. 6261",
@@ -171,7 +184,20 @@ window.LP = {
     "img/02-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/",
-   "spec": "3,2 × 2,9 м · 386 кг"
+   "tiles": [
+    {
+     "v": "386 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "3,2 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,9 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Версаль",
@@ -187,7 +213,16 @@ window.LP = {
     "img/03-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "2 921 000 ₽",
+     "l": "монтаж и работы"
+    },
+    {
+     "v": "4 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Летняя кухня \"Версаль\", цвет: Болотный 1311",
@@ -202,7 +237,20 @@ window.LP = {
     "img/04-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-versal-tsvet-bolotnyj-1311/",
-   "spec": "2,1 × 2,1 м · 382 кг"
+   "tiles": [
+    {
+     "v": "382 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "2,1 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,1 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Летняя кухня в облицовке изразцами коллекции Версаль, цвет: Синий",
@@ -220,7 +268,20 @@ window.LP = {
     "img/05-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/",
-   "spec": "4,9 × 3,0 м · 981 кг"
+   "tiles": [
+    {
+     "v": "981 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "4,9 м",
+     "l": "ширина"
+    },
+    {
+     "v": "3,0 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Тюльпан",
@@ -235,7 +296,20 @@ window.LP = {
     "img/06-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/",
-   "spec": "1,8 × 2,5 м"
+   "tiles": [
+    {
+     "v": "1,8 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,5 м",
+     "l": "высота"
+    },
+    {
+     "v": "1 438 000 ₽",
+     "l": "монтаж и работы"
+    }
+   ]
   },
   {
    "title": "Дорф",
@@ -253,7 +327,16 @@ window.LP = {
     "img/07-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "3 555 000 ₽",
+     "l": "монтаж и работы"
+    },
+    {
+     "v": "6 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Барбекю комплекс в коллекции Дорф с мангалом и дровником. 5397",
@@ -271,7 +354,20 @@ window.LP = {
     "img/08-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/",
-   "spec": "3,3 × 2,7 м · 378 кг"
+   "tiles": [
+    {
+     "v": "378 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "3,3 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,7 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Птички",
@@ -288,7 +384,20 @@ window.LP = {
     "img/09-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/",
-   "spec": "3,1 × 2,0 м · 253 кг"
+   "tiles": [
+    {
+     "v": "253 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "3,1 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,0 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Печной комплекс с мангалом и печью под казан в облицовке изразцами кол",
@@ -305,7 +414,20 @@ window.LP = {
     "img/10-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/",
-   "spec": "4,0 × 2,5 м"
+   "tiles": [
+    {
+     "v": "4,0 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,5 м",
+     "l": "высота"
+    },
+    {
+     "v": "1 162 000 ₽",
+     "l": "монтаж и работы"
+    }
+   ]
   },
   {
    "title": "Птицы",
@@ -323,7 +445,20 @@ window.LP = {
     "img/11-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/",
-   "spec": "3,0 × 2,9 м · 673 кг"
+   "tiles": [
+    {
+     "v": "673 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "3,0 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,9 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Византия",
@@ -340,7 +475,16 @@ window.LP = {
     "img/12-5.webp"
    ],
    "url": "https://ceramicadecor.ru/izraztsovye-pechi/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-vizantiya/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "1 667 000 ₽",
+     "l": "монтаж и работы"
+    },
+    {
+     "v": "5 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Облицовка «Византия»",
@@ -358,7 +502,16 @@ window.LP = {
     "img/13-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "2 128 000 ₽",
+     "l": "монтаж и работы"
+    },
+    {
+     "v": "6 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Изразцовая облицовка Византия для печного комплекса",
@@ -375,7 +528,16 @@ window.LP = {
     "img/14-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_izraztsovaya-oblitsovka-vizantiya-dlya-pechnogo-kompleksa/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "4 748 000 ₽",
+     "l": "монтаж и работы"
+    },
+    {
+     "v": "5 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Азулежу",
@@ -392,7 +554,20 @@ window.LP = {
     "img/15-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/",
-   "spec": "2,1 × 2,2 м"
+   "tiles": [
+    {
+     "v": "2,1 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,2 м",
+     "l": "высота"
+    },
+    {
+     "v": "671 000 ₽",
+     "l": "монтаж и работы"
+    }
+   ]
   },
   {
    "title": "Элеганс",
@@ -410,7 +585,20 @@ window.LP = {
     "img/16-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/",
-   "spec": "4,4 × 2,8 м · 653 кг"
+   "tiles": [
+    {
+     "v": "653 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "4,4 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,8 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Летняя кухня в изразцовой облицовке «Элеганс» со столешницей из гранит",
@@ -426,7 +614,20 @@ window.LP = {
     "img/17-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/",
-   "spec": "2,2 × 2,7 м · 211 кг"
+   "tiles": [
+    {
+     "v": "211 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "2,2 м",
+     "l": "ширина"
+    },
+    {
+     "v": "2,7 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Сценки",
@@ -441,7 +642,16 @@ window.LP = {
     "img/18-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "801 000 ₽",
+     "l": "монтаж и работы"
+    },
+    {
+     "v": "3 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   }
  ],
  "filters": [

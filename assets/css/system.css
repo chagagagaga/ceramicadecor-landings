@@ -1,47 +1,61 @@
 /* ============================================================================
    CERAMICADECOR — ДИЗАЙН-СИСТЕМА ПОСАДОЧНЫХ
    ----------------------------------------------------------------------------
-   Токены сняты с боевого сайта olgabeznogova24.github.io/RU-Site-Full
-   (style.css, блок :root). Один источник правды для всех семи лендингов:
-   правится здесь — меняется везде.
+   Визуальная дирекция «Шамот»: страница выложена так же, как выкладывают
+   печь. Модули лежат на основе и разделены швом в 2 px — шов и есть сетка.
+   Границ, теней и скруглений в системе нет вообще, радиус везде 0.
 
-   Шрифты. На основном сайте стоят лицензионные TT Ramillas (заголовки)
-   и TT Commons Pro (текст). В этот репозиторий файлы не кладём: лицензия
-   не позволяет раздавать их с публичного хостинга. Перед боевым запуском
-   положите их в assets/fonts/ и раскомментируйте @font-face ниже — пока
-   работает подобранный по метрикам системный стек.
+   Доверие строится не воздухом, а материальной плотностью: сантиметры,
+   килограммы, дни, штуки. Прилагательных вроде «эксклюзивный» на странице
+   быть не должно.
+
+   Один источник правды для всех семи направлений: правится здесь —
+   меняется везде.
    ========================================================================== */
 
-:root {
-  /* Фон и поверхности */
-  --bg:            #101010;
-  --bg-lighter:    #1a1a1a;
-  --bg-card:       #161616;
+/* Oswald — узкий гротеск для заголовков, набирается прописными: это клеймо
+   на изделии. Golos Text — весь читаемый текст и цифры, он сделан под
+   русский. Обе гарнитуры с кириллицей и свободной лицензией. */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Golos+Text:wght@400;500;600;700&display=swap');
 
-  /* Фирменные акценты */
-  --primary:       #cb3b25;   /* терракота — все действия */
-  --primary-hover: #e14c35;
-  --orange:        #ff673d;
-  --amber:         #ffa15e;   /* цифры, цены, акценты на тёмном */
-  --green:         #93d200;   /* статус «готово» */
+:root {
+  /* Поверхности. Модули лежат на основе и разделены швом — это и есть
+     вся система разделения. Рамок нет. */
+  --bg:            #14100D;   /* основа — сырая глина */
+  --bg-lighter:    #1E1813;   /* модуль — изразец */
+  --bg-card:       #1E1813;
+  --seam:          #0A0806;   /* шов 2 px между модулями */
+  --bg-accent:     #2A211A;   /* модуль на ступень светлее */
+
+  /* Акцент — обожжённая медь. Разрешена в четырёх местах: верхняя кромка
+     активного модуля, цена «под ключ», один залитый CTA и ровно одна
+     медная плитка в сетке каталога. Тонкой медью текст не набираем:
+     на основе она даёт 3,9:1 и проваливается. */
+  --primary:       #C2673A;
+  --primary-hover: #D4784B;
+  --orange:        #C2673A;
+  --amber:         #C2673A;
+  --green:         #7A8F3C;   /* статус «готово», не акцент */
 
   /* Текст */
-  --white:         #ffffff;
-  --text-muted:    rgba(255, 255, 255, .78);
-  --text-dim:      rgba(255, 255, 255, .58);
+  --white:         #F0E7DA;   /* основной — 15,1:1 на основе */
+  --text-muted:    #AFA294;   /* вторичный — 7,1:1 на модуле */
+  --text-dim:      #8C8073;
 
-  /* Линии */
-  --border:        rgba(255, 255, 255, .1);
-  --border-light:  rgba(255, 255, 255, .15);
+  /* «Линии» — это швы, а не бордеры */
+  --border:        #0A0806;
+  --border-light:  #2A211A;
 
-  /* Типографика */
-  --font-heading: 'TT Ramillas', Georgia, 'Times New Roman', serif;
-  --font-body:    'TT Commons Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Типографика. Oswald на тёмном — не легче 400 и не мельче 24 px,
+     иначе узкий гротеск рассыпается. */
+  --font-heading: 'Oswald', 'Golos Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Ритм */
   --container: 1360px;
   --pad-x:     clamp(1rem, .6rem + 2vw, 2.5rem);
   --section-y: clamp(3rem, 2rem + 4vw, 6rem);
+  --seam-w:    2px;
   --transition: .3s ease;
 }
 
@@ -52,12 +66,22 @@ body {
   background: var(--bg);
   color: var(--white);
   font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 16.5px;
+  line-height: 1.68;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 { margin: 0; font-family: var(--font-heading); font-weight: 300; line-height: 1.1; letter-spacing: -.01em; text-wrap: balance; }
+/* Заголовки — Oswald прописными: это клеймо на изделии, а не подпись.
+   Начертание не легче 400 и кегль не мельче 24 px, иначе узкий гротеск
+   на тёмном рассыпается. */
+h1, h2, h3 {
+  margin: 0; font-family: var(--font-heading); font-weight: 500;
+  text-transform: uppercase; line-height: 1.08; letter-spacing: .01em;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.9rem); line-height: 1.02; }
+h2 { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2rem); font-weight: 400; line-height: 1.12; letter-spacing: .04em; }
+h3 { font-size: 1.15rem; font-weight: 500; line-height: 1.15; }
 p { margin: 0; text-wrap: pretty; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
@@ -68,7 +92,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .5em;
-  padding: 1.05em 1.9em; border: 1px solid transparent; border-radius: 2px;
+  padding: 1.05em 1.9em; border: 1px solid transparent; border-radius: 0;
   font-size: .95rem; font-weight: 500; letter-spacing: .02em;
   transition: background var(--transition), border-color var(--transition), color var(--transition);
 }
@@ -77,9 +101,11 @@ img { display: block; max-width: 100%; height: auto; }
 .btn--ghost { border-color: var(--border-light); color: var(--white); }
 .btn--ghost:hover { border-color: var(--white); }
 
+/* Служебная строка: Golos 600 в разрядку. Моноширинного в системе нет —
+   его роль играет разрядка. */
 .kicker {
-  font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
-  color: var(--amber);
+  font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--primary);
 }
 
 /* Статусы готовности лендинга */

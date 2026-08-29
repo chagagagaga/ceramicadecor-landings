@@ -512,7 +512,14 @@
           (c.desc ? '<p class="card__desc">' + esc(c.desc) + '</p>' : '') +
           // Размер и вес — проверяемые числа: они доказывают ручную работу
           // убедительнее любого прилагательного.
-          (c.spec ? '<p class="card__spec">' + esc(c.spec) + '</p>' : '') +
+          // Плитки величин: килограммы и метры доказывают ручную работу
+          // убедительнее прилагательных. Ширина тянется на auto-fit —
+          // две плитки выглядят так же намеренно, как три.
+          (c.tiles && c.tiles.length
+            ? '<div class="card__tiles">' + c.tiles.map(function (t) {
+                return '<div class="tile"><b>' + esc(t.v) + '</b><span>' + esc(t.l) + '</span></div>';
+              }).join('') + '</div>'
+            : '') +
           '<div class="card__prices">' +
             '<div class="card__p2"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>' +
             (c.p2 ? '<div class="card__p1"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>' : '') +

@@ -134,7 +134,16 @@ window.LP = {
     "img/01-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/",
-   "spec": "172 кг"
+   "tiles": [
+    {
+     "v": "172 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "6 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке Сувенир",
@@ -151,7 +160,20 @@ window.LP = {
     "img/02-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/",
-   "spec": "1,3 × 1,2 м · 83 кг"
+   "tiles": [
+    {
+     "v": "83 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "1,3 м",
+     "l": "ширина"
+    },
+    {
+     "v": "1,2 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке Усадьба",
@@ -168,7 +190,16 @@ window.LP = {
     "img/03-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/",
-   "spec": "100 кг"
+   "tiles": [
+    {
+     "v": "100 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "5 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Белый изразцовый портал для банной печи в облицовке Пастораль",
@@ -185,7 +216,16 @@ window.LP = {
     "img/04-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/",
-   "spec": "120 кг"
+   "tiles": [
+    {
+     "v": "120 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "5 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке Камея с художественной росписью",
@@ -202,7 +242,16 @@ window.LP = {
     "img/05-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/",
-   "spec": "96 кг"
+   "tiles": [
+    {
+     "v": "96 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "5 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке с художественной росписью в стиле Прованс",
@@ -218,7 +267,12 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
-   "spec": ""
+   "tiles": [
+    {
+     "v": "4 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво",
@@ -236,7 +290,20 @@ window.LP = {
     "img/07-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/",
-   "spec": "1,3 × 0,9 м · 45 кг"
+   "tiles": [
+    {
+     "v": "45 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "1,3 м",
+     "l": "ширина"
+    },
+    {
+     "v": "0,9 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке Арт Нуво в лазурной росписи",
@@ -253,7 +320,20 @@ window.LP = {
     "img/08-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/",
-   "spec": "1,0 × 1,4 м · 46 кг"
+   "tiles": [
+    {
+     "v": "46 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "1,0 м",
+     "l": "ширина"
+    },
+    {
+     "v": "1,4 м",
+     "l": "высота"
+    }
+   ]
   },
   {
    "title": "Банный портал в изразцовой облицовке Дорф в муравленом цвете",
@@ -270,7 +350,16 @@ window.LP = {
     "img/09-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/",
-   "spec": "120 кг"
+   "tiles": [
+    {
+     "v": "120 кг",
+     "l": "облицовка"
+    },
+    {
+     "v": "5 фото",
+     "l": "съёмка объекта"
+    }
+   ]
   }
  ],
  "filters": [
