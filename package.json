@@ -10,8 +10,9 @@
     "start": "python3 -m http.server 8099",
     "drive": "node docs/drive.mjs",
     "checklist": "node docs/checklist.mjs",
-    "all": "npm test && npm run visual && npm run drive && npm run checklist && npm run mobile",
-    "mobile": "node docs/mobile.mjs"
+    "all": "npm test && npm run visual && npm run drive && npm run checklist && npm run mobile && npm run borders",
+    "mobile": "node docs/mobile.mjs",
+    "borders": "python3 tools/check_borders.py"
   },
   "devDependencies": {
     "jsdom": "^29.1.1",
