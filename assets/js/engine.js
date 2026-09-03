@@ -30,9 +30,20 @@
   /* ══ 1. АТРИБУЦИЯ ═══════════════════════════════════════════════════════
      Запоминаем первый и последний источник, чтобы в заявке было видно,
      из какой кампании Директа пришёл человек. Только localStorage, без cookie.
+
+     СКВОЗНАЯ АНАЛИТИКА (задача Дениса, 31.08.2026). Чтобы ЛСО могла вернуть
+     в Метрику офлайн-конверсию по этой заявке, в ней обязаны приехать:
+       · ym_client_id — ClientID Метрики (официальный getClientID,
+         cookie _ym_uid только как запасной вариант);
+       · yclid        — метка клика Директа, держим 90 дней отдельно от utm;
+       · lead_uid     — сквозной номер заявки, по нему CRM и Метрика говорят
+         об одной строке и повтор отправки не задваивается.
+     Контракт полей одинаковый с посадочной «Первого Луча» — приёмник один.
   ═══════════════════════════════════════════════════════════════════════ */
   var Attr = (function () {
     var K1 = 'cd_first', K2 = 'cd_last', KV = 'cd_visits';
+    var K_CID = 'cd_ym_cid', K_YCLID = 'cd_yclid';
+    var YCLID_TTL_DAYS = 90;
     function read(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } }
     function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
     var marks = {};
@@ -42,21 +53,123 @@
     var external = document.referrer && document.referrer.indexOf(location.hostname) === -1;
     if (Object.keys(marks).length || external || !read(K2)) write(K2, snap);
     var visits = (read(KV) || 0) + 1; write(KV, visits);
+
+    // ClientID Метрики: официальный вызов работает только после инициализации
+    // счётчика, поэтому ответ кэшируем — заявку могут отправить раньше.
+    (function captureCid() {
+      var id = P.brand.metrikaId || 0;
+      if (!id) return;
+      var tries = 0;
+      (function ask() {
+        if (typeof window.ym === 'function') {
+          try {
+            window.ym(id, 'getClientID', function (cid) {
+              if (cid) { try { localStorage.setItem(K_CID, String(cid)); } catch (e) {} }
+            });
+            return;
+          } catch (e) {}
+        }
+        if (++tries < 20) setTimeout(ask, 500);
+      })();
+    })();
+
+    function clientId() {
+      var cached = '';
+      try { cached = localStorage.getItem(K_CID) || ''; } catch (e) {}
+      if (cached) return cached;
+      var ym = document.cookie.match(/(?:^|;\s*)_ym_uid=([^;]+)/);
+      return ym ? decodeURIComponent(ym[1]) : '';
+    }
+
+    // yclid живёт дольше utm: человек может уйти и вернуться напрямую,
+    // а конверсию Директу всё равно нужно вернуть на тот самый клик.
+    if (marks.yclid) write(K_YCLID, { v: marks.yclid, at: snap.at });
+    function yclid() {
+      var box = read(K_YCLID);
+      if (!box || !box.v) return '';
+      return (Date.now() - new Date(box.at).getTime()) / 86400000 <= YCLID_TTL_DAYS ? box.v : '';
+    }
+
+    // Один номер на загрузку страницы: если отправка сорвалась и человек
+    // нажал ещё раз, в CRM приедет тот же номер и она склеит повтор.
+    var LEAD_UID = (function () {
+      var d = new Date();
+      return 'CD-' + String(d.getFullYear()).slice(2) +
+        ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) +
+        '-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+    })();
+
+    function flatUtm() {
+      var m = (read(K2) || snap).marks || {};
+      var out = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function (k) { out[k] = m[k] || ''; });
+      return out;
+    }
+
     return {
       payload: function () {
-        var ym = document.cookie.match(/(?:^|;\s*)_ym_uid=([^;]+)/);
-        return {
-          first_touch: read(K1) || snap, last_touch: read(K2) || snap, visits: visits,
+        var last = read(K2) || snap;
+        return Object.assign({
+          // ── склейка с Метрикой: без этих полей сквозной аналитики нет
+          lead_uid: LEAD_UID,
+          site_key: 'cd-' + P.slug,
+          ym_client_id: clientId(),
+          yclid: yclid(),
+          gclid: (last.marks && last.marks.gclid) || '',
+          first_touch: read(K1) || snap, last_touch: last, visits: visits,
           page_url: location.href, referrer: document.referrer || '',
-          ym_uid: ym ? decodeURIComponent(ym[1]) : '',
+          // ym_uid оставлен для обратной совместимости со старым приёмником
+          ym_uid: clientId(),
           screen: window.innerWidth + 'x' + window.innerHeight,
           user_agent: navigator.userAgent,
-        };
+        }, flatUtm());
       },
     };
   })();
 
-  /* ══ 2. ЦЕЛИ МЕТРИКИ ════════════════════════════════════════════════════ */
+  /* ══ 2. СЧЁТЧИК И ЦЕЛИ МЕТРИКИ ══════════════════════════════════════════
+     Счётчик поднимается здесь, из brand.metrikaId. До 03.09.2026 его на
+     посадочных не было вообще — все вызовы ym() уходили в пустоту, и ни
+     одна цель не доезжала. Без счётчика вся сквозная аналитика не начнётся:
+     офлайн-конверсии привязываются к визиту по ClientID, а ClientID выдаёт
+     именно счётчик.
+
+     Цели, которые нужно завести руками в Метрике (тип «JavaScript-событие»,
+     имена одинаковые с посадочной «Первого Луча», чтобы отчёты сходились):
+       lead_submitted, calc_started, calc_cta_click, cta_click,
+       phone_click, messenger_click, gallery_open, scroll_75
+     Офлайн-цели (тип «Загрузка данных») заводятся отдельно — см. план.
+  ═══════════════════════════════════════════════════════════════════════ */
+  (function metrika() {
+    var id = P.brand.metrikaId || 0;
+    if (!id) {
+      console.warn('[Ceramica Decor] Счётчик Метрики не задан: brand.metrikaId = 0. ' +
+                   'Цели и сквозная аналитика работать не будут.');
+      return;
+    }
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t); a = e.getElementsByTagName(t)[0];
+      k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    window.ym(id, 'init', {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+      // Параметры визита: направление приезжает в отчёты само, и семь
+      // посадочных можно сравнивать между собой в одном счётчике.
+      params: { product: P.slug, product_title: P.title },
+    });
+
+    var ns = document.createElement('noscript');
+    ns.innerHTML = '<div><img src="https://mc.yandex.ru/watch/' + id +
+      '" style="position:absolute;left:-9999px" alt=""></div>';
+    document.body.appendChild(ns);
+  })();
+
   function goal(name, params) {
     if (window.dataLayer) window.dataLayer.push(Object.assign({ event: name, product: P.slug }, params || {}));
     var id = P.brand.metrikaId || 0;
