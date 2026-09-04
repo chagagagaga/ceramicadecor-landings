@@ -27,6 +27,18 @@
 
   var QS = new URLSearchParams(location.search || '');
 
+  /* Превью для сетки. Полный кадр в 1600 px нужен только лайтбоксу, который
+     показывает фото во всю высоту экрана. Карточке хватает 700 px, и весит
+     она вшестеро меньше: без этого первый экран каталога тянул 2,7 МБ.
+     Уменьшенная копия лежит рядом, в подпапке s/ — путь получается заменой,
+     список превью в данных держать не нужно. Собираются они скриптом
+     tools/make_thumbs.py. */
+  function thumb(src) {
+    // Путь бывает и своим («img/01.webp»), и чужим («../kaminy/img/03.webp»),
+    // поэтому цепляемся за начало строки или за косую черту перед папкой.
+    return String(src || '').replace(/(^|\/)img\//, '$1img/s/');
+  }
+
   /* ══ 1. АТРИБУЦИЯ ═══════════════════════════════════════════════════════
      Запоминаем первый и последний источник, чтобы в заявке было видно,
      из какой кампании Директа пришёл человек. Только localStorage, без cookie.
@@ -680,8 +692,8 @@
         '<button type="button" class="card__media" data-gal="' + idx + '"' +
           ' aria-label="' + (n > 1 ? 'Открыть галерею: ' : 'Открыть фото: ') + esc(c.title) + '">' +
           (c.img
-            ? '<img class="card__bg" src="' + esc(c.img) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
-              '<img class="card__pic" src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
+            ? '<img class="card__bg" src="' + esc(thumb(c.img)) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
+              '<img class="card__pic" src="' + esc(thumb(c.img)) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
             : '') +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
           (n > 1 ? '<span class="card__count">' + n + ' фото</span>' : '') +
@@ -862,7 +874,7 @@
     if (gal && P.catalogStyle === 'product' && !galExternal) gal.classList.add('gallery--product');
     if (gal && P.gallery && P.gallery.length) {
       gal.innerHTML = P.gallery.map(function (src, i) {
-        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
+        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(thumb(src)) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
       }).join('');
       var lb = null, cur = 0;
       // Набор кадров и подпись задаются при открытии: из общей галереи
