@@ -677,8 +677,8 @@
     function card(c, idx) {
       var n = (c.photos || []).length;
       return '<article class="card" data-card="' + idx + '">' +
-        '<button type="button" class="card__media" ' + (n > 1 ? 'data-gal="' + idx + '"' : 'disabled') +
-          ' aria-label="' + (n > 1 ? 'Открыть галерею: ' + esc(c.title) : esc(c.title)) + '">' +
+        '<button type="button" class="card__media" data-gal="' + idx + '"' +
+          ' aria-label="' + (n > 1 ? 'Открыть галерею: ' : 'Открыть фото: ') + esc(c.title) + '">' +
           (c.img
             ? '<img class="card__bg" src="' + esc(c.img) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
               '<img class="card__pic" src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
@@ -712,7 +712,7 @@
         '</div>' +
         '<footer class="card__foot">' +
           '<button type="button" class="btn btn--primary" data-lead data-src="card">Рассчитать такой же</button>' +
-          (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="Страница объекта">Объект</a>' : '') +
+          (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="Подробнее об объекте">Подробнее</a>' : '') +
         '</footer>' +
       '</article>';
     }
@@ -854,7 +854,12 @@
 
     // Галерея с лайтбоксом
     var gal = $('[data-gallery]');
-    if (gal && P.catalogStyle === 'product') gal.classList.add('gallery--product');
+    // Товарный стиль галереи (кадр целиком на светлом) нужен там, где
+    // в ней лежат снимки изделий на подставке. Если галерея собрана из
+    // объектов соседних направлений — это обычные интерьерные кадры,
+    // и они должны заполнять плитку, а не висеть в белых полях.
+    var galExternal = P.gallery && P.gallery.length && /^\.\./.test(P.gallery[0]);
+    if (gal && P.catalogStyle === 'product' && !galExternal) gal.classList.add('gallery--product');
     if (gal && P.gallery && P.gallery.length) {
       gal.innerHTML = P.gallery.map(function (src, i) {
         return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
@@ -992,9 +997,12 @@
       var gal = e.target.closest('[data-gal]');
       if (gal && window.LPGallery && window.LP) {
         var it = window.LP.catalog[+gal.dataset.gal];
-        if (it && it.photos && it.photos.length > 1) {
+        // Одного кадра тоже достаточно: человек хочет рассмотреть плитку,
+        // а не пролистать галерею.
+        var shots = (it && it.photos && it.photos.length) ? it.photos : (it && it.img ? [it.img] : []);
+        if (shots.length) {
           goal('gallery_open', { item: it.title });
-          window.LPGallery(it.photos, it.title, 0);
+          window.LPGallery(shots, it.title, 0);
           return;
         }
       }
