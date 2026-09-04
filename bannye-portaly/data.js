@@ -110,6 +110,9 @@ window.LP = {
     "img/01-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "172 кг",
@@ -136,6 +139,9 @@ window.LP = {
     "img/02-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "83 кг",
@@ -166,6 +172,9 @@ window.LP = {
     "img/03-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "100 кг",
@@ -192,6 +201,9 @@ window.LP = {
     "img/04-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "120 кг",
@@ -218,6 +230,9 @@ window.LP = {
     "img/05-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "96 кг",
@@ -243,6 +258,9 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -261,6 +279,9 @@ window.LP = {
     "img/07-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "45 кг",
@@ -291,6 +312,9 @@ window.LP = {
     "img/08-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "46 кг",
@@ -321,6 +345,9 @@ window.LP = {
     "img/09-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "120 кг",

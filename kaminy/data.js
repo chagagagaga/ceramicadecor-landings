@@ -121,6 +121,9 @@ window.LP = {
     "img/01-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-belyj-kamin-albion-s-topkoj-liseo-castiron/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "218 кг",
@@ -152,6 +155,9 @@ window.LP = {
     "img/02-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-biokamina-izraztsami-albion-v-majolikovoj-glazuri/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "175 кг",
@@ -183,6 +189,9 @@ window.LP = {
     "img/03-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-tyulpan-s-g-obraznoj-topkoj-ekokamin-alfa-1000-rb/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "243 кг",
@@ -213,6 +222,9 @@ window.LP = {
     "img/04-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_komplekt-kaminnoj-oblitsovki-tyulpan-tsvet-arktika/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "356 531 ₽",
@@ -237,6 +249,9 @@ window.LP = {
     "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-versal-v-sinem-tsvete/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1 082 970 ₽",
@@ -264,6 +279,9 @@ window.LP = {
     "img/06-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-s-p-obraznoj-topkoj-v-oblitsovke-bristol-v-tsvete-chernaya-noch/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "236 кг",
@@ -293,6 +311,9 @@ window.LP = {
     "img/07-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_dekorativnyj-kamin-s-ochagom-airtone-andalle-1000-oblitsovan-izraztsami-kollektsii-dorf-spetsialno-dlya-restorana-5013/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "432 кг",
@@ -321,6 +342,9 @@ window.LP = {
     "img/09-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-art-nuvo-1/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "820 634 ₽",
@@ -348,6 +372,9 @@ window.LP = {
     "img/10-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-astov-p2s-v-oblitsovke-ptitsy/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1 088 509 ₽",
@@ -374,6 +401,9 @@ window.LP = {
     "img/11-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-vizantiya-v-rospisi-oliva/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "814 726 ₽",
@@ -401,6 +431,9 @@ window.LP = {
     "img/12-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-klassicheskom-stile-iz-kollektsii-luna-i-topkoj-spartherm-linear-4s-arte-1672/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "194 кг",
@@ -429,6 +462,9 @@ window.LP = {
     "img/13-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnyj-portal-universal-tsvet-arktika/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "117 кг",
@@ -459,6 +495,9 @@ window.LP = {
     "img/14-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-uglovogo-kamina-izraztsami-universal/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "108 кг",
@@ -489,6 +528,9 @@ window.LP = {
     "img/15-5.webp"
    ],
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izraztsovyj-kamin-kollektsii-gollandiya-s-drovnikom-i-ruchnoj-rospisyu/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "136 кг",
@@ -519,6 +561,9 @@ window.LP = {
     "img/16-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-izraztsami-kollektsii-bravo-s-rospisyu/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "165 кг",
@@ -549,6 +594,9 @@ window.LP = {
     "img/17-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-kamina-do-polki-s-drovnikami-po-bokam-v-kollektsii-soho-6749/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "309 кг",
@@ -577,6 +625,9 @@ window.LP = {
     "img/18-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-usadba-s-podiumami-i-prizmatichnoj-uglovoj-topkoj/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "172 кг",
@@ -607,6 +658,9 @@ window.LP = {
     "img/19-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnaya-oblitsovka-ptichki-dekorativnaya-palitra-lesnaya/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "641 754 ₽",
@@ -631,6 +685,9 @@ window.LP = {
     "img/20-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-elegans-v-glazuri-lesnoj-tuman/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "995 897 ₽",
@@ -653,6 +710,9 @@ window.LP = {
     "img/21.webp"
    ],
    "url": "",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "459 231 ₽",
@@ -677,6 +737,9 @@ window.LP = {
     "img/22-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-elektrokamina-v-interere/cd_elektrokamin-belogo-tsveta-v-izraztsah-kollektsii-venskaya-99999/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "569 037 ₽",
@@ -704,6 +767,9 @@ window.LP = {
     "img/23-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-kamin-v-oblitsovke-iz-kollektsii-dorf-s-topkoj-brunner-stil-kamin-classic-6282/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1,6 м",

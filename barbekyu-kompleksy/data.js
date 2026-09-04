@@ -128,6 +128,9 @@ window.LP = {
     "img/01-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "423 кг",
@@ -158,6 +161,9 @@ window.LP = {
     "img/02-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "386 кг",
@@ -187,6 +193,9 @@ window.LP = {
     "img/03-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "2 921 000 ₽",
@@ -211,6 +220,9 @@ window.LP = {
     "img/04-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-versal-tsvet-bolotnyj-1311/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "382 кг",
@@ -242,6 +254,9 @@ window.LP = {
     "img/05-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "981 кг",
@@ -270,6 +285,9 @@ window.LP = {
     "img/06-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1,8 м",
@@ -301,6 +319,9 @@ window.LP = {
     "img/07-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "3 555 000 ₽",
@@ -328,6 +349,9 @@ window.LP = {
     "img/08-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "378 кг",
@@ -358,6 +382,9 @@ window.LP = {
     "img/09-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "253 кг",
@@ -388,6 +415,9 @@ window.LP = {
     "img/10-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "4,0 м",
@@ -419,6 +449,9 @@ window.LP = {
     "img/11-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "673 кг",
@@ -449,6 +482,9 @@ window.LP = {
     "img/12-5.webp"
    ],
    "url": "https://ceramicadecor.ru/izraztsovye-pechi/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-vizantiya/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1 667 000 ₽",
@@ -476,6 +512,9 @@ window.LP = {
     "img/13-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "2 128 000 ₽",
@@ -502,6 +541,9 @@ window.LP = {
     "img/14-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_izraztsovaya-oblitsovka-vizantiya-dlya-pechnogo-kompleksa/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "4 748 000 ₽",
@@ -528,6 +570,9 @@ window.LP = {
     "img/15-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "2,1 м",
@@ -559,6 +604,9 @@ window.LP = {
     "img/16-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "653 кг",
@@ -588,6 +636,9 @@ window.LP = {
     "img/17-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "211 кг",
@@ -616,6 +667,9 @@ window.LP = {
     "img/18-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "801 000 ₽",

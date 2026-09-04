@@ -108,6 +108,9 @@ window.LP = {
     "img/01-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -124,6 +127,9 @@ window.LP = {
     "img/02-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -141,6 +147,9 @@ window.LP = {
     "img/03-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "218 кг",
@@ -172,6 +181,9 @@ window.LP = {
     "img/04-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-5393/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1,3 м",
@@ -200,6 +212,9 @@ window.LP = {
     "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topochnoj-dverkoj-vezuvij-9525/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1,4 м",
@@ -229,6 +244,9 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-lesnaya/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "193 кг",
@@ -257,6 +275,9 @@ window.LP = {
     "img/07-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -273,6 +294,9 @@ window.LP = {
     "img/08-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "103 кг",
@@ -302,6 +326,9 @@ window.LP = {
     "img/09-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "349 кг",
@@ -331,6 +358,9 @@ window.LP = {
     "img/10-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1,4 м",

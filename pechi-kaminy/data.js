@@ -113,6 +113,9 @@ window.LP = {
     "img/01-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -128,6 +131,9 @@ window.LP = {
     "img/02-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -143,6 +149,9 @@ window.LP = {
     "img/03-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-1/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -158,6 +167,9 @@ window.LP = {
     "img/04-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -173,6 +185,9 @@ window.LP = {
     "img/05-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1-1/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -188,6 +203,9 @@ window.LP = {
     "img/06-3.webp"
    ],
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   }
  ],

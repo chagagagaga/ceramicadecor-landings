@@ -112,6 +112,9 @@ window.LP = {
     "img/01-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "950 кг",
@@ -142,6 +145,9 @@ window.LP = {
     "img/02-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "3,0 м",
@@ -170,6 +176,9 @@ window.LP = {
     "img/03-3.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -187,6 +196,9 @@ window.LP = {
     "img/04-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "246 кг",
@@ -214,6 +226,9 @@ window.LP = {
     "img/05-2.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "217 кг",
@@ -243,6 +258,9 @@ window.LP = {
     "img/06-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": []
   },
   {
@@ -259,6 +277,9 @@ window.LP = {
     "img/07-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "520 кг",
@@ -290,6 +311,9 @@ window.LP = {
     "img/08-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "900 кг",
@@ -319,6 +343,9 @@ window.LP = {
     "img/09-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "493 кг",
@@ -349,6 +376,9 @@ window.LP = {
     "img/10-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "3,1 м",
@@ -379,6 +409,9 @@ window.LP = {
     "img/11-5.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/",
+   "size": "",
+   "surface": "",
+   "kind": "",
    "tiles": [
     {
      "v": "1,8 м",

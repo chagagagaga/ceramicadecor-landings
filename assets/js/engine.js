@@ -605,7 +605,9 @@
     (P.filters || []).forEach(function (x) { f[x.key] = 'all'; });
     // Девять карточек ложатся ровно в три ряда по три. В товарном каталоге
     // ряд четвёрочный, и девятая висела бы одна в третьем ряду — берём восемь.
-    var LIMIT = P.catalogStyle === 'product' ? 8 : 9, expanded = false;
+    // Девять карточек ложатся ровно в три ряда по три. В товарном каталоге
+    // ряд четвёрочный и позиций сотня — показываем двенадцать, три полных ряда.
+    var LIMIT = P.catalogStyle === 'product' ? 12 : 9, expanded = false;
 
     function match(c) {
       return (P.filters || []).every(function (x) {

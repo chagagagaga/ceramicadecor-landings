@@ -1002,21 +1002,34 @@ def build():
                 "p1": it["price_ceramic"],
                 "p2": it.get("price_turnkey") or 0,
                 "img": it.get("img", ""),
-                "photos": [],          # заполняется ниже по факту наличия файлов
+                # Если выгрузка сама принесла список кадров — верим ей.
+                # Иначе кадры ищутся ниже по имени файла.
+                "photos": list(it.get("photos") or []),
                 "url": it.get("url", ""),
+                # Поля товарных фильтров: есть только у направлений с
+                # каталогом изделий (изразцы). У объектных направлений
+                # пустые, и фильтры по ним не строятся.
+                "size": it.get("size", ""),
+                "surface": it.get("surface", ""),
+                "kind": it.get("kind", ""),
             })
         # Кадров у объекта обычно 4–8: первый — главный (NN.webp), остальные
         # NN-2…NN-6. Галерея из них убедительнее одной картинки.
         for pos, c in zip([p for p in range(1, len(items) + 1) if p not in skip], cards):
-            frames = []
-            main = os.path.join(ROOT, slug, 'img', '%02d.webp' % pos)
-            if os.path.exists(main):
-                frames.append('img/%02d.webp' % pos)
-            for k in range(2, 7):
-                f = os.path.join(ROOT, slug, 'img', '%02d-%d.webp' % (pos, k))
-                if os.path.exists(f):
-                    frames.append('img/%02d-%d.webp' % (pos, k))
-            c["photos"] = frames
+            if not c["photos"]:
+                frames = []
+                main = os.path.join(ROOT, slug, 'img', '%02d.webp' % pos)
+                if os.path.exists(main):
+                    frames.append('img/%02d.webp' % pos)
+                for k in range(2, 7):
+                    f = os.path.join(ROOT, slug, 'img', '%02d-%d.webp' % (pos, k))
+                    if os.path.exists(f):
+                        frames.append('img/%02d-%d.webp' % (pos, k))
+                c["photos"] = frames
+            # Кадра может не оказаться на диске: выгрузка перечисляет, что
+            # было на сайте, а скачаться могло не всё.
+            c["photos"] = [f for f in c["photos"]
+                           if os.path.exists(os.path.join(ROOT, slug, f))]
             c["tiles"] = spec_tiles(all_specs.get(slug, {}).get(str(pos)),
                                     c["p1"], c["p2"], frames)
 
@@ -1035,6 +1048,13 @@ def build():
             if c["collection"] and c["collection"] not in collections:
                 collections.append(c["collection"])
 
+        # Коллекция одна на весь каталог — метка на каждой карточке ничего
+        # не сообщает и только шумит. Снимаем.
+        colls = {c["collection"] for c in cards if c["collection"]}
+        if len(colls) < 2:
+            for c in cards:
+                c["collection"] = ""
+
         filters = []
         pf = PRICE_FILTERS.get(slug, DEFAULT_PRICE_FILTER)
         if pf:
@@ -1043,6 +1063,36 @@ def build():
         if len(collections) > 2:
             filters.append({"key": "collection", "label": "Коллекция", "field": "collection",
                             "options": [{"id": c, "label": c} for c in collections]})
+
+        # Товарные фильтры повторяют фильтры каталога на основном сайте:
+        # Тип, Типоразмер, Поверхность. Собираются только из тех значений,
+        # что реально встретились в выгрузке, — пустых кнопок не будет.
+        for key, label, field, labels in (
+            ("kind", "Тип", "kind",
+             {"painted": "Художественная роспись", "colored": "Цветная роспись",
+              "plain": "Однотонные", "other": "Прочие"}),
+            ("size", "Типоразмер", "size", {}),
+            ("surface", "Поверхность", "surface",
+             {"smooth": "Гладкие", "relief": "Рельефные"}),
+        ):
+            # Значение, за которым стоит одна-две позиции, кнопкой не делаем:
+            # человек жмёт фильтр и получает почти пустую выдачу.
+            count = {}
+            for c in cards:
+                v = c.get(field) or ""
+                if v:
+                    count[v] = count.get(v, 0) + 1
+            vals = []
+            for c in cards:
+                v = c.get(field) or ""
+                if v and count[v] >= 3 and v not in vals:
+                    vals.append(v)
+            if len(vals) < 2:
+                continue
+            if field == "size":
+                vals.sort()
+            filters.append({"key": key, "label": label, "field": field,
+                            "options": [{"id": v, "label": labels.get(v, v)} for v in vals]})
 
         q = dict(P["quiz"])
         for f in q["fields"]:

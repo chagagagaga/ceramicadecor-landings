@@ -669,21 +669,21 @@ textarea.input { resize: vertical; min-height: 84px; }
    на белом кадр читается сам. Включается классом от catalogStyle в data.js,
    остальные шесть направлений снимают объекты в интерьере и не задеты. */
 .cards--product { grid-template-columns: repeat(4, 1fr); }
-.cards--product .card__media { background: #fff; }
+.cards--product .card__media { background: #F4F4F4; }
 .cards--product .card__bg { display: none; }
 .cards--product .card__pic {
-  /* Отступ через padding, а не через inset: у абсолютно позиционированной
-     картинки width:auto берёт её собственный размер, а не размер рамки —
-     кадр вылезал за карточку и обрезался ровно так же, как раньше. */
-  inset: 0; width: 100%; height: 100%;
-  padding: 6%; box-sizing: border-box; object-fit: contain;
+  /* Поля вокруг плитки добиты в самом файле, при сборке каталога: канва
+     квадратная и залита цветом из угла снимка. Поэтому здесь padding не
+     нужен — иначе поверх фона кадра проступала бы ещё и подложка карточки,
+     и в белом квадрате был бы виден серый прямоугольник поменьше. */
+  inset: 0; width: 100%; height: 100%; object-fit: contain;
 }
 /* Метка коллекции и счётчик кадров лежали на тёмной подложке — на белом
    их пришлось затемнить, иначе белый текст на белом фоне. */
 .cards--product .card__tag,
 .cards--product .card__count { background: rgba(23, 18, 14, .82); color: #fff; }
 
-.gallery--product img { object-fit: contain; background: #fff; }
+.gallery--product img { object-fit: contain; background: #F4F4F4; }
 
 @media (max-width: 1180px) { .cards--product { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 900px)  { .cards--product { grid-template-columns: repeat(2, 1fr); } }
