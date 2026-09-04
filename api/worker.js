@@ -22,17 +22,33 @@
  * Настройка — api/README.md
  * ==========================================================================*/
 
-/* ---- Площадки ------------------------------------------------------------- */
+/* ---- Площадки -------------------------------------------------------------
+   site_key приходит с посадочной. По нему выбираем бота, вкладку в таблице
+   и название площадки в тексте сообщения. Ботов два: у «Первого Луча» свой,
+   у посадочных Керамики свой — они уходят разным менеджерам.
+--------------------------------------------------------------------------- */
 
-/** По site_key определяем, чьи это заявки: у брендов разные боты и вкладки. */
+const SITES = {
+  'luch-banya':            { title: 'Первый Луч',        tab: 'Первый Луч',        bot: 'LUCH' },
+  'cd-barbekyu-kompleksy': { title: 'Барбекю комплексы', tab: 'Барбекю комплексы', bot: 'CD' },
+  'cd-kaminy':             { title: 'Камины',            tab: 'Камины',            bot: 'CD' },
+  'cd-izraztsy':           { title: 'Изразцы',           tab: 'Изразцы',           bot: 'CD' },
+  'cd-pechi-kaminy':       { title: 'Печи-камины',       tab: 'Печи-камины',       bot: 'CD' },
+  'cd-bannye-portaly':     { title: 'Банные порталы',    tab: 'Банные порталы',    bot: 'CD' },
+  'cd-russkie-pechi':      { title: 'Русские печи',      tab: 'Русские печи',      bot: 'CD' },
+  'cd-otopitelnye-pechi':  { title: 'Отопительные печи', tab: 'Отопительные печи', bot: 'CD' },
+};
+
 function siteOf(lead) {
-  const key = String(lead.site_key || lead.attribution?.site_key || '').toLowerCase();
-  if (key.startsWith('luch')) {
-    return { id: 'luch', title: 'Первый Луч', tab: 'Первый Луч',
-             token: 'TG_TOKEN_LUCH', chat: 'TG_CHAT_LUCH' };
-  }
-  return { id: 'cd', title: 'Ceramica Decor', tab: 'Посадочные CD',
-           token: 'TG_TOKEN_CD', chat: 'TG_CHAT_CD' };
+  const key = String(lead.site_key || (lead.attribution || {}).site_key || '').toLowerCase();
+  if (SITES[key]) return { key, ...SITES[key] };
+  // Незнакомый ключ не теряем: заявка уйдёт боту по префиксу, а в таблицу —
+  // на вкладку своего бренда. Молча ронять лид нельзя.
+  const luch = key.startsWith('luch');
+  return { key: key || '—',
+           title: luch ? 'Первый Луч' : 'Ceramica Decor',
+           tab: luch ? 'Первый Луч' : 'Изразцы',
+           bot: luch ? 'LUCH' : 'CD' };
 }
 
 /* ---- Хелперы -------------------------------------------------------------- */
@@ -71,6 +87,17 @@ const money = (n) => Number(n || 0).toLocaleString('ru-RU');
 
 const TIMING = { now: 'Уже сейчас', '1-3m': 'В ближайшие 1–3 мес.', later: 'Позже, присматривается' };
 const CHANNEL = { whatsapp: 'WhatsApp', telegram: 'Telegram', max: 'MAX', call: 'Звонок' };
+const STEAM = { russian: 'русская баня', finnish: 'финская сауна', hammam: 'хамам' };
+const PKG = { comfort: 'Комфорт', premium: 'Премиум', author: 'Авторский' };
+// Блок страницы, из которого нажали. Человеческие названия вместо служебных:
+// менеджеру важно, читал человек калькулятор или ткнул кнопку в шапке.
+const SOURCE = {
+  'hero-cta': 'первый экран', calc: 'калькулятор', 'cta-mid': 'форма в середине',
+  contacts: 'блок контактов', card: 'карточка товара', 'stove-card': 'карточка печи',
+  'works-cta': 'блок работ', 'production-cta': 'блок производства',
+  'stoves-cta': 'блок печей', lightbox: 'галерея', header: 'кнопка в шапке',
+  burger: 'меню', mobilebar: 'нижняя панель', contract: 'запрос договора',
+};
 
 /* ---- Сообщение в Telegram -------------------------------------------------
    Посадочные шлют разные калькуляторы: у Керамики конфигурация уже свёрнута
@@ -81,57 +108,62 @@ const CHANNEL = { whatsapp: 'WhatsApp', telegram: 'Telegram', max: 'MAX', call: 
 function buildMessage(lead, site) {
   const a = lead.attribution || {};
   const q = lead.quiz || null;
-  const marks = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
-    .map((k) => (lead[k] || a[k]) ? `${k}=${lead[k] || a[k]}` : null)
-    .filter(Boolean).join(', ');
-
   const r = [];
-  r.push(`<b>🔔 Заявка — ${esc(site.title)}</b>`);
-  r.push('');
-  r.push(`<b>Имя:</b> ${esc(lead.name)}`);
-  r.push(`<b>Телефон:</b> <a href="tel:+${digits(lead.phone)}">${esc(lead.phone)}</a>`);
-  if (lead.channel) r.push(`<b>Связаться через:</b> ${CHANNEL[lead.channel] || lead.channel}`);
-  if (lead.timing) r.push(`<b>Сроки:</b> ${TIMING[lead.timing] || lead.timing}`);
-  if (lead.comment) r.push(`<b>Комментарий:</b> ${esc(lead.comment)}`);
-  if (lead.product_title) r.push(`<b>Направление:</b> ${esc(lead.product_title)}`);
+
+  // Шапка — то, ради чего менеджер открывает сообщение: кто, куда звонить,
+  // откуда пришёл. Технику (ClientID, метки) держим ниже: она нужна не ему,
+  // а для разбора, и не должна мешать читать первые пять строк.
+  r.push(`🔥 <b>Новая заявка с сайта ${esc(site.title)}</b>`);
+  r.push(`👤 <b>Имя:</b> ${esc(lead.name)}`);
+  r.push(`📞 <b>Телефон:</b> <a href="tel:+${digits(lead.phone)}">${esc(lead.phone)}</a>`);
+  const page = a.page_url || lead.page || '';
+  if (page) r.push(`📄 <b>Страница:</b> ${esc(page)}`);
+  if (lead.source) r.push(`📍 <b>Источник:</b> ${esc(SOURCE[lead.source] || lead.source)}`);
+  if (lead.channel) r.push(`💬 <b>Связаться через:</b> ${CHANNEL[lead.channel] || lead.channel}`);
+  if (lead.timing) r.push(`🗓 <b>Когда планирует:</b> ${TIMING[lead.timing] || lead.timing}`);
+  if (lead.comment) r.push(`✏️ <b>Комментарий:</b> ${esc(lead.comment)}`);
 
   if (q) {
-    r.push('');
-    r.push('<b>— Конфигурация —</b>');
+    const lines = [];
     if (q.summary) {
-      // Керамика: строка вида «Площадь 6 м²; Пакет Премиум; …»
-      String(q.summary).split(';').map((s) => s.trim()).filter(Boolean)
-        .forEach((s) => r.push(esc(s)));
+      // Керамика присылает конфигурацию готовой строкой «Площадь 6 м²; …»
+      String(q.summary).split(';').map((x) => x.trim()).filter(Boolean).forEach((x) => lines.push(x));
     } else {
-      if (q.area_m2) r.push(`Площадь парной: ${q.area_m2} м²`);
-      if (q.volume_m3) r.push(`Расчётный объём: ${q.volume_m3} м³`);
-      if (q.glass_inside) r.push(`Стекло внутри дома: ${q.glass_inside} шт.`);
-      if (q.glass_outside) r.push(`Стекло на улицу: ${q.glass_outside} шт.`);
-      if (q.steam_type) r.push(`Тип парной: ${q.steam_type}`);
-      if (q.package) r.push(`Пакет отделки: ${q.package}`);
-      if (q.stove) r.push(`Выбрана печь: ${esc(q.stove)}`);
-      if (q.finish_options?.length) r.push(`Интересно дополнительно: ${q.finish_options.join(', ')}`);
+      if (q.mode) lines.push(`Сценарий: ${q.mode === 'stove' ? 'только печь' : 'парная под ключ'}`);
+      if (q.area_m2) lines.push(`Площадь парной: ${q.area_m2} м²`);
+      if (q.volume_m3) lines.push(`Расчётный объём: ${q.volume_m3} м³`);
+      if (q.glass_inside) lines.push(`Стекло внутри дома: ${q.glass_inside} шт.`);
+      if (q.glass_outside) lines.push(`Стекло на улицу: ${q.glass_outside} шт.`);
+      if (q.steam_type) lines.push(`Тип парной: ${STEAM[q.steam_type] || q.steam_type}`);
+      if (q.package) lines.push(`Уровень отделки: ${PKG[q.package] || q.package}`);
+      if (q.stove) lines.push(`Выбрана печь: ${q.stove}`);
+      if (q.finish_options && q.finish_options.length) {
+        lines.push(`Интересно дополнительно: ${q.finish_options.join(', ')}`);
+      }
+    }
+    if (lines.length) {
+      r.push('');
+      r.push('🧮 <b>Калькулятор</b>');
+      lines.forEach((x) => r.push('· ' + esc(x)));
     }
     if (q.estimate_min || q.estimate_max) {
-      r.push(`<b>Расчёт: ${money(q.estimate_min)}${q.estimate_max ? ' – ' + money(q.estimate_max) : ''} ₽</b>`);
+      r.push(`💰 <b>Расчёт: ${money(q.estimate_min)}`
+             + `${q.estimate_max ? ' – ' + money(q.estimate_max) : ''} ₽</b>`);
     }
   }
 
+  // Реклама: по какой кампании пришёл человек. Менеджеру это нужно, чтобы
+  // понимать контекст разговора, а нам — чтобы сверять с отчётом Директа.
+  const camp = [lead.utm_source || a.utm_source, lead.utm_campaign || a.utm_campaign,
+                lead.utm_content || a.utm_content].filter(Boolean).join(' / ');
   r.push('');
-  r.push('<b>— Источник —</b>');
-  r.push(`Площадка: <code>${esc(lead.site_key || a.site_key || '—')}</code>`);
-  r.push(`Блок на странице: ${esc(lead.source || '—')}`);
-  r.push(`Метки: ${esc(marks || 'прямой заход')}`);
-  if (a.referrer) r.push(`Реферер: ${esc(a.referrer)}`);
-  if (a.visits) r.push(`Визитов до заявки: ${a.visits}`);
-  // Три поля, по которым CRM потом вернёт конверсию в Метрику.
-  const cid = lead.ym_client_id || a.ym_client_id;
+  r.push(`📈 <b>Реклама:</b> ${esc(camp || 'прямой заход')}`);
+  if (a.visits > 1) r.push(`🔁 <b>Визитов до заявки:</b> ${a.visits}`);
+
+  // Номер заявки — ключ, по которому CRM и Метрика говорят об одной строке.
+  // Он же нужен менеджеру, чтобы найти лид в ЛСО.
   const uid = lead.lead_uid || a.lead_uid;
-  const ycl = lead.yclid || a.yclid;
-  if (uid) r.push(`Номер заявки: <code>${esc(uid)}</code>`);
-  if (cid) r.push(`ClientID: <code>${esc(cid)}</code>`);
-  if (ycl) r.push(`yclid: <code>${esc(ycl)}</code>`);
-  r.push(`Страница: ${esc(a.page_url || lead.page || '')}`);
+  if (uid) r.push(`🔖 <b>Заявка №</b> <code>${esc(uid)}</code>`);
   return r.join('\n');
 }
 
@@ -152,9 +184,9 @@ async function sendLso(env, lead) {
 }
 
 async function sendTelegram(env, site, text) {
-  const token = env[site.token];
-  const chat = env[site.chat];
-  if (!token || !chat) return `skip: не задан бот ${site.id}`;
+  const token = env['TG_TOKEN_' + site.bot];
+  const chat = env['TG_CHAT_' + site.bot];
+  if (!token || !chat) return `skip: не задан бот ${site.bot}`;
   const chats = String(chat).split(',').map((s) => s.trim()).filter(Boolean);
   const out = [];
   for (const id of chats) {
@@ -223,26 +255,32 @@ async function sendSheet(env, site, lead) {
     const a = lead.attribution || {};
     const q = lead.quiz || {};
     const row = [
-      new Date().toISOString(),
+      new Date().toISOString().replace('T', ' ').slice(0, 19),
       lead.lead_uid || a.lead_uid || '',
-      lead.site_key || a.site_key || '',
-      lead.name || '', lead.phone || '',
+      lead.name || '',
+      lead.phone || '',
       CHANNEL[lead.channel] || lead.channel || '',
       TIMING[lead.timing] || lead.timing || '',
-      lead.source || '',
-      lead.ym_client_id || a.ym_client_id || '',
-      lead.yclid || a.yclid || '',
+      a.page_url || lead.page || '',
+      SOURCE[lead.source] || lead.source || '',
+      q.estimate_min ? `${money(q.estimate_min)}${q.estimate_max ? ' – ' + money(q.estimate_max) : ''} ₽` : '',
+      q.summary || [q.area_m2 && `площадь ${q.area_m2} м²`, q.steam_type && STEAM[q.steam_type],
+                    q.package && PKG[q.package], q.stove].filter(Boolean).join('; '),
+      lead.comment || '',
       lead.utm_source || a.utm_source || '',
       lead.utm_medium || a.utm_medium || '',
       lead.utm_campaign || a.utm_campaign || '',
       lead.utm_content || a.utm_content || '',
       lead.utm_term || a.utm_term || '',
-      q.summary || '',
-      q.estimate_min ? `${money(q.estimate_min)} – ${money(q.estimate_max)} ₽` : '',
-      a.page_url || lead.page || '',
+      lead.yclid || a.yclid || '',
+      lead.ym_client_id || a.ym_client_id || '',
+      JSON.stringify((a.first_touch || {}).marks || {}),
       a.referrer || '',
+      a.visits || '',
+      lead.ip || '',
+      lead.site_key || a.site_key || '',
     ];
-    const range = encodeURIComponent(`${site.tab}!A:S`);
+    const range = encodeURIComponent(`${site.tab}!A:W`);
     const res = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/${env.SHEET_ID}/values/${range}:append`
       + '?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS',
