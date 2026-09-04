@@ -85,6 +85,27 @@ const esc = (s) => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const money = (n) => Number(n || 0).toLocaleString('ru-RU');
 
+// Адрес посадочной без меток: в шапке сообщения нужна ссылка, по которой
+// менеджер откроет ту же страницу, что видел человек. Хвост из utm и yclid
+// там только мешает — он и так есть ниже, в строке про рекламу.
+// Время по Москве: менеджеры и заявки в одном часовом поясе, а воркер
+// живёт в UTC. Без пересчёта в сообщении стояло бы время на три часа назад.
+function moscow(d) {
+  return new Intl.DateTimeFormat('ru-RU', {
+    timeZone: 'Europe/Moscow', day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit',
+  }).format(d);
+}
+
+function cleanUrl(raw) {
+  try {
+    const u = new URL(String(raw));
+    return u.origin + u.pathname;
+  } catch (e) {
+    return String(raw || '').split('?')[0];
+  }
+}
+
 const TIMING = { now: 'Уже сейчас', '1-3m': 'В ближайшие 1–3 мес.', later: 'Позже, присматривается' };
 const CHANNEL = { whatsapp: 'WhatsApp', telegram: 'Telegram', max: 'MAX', call: 'Звонок' };
 const STEAM = { russian: 'русская баня', finnish: 'финская сауна', hammam: 'хамам' };
@@ -113,11 +134,12 @@ function buildMessage(lead, site) {
   // Шапка — то, ради чего менеджер открывает сообщение: кто, куда звонить,
   // откуда пришёл. Технику (ClientID, метки) держим ниже: она нужна не ему,
   // а для разбора, и не должна мешать читать первые пять строк.
-  r.push(`🔥 <b>Новая заявка с сайта ${esc(site.title)}</b>`);
+  const page = cleanUrl(a.page_url || lead.page || '');
+  r.push(`🔥 <b>Новая заявка с сайта ${esc(site.title)}</b>`
+         + (page ? ` (${esc(page)})` : ''));
+  r.push(`🕐 <b>Когда:</b> ${moscow(new Date(lead.receivedAt || Date.now()))} МСК`);
   r.push(`👤 <b>Имя:</b> ${esc(lead.name)}`);
   r.push(`📞 <b>Телефон:</b> <a href="tel:+${digits(lead.phone)}">${esc(lead.phone)}</a>`);
-  const page = a.page_url || lead.page || '';
-  if (page) r.push(`📄 <b>Страница:</b> ${esc(page)}`);
   if (lead.source) r.push(`📍 <b>Источник:</b> ${esc(SOURCE[lead.source] || lead.source)}`);
   if (lead.channel) r.push(`💬 <b>Связаться через:</b> ${CHANNEL[lead.channel] || lead.channel}`);
   if (lead.timing) r.push(`🗓 <b>Когда планирует:</b> ${TIMING[lead.timing] || lead.timing}`);
@@ -255,13 +277,13 @@ async function sendSheet(env, site, lead) {
     const a = lead.attribution || {};
     const q = lead.quiz || {};
     const row = [
-      new Date().toISOString().replace('T', ' ').slice(0, 19),
+      moscow(new Date(lead.receivedAt || Date.now())),
       lead.lead_uid || a.lead_uid || '',
       lead.name || '',
       lead.phone || '',
       CHANNEL[lead.channel] || lead.channel || '',
       TIMING[lead.timing] || lead.timing || '',
-      a.page_url || lead.page || '',
+      cleanUrl(a.page_url || lead.page || ''),
       SOURCE[lead.source] || lead.source || '',
       q.estimate_min ? `${money(q.estimate_min)}${q.estimate_max ? ' – ' + money(q.estimate_max) : ''} ₽` : '',
       q.summary || [q.area_m2 && `площадь ${q.area_m2} м²`, q.steam_type && STEAM[q.steam_type],
@@ -283,12 +305,57 @@ async function sendSheet(env, site, lead) {
     const range = encodeURIComponent(`${site.tab}!A:W`);
     const res = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/${env.SHEET_ID}/values/${range}:append`
-      + '?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS',
+      // RAW, а не USER_ENTERED: иначе Google трактует «+79990001122»
+      // как число и отрезает плюс, а номер телефона обязан остаться целым.
+      + '?valueInputOption=RAW&insertDataOption=INSERT_ROWS',
       {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
         body: JSON.stringify({ values: [row] }),
       });
+    return res.ok ? 'ok' : 'ошибка HTTP ' + res.status;
+  } catch (e) {
+    return 'ошибка: ' + e.message;
+  }
+}
+
+/* ---- Маячок ухода в мессенджер --------------------------------------------
+   Человек нажал WhatsApp, Telegram или MAX и ушёл с сайта. Заявки нет,
+   но источник знать надо: иначе обращение придёт в CRM без кампании.
+   Пишем строку в ту же вкладку, что и заявки, — с пометкой в колонке
+   «Источник». В чат такие события не шлём: кликов кратно больше, чем
+   обращений, и группа превратилась бы в ленту шума.
+--------------------------------------------------------------------------- */
+
+const MESSENGER = { whatsapp: 'WhatsApp', telegram: 'Telegram', max: 'MAX' };
+
+async function sendBeaconRow(env, site, b) {
+  if (!env.SHEET_ID) return 'skip: нет SHEET_ID';
+  try {
+    const token = await googleToken(env);
+    if (!token) return 'ошибка: не выдался токен Google';
+    const row = [
+      moscow(new Date()),
+      b.lead_uid || '',
+      '', '',                                   // имени и телефона ещё нет
+      MESSENGER[b.messenger] || b.messenger || '',
+      '',
+      cleanUrl(b.page_url || ''),
+      'ушёл в мессенджер',
+      '', '', '',
+      b.utm_source || '', b.utm_medium || '', b.utm_campaign || '',
+      b.utm_content || '', b.utm_term || '',
+      b.yclid || '', b.ym_client_id || '',
+      b.first_touch || '', b.referrer || '', b.visits || '', '',
+      b.site_key || '',
+    ];
+    const res = await fetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${env.SHEET_ID}/values/`
+      + `${encodeURIComponent(`${site.tab}!A:W`)}:append`
+      + '?valueInputOption=RAW&insertDataOption=INSERT_ROWS',
+      { method: 'POST',
+        headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ values: [row] }) });
     return res.ok ? 'ok' : 'ошибка HTTP ' + res.status;
   } catch (e) {
     return 'ошибка: ' + e.message;
@@ -323,6 +390,34 @@ export default {
     if (request.method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: corsHeaders(origin, env) });
     }
+    // Маячок приходит формой из sendBeacon, а не JSON: тело у sendBeacon
+    // отправляется как URLSearchParams, и разбирать его надо соответственно.
+    if (url.pathname === '/beacon' && request.method === 'POST') {
+      let b = {};
+      try {
+        const form = await request.formData();
+        form.forEach((v, k) => { b[k] = String(v); });
+      } catch (e) {
+        return json({ ok: false, error: 'bad_form' }, 400, origin, env);
+      }
+      const site = siteOf(b);
+      const sheet = await sendBeaconRow(env, site, b);
+      // Дублируем в ЛСО тем же маячком: там он склеится с обращением
+      // по номеру заявки из первого сообщения.
+      let lso = 'skip';
+      if (env.LSO_BEACON) {
+        try {
+          const r = await fetch(env.LSO_BEACON, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ ...b, beacon_id: b.lead_uid || '' }),
+          });
+          lso = r.ok ? 'ok' : 'ошибка HTTP ' + r.status;
+        } catch (e) { lso = 'ошибка: ' + e.message; }
+      }
+      return json({ ok: true, sheet, lso }, 200, origin, env);
+    }
+
     if (url.pathname === '/health') {
       return json({ ok: true, service: 'cd-lead' }, 200, origin, env);
     }

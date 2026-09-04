@@ -106,7 +106,61 @@
       return out;
     }
 
-    return {
+    /* ── Уход в мессенджер ──────────────────────────────────────────────
+       Кнопка мессенджера уводит человека с сайта: заявки не создаётся,
+       и вся накопленная атрибуция до CRM не доезжает — обращение приходит
+       без источника. На клике делаем две вещи.
+
+       1. В предзаполненный текст дописываем номер заявки: менеджер видит его
+          первым сообщением и находит по нему источник. Работает только
+          в WhatsApp — Telegram и MAX предзаполнить личный чат не дают,
+          там остаётся только маячок.
+       2. Шлём маячок на приёмник: ClientID, yclid, метки. Через sendBeacon —
+          он переживает уход со страницы и ничего не задерживает.
+    ─────────────────────────────────────────────────────────────────────── */
+    function messengerOf(href) {
+      var h = String(href || '');
+      if (/(^|\/\/)(wa\.me|api\.whatsapp\.com|whatsapp\.com\/send)/i.test(h)) return 'whatsapp';
+      if (/(^|\/\/)(t\.me|telegram\.me)/i.test(h)) return 'telegram';
+      if (/(^|\/\/)max\.ru/i.test(h)) return 'max';
+      return '';
+    }
+
+    function withOrderNo(href) {
+      try {
+        var u = new URL(href, location.origin);
+        var t = (u.searchParams.get('text') || '').replace(/\s*№ заявки:[\s\S]*$/, '').trim();
+        u.searchParams.set('text', (t ? t + '\n\n' : '')
+          + '№ заявки: ' + LEAD_UID + '. Пожалуйста, не удаляйте номер.');
+        return u.toString();
+      } catch (e) { return href; }
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!link) return;
+      var kind = messengerOf(link.getAttribute('href'));
+      if (!kind) return;
+      if (kind === 'whatsapp') link.setAttribute('href', withOrderNo(link.getAttribute('href')));
+      var url = window.LP_BEACON || P.brand.beacon || '';
+      if (!url || !navigator.sendBeacon) return;
+      try {
+        var p = api.payload();
+        p.event = 'messenger_click';
+        p.messenger = kind;
+        var body = new URLSearchParams();
+        Object.keys(p).forEach(function (k) {
+          var v = p[k];
+          if (v === undefined || v === null) return;
+          body.append(k, typeof v === 'object' ? JSON.stringify(v) : String(v));
+        });
+        navigator.sendBeacon(url, body);
+      } catch (err) {
+        // Упавший маячок не должен мешать человеку уйти в мессенджер.
+      }
+    }, true);
+
+    var api = {
       payload: function () {
         var last = read(K2) || snap;
         return Object.assign({
@@ -125,6 +179,7 @@
         }, flatUtm());
       },
     };
+    return api;
   })();
 
   /* ══ 2. СЧЁТЧИК И ЦЕЛИ МЕТРИКИ ══════════════════════════════════════════

@@ -28,7 +28,12 @@ BRAND = {
     # иначе кнопка уведёт человека в несуществующий чат.
     "whatsapp": "79950004488",
     "maxUrl": "https://max.ru/ceramicadecor",
-    "endpoint": "",          # ⚠️ заполнить: адрес приёмника заявок
+    # Общий приёмник заявок на все восемь посадочных. Рассылает в ЛСО,
+    # Telegram, Google-таблицу и на почту одновременно. Секреты живут
+    # в Cloudflare, в код и в браузер не попадают. Исходник — api/worker.js
+    "endpoint": "https://cd-lead.chagagagaga.workers.dev/lead",
+    # Маячок ухода в мессенджер: заявки нет, а источник знать надо
+    "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
     "metrikaId": 0,          # ⚠️ заполнить: номер счётчика Метрики
 }
 

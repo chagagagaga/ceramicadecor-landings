@@ -10,7 +10,8 @@ window.LP = {
   "telegram": "+79950004488",
   "whatsapp": "79950004488",
   "maxUrl": "https://max.ru/ceramicadecor",
-  "endpoint": "",
+  "endpoint": "https://cd-lead.chagagagaga.workers.dev/lead",
+  "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
   "metrikaId": 0
  },
  "priceLabel1": "Облицовка",
