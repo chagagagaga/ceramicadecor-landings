@@ -658,3 +658,50 @@ textarea.input { resize: vertical; min-height: 84px; }
 .calc .calc-opt__hint { color: #7A7066; }
 .calc .calc__more summary { color: #17120E; }
 .calc .calc__more summary > span { color: #8A8076; }
+
+/* ── Каталог товарных снимков (изразцы) ──────────────────────────────────
+   Изразец снят на подставке на светлом фоне, кадры разной высоты — от 0,64
+   до 1,26. Квадратная обрезка `cover` резала им верх и низ: у половины
+   позиций отрезало подставку, у остальных — верхнюю кромку плитки.
+
+   Здесь карточка работает как на основном сайте: снимок целиком на белом,
+   четыре в ряд на десктопе и два на телефоне. Размытая подложка не нужна —
+   на белом кадр читается сам. Включается классом от catalogStyle в data.js,
+   остальные шесть направлений снимают объекты в интерьере и не задеты. */
+.cards--product { grid-template-columns: repeat(4, 1fr); }
+.cards--product .card__media { background: #fff; }
+.cards--product .card__bg { display: none; }
+.cards--product .card__pic {
+  /* Отступ через padding, а не через inset: у абсолютно позиционированной
+     картинки width:auto берёт её собственный размер, а не размер рамки —
+     кадр вылезал за карточку и обрезался ровно так же, как раньше. */
+  inset: 0; width: 100%; height: 100%;
+  padding: 6%; box-sizing: border-box; object-fit: contain;
+}
+/* Метка коллекции и счётчик кадров лежали на тёмной подложке — на белом
+   их пришлось затемнить, иначе белый текст на белом фоне. */
+.cards--product .card__tag,
+.cards--product .card__count { background: rgba(23, 18, 14, .82); color: #fff; }
+
+.gallery--product img { object-fit: contain; background: #fff; }
+
+@media (max-width: 1180px) { .cards--product { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px)  { .cards--product { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px)  { .cards--product { grid-template-columns: repeat(2, 1fr); } }
+
+/* Товарный каталог на телефоне: две карточки в ряд по просьбе заказчика.
+   В такую ширину не влезает крупный заголовок и строка цены в две колонки —
+   «Цена за штуку» ломалась на три строки, а артикул обрезался. Здесь текст
+   ужат под узкую колонку, а цена встаёт под подписью. */
+@media (max-width: 620px) {
+  .cards--product .card__body { padding: .85rem .8rem .9rem; }
+  .cards--product .card__name { font-size: .98rem; line-height: 1.16; }
+  .cards--product .card__desc { margin-top: .35rem; font-size: .78rem; line-height: 1.4; }
+  .cards--product .card__prices { padding-top: .7rem; }
+  .cards--product .card__p1,
+  .cards--product .card__p2 { display: block; }
+  .cards--product .card__p1 span,
+  .cards--product .card__p2 span { display: block; font-size: .74rem; }
+  .cards--product .card__p1 b { font-size: 1.02rem; }
+  .cards--product .card__foot .btn { padding-inline: .6em; font-size: .8rem; }
+}

@@ -595,11 +595,17 @@
   // Каталог топ-моделей с фильтрами
   (function catalog() {
     var grid = $('[data-cards]');
+    // Товарные снимки: карточки как на основном сайте — четыре в ряд,
+    // кадр целиком на белом, без квадратной обрезки. Включается флагом
+    // catalogStyle в data.js, остальные направления не задеты.
+    if (grid && P.catalogStyle === 'product') grid.classList.add('cards--product');
     if (!grid || !P.catalog) return;
     var empty = $('[data-cards-empty]');
     var f = {};
     (P.filters || []).forEach(function (x) { f[x.key] = 'all'; });
-    var LIMIT = 9, expanded = false;
+    // Девять карточек ложатся ровно в три ряда по три. В товарном каталоге
+    // ряд четвёрочный, и девятая висела бы одна в третьем ряду — берём восемь.
+    var LIMIT = P.catalogStyle === 'product' ? 8 : 9, expanded = false;
 
     function match(c) {
       return (P.filters || []).every(function (x) {
@@ -791,6 +797,7 @@
 
     // Галерея с лайтбоксом
     var gal = $('[data-gallery]');
+    if (gal && P.catalogStyle === 'product') gal.classList.add('gallery--product');
     if (gal && P.gallery && P.gallery.length) {
       gal.innerHTML = P.gallery.map(function (src, i) {
         return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(src) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
