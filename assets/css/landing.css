@@ -315,8 +315,8 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .card__count {
   position: absolute; right: 0; bottom: 0; z-index: 2;
   padding: .45em .8em; background: var(--seam);
-  color: var(--primary); font-size: .72rem; font-weight: 600; letter-spacing: .1em;
-  text-transform: uppercase;
+  color: var(--primary); font-size: .68rem; font-weight: 600; letter-spacing: .1em;
+  line-height: 1.35; text-transform: uppercase;
 }
 .card__media:not([disabled]):hover .card__count { color: var(--primary-hover); }
 .card__pic { transition: transform .6s cubic-bezier(.2,.7,.3,1); }
@@ -324,11 +324,15 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 /* Плашка коллекции врезана в левый нижний угол вплотную к краям — она
    выглядит продолжением шва, а не наклейкой, и заодно перекрывает завал
    горизонта, самый частый дефект архивных снимков. */
+/* Размер шрифта и межстрочный одинаковы со счётчиком кадров: отступы заданы
+   в em, и от разницы в 0,04rem плашки получались разной высоты. Илана:
+   «прямоугольнички «6 фото» и «Тюльпан» разной высоты, это визуальный
+   крючок?» — нет, это был баг. */
 .card__tag {
   position: absolute; left: 0; bottom: 0; z-index: 2;
   padding: .45em .8em; background: var(--seam);
   font-size: .68rem; font-weight: 600; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--text-muted);
+  line-height: 1.35; text-transform: uppercase; color: var(--text-muted);
 }
 .card__body { padding: 1.15rem 1.2rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
 .card__collection { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
