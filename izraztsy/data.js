@@ -9,7 +9,7 @@ window.LP = {
   "site": "https://ceramicadecor.ru",
   "telegram": "+79950004488",
   "whatsapp": "79950004488",
-  "maxUrl": "https://max.ru/ceramicadecor",
+  "maxUrl": "",
   "endpoint": "https://cd-lead.chagagagaga.workers.dev/lead",
   "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
   "metrikaId": 0
