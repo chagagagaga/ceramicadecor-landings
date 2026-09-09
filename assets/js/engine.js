@@ -861,8 +861,11 @@
       '<div class="why__card why__card--bad"><h3>' + esc(P.why.badTitle) + '</h3><ul>' +
         P.why.bad.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>' +
       '<div class="why__card why__card--good"><h3>' + esc(P.why.goodTitle) + '</h3><ul>' +
-        P.why.good.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +
-        (P.why.media ? '<div class="why__media"><img src="' + esc(P.why.media) + '" alt="" loading="lazy" decoding="async" width="800" height="600"></div>' : '') + '</div>';
+        P.why.good.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>' +
+        // Кадр вынесен под обе колонки. Внутри правой карточки он оставлял
+        // левую наполовину пустой, и эта пустота читалась как картинка,
+        // которая не загрузилась.
+        (P.why.media ? '<div class="why__media"><img src="' + esc(P.why.media) + '" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>' : '');
 
     // Галерея с лайтбоксом
     var gal = $('[data-gallery]');

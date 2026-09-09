@@ -388,7 +388,7 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .why__card--good li::before { content: '✓'; color: var(--green); }
 /* Кадр показываем целиком: жёсткая пропорция 16:10 срезала печи по грудь,
    а изделие в полный рост — это и есть аргумент блока. */
-.why__media { margin-top: 1.5rem; overflow: hidden; background: var(--seam); }
+.why__media { grid-column: 1 / -1; overflow: hidden; background: var(--seam); }
 .why__media img { width: 100%; height: auto; display: block; }
 
 /* ── Этапы ───────────────────────────────────────────────────────────────── */
