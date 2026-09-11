@@ -570,9 +570,12 @@ INDEX_TPL = """<!DOCTYPE html>
 <meta property="og:description" content="@SEO@">
 <meta property="og:image" content="https://chagagagaga.github.io/ceramicadecor-landings/@SLUG@/@HERO@">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="@HERO@" imagesrcset="@HERO_SET@" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="../assets/css/system.css?v=4">
-<link rel="stylesheet" href="../assets/css/landing.css?v=4">
+<link rel="preload" as="image" href="@HERO_WIDE@" media="(min-width: 701px)" fetchpriority="high">
+<link rel="preload" as="image" href="@HERO_TALL@" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/golos-text-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/oswald-cyrillic.woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/system.css?v=5">
+<link rel="stylesheet" href="../assets/css/landing.css?v=5">
 </head>
 <body>
 
@@ -618,7 +621,16 @@ INDEX_TPL = """<!DOCTYPE html>
 <main id="top">
 
 <section class="hero" id="top-hero">
-  <div class="hero__bg"><img src="@HERO@" srcset="@HERO_SET@" sizes="100vw" alt="" fetchpriority="high" width="1400" height="1050"></div>
+  <!-- Кадр героя лежит под градиентом от 94 % до 20 % непрозрачности, и
+       полоса на десктопе почти два к одному, а на телефоне вытянута
+       вертикально. Поэтому не srcset по ширине, а два разных среза: иначе
+       телефон тянет широкий кадр, чтобы обрезать его до узкой полосы. -->
+  <div class="hero__bg">
+    <picture>
+      <source media="(max-width: 700px)" srcset="@HERO_TALL@">
+      <img src="@HERO_WIDE@" alt="" fetchpriority="high" width="1600" height="800">
+    </picture>
+  </div>
   <div class="container hero__inner">
     <div>
       <span class="hero__badge"><i></i>@BADGE@</span>
@@ -831,8 +843,8 @@ INDEX_TPL = """<!DOCTYPE html>
   <button type="button" class="is-primary" data-lead data-src="mobilebar">Рассчитать</button>
 </div>
 
-<script src="data.js?v=3"></script>
-<script src="../assets/js/engine.js?v=3"></script>
+<script src="data.js?v=4"></script>
+<script src="../assets/js/engine.js?v=4"></script>
 </body>
 </html>
 """
@@ -1867,12 +1879,9 @@ def build():
                 
                 .replace('@TITLE@', P["title"]).replace('@SEO@', P["seo"])
                 .replace('@SLUG@', slug)
-                # Кадр первого экрана раскинут на всю ширину. На телефоне
-                # это 390 CSS-пикселей, и полный кадр в 1600 px там лишний
-                # вес на самом важном для скорости месте.
-                .replace('@HERO_SET@', ', '.join(
-                    '%s %dw' % (hero.replace('img/', 'img/%s/' % t), w)
-                    for t, w in (('s', 700), ('m', 1100)) ) + ', %s 1600w' % hero)
+                # Облегчённые срезы кадра героя: tools/make_hero.py
+                .replace('@HERO_WIDE@', '../assets/img/hero/%s-1600.webp' % slug)
+                .replace('@HERO_TALL@', '../assets/img/hero/%s-900.webp' % slug)
                 .replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
                 .replace('@WORKS_TITLE@', P.get("worksTitle", "Реализованные проекты"))

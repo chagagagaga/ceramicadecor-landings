@@ -32,7 +32,11 @@ for (const slug of SLUGS) {
 
   // ── картинки ──
   const imgs = [...d.querySelectorAll('img[src]')];
-  const miss = imgs.map(i=>i.getAttribute('src')).filter(s=>!s.startsWith('http') && !fs.existsSync(path.resolve(dir,s)));
+  // Отложенные кадры держат в src прозрачный пиксель, настоящий путь —
+  // в data-src. Проверяем именно его.
+  const srcOf = i => i.dataset.src || i.getAttribute('src') || '';
+  const miss = imgs.map(srcOf).filter(s=>s && !s.startsWith('http') && !s.startsWith('data:')
+    && !fs.existsSync(path.resolve(dir,s)));
   t(!miss.length, 'битые картинки: '+miss.slice(0,3).join(', '));
   t(!imgs.filter(i=>i.getAttribute('alt')===null).length, 'картинки без alt');
   t(!imgs.filter(i=>!i.getAttribute('width')).length, 'картинки без размеров');

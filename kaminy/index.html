@@ -11,9 +11,12 @@
 <meta property="og:description" content="Изразцовые камины ручной работы: дровяные, электрические и биокамины в керамической облицовке. 3D-проект бесплатно, монтаж под ключ.">
 <meta property="og:image" content="https://chagagagaga.github.io/ceramicadecor-landings/kaminy/img/01.webp">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/01.webp" imagesrcset="img/s/01.webp 700w, img/m/01.webp 1100w, img/01.webp 1600w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="../assets/css/system.css?v=4">
-<link rel="stylesheet" href="../assets/css/landing.css?v=4">
+<link rel="preload" as="image" href="../assets/img/hero/kaminy-1600.webp" media="(min-width: 701px)" fetchpriority="high">
+<link rel="preload" as="image" href="../assets/img/hero/kaminy-900.webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/golos-text-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/oswald-cyrillic.woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/system.css?v=5">
+<link rel="stylesheet" href="../assets/css/landing.css?v=5">
 </head>
 <body>
 
@@ -103,7 +106,16 @@
 <main id="top">
 
 <section class="hero" id="top-hero">
-  <div class="hero__bg"><img src="img/01.webp" srcset="img/s/01.webp 700w, img/m/01.webp 1100w, img/01.webp 1600w" sizes="100vw" alt="" fetchpriority="high" width="1400" height="1050"></div>
+  <!-- Кадр героя лежит под градиентом от 94 % до 20 % непрозрачности, и
+       полоса на десктопе почти два к одному, а на телефоне вытянута
+       вертикально. Поэтому не srcset по ширине, а два разных среза: иначе
+       телефон тянет широкий кадр, чтобы обрезать его до узкой полосы. -->
+  <div class="hero__bg">
+    <picture>
+      <source media="(max-width: 700px)" srcset="../assets/img/hero/kaminy-900.webp">
+      <img src="../assets/img/hero/kaminy-1600.webp" alt="" fetchpriority="high" width="1600" height="800">
+    </picture>
+  </div>
   <div class="container hero__inner">
     <div>
       <span class="hero__badge"><i></i>Москва, Петербург и области</span>
@@ -385,7 +397,7 @@
   <button type="button" class="is-primary" data-lead data-src="mobilebar">Рассчитать</button>
 </div>
 
-<script src="data.js?v=3"></script>
-<script src="../assets/js/engine.js?v=3"></script>
+<script src="data.js?v=4"></script>
+<script src="../assets/js/engine.js?v=4"></script>
 </body>
 </html>

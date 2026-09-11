@@ -44,6 +44,41 @@
   // «От» уместно там, где цена зависит от размеров объекта. У готовой
   // заводской модели она фиксированная, и приставка только путает.
   var FROM = P.priceFrom === false ? '' : 'от ';
+  /* Отложенная загрузка кадров.
+
+     Штатный loading="lazy" отдан на откуп браузеру, и Chrome на быстром
+     соединении считает «рядом с экраном» очень широкую полосу: до первой
+     прокрутки он тянул весь каталог вместе с галереей — на отопительных
+     печах мегабайт с лишним, из которого на экране видна одна картинка.
+     Порог задаём сами: четыреста точек до появления в кадре — кадр
+     успевает загрузиться раньше, чем до него доедут.
+
+     Пока кадр не нужен, в src стоит прозрачный пиксель: с пустым src
+     часть браузеров показывает значок битой картинки. */
+  var BLANK = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+  var lazyIO = null;
+
+  function loadNow(img) {
+    if (img.dataset.srcset) { img.srcset = img.dataset.srcset; delete img.dataset.srcset; }
+    if (img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; }
+  }
+
+  function lazify(root) {
+    var imgs = $$('img[data-src]', root || document);
+    if (!imgs.length) return;
+    if (!window.IntersectionObserver) { imgs.forEach(loadNow); return; }
+    if (!lazyIO) {
+      lazyIO = new IntersectionObserver(function (list) {
+        list.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          loadNow(e.target);
+          lazyIO.unobserve(e.target);
+        });
+      }, { rootMargin: '400px 0px' });
+    }
+    imgs.forEach(function (i) { lazyIO.observe(i); });
+  }
+
   var CARD_SIZES = P.catalogStyle === 'product'
     ? '(min-width: 1024px) 320px, (min-width: 700px) 25vw, 50vw'
     : '(min-width: 1024px) 430px, (min-width: 700px) 50vw, 100vw';
@@ -710,8 +745,8 @@
           '<button type="button" class="card__photo" data-gal="' + idx + '" data-start="0"' +
             ' aria-label="' + (n > 1 ? 'Открыть галерею: ' : 'Открыть фото: ') + esc(c.title) + '">' +
             (c.img
-              ? '<img class="card__bg" src="' + esc(tier(c.img, 'b')) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
-                '<img class="card__pic" src="' + esc(thumb(c.img)) + '" srcset="' + cardSet(c.img) + '" sizes="' + CARD_SIZES + '"' +
+              ? '<img class="card__bg" src="' + BLANK + '" data-src="' + esc(tier(c.img, 'b')) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
+                '<img class="card__pic" src="' + BLANK + '" data-src="' + esc(thumb(c.img)) + '" data-srcset="' + cardSet(c.img) + '" sizes="' + CARD_SIZES + '"' +
                 ' alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
               : '') +
           '</button>' +
@@ -752,6 +787,7 @@
       var shown = expanded ? list : list.slice(0, LIMIT);
       // индекс в общем каталоге — чтобы галерея открыла кадры нужного объекта
       grid.innerHTML = shown.map(function (c) { return card(c, P.catalog.indexOf(c)); }).join('');
+      lazify(grid);
       if (empty) empty.hidden = list.length > 0;
       var more = $('[data-cards-more]');
       if (more) { more.hidden = expanded || list.length <= LIMIT; more.textContent = 'Показать ещё ' + (list.length - LIMIT); }
@@ -782,8 +818,8 @@
       var i = (((+shot.dataset.start || 0) + (+b.dataset.step)) % n + n) % n;
       shot.dataset.start = i;
       var pic = $('.card__pic', art);
-      if (pic) { pic.srcset = cardSet(it.photos[i]); pic.src = thumb(it.photos[i]); }
-      var bg = $('.card__bg', art); if (bg) bg.src = tier(it.photos[i], 'b');
+      if (pic) { delete pic.dataset.src; delete pic.dataset.srcset; pic.srcset = cardSet(it.photos[i]); pic.src = thumb(it.photos[i]); }
+      var bg = $('.card__bg', art); if (bg) { delete bg.dataset.src; bg.src = tier(it.photos[i], 'b'); }
     });
 
     draw();
@@ -943,7 +979,7 @@
     var s = $('[data-steps]');
     if (s && P.steps) s.innerHTML = P.steps.map(function (x, i) {
       return '<div class="step">' +
-        (x.img ? '<div class="step__media"><img src="../assets/img/steps/' + esc(x.img) + '.webp" alt="" loading="lazy" decoding="async" width="700" height="466"></div>' : '') +
+        (x.img ? '<div class="step__media"><img src="' + BLANK + '" data-src="../assets/img/steps/' + esc(x.img) + '.webp" alt="" loading="lazy" decoding="async" width="700" height="466"></div>' : '') +
         '<div class="step__text">' +
           '<span class="step__n">' + (i + 1) + '</span>' +
           '<h3>' + esc(x.title) + '</h3>' +
@@ -1031,8 +1067,8 @@
         // левую наполовину пустой, и эта пустота читалась как картинка,
         // которая не загрузилась.
         (P.why.media
-          ? '<div class="why__media"><img src="' + esc(P.why.media) + '"' +
-            ' srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' +
+          ? '<div class="why__media"><img src="' + BLANK + '" data-src="' + esc(P.why.media) + '"' +
+            ' data-srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' +
               esc(P.why.media) + ' 1600w' + (P.why.mediaHi ? ', ' + esc(P.why.mediaHi) : '') + '"' +
             ' sizes="(min-width: 1024px) min(1280px, 100vw), 100vw" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>'
           : '');
@@ -1053,9 +1089,10 @@
       var GAL_SIZES = '(min-width: 1024px) 210px, (min-width: 700px) 25vw, 33vw';
       gal.innerHTML = P.gallery.map(function (src, i) {
         return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '">' +
-          '<img src="' + esc(tier(src, 'g')) + '" srcset="' + esc(tier(src, 'b')) + ' 240w, ' + esc(tier(src, 'g')) + ' 460w, ' + esc(thumb(src)) + ' 700w"' +
+          '<img src="' + BLANK + '" data-src="' + esc(tier(src, 'g')) + '" data-srcset="' + esc(tier(src, 'b')) + ' 240w, ' + esc(tier(src, 'g')) + ' 460w, ' + esc(thumb(src)) + ' 700w"' +
           ' sizes="' + GAL_SIZES + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
       }).join('');
+      lazify(gal);
       var lb = null, cur = 0;
       // Набор кадров и подпись задаются при открытии: из общей галереи
       // раздела или из фотографий конкретного объекта.
@@ -1110,6 +1147,7 @@
 
     // Вызываем в самом конце: к этому моменту отрисованы все блоки,
     // включая те, что собираются из data.js.
+    lazify();
     typography();
   })();
 
