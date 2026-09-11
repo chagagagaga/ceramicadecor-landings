@@ -696,7 +696,6 @@
               '<img class="card__pic" src="' + esc(thumb(c.img)) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
             : '') +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
-          (n > 1 ? '<span class="card__count">' + n + ' фото</span>' : '') +
         '</button>' +
         '<div class="card__body">' +
           '<h3 class="card__name">' + esc(c.title) + '</h3>' +
