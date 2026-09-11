@@ -27,16 +27,25 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'img', 'hero')
-# ширина, качество, пропорция среза (None — кадр целиком)
-TIERS = ((1600, 60, 2.0), (900, 58, None))
+# ширина, качество, пропорция среза (None — кадр целиком).
+# Телефонный срез намеренно скромный: полоса там 390 CSS-пикселей и
+# залита почти чёрным, разглядывать в ней нечего, а на медленном 4G
+# каждые сто килобайт — это полсекунды до первой отрисовки.
+TIERS = ((1600, 60, 2.0), (760, 54, None))
 
 SLUGS = ['barbekyu-kompleksy', 'kaminy', 'izraztsy', 'pechi-kaminy',
          'bannye-portaly', 'russkie-pechi', 'otopitelnye-pechi']
 
 
 def hero_of(slug):
+    """Исходный кадр объекта.
+
+    Берём из og:image, а не из preload: preload после первого же прогона
+    указывает на срез, который сделал этот же скрипт, и повторный запуск
+    начинал резать уже обрезанное.
+    """
     html = io.open(os.path.join(ROOT, slug, 'index.html'), encoding='utf-8').read()
-    m = re.search(r'preload" as="image" href="([^"]+)"', html)
+    m = re.search(r'og:image" content="[^"]*/%s/([^"]+)"' % re.escape(slug), html)
     return m.group(1) if m else ''
 
 

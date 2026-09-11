@@ -1881,7 +1881,7 @@ def build():
                 .replace('@SLUG@', slug)
                 # Облегчённые срезы кадра героя: tools/make_hero.py
                 .replace('@HERO_WIDE@', '../assets/img/hero/%s-1600.webp' % slug)
-                .replace('@HERO_TALL@', '../assets/img/hero/%s-900.webp' % slug)
+                .replace('@HERO_TALL@', '../assets/img/hero/%s-760.webp' % slug)
                 .replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
                 .replace('@WORKS_TITLE@', P.get("worksTitle", "Реализованные проекты"))
