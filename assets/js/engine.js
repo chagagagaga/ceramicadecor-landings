@@ -448,7 +448,7 @@
           '<span class="calc-opt__box" aria-hidden="true"></span>' +
           '<span class="calc-opt__body"><span class="calc-opt__name">' + esc(o.label) + '</span>' +
           (o.hint ? '<span class="calc-opt__hint">' + esc(o.hint) + '</span>' : '') + '</span>' +
-          (o.add ? '<span class="calc-opt__price">+' + fmt(o.add) + ' ₽</span>' : '') +
+          (o.add && !f.hidePrices ? '<span class="calc-opt__price">+' + fmt(o.add) + ' ₽</span>' : '') +
           '</button>';
       }).join('');
 
@@ -854,7 +854,6 @@
           '<div class="pcard__prices">' + price + '</div>' +
           '<div class="pcard__acts">' +
             '<button type="button" class="btn btn--primary" data-lead data-src="card-detail">Рассчитать такой же</button>' +
-            (many ? '<button type="button" class="btn btn--ghost" data-full>Смотреть кадры крупно</button>' : '') +
           '</div>' +
           '<p class="pcard__note">Цена ориентировочная: итоговая зависит от размеров проёма, топки и объёма работ. Считаем бесплатно за 2–3 дня.</p>' +
         '</div>';
@@ -872,7 +871,6 @@
         if (st) { cur += +st.dataset.step; paint(); return; }
         var th = e.target.closest('.pcard__thumb');
         if (th) { cur = +th.dataset.i; paint(); return; }
-        if (e.target.closest('[data-full]') && window.LPGallery) { window.LPGallery(shots(), item.title, cur); return; }
         // Кнопка расчёта живёт в общем обработчике: закрываем карточку,
         // чтобы форма не открывалась под ней.
         if (e.target.closest('[data-lead]')) close();
@@ -1028,8 +1026,9 @@
         // которая не загрузилась.
         (P.why.media
           ? '<div class="why__media"><img src="' + esc(P.why.media) + '"' +
-            ' srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' + esc(P.why.media) + ' 1600w"' +
-            ' sizes="(min-width: 1024px) 1280px, 100vw" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>'
+            ' srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' +
+              esc(P.why.media) + ' 1600w' + (P.why.mediaHi ? ', ' + esc(P.why.mediaHi) : '') + '"' +
+            ' sizes="(min-width: 1024px) min(1280px, 100vw), 100vw" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>'
           : '');
 
     // Галерея с лайтбоксом
