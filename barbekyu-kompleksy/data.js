@@ -15,6 +15,8 @@ window.LP = {
   "metrikaId": 0
  },
  "priceLabel1": "Облицовка",
+ "priceNote": "Цена ориентировочная: итоговая зависит от размеров комплекса, набора модулей и объёма кладки. Смету считаем бесплатно за 2–3 дня.",
+ "priceFrom": true,
  "catalogStyle": "",
  "quiz": {
   "title": "Рассчитайте свой комплекс",
@@ -137,7 +139,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Печной комплекс Альбион",
@@ -163,7 +166,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Версаль",
@@ -181,7 +185,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Летняя кухня Версаль, Болотный",
@@ -205,6 +210,7 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
+   "props": [],
    "full": "Многофункциональная летняя кухня в облицовке изразцами Версаль. Масштабный проект с полным набором оборудования: мангал, мойка, духовка, тандыр, рабочие поверхности и дровники. Яркие изразцы голубых оттенков создают настроение летней беседки."
   },
   {
@@ -231,7 +237,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Тюльпан",
@@ -253,7 +260,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Дорф",
@@ -273,7 +281,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Дорф, с дровником",
@@ -299,7 +308,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Птички",
@@ -324,7 +334,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Печной комплекс Птички",
@@ -348,7 +359,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Птицы",
@@ -373,7 +385,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Византия",
@@ -393,6 +406,7 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
+   "props": [],
    "full": "Облицовка печного комплекса с высоким открытым камином изразцами Византия. Грандиозный проект с открытым камином и полным набором кулинарного оборудования: мангал, мини русская печь, мойка, рабочие поверхности и шкафчики для хранения."
   },
   {
@@ -413,7 +427,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Печной комплекс Византия",
@@ -433,6 +448,7 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
+   "props": [],
    "full": "Изразцовая облицовка Византия в палитре росписи Бирюзовая. Масштабный проект беседки включает в себя навес из дерева, а также печной комплекс с мангалом, тандыром, печью под казан и другими необходимыми функциями. Сложная геометрия и богатый декор создают впечатляющий ансамбль."
   },
   {
@@ -457,7 +473,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Элеганс",
@@ -483,7 +500,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Летняя кухня Элеганс",
@@ -507,7 +525,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Барбекю комплекс Сценки",
@@ -524,7 +543,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   }
  ],
  "filters": [
@@ -626,7 +646,7 @@ window.LP = {
    "icon": "truck",
    "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "text": "Свои монтажные бригады, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],

@@ -15,6 +15,8 @@ window.LP = {
   "metrikaId": 0
  },
  "priceLabel1": "Цена за штуку",
+ "priceNote": "Цена за один изразец из этой коллекции. Итог зависит от площади и раскладки — пришлём смету и раскладку за 2–3 дня.",
+ "priceFrom": true,
  "catalogStyle": "product",
  "quiz": {
   "title": "Рассчитайте комплект изразцов",
@@ -123,7 +125,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_izrazets-s-dekorativnoj-rospisyu-kaban-kollektsii-kameya-art-77133-52089-11647/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": "painted"
+   "kind": "painted",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ],
+    [
+     "Роспись",
+     "Художественная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом 200х200 Русская Этника",
@@ -140,7 +156,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-ptitsa-s-krasnym-fonom-20h20-kollektsii-russkaya-etnika-art-77880-50555-11841/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец в окантовке Тюльпан с росписью Прованс",
@@ -157,7 +187,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-s-rospisyu-provans-v-kvadratnoj-okantovke-s-risunkom-tsvetka-kollektsii-tyulpan-art-77079-51259-11828/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": "painted"
+   "kind": "painted",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ],
+    [
+     "Роспись",
+     "Художественная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -174,7 +218,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-relfom-ptitsy-v-zelenom-tsvete-art71060-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с синей сюжетной росписью (в лес по дрова)",
@@ -191,7 +245,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-russkie/cd_russkij-izrazets-s-syuzhetnoj-rospisyu-les-kollektsii-kameya-art-77133-52136-11737-28/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с рельефными тюльпанами Тюльпан",
@@ -208,7 +272,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-relefnym-uzorom-v-vide-tyulpanov-kollektsii-tyulpan-art-77073-50565/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с румпой и лепным рельефом 100х100х15 мм",
@@ -225,7 +303,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-s-rumpoj/cd_izrazets-s-lepnym-relefom-i-rumpoj-v-zelenom-tsvete-i-krasnoj-rospisyu-s-okantovkoj-kollektsii-pechvork-4779-4788-art-75097r-53500-11968-1/",
    "size": "100x100",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "100×100"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с рельефными птичками и ягодами Птички",
@@ -242,7 +330,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefnymi-ptitsami-v-temno-sinej-rospisi-kollektsii-ptitsy-200h200-art-77012-50555-11831/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий Универсальный",
@@ -259,7 +361,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_belyj-gladkij-izrazets-v-lazurnoj-rospisi-uzor-kollektsii-universal-art-70012-52089-11507-1/",
    "size": "150x150",
    "surface": "smooth",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Сувенир",
@@ -276,7 +392,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/yaroslavskie-izraztsy/cd_izrazets-s-lepnoj-ptitsej-zelenogo-tsveta-kollektsii-suvenir-art-78032-52200-12006/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец в окантовке Универсал",
@@ -292,7 +418,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_izrazets-gladkij-v-korichnevom-tsvete-s-okantovkoj-kollektsii-universal-art-76117-50485/",
    "size": "150x150",
    "surface": "smooth",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Современный изразец коллекции Сохо",
@@ -309,7 +449,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/soho/izraztsy-soho-v-hvojnom-tsvete/cd_sovremennyj-odnotonnyj-relefnyj-izrazets-soho-v-zelenom-tsvete-kollektsii-soho-art-77150-50567/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец рельефный",
@@ -326,7 +480,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-relefom-v-vide-rozetki-v-zelenom-tsvete-art71048-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (деревья на обрыве)",
@@ -343,7 +507,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-10x30-s-sinej-rospisyu-s-syuzhetom-derevya-kollektsii-pechnye-200h300-art-77404-52089-11823-30/",
    "size": "",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х20 с росписью (летний отдых)",
@@ -360,7 +530,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-s-rospisyu-v-sinem-tsvete-letnij-otdyx-20x20-kollektsii-kameya-art-77002-52089-11823-6/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (дерево на краю)",
@@ -377,7 +557,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-10h30-s-sinej-gollandskoj-rospisyu-s-syuzhetom-derevo-kollektsii-pechnye-200h300-art-77404-52089-11823-29/",
    "size": "",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -394,7 +580,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-relefom-ptichki-v-zelenom-tsvete-art71057-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с художественной росписью (Свиристель)",
@@ -411,7 +607,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_izrazets-s-syuzhetnoj-rospisyu-sviristel-kollektsii-kameya-art-77133-52150-11817-3/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной с лепным рельефом",
@@ -428,7 +634,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-relefnyj-v-zhelto-sinej-rospisi-art71034-50555-11934/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х20 с росписью 1/2 (дорога)",
@@ -445,7 +665,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-10x20-s-sinej-rospisyu-s-syuzhetom-doroga-kollektsii-pechnye-200h300-art-77404-52089-11823-18/",
    "size": "",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец для фасада с лепным рельефом 300х300х20",
@@ -462,7 +688,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-serogo-tsveta-i-sinej-rospisyu-art77871-50555-11924/",
    "size": "300x300",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "300×300"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепной лилией Арт Нуво в Лазурной росписи",
@@ -479,7 +715,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnoj-liliej-v-goluboj-rospisi-kollektsii-art-nuvo-art-71023-52097-11507/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Угол гладкий с 3-х сторонним кантом Тюльпан",
@@ -496,7 +746,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-gladkij-s-3-h-storonnim-kantom-kollektsii-tyulpan-art-77064-52151-12020/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец Прованс с роспись (На базар)",
@@ -513,7 +773,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-s-goluboj-rospisyu-s-syuzhetom-na-bazar-kollektsii-kameya-art-77133-52089-11736/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": "painted"
+   "kind": "painted",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ],
+    [
+     "Роспись",
+     "Художественная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец Пэчворк с лепным рельефом",
@@ -530,7 +804,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_relefnyj-izrazets-s-hudozhestvennoj-rospisyu-s-sinim-fonom-kollektsii-pechvork-art-71037-50555-12145/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец угловой с лепным рельефом Венская",
@@ -547,7 +835,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-s-lepnym-relefom-kollektsii-venskaya-art-77920-51261/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Пэчворк",
@@ -564,7 +866,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-dekorom-v-rospisi-zheltogo-tsvete-kollektsii-pechvork-art-71017-50555-11934/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец рельефный",
@@ -581,7 +897,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-uzornym-relefom-v-zelenom-tsvete-art71044-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -598,7 +924,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefom-s-sinej-rospisyu-kollektsii-ptitsy-200h200-art-77392-52089-11743/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Сувенир (грифон). Палитра: Зеленая",
@@ -615,7 +955,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_izrazets-v-drevnerusskom-stile-s-risunkom-v-zelenom-tsvete-15h15-kollektsii-suvenir-art-71146-50555-11940-2/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с сюжетной росписью Прованс (Полевые Гвоздики)",
@@ -632,7 +982,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-provans-s-risunkom-gvozdik-v-okantovke-kollektsii-kameya-art-77133-52150-11828-11/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Угол в окантовке Универсал",
@@ -648,7 +1008,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-v-relefnoj-okantovke-korichnevogo-tsveta-kollektsii-universal-art-76150-50485/",
    "size": "150x150",
    "surface": "smooth",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с рельефными птичками и ягодами Птички",
@@ -665,7 +1039,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-dekorom-ptitsa-yarkogo-zheltogo-tsveta-kollektsii-ptichki-150h150-art-71012-52090-11734/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с сюжетной росписью Прованс (Букет Лаванды)",
@@ -682,7 +1070,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-provans-s-okantovkoj-s-risunkom-buketa-lovandy-kollektsii-kameya-art-77133-52150-11828-3/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец h300 мм с синей росписью (хорошая погода)",
@@ -699,7 +1097,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-gladkij-v-syuzhetnoj-gollandskoj-rospisi-sinego-tsveta-kollektsii-pechnye-200h300-art-77404-52136-12119-7/",
    "size": "",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х20 с росписью (водопой)",
@@ -716,7 +1120,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-s-rospisyu-v-sinem-tsvete-vodopoj-20x20-kollektsii-kameya-art-77002-52089-11823-5/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Пэчворк",
@@ -733,7 +1147,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefnym-uzorom-golubogo-tsveta-kollektsii-pechvork-art-71036-52089-11443/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Плитка изразцовая рельефная Азулежу 200х200х12 мм",
@@ -750,7 +1178,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/azulezhu/izraztsovaya-plitka-azulezhu-s-relefom/cd_plitka-izraztsovaya-relefnaya-azulezhu-200h200h12-mm-77641-52136-11976-1/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -767,7 +1205,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-s-dekorativnym-relefom-vizantiya-belogo-tsveta-20x20-kollektsii-vizantiya-art-77457-52111/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец угловой гладкий 20х30 с росписью (охотники с добычей)",
@@ -784,7 +1236,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-gladkij-v-gollandskom-stile-s-sinej-rospisyu-ohotniki-s-sinej-dobychej-kollektsii-pechnye-200h300-art-77405-52089-11823-9/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Дорф",
@@ -801,7 +1263,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_krasnyj-relefnyj-izrazets-kollektsii-dorf-art-77275-50893/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с румпой Арт Нуво",
@@ -818,7 +1294,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-s-rumpoj/cd_izrazets-s-s-rumpoj-v-zelenoj-rospisi-s-tsvetkom-kollektsii-art-nuvo-art-71023r-52092-11505/",
    "size": "",
    "surface": "",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -835,7 +1317,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-relefnyj-v-krasno-sinej-rospisi-kollektsii-ptichki-150h150-art-71033-52089-11673/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Сувенир. Палитра: Коричневая",
@@ -852,7 +1348,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_izrazets-v-drevnerusskom-stile-relefnyj-s-obemnym-risunkom-korichnevogo-tsveta-kollektsii-suvenir-art-71144-50555-11940/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Сувенир (двуглавый орел). Палитра: Коричневая",
@@ -869,7 +1375,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_izrazets-v-drevnerusskom-stile-korichnevogo-tsveta-relefnyj-s-zheltoj-rospisyu-kollektsii-suvenir-art-71142-50555-11940/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Элеганс",
@@ -886,7 +1402,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-tsvete-sapfir-kollektsii-elegans-150h150-art-71013-50571/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с медальоном и росписью в коричневой окантовке (воробьи)",
@@ -903,7 +1433,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-provans-s-risunkom-ptits-v-okantovke-kollektsii-kameya-art-77133-52136-11953-2/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (деревенский пёс)",
@@ -920,7 +1460,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-10x30-s-sinej-gollandskoj-rospisyu-s-syuzhetom-sobaka-kollektsii-pechnye-200h300-art-77404-52089-11823-26/",
    "size": "",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Белый изразец с лепным рельефом Русская Этника",
@@ -937,7 +1483,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_drevnerusskij-izrazets-s-hudozhestvennym-dekorom-v-belom-tsvete-kollektsii-russkaya-etnika-art-77881-51200/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец рельефный",
@@ -954,7 +1510,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-relefom-tsvetok-v-zelenom-tsvete-art71054-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с румпой и лепным рельефом 100х100х15 мм",
@@ -971,7 +1537,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-s-rumpoj/cd_izrazets-s-lepnym-relefom-i-rumpoj-v-zheltom-tsvete-i-korichnevoj-rospisyu-s-okantovkoj-kollektsii-pechvork-4779-4788-art-75097r-53500-11968/",
    "size": "100x100",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "100×100"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Угол изразцовый с лепным рельефом «Ярославская майолика»",
@@ -988,7 +1564,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-s-dekorotivnym-relefom-v-tsvetnoj-rospisi-kollektsii-albion-art-76014-52089-11816/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразцовый угол с лепным рельефом Альбион",
@@ -1005,7 +1595,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-s-lepnym-relefom-zelenogo-tsveta-kollektsii-albion-art-76014-53050/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с сюжетной росписью Прованс (Птички Чечетки с гнездом)",
@@ -1022,7 +1626,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-v-stile-provans-s-risunkom-ptich-v-tsvetnoj-okantovke-kollektsii-kameya-art-77133-52150-11828-9/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом «Ярославская майолика»",
@@ -1039,7 +1653,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/yaroslavskie-izraztsy/cd_izrazets-relefnyj-s-lepninoj-ptitsej-v-zheltoj-rospisi-kollektsii-suvenir-art-78024-52089-11816/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец рельефный с росписью",
@@ -1056,7 +1684,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-relefnyj-v-korichnevo-sinej-rospisi-art71029-50555-11934/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Элеганс",
@@ -1073,7 +1715,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-dekorom-tsvetok-zheltogo-tsveta-v-korichnevoj-ramke-kollektsii-elegans-150h150-art-71010-50555-11727/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с росписью Прованс (колибри)",
@@ -1090,7 +1746,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-s-rospisyu-provans-v-zelenoj-okantovke-s-risunkom-ptichki-kollektsii-kameya-art-77133-52089-11829-3/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с синей сюжетной росписью (посевной день)",
@@ -1107,7 +1773,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-russkie/cd_russkij-izrazets-s-syuzhetnoj-rospisyu-den-kollektsii-kameya-art-77133-52136-11737-27/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Сувенир (жарптица). Палитра: Зеленая",
@@ -1124,7 +1800,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_izrazets-v-drevnerusskom-stile-zelenogo-tsveta-s-zheltoj-rospisyu-relefnyj-kollektsii-suvenir-art-71139-50555-11940/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -1141,7 +1827,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-relefom-uzor-v-zelenom-tsvete-art71051-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -1158,7 +1854,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-v-krasnoj-okantovke-s-rospisyu-tsvetok-kollektsii-vizantiya-art-77459-52111-11725/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Плитка изразцовая рельефная Азулежу 200х200х12 мм",
@@ -1175,7 +1885,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/azulezhu/izraztsovaya-plitka-azulezhu-s-relefom/cd_plitka-izraztsovaya-relefnaya-azulezhu-200h200h12-mm-77643-52136-11976-1/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с синей сюжетной росписью (разговор с конём)",
@@ -1192,7 +1912,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-russkie/cd_russkij-izrazets-s-syuzhetnoj-rospisyu-razgovor-kollektsii-kameya-art-77133-52136-11737-34/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Плитка рельефная Азулежу 200х200х12 мм",
@@ -1209,7 +1939,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/azulezhu/izraztsovaya-plitka-azulezhu-s-relefom/cd_plitka-relefnaya-azulezhu-200h200h12-mm-77643-52136-11976/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -1226,7 +1966,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-relefom-v-zelenom-tsvete-art71152-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -1243,7 +1993,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefom-s-oranzhevoj-rospisyu-na-zelenom-fone-kollektsii-ptitsy-200h200-art-77392-52046-12139/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с медальоном под сюжетную роспись Прованс(ветряная мельница)",
@@ -1260,7 +2020,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-v-sine-goluboj-rospisi-s-syuzhetom-vetryanaya-melnitsa-kollektsii-kameya-art-77133-52089-11735-7/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Угол левый к плитке в форме треугольника Маджестик",
@@ -1277,7 +2047,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-treugolnyj-v-rospisi-zolotom-kollektsii-madzhestik-art-77231-51241/",
    "size": "",
    "surface": "",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Пэчворк",
@@ -1294,7 +2070,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-dekorom-zelenogo-tsveta-kollektsii-pechvork-art-71019-50555-11934/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Дорф",
@@ -1311,7 +2101,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_korichnevyj-izrazets-s-relefom-kollektsii-dorf-art-77275-50557/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий с художественной синей росписью (водная тишь)",
@@ -1328,7 +2132,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izrazets-gladkij-v-ramke-i-sinej-rospisyu-s-syuzhetom-vodnaya-tish-kollektsii-kameya-art-77002-52136-12119-4/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец рельефный 200х250 Неаполь",
@@ -1345,7 +2159,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-zheltoj-ramke-kollektsii-neapol-art-77853-52089-11824/",
    "size": "",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с синей сюжетной росписью (русские гулянья)",
@@ -1362,7 +2186,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/izraztsy-russkie/cd_russkij-izrazets-s-syuzhetnoj-rospisyu-gulyaniya-kollektsii-kameya-art-77133-52136-11737-35/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Муравленный изразец 20х20 Русская Этника",
@@ -1379,7 +2213,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_izrazets-v-drevnerusskom-stile-relefnyj-lepnoj-syuzhetnyj-20h20-kollektsii-russkaya-etnika-art-77878-53050/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с росписью Прованс (Лаванда душистая)",
@@ -1396,7 +2244,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/provans/cd_izrazets-v-stile-provans-s-risunkom-v-okantovke-lavandy-kollektsii-kameya-art-77133-52150-12005-7/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной с лепным рельефом 200х200 Русская Этника",
@@ -1413,7 +2271,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_raznotsvetnyj-izrazets-s-lepnym-relefom-ptitsa-i-krasnym-fonom-kollektsii-russkaya-etnika-art-77875-50555-11841/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец белый с рельефной розеткой Бристоль",
@@ -1430,7 +2302,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-belyj-s-relefnoj-rozetkoj-kollektsii-bristol-art-77181-51200/",
    "size": "180x180",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "180×180"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (водяная мельница)",
@@ -1447,7 +2333,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-10x30-s-sinej-rospisyu-s-syuzhetom-vodyanaya-melnitsa-kollektsii-pechnye-200h300-art-77404-52089-11823-28/",
    "size": "",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Угол с рельефной косичкой Птички",
@@ -1464,7 +2356,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-s-relefom-kosichka-zelenogo-tsveta-s-krasnoj-rospisyu-kollektsii-ptichki-150h150-art-76012-50555-12141/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Арт Нуво в росписи Фисташковая",
@@ -1481,7 +2387,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-dekorom-v-zelenoj-rospisi-kollektsii-art-nuvo-art-71014-52091-11505/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом «Ярославская майолика»",
@@ -1498,7 +2418,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/yaroslavskie-izraztsy/cd_izrazets-s-lepnoj-ptitsej-sinego-tsveta-kollektsii-suvenir-art-78037-52089-11816-1/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец для фасада 230х230х30 мм с рельефом",
@@ -1515,7 +2445,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-tsvetkom-v-zelenom-tsvete-230h230h30-mm-art78278-52144-12010/",
    "size": "",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с современным рельефом",
@@ -1532,7 +2468,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-lepnoj-geometriej-v-zelenom-tsvete-art74077-50509/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом 10х10 Нарцысс желтый",
@@ -1549,7 +2499,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-10x10-s-rospisyu-i-lepnym-relefom-nartsiss-art75088-52105-11795/",
    "size": "100x100",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "100×100"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом 10х10 Лавр",
@@ -1566,7 +2530,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-10x10-s-rospisyu-i-lepnym-relefom-lavr-art75074-52105-11781/",
    "size": "100x100",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "100×100"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с художественной росписью (Птицы с птенчиками)",
@@ -1583,7 +2561,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_izrazets-s-syuzhetnoj-rospisyu-ptitsy-v-korichnevom-tsvete-kollektsii-kameya-art-77133-52150-11817-5/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -1600,7 +2588,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-dekorativnym-uzorom-zelenogo-tsveta-art71026-53537/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -1617,7 +2615,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-v-sinej-ramke-s-uzorom-rozovogo-tsveta-kollektsii-vizantiya-art-77457-52111-11725/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -1634,7 +2646,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-temno-sinej-okantovke-na-rozovom-fone-kollektsii-vizantiya-art-77456-56000-12021/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Русский изразец с рельефным Грифоном",
@@ -1651,7 +2673,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-s-risunkom-grifon-kollektsii-suvenir-art-78008-53045-11284/",
    "size": "",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -1668,7 +2700,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-relefom-s-tsvetnoj-rospisyu-kollektsii-ptitsy-200h200-art-77392-50496-12132/",
    "size": "200x200",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Усадьба",
@@ -1685,7 +2731,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-dekorom-tsvetok-zheltogo-tsveta-na-zelenom-fone-kollektsii-usadba-art-71008-52136-11954/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Элеганс",
@@ -1702,7 +2758,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/zelenye-izraztsy/cd_izrazets-s-hudozhestvennym-relefnym-dekorom-zelenogo-tsveta-kollektsii-elegans-150h150-art-71010-50512/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   },
   {
    "title": "Русский изразец с мифологической сценкой",
@@ -1719,7 +2789,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_izrazets-v-drevnerusskom-stile-s-hudozhestvennym-uzorom-kollektsii-suvenir-art-78020-53045-11284/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец цветной Сувенир (двуглавый орел). Палитра: Зеленая",
@@ -1736,7 +2820,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/drevnerusskie-izraztsy/cd_drevnerusskij-izrazets-zelenogo-tsveta-s-krasnoj-rospisyu-relefnyj-kollektsii-suvenir-art-71142-50555-11940-2/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец с художественной росписью (Птицы на ветке)",
@@ -1753,7 +2847,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_izrazets-s-syuzhetnoj-rospisyu-ptitsy-na-vetke-kollektsii-kameya-art-77133-52150-11817/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец гладкий 20х20 с росписью (заброшенный замок)",
@@ -1770,7 +2874,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_gollandskij-izrazets-s-rospisyu-v-sinem-tsvete-zabroshennyj-zamok-20x20-kollektsii-kameya-art-77002-52089-11823-8/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -1787,7 +2901,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-relefnyj-v-krasno-zheltoj-rospisi-kollektsii-ptichki-150h150-art-71033-52090-11734/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с декоративным рельефом 10х10 Астры",
@@ -1804,7 +2932,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-10x10-s-rospisyu-i-lepnym-relefom-astry-art75075-52105-11782/",
    "size": "100x100",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "100×100"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с лепным рельефом 200х200 мм Русская Этника (Зеленая окантовка)",
@@ -1821,7 +2963,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/tsvetnye-izraztsy/cd_izrazets-s-lepnym-relefom-tsvetok-v-zelenoj-okantovke-kollektsii-russkaya-etnika-art-77874-52151-12020-2/",
    "size": "200x200",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Изразец Охота с сюжетной росписью (медведь)",
@@ -1838,7 +2990,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/raspisnye-izraztsy/cd_izrazets-s-dekorativnoj-sinej-rospisyu-medved-kollektsii-kameya-art-77133-52089-11660-4/",
    "size": "200x200",
    "surface": "smooth",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "200×200"
+    ],
+    [
+     "Поверхность",
+     "Гладкая"
+    ]
+   ]
   },
   {
    "title": "Изразец с насечкой Альбион",
@@ -1855,7 +3017,17 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/odnotonnye-izraztsy/cd_izrazets-s-lepnym-relefom-v-tsvete-baklazhan-kollektsii-albion-art-74036-53517/",
    "size": "150x150",
    "surface": "relief",
-   "kind": ""
+   "kind": "",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ]
+   ]
   },
   {
    "title": "Угол с насечкой Альбион",
@@ -1872,7 +3044,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/uglovye-izraztsy/cd_izrazets-uglovoj-s-nasechkoj-v-belom-tsvete-s-zheltoj-rospisyu-kollektsii-albion-art-76069-52123-11745/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "colored"
+   "kind": "colored",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Цветная роспись"
+    ]
+   ]
   },
   {
    "title": "Изразец с рельефными полосами и завитками Ар Деко",
@@ -1889,7 +3075,21 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/belye-izraztsy/cd_izrazets-s-dekorativnym-relefom-polosy-v-belom-tsvete-kollektsii-ar-deko-art-71100-51201/",
    "size": "150x150",
    "surface": "relief",
-   "kind": "plain"
+   "kind": "plain",
+   "props": [
+    [
+     "Типоразмер",
+     "150×150"
+    ],
+    [
+     "Поверхность",
+     "Рельефная"
+    ],
+    [
+     "Роспись",
+     "Однотонный"
+    ]
+   ]
   }
  ],
  "filters": [
@@ -2038,7 +3238,7 @@ window.LP = {
    "icon": "truck",
    "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "text": "Свои монтажные бригады, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],

@@ -15,6 +15,8 @@ window.LP = {
   "metrikaId": 0
  },
  "priceLabel1": "Облицовка",
+ "priceNote": "Цена ориентировочная: итоговая зависит от размеров печи, кладки ядра и объёма облицовки. Смету считаем бесплатно за 2–3 дня.",
+ "priceFrom": true,
  "catalogStyle": "",
  "quiz": {
   "title": "Рассчитайте свою печь",
@@ -69,6 +71,7 @@ window.LP = {
     "type": "checks",
     "label": "Дополнить печь",
     "collapsed": true,
+    "hidePrices": true,
     "options": [
      {
       "id": "chimney",
@@ -111,7 +114,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Прованс",
@@ -129,12 +133,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Арт Нуво, лазурная роспись",
    "collection": "Арт Нуво",
-   "desc": "Отопительная печь в облицовке «Арт Нуво», лазурная роспись. Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Арт Нуво в сине-голубой росписи. Пристенная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 218,
     "width": 1308,
@@ -154,7 +159,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Усадьба",
@@ -179,12 +185,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-5393/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Универсал",
    "collection": "Универсал",
-   "desc": "Отопительная печь в облицовке «Универсал». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Универсал в цвете Роза. Пристенная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "width": 1390,
     "height": 2120,
@@ -201,12 +208,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topochnoj-dverkoj-vezuvij-9525/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Птички",
    "collection": "Птички",
-   "desc": "Отопительная печь в облицовке «Птички». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Птички в художественной росписи. Пристенная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 193,
     "width": 1425,
@@ -225,12 +233,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-lesnaya/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Арт Нуво",
    "collection": "Арт Нуво",
-   "desc": "Отопительная печь в облицовке «Арт Нуво». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Арт Нуво в росписи «Кофейная». Пристенная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "p1": 691369,
    "p2": 0,
    "img": "img/07.webp",
@@ -242,7 +251,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Модерн",
@@ -266,12 +276,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Дорф",
    "collection": "Дорф",
-   "desc": "Отопительная печь в облицовке «Дорф». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Дорф в цвете Сангрия. Островная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 349,
     "width": 1209,
@@ -290,7 +301,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Отопительная печь Неаполь",
@@ -303,17 +315,18 @@ window.LP = {
    },
    "p1": 968320,
    "p2": 0,
-   "img": "img/10.webp",
+   "img": "img/10-2.webp",
    "photos": [
-    "img/10.webp",
     "img/10-2.webp",
+    "img/10.webp",
     "img/10-3.webp",
     "img/10-4.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   }
  ],
  "filters": [
@@ -458,7 +471,7 @@ window.LP = {
    "icon": "truck",
    "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "text": "Свои монтажные бригады, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],
@@ -506,6 +519,6 @@ window.LP = {
   "img/07.webp",
   "img/08.webp",
   "img/09.webp",
-  "img/10.webp"
+  "img/10-2.webp"
  ]
 };

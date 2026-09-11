@@ -41,6 +41,9 @@
   /* Плитка каталога занимает до 426 CSS-пикселей: на ретине это 852 точки,
      на телефоне с DPR 3 — 1065. Отдаём браузеру оба размера, он возьмёт
      нужный — на обычном экране страница не тяжелеет. */
+  // «От» уместно там, где цена зависит от размеров объекта. У готовой
+  // заводской модели она фиксированная, и приставка только путает.
+  var FROM = P.priceFrom === false ? '' : 'от ';
   var CARD_SIZES = P.catalogStyle === 'product'
     ? '(min-width: 1024px) 320px, (min-width: 700px) 25vw, 50vw'
     : '(min-width: 1024px) 430px, (min-width: 700px) 50vw, 100vw';
@@ -732,9 +735,9 @@
           // чтобы не выглядеть спрятанным.
           '<div class="card__prices">' +
             (c.p2
-              ? '<div class="card__p2"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>' +
-                '<div class="card__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>'
-              : '<div class="card__p1 card__p1--solo"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>') +
+              ? '<div class="card__p2"><span>Под ключ с монтажом</span><b>' + FROM + fmt(c.p2) + ' ₽</b></div>' +
+                '<div class="card__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>' + FROM + fmt(c.p1) + ' ₽</b></div>'
+              : '<div class="card__p1 card__p1--solo"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>' + FROM + fmt(c.p1) + ' ₽</b></div>') +
           '</div>' +
         '</div>' +
         '<footer class="card__foot">' +
@@ -796,13 +799,16 @@
     if (!P.catalog || !P.catalog.length) return;
     var box = null, cur = 0, item = null, back = null;
 
-    function specRows(sp) {
-      if (!sp) return '';
+    function specRows(sp, props) {
       var rows = [];
+      sp = sp || {};
       if (sp.width) rows.push(['Ширина', Math.round(sp.width / 10) + ' см']);
       if (sp.height) rows.push(['Высота', Math.round(sp.height / 10) + ' см']);
       if (sp.depth) rows.push(['Глубина', Math.round(sp.depth / 10) + ' см']);
       if (sp.weight) rows.push(['Вес облицовки', sp.weight + ' кг']);
+      // У товарного каталога габаритов нет, зато есть типоразмер,
+      // поверхность и тип росписи — без них карточка почти пустая.
+      (props || []).forEach(function (x) { rows.push(x); });
       if (!rows.length) return '';
       return '<dl class="pcard__spec">' + rows.map(function (r) {
         return '<div><dt>' + r[0] + '</dt><dd>' + r[1] + '</dd></div>';
@@ -827,9 +833,9 @@
     function fill() {
       var set = shots(), many = set.length > 1;
       var price = item.p2
-        ? '<div class="pcard__p2"><span>Под ключ с монтажом</span><b>от ' + fmt(item.p2) + ' ₽</b></div>' +
-          '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(item.p1) + ' ₽</b></div>'
-        : '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(item.p1) + ' ₽</b></div>';
+        ? '<div class="pcard__p2"><span>Под ключ с монтажом</span><b>' + FROM + fmt(item.p2) + ' ₽</b></div>' +
+          '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>' + FROM + fmt(item.p1) + ' ₽</b></div>'
+        : '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>' + FROM + fmt(item.p1) + ' ₽</b></div>';
       $('.pcard__box', box).innerHTML =
         '<button type="button" class="pcard__close" data-close aria-label="Закрыть">✕</button>' +
         '<div class="pcard__gal">' +
@@ -850,12 +856,12 @@
           (item.collection ? '<span class="pcard__tag">' + esc(item.collection) + '</span>' : '') +
           '<h3 class="pcard__name" id="pcard-title">' + esc(item.title) + '</h3>' +
           '<p class="pcard__desc">' + esc(item.full || item.desc || '') + '</p>' +
-          specRows(item.spec) +
+          specRows(item.spec, item.props) +
           '<div class="pcard__prices">' + price + '</div>' +
           '<div class="pcard__acts">' +
             '<button type="button" class="btn btn--primary" data-lead data-src="card-detail">Рассчитать такой же</button>' +
           '</div>' +
-          '<p class="pcard__note">Цена ориентировочная: итоговая зависит от размеров проёма, топки и объёма работ. Считаем бесплатно за 2–3 дня.</p>' +
+          (P.priceNote ? '<p class="pcard__note">' + esc(P.priceNote) + '</p>' : '') +
         '</div>';
       paint();
     }

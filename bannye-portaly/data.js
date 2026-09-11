@@ -15,6 +15,8 @@ window.LP = {
   "metrikaId": 0
  },
  "priceLabel1": "Облицовка",
+ "priceNote": "Цена ориентировочная: итоговая зависит от размеров портала, модели банной печи и объёма работ. Смету считаем бесплатно за 2–3 дня.",
+ "priceFrom": true,
  "catalogStyle": "",
  "quiz": {
   "title": "Рассчитайте свой портал",
@@ -68,6 +70,7 @@ window.LP = {
     "type": "checks",
     "label": "Дополнить портал",
     "collapsed": true,
+    "hidePrices": true,
     "options": [
      {
       "id": "panno",
@@ -98,7 +101,7 @@ window.LP = {
   {
    "title": "Банный портал с росписным панно",
    "collection": "",
-   "desc": "Портал для банной печи в изразцовой облицовке: керамика держит жар и легко моется.",
+   "desc": "Облицовка банной печи в предбаннике: изразцы Тюльпан и панно ручной росписи по индивидуальному сюжету.",
    "spec": {
     "weight": 172
    },
@@ -116,12 +119,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Сувенир",
    "collection": "Сувенир",
-   "desc": "Портал для банной печи в облицовке «Сувенир». Изразец ручной формовки, обжиг свыше 1100 °C.",
+   "desc": "Цветные изразцы Сувенир. Встроенный монтаж. Изразец ручной формовки, обжиг свыше 1100 °C.",
    "spec": {
     "weight": 83,
     "width": 1276,
@@ -141,12 +145,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Усадьба",
    "collection": "Усадьба",
-   "desc": "Портал для банной печи в облицовке «Усадьба». Изразец ручной формовки, обжиг свыше 1100 °C.",
+   "desc": "Изразцы Усадьба в росписи Медовая. Встроенный монтаж. Изразец ручной формовки, обжиг свыше 1100 °C.",
    "spec": {
     "weight": 100
    },
@@ -163,12 +168,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Пастораль",
    "collection": "Пастораль",
-   "desc": "Портал для банной печи в облицовке «Пастораль». Изразец ручной формовки, обжиг свыше 1100 °C.",
+   "desc": "Изразцы Пастораль 15×15 в цвете Белый Антик. Встроенный монтаж. Изразец ручной формовки, обжиг свыше 1100 °C.",
    "spec": {
     "weight": 120
    },
@@ -185,7 +191,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Камея",
@@ -207,12 +214,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Прованс",
    "collection": "Прованс",
-   "desc": "Портал для банной печи в облицовке «Прованс». Изразец ручной формовки, обжиг свыше 1100 °C.",
+   "desc": "Изразцы Прованс с росписью. Встроенный монтаж. Изразец ручной формовки, обжиг свыше 1100 °C.",
    "p1": 572034,
    "p2": 0,
    "img": "img/06.webp",
@@ -225,7 +233,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Арт Нуво",
@@ -251,12 +260,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Арт Нуво, лазурная роспись",
    "collection": "Арт Нуво",
-   "desc": "Портал для банной печи в облицовке «Арт Нуво», лазурная роспись. Изразец ручной формовки, обжиг свыше 1100 °C.",
+   "desc": "Изразцы Арт Нуво в Лазурной росписи. Встроенный монтаж. Изразец ручной формовки, обжиг свыше 1100 °C.",
    "spec": {
     "weight": 46,
     "width": 980,
@@ -276,12 +286,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Банный портал Дорф",
    "collection": "Дорф",
-   "desc": "Портал для банной печи в облицовке «Дорф». Изразец ручной формовки, обжиг свыше 1100 °C.",
+   "desc": "Муравленые изразцы Дорф. Встроенный монтаж. Изразец ручной формовки, обжиг свыше 1100 °C.",
    "spec": {
     "weight": 120
    },
@@ -298,7 +309,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   }
  ],
  "filters": [
@@ -435,7 +447,7 @@ window.LP = {
    "icon": "truck",
    "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "text": "Свои монтажные бригады, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],

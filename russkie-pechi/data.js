@@ -15,6 +15,8 @@ window.LP = {
   "metrikaId": 0
  },
  "priceLabel1": "Облицовка",
+ "priceNote": "Цена ориентировочная: итоговая зависит от размеров печи, кладки ядра и объёма облицовки. Смету считаем бесплатно за 2–3 дня.",
+ "priceFrom": true,
  "catalogStyle": "",
  "quiz": {
   "title": "Рассчитайте свою печь",
@@ -70,6 +72,7 @@ window.LP = {
     "type": "checks",
     "label": "Дополнить печь",
     "collapsed": true,
+    "hidePrices": true,
     "options": [
      {
       "id": "niche",
@@ -100,7 +103,7 @@ window.LP = {
   {
    "title": "Русская печь Русская Этника",
    "collection": "Русская Этника",
-   "desc": "Русская печь в изразцовой облицовке «Русская Этника». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Русская Этника 20×20 в цветной росписи. Островная установка, открытый очаг. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 950,
     "width": 1769,
@@ -121,12 +124,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Камея",
    "collection": "Камея",
-   "desc": "Русская печь в изразцовой облицовке «Камея». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Камея с медальонами в коричневой окантовке. Пристенная установка. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "width": 3050,
     "height": 2500,
@@ -145,12 +149,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Тюльпан, белый",
    "collection": "Тюльпан",
-   "desc": "Русская печь в изразцовой облицовке «Тюльпан», белый. Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Тюльпан в цвете Белый Антик. Пристенная установка, открытый очаг. Кладка ядра и монтаж облицовки под ключ.",
    "p1": 963875,
    "p2": 0,
    "img": "img/03.webp",
@@ -162,12 +167,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Неаполь",
    "collection": "Неаполь",
-   "desc": "Русская печь в изразцовой облицовке «Неаполь». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Неаполь в росписи «Вечер в Италии». Пристенная установка, открытый очаг. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 246,
     "width": 1405,
@@ -187,12 +193,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Усадьба",
    "collection": "Усадьба",
-   "desc": "Русская печь в изразцовой облицовке «Усадьба». Кладка ядра и облицовка под ключ.",
+   "desc": "Печь оштукатурена, изразцовые вставки коллекции Усадьба. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 217,
     "width": 2466,
@@ -209,12 +216,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Византия",
    "collection": "Византия",
-   "desc": "Русская печь в изразцовой облицовке «Византия». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Византия в Морской росписи. Островная установка, открытый очаг. Кладка ядра и монтаж облицовки под ключ.",
    "p1": 2371049,
    "p2": 0,
    "img": "img/06.webp",
@@ -227,12 +235,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Арт Нуво",
    "collection": "Арт Нуво",
-   "desc": "Русская печь в изразцовой облицовке «Арт Нуво». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Арт Нуво в росписи «Фисташковая». Островная установка, открытый очаг. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 520,
     "width": 3040,
@@ -251,12 +260,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь в зелёной майолике",
    "collection": "",
-   "desc": "Русская печь в изразцовой облицовке: ручная формовка, обжиг свыше 1100 °C.",
+   "desc": "Русская печь с лежанкой в зелёной майоликовой глазури. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 900,
     "width": 2929,
@@ -277,12 +287,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Русская Этника, зелёная роспись",
    "collection": "Русская Этника",
-   "desc": "Русская печь в изразцовой облицовке «Русская Этника», зелёная роспись. Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Русская Этника 20×20 в зелёной росписи. Островная установка, открытый очаг. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "weight": 493,
     "width": 1920,
@@ -301,12 +312,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Тюльпан",
    "collection": "Тюльпан",
-   "desc": "Русская печь в изразцовой облицовке «Тюльпан». Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Тюльпан в цвете Белый Антик. Островная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "width": 3078,
     "height": 4396,
@@ -325,12 +337,13 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   },
   {
    "title": "Русская печь Русская Этника, белый",
    "collection": "Русская Этника",
-   "desc": "Русская печь в изразцовой облицовке «Русская Этника», белый. Кладка ядра и облицовка под ключ.",
+   "desc": "Изразцы Русская Этника 20×20 в Белом цвете. Пристенная установка, топка с прямым стеклом. Кладка ядра и монтаж облицовки под ключ.",
    "spec": {
     "width": 1784,
     "height": 2963,
@@ -349,7 +362,8 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/",
    "size": "",
    "surface": "",
-   "kind": ""
+   "kind": "",
+   "props": []
   }
  ],
  "filters": [
@@ -486,7 +500,7 @@ window.LP = {
    "icon": "truck",
    "b": "",
    "title": "Доставка и монтаж по России",
-   "text": "Свои монтажные бригады в Москве и МО, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
+   "text": "Свои монтажные бригады, отгрузка керамики в любой регион с упаковкой в жёсткий каркас.",
    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.8 6.4h10.4v9.2H2.8zM13.2 9.6h4l3 3.2v2.8h-7z\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17.4\" cy=\"18\" r=\"2\"/></svg>"
   }
  ],
