@@ -124,21 +124,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-belyj-kamin-albion-s-topkoj-liseo-castiron/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "218 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Альбион, майоликовая глазурь",
@@ -158,21 +144,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-biokamina-izraztsami-albion-v-majolikovoj-glazuri/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "175 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Тюльпан",
@@ -192,21 +164,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-tyulpan-s-g-obraznoj-topkoj-ekokamin-alfa-1000-rb/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "243 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Тюльпан, Арктика",
@@ -225,8 +183,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_komplekt-kaminnoj-oblitsovki-tyulpan-tsvet-arktika/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Версаль",
@@ -244,8 +201,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-versal-v-sinem-tsvete/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Бристоль",
@@ -265,21 +221,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-s-p-obraznoj-topkoj-v-oblitsovke-bristol-v-tsvete-chernaya-noch/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "236 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Дорф",
@@ -297,21 +239,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_dekorativnyj-kamin-s-ochagom-airtone-andalle-1000-oblitsovan-izraztsami-kollektsii-dorf-spetsialno-dlya-restorana-5013/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "432 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,7 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Арт Нуво",
@@ -328,8 +256,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-art-nuvo-1/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Птицы",
@@ -349,8 +276,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-astov-p2s-v-oblitsovke-ptitsy/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Византия",
@@ -369,8 +295,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-vizantiya-v-rospisi-oliva/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Луна",
@@ -390,21 +315,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-klassicheskom-stile-iz-kollektsii-luna-i-topkoj-spartherm-linear-4s-arte-1672/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "194 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,1 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Универсал",
@@ -424,21 +335,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnyj-portal-universal-tsvet-arktika/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "117 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,7 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,9 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Универсал, угловой",
@@ -457,21 +354,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-uglovogo-kamina-izraztsami-universal/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "108 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Прованс",
@@ -490,21 +373,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izrazcy/gollandiya/cd_izraztsovyj-kamin-kollektsii-gollandiya-s-drovnikom-i-ruchnoj-rospisyu/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "136 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,5 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,4 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Браво",
@@ -523,21 +392,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kamin-v-oblitsovke-izraztsami-kollektsii-bravo-s-rospisyu/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "165 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Сохо",
@@ -556,21 +411,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_oblitsovka-kamina-do-polki-s-drovnikami-po-bokam-v-kollektsii-soho-6749/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "309 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "2,6 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,8 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Усадьба",
@@ -587,21 +428,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-usadba-s-podiumami-i-prizmatichnoj-uglovoj-topkoj/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "172 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,4 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Камин Птички",
@@ -620,8 +447,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_kaminnaya-oblitsovka-ptichki-dekorativnaya-palitra-lesnaya/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Элеганс",
@@ -639,8 +465,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_izraztsovyj-kamin-elegans-v-glazuri-lesnoj-tuman/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Минималист",
@@ -655,8 +480,7 @@ window.LP = {
    "url": "",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Венская",
@@ -673,8 +497,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-elektrokamina-v-interere/cd_elektrokamin-belogo-tsveta-v-izraztsah-kollektsii-venskaya-99999/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Камин Венская, классический",
@@ -694,17 +517,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-kaminy-v-interere/cd_klassicheskij-kamin-v-oblitsovke-iz-kollektsii-dorf-s-topkoj-brunner-stil-kamin-classic-6282/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "1,6 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,6 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   }
  ],
  "filters": [
@@ -834,7 +647,7 @@ window.LP = {
    "Коллекция, цвет глазури и сюжет росписи подбираются под интерьер.",
    "Керамика с обжигом свыше 1100 °C, гарантия 50 лет, отдельный изразец заменяется точечно."
   ],
-  "media": "img/06-5.webp"
+  "media": "img/20.webp"
  },
  "steps": [
   {

@@ -116,8 +116,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печь-камин Дорф, Горький Шоколад",
@@ -134,8 +133,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печь-камин Дорф, Муравленый",
@@ -152,8 +150,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-1/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печь-камин Ритм, Белый Антик",
@@ -170,8 +167,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печь-камин Ритм, Бургундия",
@@ -188,8 +184,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1-1/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печь-камин Ритм, Лазурный",
@@ -206,8 +201,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/tipovye-kaminy-i-pechi-v-nalichii/cd_pech-kamin-tipovaya-keramikadekor-dorf-v-tsvete-belyj-antik-2-1-1/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   }
  ],
  "filters": [],

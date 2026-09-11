@@ -131,21 +131,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_zona-barbekyu-s-mangalom-i-kazanom-v-zagorodnom-dome-kollektsii-albion-6127/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "423 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "3,7 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,8 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Печной комплекс Альбион",
@@ -164,21 +150,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "386 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "3,2 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,9 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Версаль",
@@ -196,8 +168,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-barbekyu-v-oblitsovke-versal/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Летняя кухня Версаль, Болотный",
@@ -214,21 +185,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-versal-tsvet-bolotnyj-1311/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "382 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "2,1 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,1 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Летняя кухня Версаль, Синий",
@@ -248,21 +205,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-oblitsovke-izraztsami-kollektsii-versal-tsvet-sinij/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "981 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "4,9 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Тюльпан",
@@ -279,17 +222,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_belyj-mangal-v-oblitsovke-izraztsami-kollektsii-tyulpan-7757/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "1,8 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Дорф",
@@ -309,8 +242,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_eksklyuzivnaya-kuhnya-s-mangalom-v-izraztsovoj-oblitsovke-5268/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Дорф, с дровником",
@@ -330,21 +262,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-kollektsii-dorf-s-mangalom-i-drovnikom-5397/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "378 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "3,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Птички",
@@ -363,21 +281,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-yarkoj-oblitsovke-ptichki-3548/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "253 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "3,1 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Печной комплекс Птички",
@@ -396,17 +300,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-s-mangalom-i-pechyu-pod-kazan-v-oblitsovke-izraztsami-kollektsii--8075/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "4,0 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Птицы",
@@ -426,21 +320,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_pechnoj-kompleks-iz-kirpicha-v-kollektsii-ptichki-7676/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "673 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "3,0 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,9 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Византия",
@@ -459,8 +339,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/izraztsovye-pechi/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-vizantiya/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печной комплекс Византия, с открытым камином",
@@ -480,8 +359,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-pechnogo-kompleksa-s-vysokim-otkrytym-kaminom-izraztsami-vizantiya-7268/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Печной комплекс Византия",
@@ -500,8 +378,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_izraztsovaya-oblitsovka-vizantiya-dlya-pechnogo-kompleksa/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Азулежу",
@@ -520,17 +397,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_mangal-na-kuhne-v-izraztsah-iz-kollektsii-azulezhu-7094/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "2,1 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,2 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Элеганс",
@@ -550,21 +417,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-gotovogo-pechnogo-kompleksa-s-mangalom-pechyu-i-plitoj-6514/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "653 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "4,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,8 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Летняя кухня Элеганс",
@@ -582,21 +435,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_letnyaya-kuhnya-v-izraztsovoj-oblitsovke-elegans-so-stoleshnitsej-iz-granita-4100/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "211 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "2,2 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Барбекю комплекс Сценки",
@@ -613,8 +452,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_barbekyu-kompleks-v-izraztsovoj-oblitsovke-s-hudozhestvennoj-rospisyu-ptitsy/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   }
  ],
  "filters": [
@@ -712,7 +550,7 @@ window.LP = {
    "Больше двадцати коллекций и десятки цветов глазури — комплекс собирается под характер вашего дома.",
    "Гарантия 50 лет на облицовку — зафиксирована в договоре."
   ],
-  "media": "img/09-3.webp"
+  "media": "img/14.webp"
  },
  "steps": [
   {

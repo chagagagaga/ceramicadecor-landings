@@ -115,21 +115,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-rumpoj-v-kollektsii-ptichki-5795/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "950 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,8 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Камея",
@@ -148,17 +134,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-izraztsami-s-medalonami-v-korichnevoj-okantovke-5051/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "3,0 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,5 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Тюльпан, белый",
@@ -175,8 +151,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsov-tyulpan-dlya-otdelki-pechi/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Русская печь Неаполь",
@@ -195,21 +170,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-pech-so-starinnymi-izraztsami-v-oblitsovke-neapol/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "246 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Усадьба",
@@ -225,21 +186,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-otdelannaya-shtukaturkoj-s-izraztsovymi-vstavkami-7298/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "217 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "2,5 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Византия",
@@ -257,8 +204,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-kollektsii-vizantiya-/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Русская печь Арт Нуво",
@@ -276,21 +222,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-s-lezhankoj-i-chastichnoj-oblitsovkoj-izraztsami-art-nuvo-4448/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "520 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "3,0 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,7 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь в зелёной майолике",
@@ -310,21 +242,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_izraztsovaya-russkaya-pech-s-lezhankoj-v-zelenoj-majolikovoj-glazuri-5672/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "900 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "2,9 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Русская Этника, зелёная роспись",
@@ -342,21 +260,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-belom-tsvete-s-zelenoj-rospisyu-v-kollektsii-russkaya-etnika-6093/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "493 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,9 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,9 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Тюльпан",
@@ -375,17 +279,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-otopitelnaya-pech-v-izratsah-kollektsii-tyulpan-belogo-tsveta-4665/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "3,1 м",
-     "l": "ширина"
-    },
-    {
-     "v": "4,4 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Русская печь Русская Этника, белый",
@@ -404,17 +298,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_russkaya-pech-v-oblitsovke-belymi-izraztsami-iz-kollektsii-russkaya-etnika-7534/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "1,8 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,0 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   }
  ],
  "filters": [
@@ -500,7 +384,7 @@ window.LP = {
    "Изразцовая печь становится главным объектом дома — её показывают гостям.",
    "Изразец с румпой держит тепло часами, гарантия на керамику 50 лет."
   ],
-  "media": "img/04-4.webp"
+  "media": "img/01.webp"
  },
  "steps": [
   {

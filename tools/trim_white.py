@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-ОБРЕЗКА БЕЛЫХ ПОЛЕЙ
---------------------------------------------------------------------------
-Часть оригиналов на сайте добита белым до квадрата: у снимка 1600×1600
-реальная картинка занимает середину, а сверху и снизу по 350 строк чистого
-белого. В сетке работ это выглядит как белые полосы над и под каждым фото.
+"""ОБРЕЗКА СВЕТЛОЙ КРОМКИ ПО КРАЮ КАДРА
 
-Скрипт срезает такие поля. Обрезаются только строки и столбцы, где ВСЕ
-пиксели практически белые (255): настоящая фотография такой строки почти
-никогда не даёт, даже если снята на белой стене. Порог намеренно жёсткий —
-лучше не дообрезать, чем срезать край печи.
+Часть снимков на сайте отдаётся с полоской в один-два пикселя по краю:
+след от белой подложки, на которой их добивали до квадрата. На тёмной
+странице эта полоска читается как тонкая белая линия вокруг фотографии.
 
-Изразцы намеренно не трогаем: там поля добиты нами специально, чтобы
-плитка на подставке выглядела как в каталоге основного сайта.
+Прошлая версия искала идеально белые ряды (порог 248) и промахивалась:
+в кромке попадаются пиксели 243–247, и ряд не проходил проверку.
+
+Здесь порог не абсолютный, а относительный: ряд считается кромкой,
+если он заметно светлее ряда на четыре пикселя внутрь. Настоящий кадр
+такого скачка на самом краю почти никогда не даёт, а если и даст —
+срезается максимум шесть пикселей из полутора тысяч, этого не видно.
 
 Запуск:  python3 tools/trim_white.py [slug ...]
 """
@@ -21,55 +20,42 @@ import os, sys
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SLUGS = ['barbekyu-kompleksy', 'kaminy', 'pechi-kaminy',
-         'bannye-portaly', 'russkie-pechi', 'otopitelnye-pechi']
+SLUGS = ['barbekyu-kompleksy', 'kaminy', 'pechi-kaminy', 'bannye-portaly',
+         'russkie-pechi', 'otopitelnye-pechi', 'izraztsy']
 
-WHITE = 248     # сплошное поле: ниже этого пиксель уже не считаем белым
-SOFT = 232      # кромка: между полем и фото остаётся переходная полоса
-MAX_SOFT = 6    # но снимаем её не больше чем на столько пикселей с каждой стороны
-STEP = 7        # шаг выборки пикселей вдоль строки: полный проход не нужен
-MIN_TRIM = 8    # поля тоньше этого игнорируем — это просто светлый край кадра
+JUMP = 16    # насколько край должен быть светлее нутра, чтобы считаться кромкой
+DEPTH = 4    # на сколько пикселей внутрь смотрим для сравнения
+MAX = 6      # больше этого не срезаем ни при каких условиях
+STEP = 7     # шаг выборки вдоль ряда
 
 
-def border(im):
-    """Сколько строк и столбцов по краям занимает белое поле.
-
-    Проход в два шага. Первый снимает сплошное поле по жёсткому порогу.
-    Второй добирает кромку: между полем и фотографией остаётся переходная
-    полоса в один-два пикселя — она уже не чисто белая (246, 242), но
-    заметно светлее кадра, и на тёмной странице читается тонкой линией.
-    Второй проход ограничен шестью пикселями: снять кромку он успеет,
-    а въесться в светлый кадр — нет.
-    """
-    w, h = im.size
+def trim(im):
     px = im.load()
+    w, h = im.size
 
-    def row_at(y, lim):
-        return all(min(px[x, y]) >= lim for x in range(0, w, STEP))
+    def row(y):
+        v = [min(px[x, y]) for x in range(0, w, STEP)]
+        return sum(v) / len(v)
 
-    def col_at(x, lim):
-        return all(min(px[x, y]) >= lim for y in range(0, h, STEP))
+    def col(x):
+        v = [min(px[x, y]) for y in range(0, h, STEP)]
+        return sum(v) / len(v)
 
-    def run(fn, size, limit, cap=None):
+    def run(at, ref, size):
         n = 0
-        while n < size // 2 and (cap is None or n < cap) and fn(n, limit):
+        while n < MAX and n < size // 4 and at(n) > ref(n) + JUMP:
             n += 1
         return n
 
-    top    = run(lambda n, l: row_at(n, l),         h, WHITE)
-    bottom = run(lambda n, l: row_at(h - 1 - n, l), h, WHITE)
-    left   = run(lambda n, l: col_at(n, l),         w, WHITE)
-    right  = run(lambda n, l: col_at(w - 1 - n, l), w, WHITE)
-
-    top    += run(lambda n, l: row_at(top + n, l),            h, SOFT, MAX_SOFT)
-    bottom += run(lambda n, l: row_at(h - 1 - bottom - n, l), h, SOFT, MAX_SOFT)
-    left   += run(lambda n, l: col_at(left + n, l),           w, SOFT, MAX_SOFT)
-    right  += run(lambda n, l: col_at(w - 1 - right - n, l),  w, SOFT, MAX_SOFT)
-    return top, bottom, left, right
+    t = run(lambda n: row(n),         lambda n: row(n + DEPTH),         h)
+    b = run(lambda n: row(h - 1 - n), lambda n: row(h - 1 - n - DEPTH), h)
+    l = run(lambda n: col(n),         lambda n: col(n + DEPTH),         w)
+    r = run(lambda n: col(w - 1 - n), lambda n: col(w - 1 - n - DEPTH), w)
+    return t, b, l, r
 
 
 def main(slugs):
-    touched = seen = 0
+    seen = cut = 0
     for slug in slugs:
         d = os.path.join(ROOT, slug, 'img')
         if not os.path.isdir(d):
@@ -78,24 +64,22 @@ def main(slugs):
         for f in sorted(os.listdir(d)):
             if not f.endswith('.webp'):
                 continue
-            path = os.path.join(d, f)
+            p = os.path.join(d, f)
             seen += 1
             try:
-                im = Image.open(path).convert('RGB')
-                t, b, l, r = border(im)
-                # Кромку снимаем даже когда сплошного поля не было:
-                # один светлый пиксель по краю виден на тёмном фоне.
+                im = Image.open(p).convert('RGB')
+                t, b, l, r = trim(im)
                 if max(t, b, l, r) < 1:
                     continue
                 w, h = im.size
-                im.crop((l, t, w - r, h - b)).save(path, 'WEBP', quality=82, method=5)
+                im.crop((l, t, w - r, h - b)).save(p, 'WEBP', quality=82, method=5)
                 n += 1
-                touched += 1
+                cut += 1
             except Exception as e:
                 print('  ! %s: %s' % (f, e))
         if n:
             print('  %-22s обрезано %d' % (slug, n))
-    print('\nпросмотрено %d, обрезано %d' % (seen, touched))
+    print('\nпросмотрено %d, обрезано %d' % (seen, cut))
 
 
 if __name__ == '__main__':

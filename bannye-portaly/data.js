@@ -113,8 +113,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-v-predbannike-tyulpan-s-individualnym-panno-ruchnoj-rospisi/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Банный портал Сувенир",
@@ -133,21 +132,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_yarkaya-oblitsovka-bannogo-portala-izraztsami-suvenir-5426/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "83 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,2 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Банный портал Усадьба",
@@ -166,8 +151,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_keramicheskij-portal-dlya-bannoj-pechi-s-izraztsami-v-medovoj-glazuri-iz-kollektsii-usadba-980/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Банный портал Пастораль",
@@ -186,8 +170,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_belyj-izraztsovyj-portal-dlya-bannoj-pechi-iz-kollektsii-pastoral-2382/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Банный портал Камея",
@@ -206,8 +189,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-kollektsii-russkie-izraztsy/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Банный портал Прованс",
@@ -225,8 +207,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-provans-dlya-portala-bannoj-pechi/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Банный портал Арт Нуво",
@@ -246,21 +227,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_izraztsovyj-bannyj-portal-art-nuvo-dlya-pechi-kamenki-5402/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "45 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "0,9 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Банный портал Арт Нуво, лазурная роспись",
@@ -279,21 +246,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-izraztsami-art-nuvo-v-lazurnoj-rospisi-5480/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "46 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,0 м",
-     "l": "ширина"
-    },
-    {
-     "v": "1,4 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Банный портал Дорф",
@@ -312,8 +265,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/portaly-dlya-bannyh-pechej-v-interere/cd_oblitsovka-bannoj-pechi-legenda-russkij-par-24-240-s-40-izraztsami-dorf-5623/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   }
  ],
  "filters": [
@@ -399,7 +351,7 @@ window.LP = {
    "Портал превращает печь в главный элемент интерьера бани.",
    "Изразец держит тепло часами после протопки, гарантия 50 лет."
   ],
-  "media": "img/03-3.webp"
+  "media": "img/03.webp"
  },
  "steps": [
   {

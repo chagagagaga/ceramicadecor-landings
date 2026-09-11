@@ -331,14 +331,6 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .card__desc { margin-top: .5rem; font-size: .93rem; color: var(--text-muted); line-height: 1.55; }
 /* Характеристики объекта: моноширинные цифры, чтобы читались как замер,
    а не как рекламная строка. */
-/* Плитки величин: auto-fit, поэтому две тянутся на всю ширину и выглядят
-   так же намеренно, как три. Высота фиксирована — карточки в ряду
-   остаются одной высоты независимо от полноты данных. */
-.card__tiles { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--seam-w); margin-top: .9rem; background: var(--seam); }
-.tile { background: var(--bg-accent); padding: .6rem .7rem; min-height: 58px; display: flex; flex-direction: column; justify-content: center; }
-.tile b { font-family: var(--font-heading); font-weight: 500; font-size: 1.05rem; letter-spacing: .01em; white-space: nowrap; }
-.tile span { font-size: .64rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-top: .1rem; }
-
 /* Две цены разделены швом в 2 px. Шов прямо говорит: это два разных
    объёма работ, а не скидка. Сверху облицовка приглушённая — входной
    порог; снизу «под ключ» медью — цена решения, за которую покупают. */
@@ -379,8 +371,8 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .why__card--good li::before { content: '✓'; color: var(--green); }
 /* Кадр показываем целиком: жёсткая пропорция 16:10 срезала печи по грудь,
    а изделие в полный рост — это и есть аргумент блока. */
-.why__media { grid-column: 1 / -1; overflow: hidden; background: var(--seam); }
-.why__media img { width: 100%; height: auto; display: block; }
+.why__media { grid-column: 1 / -1; aspect-ratio: 5 / 2; overflow: hidden; background: var(--seam); }
+.why__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ── Этапы ───────────────────────────────────────────────────────────────── */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--seam-w); background: var(--seam); }

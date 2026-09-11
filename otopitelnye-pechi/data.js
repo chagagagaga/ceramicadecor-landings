@@ -111,8 +111,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-russkie-pechi-v-interere/cd_komplekt-izraztsovoj-plitki-ptitsy-dlya-otdelki-pechi-dekorativnaya-palitra-individualnaya/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Отопительная печь Прованс",
@@ -130,8 +129,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-s-rospisyu-provans/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Отопительная печь Арт Нуво, лазурная роспись",
@@ -150,21 +148,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-lvzurnoj-rospisi/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "218 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,8 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Отопительная печь Усадьба",
@@ -184,17 +168,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-kamina-v-kollektsii-ptichki-s-pechnoj-dvertsej-5393/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "1,3 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,3 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Отопительная печь Универсал",
@@ -211,17 +185,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-otopitelnoj-pechi-v-kollektsii-universal-i-topochnoj-dverkoj-vezuvij-9525/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "1,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,1 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Отопительная печь Птички",
@@ -239,21 +203,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-kaminopech-v-izraztsah-ptichki-palitra-rospisi-lesnaya/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "193 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,1 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Отопительная печь Арт Нуво",
@@ -270,8 +220,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_izraztsovaya-pech-art-nuvo-v-krasnom-tsvete/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": []
+   "kind": ""
   },
   {
    "title": "Отопительная печь Модерн",
@@ -289,21 +238,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-izraztsami-modern/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "103 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "0,9 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,6 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Отопительная печь Дорф",
@@ -321,21 +256,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_oblitsovka-pechi-s-kaminnoj-dverkoj-svt-409-kollektsiya-dorf/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "349 кг",
-     "l": "облицовка"
-    },
-    {
-     "v": "1,2 м",
-     "l": "ширина"
-    },
-    {
-     "v": "2,2 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   },
   {
    "title": "Отопительная печь Неаполь",
@@ -353,17 +274,7 @@ window.LP = {
    "url": "https://ceramicadecor.ru/nashi-raboti/izraztsovye-pechi-v-interere/cd_otopitelnaya-pech-v-belom-tsvete-v-gladkoj-plitke-7500/",
    "size": "",
    "surface": "",
-   "kind": "",
-   "tiles": [
-    {
-     "v": "1,4 м",
-     "l": "ширина"
-    },
-    {
-     "v": "3,1 м",
-     "l": "высота"
-    }
-   ]
+   "kind": ""
   }
  ],
  "filters": [
@@ -457,7 +368,7 @@ window.LP = {
    "Печь на изразцах служит десятилетиями, отдельный элемент меняется точечно.",
    "Становится центром интерьера, а не бытовым прибором в углу."
   ],
-  "media": "img/03-3.webp"
+  "media": "img/01.webp"
  },
  "steps": [
   {
