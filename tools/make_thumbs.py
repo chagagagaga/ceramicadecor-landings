@@ -21,7 +21,7 @@ import os, re, sys
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SIDE = 700          # длинная сторона превью, px
+SIDE = 700          # длинная сторона превью, px (плюс пиксель на срез блика)
 QUALITY = 78
 
 SLUGS = ['barbekyu-kompleksy', 'kaminy', 'izraztsy', 'pechi-kaminy',
@@ -50,7 +50,15 @@ def main(slugs):
                 continue
             try:
                 im = Image.open(src).convert('RGB')
-                im.thumbnail((SIDE, SIDE), Image.LANCZOS)
+                # Лишний пиксель по периметру и срез после уменьшения.
+                # Иначе на границе кадра ланцош выбивает светлую строку:
+                # у крайних точек нет соседей снаружи, ядро фильтра берёт
+                # их «отражением», и по краю остаётся блик в один пиксель.
+                # В карточке фото лежит на затемнённой подложке, и этот
+                # блик читается как тонкая белая линия вдоль края.
+                im.thumbnail((SIDE + 2, SIDE + 2), Image.LANCZOS)
+                w, h = im.size
+                im = im.crop((1, 1, w - 1, h - 1))
                 im.save(dst, 'WEBP', quality=QUALITY, method=5)
                 saved += 1
                 n += 1

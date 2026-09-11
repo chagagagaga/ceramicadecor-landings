@@ -145,7 +145,8 @@ window.LP = {
     "img/02-2.webp",
     "img/02-3.webp",
     "img/02-4.webp",
-    "img/02-5.webp"
+    "img/02-5.webp",
+    "img/02-6.webp"
    ],
    "url": "https://ceramicadecor.ru/nashi-raboti/gotovye-izraztsovye-barbekyu-kompleksy/cd_oblitsovka-malenkogo-pechnogo-kompleksa-s-mangalom-6261/",
    "size": "",
