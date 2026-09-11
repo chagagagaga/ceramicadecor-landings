@@ -44,6 +44,18 @@ BRAND = {
     "metrikaId": 0,          # ⚠️ заполнить: номер счётчика Метрики
 }
 
+# Шоурумы — со страницы контактов ceramicadecor.ru. Живой адрес, куда
+# можно приехать и потрогать изразец, снимает больше сомнений, чем любой
+# текст про ручную работу.
+SHOWROOMS = [
+    {"city": "Москва", "phone": "+7 (495) 229-30-46",
+     "address": "ул. Свободы, 99к1", "metro": "м. Планерная, 10 мин пешком",
+     "hours": "Пн–Вс 10:00–19:00"},
+    {"city": "Санкт-Петербург", "phone": "+7 (812) 504-80-32",
+     "address": "пр. Энгельса, 60", "metro": "м. Удельная, 7 мин пешком",
+     "hours": "Пн–Пт 10:00–19:00, выходные по записи"},
+]
+
 STATS = [
     {"v": "14 лет", "l": "на рынке"},
     {"v": ">3000", "l": "выполненных объектов"},
@@ -538,9 +550,9 @@ INDEX_TPL = """<!DOCTYPE html>
 <meta property="og:description" content="@SEO@">
 <meta property="og:image" content="https://chagagagaga.github.io/ceramicadecor-landings/@SLUG@/@HERO@">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="@HERO@" fetchpriority="high">
-<link rel="stylesheet" href="../assets/css/system.css?v=3">
-<link rel="stylesheet" href="../assets/css/landing.css?v=3">
+<link rel="preload" as="image" href="@HERO@" imagesrcset="@HERO_SET@" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="../assets/css/system.css?v=4">
+<link rel="stylesheet" href="../assets/css/landing.css?v=4">
 </head>
 <body>
 
@@ -586,7 +598,7 @@ INDEX_TPL = """<!DOCTYPE html>
 <main id="top">
 
 <section class="hero" id="top-hero">
-  <div class="hero__bg"><img src="@HERO@" alt="" fetchpriority="high" width="1400" height="1050"></div>
+  <div class="hero__bg"><img src="@HERO@" srcset="@HERO_SET@" sizes="100vw" alt="" fetchpriority="high" width="1400" height="1050"></div>
   <div class="container hero__inner">
     <div>
       <span class="hero__badge"><i></i>@BADGE@</span>
@@ -680,8 +692,17 @@ INDEX_TPL = """<!DOCTYPE html>
       <input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="field"><span class="field__label">Как к вам обращаться</span>
         <input class="input" type="text" name="name" placeholder="Имя" required></label>
-      <label class="field"><span class="field__label">Телефон или WhatsApp</span>
+      <label class="field"><span class="field__label">Ваш номер телефона</span>
         <input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>
+      <div class="field"><span class="field__label">Куда прислать расчёт</span>
+        <input type="hidden" name="channel" data-chan-input value="max">
+        <div class="chans" data-chans>
+          <button type="button" class="chan" data-chan="call">Звонок</button>
+          <button type="button" class="chan is-on" data-chan="max">MAX</button>
+          <button type="button" class="chan" data-chan="telegram">Telegram</button>
+          <button type="button" class="chan" data-chan="whatsapp">WhatsApp</button>
+        </div>
+      </div>
       <button type="submit" class="btn btn--primary" style="width:100%">Получить 3D-проект и смету</button>
       <p class="policy">Нажимая кнопку, вы соглашаетесь с <a href="../policy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>. Спама не будет.</p>
       <div class="form-status" role="status" aria-live="polite"></div>
@@ -746,6 +767,10 @@ INDEX_TPL = """<!DOCTYPE html>
     </div>
     <nav><h4>Направления</h4>@FOOTER_LINKS@</nav>
     <div>
+      <h4>Шоурумы</h4>
+      @SHOWROOMS@
+    </div>
+    <div>
       <h4>Контакты</h4>
       <nav>
         <a data-tel data-phone-text>@PHONE@</a>
@@ -786,8 +811,8 @@ INDEX_TPL = """<!DOCTYPE html>
   <button type="button" class="is-primary" data-lead data-src="mobilebar">Рассчитать</button>
 </div>
 
-<script src="data.js?v=2"></script>
-<script src="../assets/js/engine.js?v=2"></script>
+<script src="data.js?v=3"></script>
+<script src="../assets/js/engine.js?v=3"></script>
 </body>
 </html>
 """
@@ -1547,7 +1572,14 @@ def build():
                 .replace('@LOGO_SVG@', logo_svg)
                 
                 .replace('@TITLE@', P["title"]).replace('@SEO@', P["seo"])
-                .replace('@SLUG@', slug).replace('@HERO@', hero)
+                .replace('@SLUG@', slug)
+                # Кадр первого экрана раскинут на всю ширину. На телефоне
+                # это 390 CSS-пикселей, и полный кадр в 1600 px там лишний
+                # вес на самом важном для скорости месте.
+                .replace('@HERO_SET@', ', '.join(
+                    '%s %dw' % (hero.replace('img/', 'img/%s/' % t), w)
+                    for t, w in (('s', 700), ('m', 1100)) ) + ', %s 1600w' % hero)
+                .replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
                 .replace('@WORKS_TITLE@', P.get("worksTitle", "Реализованные проекты"))
                 .replace('@WORKS_LEAD@', P.get("worksLead",
@@ -1557,6 +1589,13 @@ def build():
                 .replace('@WHY_TITLE@', no_orphan(WHY_TITLE[slug]))
                 .replace('@COMMENT_PLACEHOLDER@', COMMENT_PH[slug])
                 .replace('@FOOTER_LINKS@', links)
+                .replace('@SHOWROOMS@', ''.join(
+                    '<div class="showroom"><b>%s</b>'
+                    '<a href="tel:%s">%s</a>'
+                    '<span>%s</span><span>%s</span><span>%s</span></div>'
+                    % (x['city'], re.sub(r'\D', '', x['phone']), x['phone'],
+                       x['address'], x['metro'], x['hours'])
+                    for x in SHOWROOMS))
                 .replace('@PHONE@', BRAND["phone"]).replace('@WORKTIME@', BRAND["worktime"])
                 .replace('@ADDRESS@', BRAND["address"]).replace('@SITE@', BRAND["site"]))
         # каждая вставка знака получает свой id градиента

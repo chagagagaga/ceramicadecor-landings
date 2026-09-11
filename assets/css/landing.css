@@ -78,8 +78,21 @@
 }
 .msgdock__btn:hover span, .msgdock__btn:focus-visible span { opacity: 1; transform: none; }
 
-/* Иконка MAX в шапке — видна только на телефоне, рядом с «Рассчитать» */
-.header__max { display: none; }
+/* Знак MAX в шапке — слева от «Рассчитать», на всех экранах.
+   Подпись остаётся в потоке: абсолютом она обрезалась нижним краем
+   шапки. Блок сдвинут вниз на половину её высоты, чтобы сам знак
+   совпал по центру с кнопкой, а не встал выше неё. */
+.header__max {
+  position: relative; top: 3px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; flex: none; width: 44px;
+  margin-left: .9rem; padding: 0; background: none;
+}
+.header__max svg { width: 28px; height: 28px; display: block; }
+.header__max i {
+  font-style: normal; font-size: .5rem; font-weight: 700; letter-spacing: .12em;
+  color: var(--text-muted); line-height: 1; text-align: center;
+}
 
 /* Липкая шапка накрывала верх блока, к которому ведёт ссылка. Отступ
    задаём через scroll-margin-top: ручной расчёт спорит с нативной
@@ -483,7 +496,16 @@ textarea.input { resize: vertical; min-height: 84px; }
 .contacts__msg { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; }
 
 .footer { border-top: 1px solid var(--border); padding-block: 3rem 1.5rem; }
-.footer__inner { display: grid; grid-template-columns: minmax(0,1.5fr) repeat(2, minmax(0,1fr)); gap: 2rem; }
+.footer__inner { display: grid; grid-template-columns: minmax(0,1.4fr) repeat(3, minmax(0,1fr)); gap: 2rem; }
+/* Адрес, куда можно приехать и потрогать изразец, снимает больше
+   сомнений, чем абзац про ручную работу. Поэтому в подвале — не строкой,
+   а блоком: город, телефон, улица, метро, часы. */
+.showroom { display: flex; flex-direction: column; gap: .3rem; font-size: .92rem; color: var(--text-muted); }
+.showroom > * { line-height: 1.4; }
+.showroom + .showroom { margin-top: 1.1rem; }
+.showroom b { color: var(--white); font-weight: 500; }
+.showroom a { color: var(--text-muted); }
+.showroom a:hover { color: var(--amber); }
 .footer p, .footer a { font-size: .92rem; color: var(--text-muted); }
 .footer h4 { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--white); margin-bottom: 1rem; }
 .footer nav { display: flex; flex-direction: column; gap: .5rem; }
@@ -502,9 +524,11 @@ textarea.input { resize: vertical; min-height: 84px; }
 .modal__summary-sum i { font-style: normal; white-space: nowrap; }
 .modal__summary ul { margin-top: .6rem; padding-top: .6rem; border-top: 1px solid var(--border); display: grid; gap: .25rem; }
 .modal__summary li { font-size: .76rem; color: var(--text-muted); }
-.modal__channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: .4rem; margin-bottom: 1.1rem; }
-.modal__chan { padding: .6em .4em; border: 1px solid var(--border); background: transparent; color: var(--white); font-size: .82rem; cursor: pointer; transition: all var(--transition); }
-.modal__chan.is-on { background: var(--primary); border-color: var(--primary); }
+.modal__channels, .chans { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: .4rem; }
+.modal__channels { margin-bottom: 1.1rem; }
+.chans { margin-top: .35rem; }
+.modal__chan, .chan { min-height: 40px; padding: .6em .4em; border: 1px solid var(--border); background: transparent; color: var(--white); font-size: .82rem; cursor: pointer; transition: all var(--transition); }
+.modal__chan.is-on, .chan.is-on { background: var(--primary); border-color: var(--primary); }
 .chips-timing { display: flex; flex-wrap: wrap; gap: .4rem; }
 .modal__success { text-align: center; padding: 1rem 0; }
 .modal__success b { display: block; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 300; color: var(--green); margin-bottom: .8rem; }
@@ -577,20 +601,6 @@ textarea.input { resize: vertical; min-height: 84px; }
      Фон не нужен — у самого знака он свой, фирменный. Блок центрируется
      по высоте кнопки «Рассчитать», иначе подпись тянет его вверх. */
   .header__right { align-items: center; gap: .7rem; }
-  /* Подпись остаётся в потоке — абсолютом она обрезалась нижним краем
-     шапки. Блок сдвинут вниз на половину её высоты, чтобы сам знак
-     совпал по центру с кнопкой «Рассчитать», а не встал выше неё. */
-  .header__max {
-    position: relative; top: 3px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 2px; flex: none; width: 44px;
-    margin-left: .9rem; padding: 0; background: none;
-  }
-  .header__max svg { width: 28px; height: 28px; display: block; }
-  .header__max i {
-    font-style: normal; font-size: .5rem; font-weight: 700; letter-spacing: .12em;
-    color: var(--text-muted); line-height: 1; text-align: center;
-  }
   /* Плавающие кружки перекрывали бы нижнюю панель */
   .msgdock { display: none !important; }
   /* Модульные сетки схлопываются в одну колонку: на телефоне четыре

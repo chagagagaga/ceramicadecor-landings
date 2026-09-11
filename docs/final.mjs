@@ -41,8 +41,14 @@ for (const slug of SLUGS) {
   const anchors = [...d.querySelectorAll('a[href^="#"]')].map(a=>a.getAttribute('href')).filter(h=>h!=='#');
   const brokenA = anchors.filter(h=>{try{return !d.querySelector(h)}catch{return true}});
   t(!brokenA.length, 'битые якоря: '+brokenA.join(', '));
-  const empty = [...d.querySelectorAll('a')].filter(a=>!a.hidden && !a.getAttribute('href') && !a.dataset.tel);
+  // Кнопка мессенджера без адреса — осознанная заглушка: канал показываем,
+  // пока не прислали ссылку. Она помечена aria-disabled и кликом ничего
+  // не делает. Остальные ссылки без href — ошибка.
+  const pending = [...d.querySelectorAll('a[aria-disabled="true"]')];
+  const empty = [...d.querySelectorAll('a')].filter(a=>!a.hidden && !a.getAttribute('href')
+    && !a.dataset.tel && a.getAttribute('aria-disabled')!=='true');
   t(!empty.length, 'ссылки без адреса: '+empty.length);
+  w(!pending.length, 'каналы без ссылки (кнопка видна, клик пустой): '+pending.length);
   const ext = [...d.querySelectorAll('a[href^="http"]')].filter(a=>!a.getAttribute('rel')?.includes('noopener'));
   w(!ext.length, 'внешние ссылки без rel=noopener: '+ext.length);
 

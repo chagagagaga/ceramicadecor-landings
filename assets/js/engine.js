@@ -28,15 +28,24 @@
   var QS = new URLSearchParams(location.search || '');
 
   /* Превью для сетки. Полный кадр в 1600 px нужен только лайтбоксу, который
-     показывает фото во всю высоту экрана. Карточке хватает 700 px, и весит
-     она вшестеро меньше: без этого первый экран каталога тянул 2,7 МБ.
-     Уменьшенная копия лежит рядом, в подпапке s/ — путь получается заменой,
-     список превью в данных держать не нужно. Собираются они скриптом
-     tools/make_thumbs.py. */
-  function thumb(src) {
+     показывает фото во всю высоту экрана. Копии поменьше лежат рядом,
+     в подпапках s/ (700 px), m/ (1100 px) и b/ (240 px) — путь получается
+     заменой, список превью в данных держать не нужно. Собираются они
+     скриптом tools/make_thumbs.py, там же расписано, зачем каждый уровень. */
+  function tier(src, t) {
     // Путь бывает и своим («img/01.webp»), и чужим («../kaminy/img/03.webp»),
     // поэтому цепляемся за начало строки или за косую черту перед папкой.
-    return String(src || '').replace(/(^|\/)img\//, '$1img/s/');
+    return String(src || '').replace(/(^|\/)img\//, '$1img/' + t + '/');
+  }
+  function thumb(src) { return tier(src, 's'); }
+  /* Плитка каталога занимает до 426 CSS-пикселей: на ретине это 852 точки,
+     на телефоне с DPR 3 — 1065. Отдаём браузеру оба размера, он возьмёт
+     нужный — на обычном экране страница не тяжелеет. */
+  var CARD_SIZES = P.catalogStyle === 'product'
+    ? '(min-width: 1024px) 320px, (min-width: 700px) 25vw, 50vw'
+    : '(min-width: 1024px) 430px, (min-width: 700px) 50vw, 100vw';
+  function cardSet(src) {
+    return esc(thumb(src)) + ' 700w, ' + esc(tier(src, 'm')) + ' 1100w';
   }
 
   /* ══ 1. АТРИБУЦИЯ ═══════════════════════════════════════════════════════
@@ -349,7 +358,8 @@
     if (!root || !P.quiz) return null;
     var Q = P.quiz;
     var state = {};
-    var modal = null, channel = 'whatsapp';
+    // MAX — основной канал связи компании, с него и начинаем.
+    var modal = null, channel = 'max';
     // Какие раскрывашки человек открыл сам: при перерисовке они должны
     // остаться открытыми, а закрытые — закрытыми.
     var opened = {};
@@ -583,7 +593,7 @@
           '</div>' +
           '<form data-lead-source="calc" novalidate>' +
             '<input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-            '<input type="hidden" name="channel" data-chan-input value="whatsapp">' +
+            '<input type="hidden" name="channel" data-chan-input value="max">' +
             '<input type="hidden" name="timing" data-timing-input value="">' +
             '<label class="field"><span class="field__label">Имя</span><input class="input" type="text" name="name" placeholder="Как к вам обращаться" required></label>' +
             '<label class="field"><span class="field__label">Телефон</span><input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>' +
@@ -697,8 +707,9 @@
           '<button type="button" class="card__photo" data-gal="' + idx + '" data-start="0"' +
             ' aria-label="' + (n > 1 ? 'Открыть галерею: ' : 'Открыть фото: ') + esc(c.title) + '">' +
             (c.img
-              ? '<img class="card__bg" src="' + esc(thumb(c.img)) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
-                '<img class="card__pic" src="' + esc(thumb(c.img)) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
+              ? '<img class="card__bg" src="' + esc(tier(c.img, 'b')) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
+                '<img class="card__pic" src="' + esc(thumb(c.img)) + '" srcset="' + cardSet(c.img) + '" sizes="' + CARD_SIZES + '"' +
+                ' alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
               : '') +
           '</button>' +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
@@ -767,9 +778,9 @@
       if (n < 2) return;
       var i = (((+shot.dataset.start || 0) + (+b.dataset.step)) % n + n) % n;
       shot.dataset.start = i;
-      var src = thumb(it.photos[i]);
-      var pic = $('.card__pic', art); if (pic) pic.src = src;
-      var bg = $('.card__bg', art); if (bg) bg.src = src;
+      var pic = $('.card__pic', art);
+      if (pic) { pic.srcset = cardSet(it.photos[i]); pic.src = thumb(it.photos[i]); }
+      var bg = $('.card__bg', art); if (bg) bg.src = tier(it.photos[i], 'b');
     });
 
     draw();
@@ -831,7 +842,7 @@
           (many
             ? '<div class="pcard__thumbs">' + set.map(function (src, i) {
                 return '<button type="button" class="pcard__thumb" data-i="' + i + '" aria-label="Кадр ' + (i + 1) + '">' +
-                  '<img src="' + esc(thumb(src)) + '" alt="" loading="lazy" decoding="async" width="120" height="90"></button>';
+                  '<img src="' + esc(tier(src, 'b')) + '" alt="" loading="lazy" decoding="async" width="120" height="90"></button>';
               }).join('') + '</div>'
             : '') +
         '</div>' +
@@ -1015,7 +1026,11 @@
         // Кадр вынесен под обе колонки. Внутри правой карточки он оставлял
         // левую наполовину пустой, и эта пустота читалась как картинка,
         // которая не загрузилась.
-        (P.why.media ? '<div class="why__media"><img src="' + esc(P.why.media) + '" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>' : '');
+        (P.why.media
+          ? '<div class="why__media"><img src="' + esc(P.why.media) + '"' +
+            ' srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' + esc(P.why.media) + ' 1600w"' +
+            ' sizes="(min-width: 1024px) 1280px, 100vw" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>'
+          : '');
 
     // Галерея с лайтбоксом
     var gal = $('[data-gallery]');
@@ -1026,8 +1041,15 @@
     var galExternal = P.gallery && P.gallery.length && /^\.\./.test(P.gallery[0]);
     if (gal && P.catalogStyle === 'product' && !galExternal) gal.classList.add('gallery--product');
     if (gal && P.gallery && P.gallery.length) {
+      // Плитка галереи занимает до 206 CSS-пикселей: на обычном экране
+      // хватает лёгкого уровня, на ретине — превью карточки. Раньше сюда
+      // уходило восемнадцать кадров по 700 px — почти мегабайт на блок,
+      // который человек чаще всего пролистывает.
+      var GAL_SIZES = '(min-width: 1024px) 210px, (min-width: 700px) 25vw, 33vw';
       gal.innerHTML = P.gallery.map(function (src, i) {
-        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '"><img src="' + esc(thumb(src)) + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
+        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '">' +
+          '<img src="' + esc(tier(src, 'g')) + '" srcset="' + esc(tier(src, 'b')) + ' 240w, ' + esc(tier(src, 'g')) + ' 460w, ' + esc(thumb(src)) + ' 700w"' +
+          ' sizes="' + GAL_SIZES + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
       }).join('');
       var lb = null, cur = 0;
       // Набор кадров и подпись задаются при открытии: из общей галереи
@@ -1089,14 +1111,23 @@
   /* ══ 6. КОНТАКТЫ, ШАПКА, CTA ════════════════════════════════════════════ */
   (function chrome() {
     var b = P.brand;
+    /* Кнопку канала показываем всегда, даже пока не прислали адрес.
+       Раньше пустой адрес её прятал, и MAX пропадал из шапки, подвала,
+       дока и нижней панели — человек не видел, что канал вообще есть.
+       Без адреса кнопка просто ничего не делает: это честнее, чем увести
+       в несуществующий чат, и лучше, чем скрыть канал целиком. */
     function wire(sel, url) {
       $$(sel).forEach(function (a) {
+        a.hidden = false;
         if (url) {
-          a.href = url; a.hidden = false;
+          a.href = url;
           a.rel = 'noopener noreferrer';
           if (!a.target) a.target = '_blank';
+          a.removeAttribute('aria-disabled');
         } else {
-          a.hidden = true; a.removeAttribute('href');
+          a.removeAttribute('href');
+          a.removeAttribute('target');
+          a.setAttribute('aria-disabled', 'true');
         }
       });
     }
@@ -1104,28 +1135,23 @@
     wire('[data-wa]', b.whatsapp ? 'https://wa.me/' + b.whatsapp + '?text=' + txt : '');
     wire('[data-tg]', b.telegram ? 'https://t.me/' + b.telegram : '');
     wire('[data-max]', b.maxUrl || '');
-    // Плавающие кружки в углу: показываем только если есть хоть одна
-    // ссылка. Пустой кружок хуже, чем его отсутствие.
+    // Плавающие кружки в углу: MAX, Telegram, WhatsApp — все три.
     (function msgDock() {
       var dock = $('[data-msgdock]');
-      if (dock) dock.hidden = !(b.maxUrl || b.telegram || b.whatsapp);
+      if (dock) dock.hidden = false;
     })();
 
     // В нижней панели один слот под мессенджер: MAX в приоритете,
     // WhatsApp — запасной. Обе сразу не помещаются рядом с телефоном
     // и кнопкой расчёта.
     (function barMessenger() {
-      // Слот один: показываем первый заполненный по приоритету MAX →
-      // Telegram → WhatsApp. Три кнопки подряд не помещаются рядом
-      // с телефоном и расчётом.
-      var slots = [['[data-max]', b.maxUrl], ['[data-tg]', b.telegram], ['[data-wa]', b.whatsapp]];
-      var taken = false;
-      slots.forEach(function (pair) {
-        var el = document.querySelector('.mobilebar ' + pair[0]);
-        if (!el) return;
-        var show = !taken && !!pair[1];
-        el.hidden = !show;
-        if (show) taken = true;
+      // Слот один — три кнопки подряд не помещаются рядом с телефоном
+      // и расчётом. Занимает его MAX: это основной канал связи, и он не
+      // должен уступать место запасным из-за того, что адрес ещё не
+      // прислали.
+      ['[data-max]', '[data-tg]', '[data-wa]'].forEach(function (sel, i) {
+        var el = document.querySelector('.mobilebar ' + sel);
+        if (el) el.hidden = i !== 0;
       });
     })();
 
@@ -1182,6 +1208,20 @@
     });
 
     $$('form[data-lead-source]').forEach(Lead.bind);
+
+    // Выбор канала в обычной форме — тот же, что в модалке расчёта.
+    // Значение уходит в заявку скрытым полем, отдельной логики не нужно.
+    $$('[data-chans]').forEach(function (box) {
+      box.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-chan]');
+        if (!b) return;
+        $$('[data-chan]', box).forEach(function (x) { x.classList.remove('is-on'); });
+        b.classList.add('is-on');
+        var input = $('[data-chan-input]', box.closest('form') || document);
+        if (input) input.value = b.dataset.chan;
+        goal('channel_pick', { channel: b.dataset.chan });
+      });
+    });
 
     // микроконверсия: первое касание конфигуратора
     var calcBox = $('[data-calc]'), fired = false;
