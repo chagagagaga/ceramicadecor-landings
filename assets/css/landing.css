@@ -13,6 +13,7 @@
 .section__head { max-width: 780px; margin-bottom: clamp(2rem, 1.4rem + 2.4vw, 3.5rem); }
 .section__head--center { margin-inline: auto; text-align: center; }
 .section__title { margin-top: .8rem; }
+.section__sub { margin-top: .8rem; font-size: 1.02rem; color: var(--text-muted); line-height: 1.6; }
 /* Лид набирается Golos 500: он читаемый, а не декоративный */
 .section__lead { margin-top: 1.1rem; color: var(--text-muted); font-size: 1.16rem; font-weight: 500; line-height: 1.5; }
 .section__lead b { color: var(--white); font-weight: 500; }
@@ -306,10 +307,11 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 /* Окно карточки квадратное: печи и камины вертикальные, а комплексы
    горизонтальные — квадрат ближе всего к обеим группам. Кадр вписан
    целиком, поля заполняет его же размытая копия. */
-.card__media { position: relative; display: block; width: 100%; margin: 0; padding: 0; border: 0; aspect-ratio: 1 / 1; overflow: hidden; background: var(--bg-accent); cursor: pointer; font: inherit; }
+.card__media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--bg-accent); }
+.card__photo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; background: none; cursor: pointer; font: inherit; }
 .card__bg { position: absolute; inset: -8%; width: 116%; height: 116%; object-fit: cover; filter: blur(18px) saturate(.75) brightness(.55); }
 .card__pic { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-.card__media[disabled] { cursor: default; }
+.card__photo[disabled] { cursor: default; }
 .card__pic { transition: transform .6s cubic-bezier(.2,.7,.3,1); }
 .card:hover .card__pic { transform: scale(1.03); }
 /* Плашка коллекции врезана в левый нижний угол вплотную к краям — она
@@ -325,6 +327,24 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
   font-size: .68rem; font-weight: 600; letter-spacing: .12em;
   line-height: 1.35; text-transform: uppercase; color: var(--text-muted);
 }
+/* Стрелки листания кадров. Небольшие и приглушённые: кадр в плитке
+   главнее навигации по нему. На мыши проявляются при наведении, на
+   тач-устройствах видны всегда — там наведения нет. */
+.card__nav {
+  position: absolute; top: 50%; z-index: 3; transform: translateY(-50%);
+  width: 34px; height: 34px; display: grid; place-items: center;
+  border: 0; padding: 0 0 .15em; cursor: pointer;
+  background: rgba(10, 8, 6, .55); color: #F2EBE2;
+  font: 400 1.5rem/1 var(--font-heading, inherit);
+  opacity: 0; transition: opacity var(--transition), background var(--transition);
+}
+.card__nav--prev { left: 0; }
+.card__nav--next { right: 0; }
+.card:hover .card__nav, .card:focus-within .card__nav { opacity: 1; }
+.card__nav:hover { background: var(--primary); }
+.card__nav:focus-visible { opacity: 1; outline: 2px solid var(--primary); outline-offset: -2px; }
+@media (hover: none) { .card__nav { opacity: .85; } }
+
 .card__body { padding: 1.15rem 1.2rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
 .card__collection { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
 .card__name { font-size: 1.4rem; margin-top: .1rem; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; letter-spacing: .01em; line-height: 1.12; }
@@ -332,8 +352,9 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 /* Характеристики объекта: моноширинные цифры, чтобы читались как замер,
    а не как рекламная строка. */
 /* Две цены разделены швом в 2 px. Шов прямо говорит: это два разных
-   объёма работ, а не скидка. Сверху облицовка приглушённая — входной
-   порог; снизу «под ключ» медью — цена решения, за которую покупают. */
+   объёма работ, а не скидка. Сверху «под ключ» приглушённое — полная
+   сумма работ; снизу облицовка медью: с неё начинается разговор, и
+   акцент честнее держать на меньшей цифре. */
 .card__prices { margin-top: auto; padding-top: 1rem; }
 .card__p1, .card__p2 { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
 .card__p2 { font-size: .95rem; color: var(--text-muted); padding-bottom: .55rem; }
@@ -377,7 +398,14 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 /* ── Этапы ───────────────────────────────────────────────────────────────── */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--seam-w); background: var(--seam); }
 .steps > * { min-width: 0; }
-.step { padding: 1.4rem; border: 0; background: var(--bg-lighter); display: flex; flex-direction: column; gap: .7rem; }
+.step { border: 0; background: var(--bg-lighter); display: flex; flex-direction: column; }
+/* Кадр производства даёт шагу доказательство: видно руку, глазурь, печь.
+   Окно 3:2 одинаковое у всех четырёх — исходники с сайта разной
+   пропорции, и без него ряд ступенькой. */
+.step__media { aspect-ratio: 3 / 2; overflow: hidden; background: var(--bg-accent); }
+.step__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.3,1); }
+.step:hover .step__media img { transform: scale(1.04); }
+.step__text { padding: 1.3rem 1.4rem 1.4rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
 .step__n { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600; letter-spacing: .12em; color: var(--primary); line-height: 1; }
 .step h3 { font-size: 1.05rem; }
 .step p { font-size: .95rem; color: var(--text-muted); line-height: 1.55; }
@@ -690,4 +718,79 @@ textarea.input { resize: vertical; min-height: 84px; }
   .cards--product .card__p2 span { display: block; font-size: .74rem; }
   .cards--product .card__p1 b { font-size: 1.02rem; }
   .cards--product .card__foot .btn { padding-inline: .6em; font-size: .8rem; }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   КАРТОЧКА ОБЪЕКТА ВНУТРИ ЛЕНДИНГА
+   «Подробнее» больше не уводит на основной сайт: то же содержимое
+   открывается поверх страницы, форма расчёта остаётся в одном клике.
+   ───────────────────────────────────────────────────────────────────── */
+.pcard {
+  position: fixed; inset: 0; z-index: 90;
+  display: grid; place-items: center; padding: clamp(.6rem, 3vw, 2.5rem);
+  background: rgba(8, 6, 5, .88);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  overflow-y: auto;
+}
+.pcard__box {
+  position: relative; width: min(1080px, 100%); max-height: min(100%, 860px);
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--seam-w); background: var(--seam); overflow: hidden;
+}
+.pcard__close {
+  position: absolute; top: 0; right: 0; z-index: 4;
+  width: 44px; height: 44px; border: 0; cursor: pointer;
+  background: var(--seam); color: var(--text-muted); font-size: 1rem; line-height: 1;
+}
+.pcard__close:hover { background: var(--primary); color: #fff; }
+
+/* Кадр занимает всю высоту колонки, ленту превью прижимаем к низу:
+   иначе колонка тянется под соседнюю и над фото висит пустая полоса. */
+.pcard__gal { position: relative; background: var(--bg-accent); display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; min-height: 0; }
+.pcard__pic { width: 100%; height: 100%; min-height: 0; object-fit: contain; background: var(--bg-accent); display: block; }
+.pcard__nav {
+  position: absolute; top: 45%; transform: translateY(-50%); z-index: 3;
+  width: 40px; height: 40px; display: grid; place-items: center;
+  border: 0; padding: 0 0 .15em; cursor: pointer;
+  background: rgba(10, 8, 6, .6); color: #F2EBE2; font-size: 1.7rem; line-height: 1;
+}
+.pcard__nav--prev { left: 0; }
+.pcard__nav--next { right: 0; }
+.pcard__nav:hover { background: var(--primary); }
+.pcard__count {
+  position: absolute; left: 0; top: 0; z-index: 3;
+  padding: .45em .8em; background: var(--seam);
+  font-size: .68rem; letter-spacing: .12em; color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.pcard__thumbs { display: flex; gap: var(--seam-w); padding: var(--seam-w) 0 0; overflow-x: auto; background: var(--seam); }
+.pcard__thumb { flex: 0 0 84px; height: 64px; border: 0; padding: 0; cursor: pointer; background: var(--bg-accent); opacity: .5; transition: opacity var(--transition); }
+.pcard__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pcard__thumb.is-on, .pcard__thumb:hover { opacity: 1; }
+
+.pcard__info { overflow-y: auto; background: var(--bg-lighter); padding: clamp(1.2rem, .8rem + 1.4vw, 2rem); display: flex; flex-direction: column; gap: .75rem; min-width: 0; }
+.pcard__tag { font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); }
+.pcard__name { font-family: var(--font-heading); font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); font-weight: 500; text-transform: uppercase; line-height: 1.1; }
+.pcard__desc { font-size: .97rem; color: var(--text-muted); line-height: 1.6; }
+.pcard__spec { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--seam-w); background: var(--seam); border: var(--seam-w) solid var(--seam); }
+.pcard__spec > div { background: var(--bg-accent); padding: .7rem .85rem; }
+.pcard__spec dt { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); }
+.pcard__spec dd { margin: .25rem 0 0; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.pcard__prices { margin-top: auto; padding-top: .5rem; }
+.pcard__p1, .pcard__p2 { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+.pcard__p2 { font-size: .95rem; color: var(--text-muted); padding-bottom: .55rem; }
+.pcard__p2 b { font-weight: 500; font-variant-numeric: tabular-nums; }
+.pcard__p1 { padding-top: .55rem; border-top: var(--seam-w) solid var(--seam); }
+.pcard__p1 span { font-size: .95rem; color: var(--text-muted); }
+.pcard__p1 b { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; color: var(--primary); font-variant-numeric: tabular-nums; }
+.pcard__acts { display: flex; flex-wrap: wrap; gap: .6rem; }
+.pcard__acts .btn { flex: 1 1 auto; }
+.pcard__note { font-size: .8rem; color: var(--text-dim); line-height: 1.5; }
+
+@media (max-width: 860px) {
+  .pcard__box { grid-template-columns: minmax(0, 1fr); max-height: 100%; overflow-y: auto; }
+  .pcard__gal { grid-template-rows: auto auto; }
+  .pcard__pic { height: auto; aspect-ratio: 4 / 3; }
+  .pcard__info { overflow: visible; }
 }

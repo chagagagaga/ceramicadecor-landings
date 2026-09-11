@@ -688,15 +688,25 @@
 
     function card(c, idx) {
       var n = (c.photos || []).length;
+      // Кадры листаются прямо в плитке: у объекта их обычно 4–6, и
+      // человеку удобнее пролистать их на месте, чем открывать лайтбокс
+      // ради второго ракурса. Стрелки — соседи кнопки-фото, а не её
+      // потомки: кнопка внутри кнопки — невалидная разметка.
       return '<article class="card" data-card="' + idx + '">' +
-        '<button type="button" class="card__media" data-gal="' + idx + '"' +
-          ' aria-label="' + (n > 1 ? 'Открыть галерею: ' : 'Открыть фото: ') + esc(c.title) + '">' +
-          (c.img
-            ? '<img class="card__bg" src="' + esc(thumb(c.img)) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
-              '<img class="card__pic" src="' + esc(thumb(c.img)) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
-            : '') +
+        '<div class="card__media">' +
+          '<button type="button" class="card__photo" data-gal="' + idx + '" data-start="0"' +
+            ' aria-label="' + (n > 1 ? 'Открыть галерею: ' : 'Открыть фото: ') + esc(c.title) + '">' +
+            (c.img
+              ? '<img class="card__bg" src="' + esc(thumb(c.img)) + '" alt="" aria-hidden="true" loading="lazy" decoding="async" width="600" height="600">' +
+                '<img class="card__pic" src="' + esc(thumb(c.img)) + '" alt="' + esc(c.title) + '" loading="lazy" decoding="async" width="600" height="600">'
+              : '') +
+          '</button>' +
           (c.collection ? '<span class="card__tag">' + esc(c.collection) + '</span>' : '') +
-        '</button>' +
+          (n > 1
+            ? '<button type="button" class="card__nav card__nav--prev" data-step="-1" aria-label="Предыдущий кадр">\u2039</button>' +
+              '<button type="button" class="card__nav card__nav--next" data-step="1" aria-label="Следующий кадр">\u203a</button>'
+            : '') +
+        '</div>' +
         '<div class="card__body">' +
           '<h3 class="card__name">' + esc(c.title) + '</h3>' +
           (c.desc ? '<p class="card__desc">' + esc(c.desc) + '</p>' : '') +
@@ -706,16 +716,19 @@
           // но у направлений вроде изразцов монтажа нет и единственная
           // цена — за материал: тогда главной становится она, иначе цена
           // осталась бы набрана мелким серым и потерялась.
+          // Акцент отдан цене облицовки: она ниже, и именно с неё
+          // начинается разговор. «Под ключ» стоит выше строкой помельче,
+          // чтобы не выглядеть спрятанным.
           '<div class="card__prices">' +
             (c.p2
-              ? '<div class="card__p2"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>' +
-                '<div class="card__p1"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>'
+              ? '<div class="card__p2"><span>Под ключ с монтажом</span><b>от ' + fmt(c.p2) + ' ₽</b></div>' +
+                '<div class="card__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>'
               : '<div class="card__p1 card__p1--solo"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(c.p1) + ' ₽</b></div>') +
           '</div>' +
         '</div>' +
         '<footer class="card__foot">' +
           '<button type="button" class="btn btn--primary" data-lead data-src="card">Рассчитать такой же</button>' +
-          (c.url ? '<a class="btn btn--ghost" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="Подробнее об объекте">Подробнее</a>' : '') +
+          '<button type="button" class="btn btn--ghost" data-more-card="' + idx + '" aria-label="Подробнее: ' + esc(c.title) + '">Подробнее</button>' +
         '</footer>' +
       '</article>';
     }
@@ -741,7 +754,145 @@
     });
     var more = $('[data-cards-more]');
     if (more) more.addEventListener('click', function () { expanded = true; draw(); });
+
+    // Листание кадров прямо в плитке. Индекс живём в data-start кнопки-фото:
+    // её же читает лайтбокс, поэтому он открывается на том кадре, который
+    // человек досмотрел, а не всегда на первом.
+    grid.addEventListener('click', function (e) {
+      var b = e.target.closest('.card__nav');
+      if (!b) return;
+      var art = b.closest('.card'), shot = $('[data-gal]', art);
+      if (!shot) return;
+      var it = P.catalog[+shot.dataset.gal], n = (it && it.photos || []).length;
+      if (n < 2) return;
+      var i = (((+shot.dataset.start || 0) + (+b.dataset.step)) % n + n) % n;
+      shot.dataset.start = i;
+      var src = thumb(it.photos[i]);
+      var pic = $('.card__pic', art); if (pic) pic.src = src;
+      var bg = $('.card__bg', art); if (bg) bg.src = src;
+    });
+
     draw();
+  })();
+
+  /* Карточка объекта внутри лендинга.
+
+     Раньше «Подробнее» уводило на основной сайт: человек уходил со
+     страницы, где стоит форма и счётчик, и назад почти не возвращался.
+     Теперь то же содержимое — кадры, описание, габариты, обе цены —
+     открывается поверх лендинга, а кнопка расчёта остаётся под рукой. */
+  (function productCard() {
+    if (!P.catalog || !P.catalog.length) return;
+    var box = null, cur = 0, item = null, back = null;
+
+    function specRows(sp) {
+      if (!sp) return '';
+      var rows = [];
+      if (sp.width) rows.push(['Ширина', Math.round(sp.width / 10) + ' см']);
+      if (sp.height) rows.push(['Высота', Math.round(sp.height / 10) + ' см']);
+      if (sp.depth) rows.push(['Глубина', Math.round(sp.depth / 10) + ' см']);
+      if (sp.weight) rows.push(['Вес облицовки', sp.weight + ' кг']);
+      if (!rows.length) return '';
+      return '<dl class="pcard__spec">' + rows.map(function (r) {
+        return '<div><dt>' + r[0] + '</dt><dd>' + r[1] + '</dd></div>';
+      }).join('') + '</dl>';
+    }
+
+    function shots() { return (item.photos && item.photos.length) ? item.photos : (item.img ? [item.img] : []); }
+
+    function paint() {
+      var set = shots();
+      if (!set.length) return;
+      cur = (cur % set.length + set.length) % set.length;
+      $('.pcard__pic', box).src = set[cur];
+      $('.pcard__pic', box).alt = item.title;
+      $$('.pcard__thumb', box).forEach(function (b, i) {
+        b.classList.toggle('is-on', i === cur);
+      });
+      var cnt = $('.pcard__count', box);
+      if (cnt) cnt.textContent = (cur + 1) + ' / ' + set.length;
+    }
+
+    function fill() {
+      var set = shots(), many = set.length > 1;
+      var price = item.p2
+        ? '<div class="pcard__p2"><span>Под ключ с монтажом</span><b>от ' + fmt(item.p2) + ' ₽</b></div>' +
+          '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(item.p1) + ' ₽</b></div>'
+        : '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>от ' + fmt(item.p1) + ' ₽</b></div>';
+      $('.pcard__box', box).innerHTML =
+        '<button type="button" class="pcard__close" data-close aria-label="Закрыть">✕</button>' +
+        '<div class="pcard__gal">' +
+          '<img class="pcard__pic" src="" alt="" width="1200" height="900">' +
+          (many
+            ? '<button type="button" class="pcard__nav pcard__nav--prev" data-step="-1" aria-label="Предыдущий кадр">‹</button>' +
+              '<button type="button" class="pcard__nav pcard__nav--next" data-step="1" aria-label="Следующий кадр">›</button>' +
+              '<span class="pcard__count"></span>'
+            : '') +
+          (many
+            ? '<div class="pcard__thumbs">' + set.map(function (src, i) {
+                return '<button type="button" class="pcard__thumb" data-i="' + i + '" aria-label="Кадр ' + (i + 1) + '">' +
+                  '<img src="' + esc(thumb(src)) + '" alt="" loading="lazy" decoding="async" width="120" height="90"></button>';
+              }).join('') + '</div>'
+            : '') +
+        '</div>' +
+        '<div class="pcard__info">' +
+          (item.collection ? '<span class="pcard__tag">' + esc(item.collection) + '</span>' : '') +
+          '<h3 class="pcard__name" id="pcard-title">' + esc(item.title) + '</h3>' +
+          '<p class="pcard__desc">' + esc(item.full || item.desc || '') + '</p>' +
+          specRows(item.spec) +
+          '<div class="pcard__prices">' + price + '</div>' +
+          '<div class="pcard__acts">' +
+            '<button type="button" class="btn btn--primary" data-lead data-src="card-detail">Рассчитать такой же</button>' +
+            (many ? '<button type="button" class="btn btn--ghost" data-full>Смотреть кадры крупно</button>' : '') +
+          '</div>' +
+          '<p class="pcard__note">Цена ориентировочная: итоговая зависит от размеров проёма, топки и объёма работ. Считаем бесплатно за 2–3 дня.</p>' +
+        '</div>';
+      paint();
+    }
+
+    function make() {
+      var el = document.createElement('div');
+      el.className = 'pcard'; el.hidden = true;
+      el.innerHTML = '<div class="pcard__box" role="dialog" aria-modal="true" aria-labelledby="pcard-title"></div>';
+      document.body.appendChild(el);
+      el.addEventListener('click', function (e) {
+        if (e.target === el || e.target.closest('[data-close]')) { close(); return; }
+        var st = e.target.closest('[data-step]');
+        if (st) { cur += +st.dataset.step; paint(); return; }
+        var th = e.target.closest('.pcard__thumb');
+        if (th) { cur = +th.dataset.i; paint(); return; }
+        if (e.target.closest('[data-full]') && window.LPGallery) { window.LPGallery(shots(), item.title, cur); return; }
+        // Кнопка расчёта живёт в общем обработчике: закрываем карточку,
+        // чтобы форма не открывалась под ней.
+        if (e.target.closest('[data-lead]')) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (el.hidden) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') { cur--; paint(); }
+        if (e.key === 'ArrowRight') { cur++; paint(); }
+      });
+      return el;
+    }
+
+    function close() {
+      if (!box) return;
+      box.hidden = true;
+      document.body.style.overflow = '';
+      if (back && back.focus) back.focus();
+    }
+
+    window.LPCard = function (idx, opener) {
+      item = P.catalog[idx];
+      if (!item) return;
+      back = opener || null; cur = 0;
+      if (!box) box = make();
+      fill();
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+      var c = $('.pcard__close', box); if (c) c.focus();
+      goal('card_detail', { item: item.title });
+    };
   })();
 
   // Фильтры
@@ -776,7 +927,15 @@
   (function sections() {
     var s = $('[data-steps]');
     if (s && P.steps) s.innerHTML = P.steps.map(function (x, i) {
-      return '<div class="step"><span class="step__n">' + (i + 1) + '</span><h3>' + esc(x.title) + '</h3><p>' + esc(x.text) + '</p><span class="step__day">' + esc(x.day) + '</span></div>';
+      return '<div class="step">' +
+        (x.img ? '<div class="step__media"><img src="../assets/img/steps/' + esc(x.img) + '.webp" alt="" loading="lazy" decoding="async" width="700" height="466"></div>' : '') +
+        '<div class="step__text">' +
+          '<span class="step__n">' + (i + 1) + '</span>' +
+          '<h3>' + esc(x.title) + '</h3>' +
+          '<p>' + esc(x.text) + '</p>' +
+          (x.day ? '<span class="step__day">' + esc(x.day) + '</span>' : '') +
+        '</div>' +
+      '</div>';
     }).join('');
 
     var g = $('[data-guarantees]');
@@ -1008,10 +1167,12 @@
         var shots = (it && it.photos && it.photos.length) ? it.photos : (it && it.img ? [it.img] : []);
         if (shots.length) {
           goal('gallery_open', { item: it.title });
-          window.LPGallery(shots, it.title, 0);
+          window.LPGallery(shots, it.title, +gal.dataset.start || 0);
           return;
         }
       }
+      var det = e.target.closest('[data-more-card]');
+      if (det && window.LPCard) { window.LPCard(+det.dataset.moreCard, det); return; }
       var lead = e.target.closest('[data-lead]');
       if (lead && Calc) { goal('cta_click', { source: lead.dataset.src || 'cta' }); Calc.open(); }
       var tel = e.target.closest('a[href^="tel:"]');

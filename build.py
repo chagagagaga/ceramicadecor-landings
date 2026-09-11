@@ -74,10 +74,14 @@ GUARANTEES = [
 ]
 
 STEPS = [
-    {"title": "Заявка и замер", "text": "Обсуждаем задачу, снимаем размеры. Выезд замерщика — 4 000 ₽, за МКАД плюс 40 ₽ за километр.", "day": "1–2 дня"},
-    {"title": "3D-проект и смета", "text": "Показываем объект в вашем интерьере и фиксируем стоимость. Правки — до согласования.", "day": "3–5 дней"},
-    {"title": "Производство", "text": "Формуем, обжигаем и расписываем в собственном цехе. Каждый изразец проходит контроль.", "day": "2–3 месяца"},
-    {"title": "Монтаж и сдача", "text": "Привозим, собираем, сдаём объект. Выдаём паспорт изделия и гарантию.", "day": "3–10 дней"},
+    {"title": "Проектирование и дизайн", "img": "01-proekt",
+     "text": "Всё начинается с проекта. Мы разрабатываем архитектуру камина, подбираем материалы, создаём 3D-визуализацию для утверждения."},
+    {"title": "Изготовление изразцов", "img": "02-izrazcy",
+     "text": "Каждый элемент формуется и расписывается вручную. Проходит несколько технологических операций и двукратный обжиг при температуре свыше 1100 °C."},
+    {"title": "Монтаж конструктива", "img": "03-konstruktiv",
+     "text": "Строительство печи или установка топки и дымохода камина."},
+    {"title": "Монтаж облицовки", "img": "04-oblicovka",
+     "text": "Финальный этап — облицовка изразцами. Каждый элемент подгоняется вручную, создавая единое полотно."},
 ]
 
 # ───────────────────────────────────────────────────────────────────────────
@@ -641,7 +645,8 @@ INDEX_TPL = """<!DOCTYPE html>
   <div class="container">
     <div class="section__head section__head--center">
       <span class="kicker">Как мы работаем</span>
-      <h2 class="section__title">От заявки до сдачи объекта</h2>
+      <h2 class="section__title">Как мы создаём камины и печи</h2>
+      <p class="section__sub">Каждый проект проходит путь от идеи до установки на объекте.</p>
     </div>
     <div class="steps" data-steps></div>
   </div>
@@ -875,6 +880,123 @@ FALLBACK_DESC = {
 
 BANNED_WORDS = ('эксклюзивн', 'уникальн', 'премиальн', 'элитн', 'роскошн')
 
+# Опечатки и потерянная «ё» в текстах каталога. Правим на выходе, а не
+# в исходнике: исходник перескачивается и правка потерялась бы.
+TYPOS = (
+    ('обепечивает', 'обеспечивает'),
+    ('стеклами', 'стёклами'),
+    ('зеленых', 'зелёных'), ('зеленого', 'зелёного'),
+    ('зеленоватой', 'зеленоватой'),
+)
+
+
+# ── Описания с каталога ceramicadecor.kz ─────────────────────────────────
+# У каждой позиции казахстанского каталога есть готовое авторское
+# описание — точнее и нашего шаблона, и куцых текстов из выгрузки.
+# Поэтому оно первый источник, выгрузка второй, шаблон последний.
+# Соответствие ищем по набору значимых слов названия, чтобы
+# «Камин Дорф, Муравленый» нашёл «Камин Дорф Муравленый».
+KZ_SKIP = {'с', 'и', 'в', 'на', 'для', 'из', 'от', 'по'}
+
+
+def _key_words(v):
+    ws = re.findall(r'[а-яёa-z]+', (v or '').lower())
+    return frozenset(w for w in ws if w not in KZ_SKIP)
+
+
+def _load_kz():
+    path = os.path.join(ROOT, 'kz_descriptions.json')
+    if not os.path.exists(path):
+        return []
+    rows = json.load(io.open(path, encoding='utf-8'))
+    return [(_key_words(x['name']), (x.get('full') or x.get('desc') or '').strip())
+            for x in rows]
+
+
+KZ_DESC = _load_kz()
+
+
+def assign_kz(cards):
+    """Описания kz-каталога раздаём карточкам однозначно.
+
+    Одно описание не может достаться двум карточкам: «Камин Альбион» и
+    «Камин Альбион, майоликовая глазурь» оба подходят под запись
+    «Камин Альбион», и без распределения обе получают один текст —
+    а поздний проход по дублям затирает его заглушкой.
+
+    Ключом берём и итоговое название, и исходное из выгрузки: после
+    шаблона «тип + коллекция» из названия уходит слово, по которому
+    позиция и узнаётся («Биокамин Альбион» → «Камин Альбион, глазурь»).
+    """
+    pairs = []
+    for ci, c in enumerate(cards):
+        keys = [_key_words(c.get('title')), _key_words(c.get('_raw'))]
+        for ki, (words, text) in enumerate(KZ_DESC):
+            if not text:
+                continue
+            best = None
+            for k in keys:
+                if not k or not (words <= k or k <= words):
+                    continue
+                common = len(words & k)
+                if common < 2:
+                    continue
+                rank = (common, -len(words ^ k))
+                if best is None or rank > best:
+                    best = rank
+            if best:
+                pairs.append((best, ci, ki))
+    pairs.sort(key=lambda x: x[0], reverse=True)
+    used_c, used_k = set(), set()
+    for _, ci, ki in pairs:
+        if ci in used_c or ki in used_k:
+            continue
+        txt = normalize_brand(clean_text(KZ_DESC[ki][1], ''))
+        if not txt:
+            continue
+        used_c.add(ci)
+        used_k.add(ki)
+        cards[ci]['desc'] = txt
+        cards[ci]['_gen'] = False
+    return cards
+
+
+def kz_desc(title):
+    """Описание позиции с kz-каталога по названию карточки.
+
+    Совпадение считаем только когда один набор слов целиком лежит в
+    другом: частичное пересечение ставит на «Биокамин Альбион» текст
+    про «Камин Альбион». При равенстве выигрывает то название, где
+    меньше лишних слов, — иначе «Барбекю комплекс Альбион» цепляет
+    вариант «с мангалом и казаном» просто потому, что тот выше.
+    """
+    k = _key_words(title)
+    best, best_rank = '', None
+    for words, text in KZ_DESC:
+        if not text or not (words <= k or k <= words):
+            continue
+        common = len(words & k)
+        if common < 2:
+            continue
+        rank = (common, -len(words ^ k))
+        if best_rank is None or rank > best_rank:
+            best, best_rank = text, rank
+    return best
+
+
+def fit(v, limit):
+    """Обрезка по границе предложения, а не по символу."""
+    v = (v or '').strip()
+    if len(v) <= limit:
+        return v
+    head = v[:limit + 1]
+    for sep in ('. ', '! ', '? '):
+        i = head.rfind(sep)
+        if i > 60:
+            return v[:i + 1]
+    i = head.rfind(' ')
+    return (v[:i] if i > 60 else v[:limit]).rstrip(' ,.;:—-') + '…'
+
 
 def normalize_brand(v):
     """Бренд пишется в два слова. В выгрузке встречается слитно
@@ -906,6 +1028,15 @@ def clean_text(v, fallback=""):
         return fallback
     # хвост вида «| Ceramica Decor» в описании ничего не добавляет
     v = v.split("|")[0].strip()
+    # Снятый эпитет мог открывать предложение: «…облицовке Птицы.
+    # ручная роспись…». Поднимаем регистр обратно.
+    v = re.sub(r'([.!?]\s+)([а-яё])', lambda m: m.group(1) + m.group(2).upper(), v)
+    # Прямые кавычки из выгрузки — на ёлочки: на странице всё остальное
+    # набрано ими.
+    v = re.sub(r'"([^"]+)"', '\u00ab\\1\u00bb', v)
+    for a, b in TYPOS:
+        if a != b:
+            v = v.replace(a, b).replace(a.capitalize(), b.capitalize())
     return v or fallback
 
 
@@ -941,13 +1072,17 @@ CARD_COLLECTIONS = sorted([
     'Русская Этника', 'Арт Нуво', 'Азулежу', 'Альбион', 'Браво', 'Бристоль',
     'Венская', 'Версаль', 'Византия', 'Дорф', 'Камея', 'Луна', 'Минималист',
     'Модерн', 'Неаполь', 'Пастораль', 'Прованс', 'Птицы', 'Птички', 'Ритм',
-    'Сохо', 'Сувенир', 'Сценки', 'Тюльпан', 'Универсал', 'Усадьба', 'Элеганс',
+    'Голландия', 'Сохо', 'Сувенир', 'Сценки', 'Тюльпан', 'Универсал',
+    'Усадьба', 'Элеганс',
 ], key=len, reverse=True)
 
 # Позиции, где выгрузка принесла ссылку вместо названия или где поле
 # коллекции расходится со страницей объекта. Проверены руками по URL.
 CARD_OVERRIDE = {
     ('barbekyu-kompleksy', 13): 'Печной комплекс Византия, с открытым камином',
+    # В выгрузке коллекция «Прованс», но и заголовок страницы объекта, и
+    # её адрес (/izrazcy/gollandiya/) говорят «Голландия».
+    ('kaminy', 15): 'Камин Голландия',
     ('kaminy', 14): 'Камин Универсал, угловой',
     ('kaminy', 23): 'Камин Венская, классический',
     ('russkie-pechi', 9): 'Русская печь Русская Этника, зелёная роспись',
@@ -980,6 +1115,10 @@ CARD_DESC_TPL = {
 
 def _strip_art(t):
     return RE_ART.sub('', (t or '').strip()).strip(' .,')
+
+
+# Коллекция расходится с полем выгрузки — проверено по странице объекта.
+CARD_COLL_OVERRIDE = {('kaminy', 15): 'Голландия'}
 
 
 def card_collection(raw, field):
@@ -1205,7 +1344,8 @@ def build():
             if pos in skip:
                 continue
             raw_title = clean_text(it.get("title"), "")
-            coll = card_collection(raw_title, it.get("collection", ""))
+            coll = (CARD_COLL_OVERRIDE.get((slug, pos))
+                    or card_collection(raw_title, it.get("collection", "")))
             title = normalize_brand(card_title(slug, pos, raw_title, it.get("collection", "")))
             if not title:
                 title = ("Облицовка «%s»" % coll) if coll else P["title"]
@@ -1213,7 +1353,14 @@ def build():
                 "_raw": raw_title,
                 "title": title[:96],
                 "collection": coll,
-                "desc": card_text(slug, it.get("desc"), raw_title, title, coll)[:150],
+                "desc": card_text(slug, it.get("desc"), raw_title, title, coll),
+                # Габариты и вес — для карточки, которая открывается
+                # внутри лендинга. На плитке каталога их нет: там они
+                # забивали описание и их убрали.
+                # Габарит меньше 10 см у камина или комплекса — брак
+                # выгрузки: у барбекю «Альбион» глубина стоит 20 мм.
+                "spec": {k: v for k, v in (all_specs.get(slug, {}).get(str(pos)) or {}).items()
+                         if v and (v >= 100 or k == 'weight') and (k != 'weight' or v >= 5)},
                 "_gen": False,
                 "p1": it["price_ceramic"],
                 "p2": it.get("price_turnkey") or 0,
@@ -1233,6 +1380,11 @@ def build():
             if c["desc"].startswith(GEN):
                 c["desc"], c["_gen"] = c["desc"][len(GEN):], True
         dedupe_titles(slug, cards)
+        # Описания с kz-каталога — первый источник: они написаны под
+        # конкретный объект. Изразцы пропускаем: это каталог артикулов,
+        # и односложное имя плитки ложно цепляет камин той же коллекции.
+        if slug in CARD_KIND:
+            assign_kz(cards)
         # Уточнение появляется в названии только после разведения дублей,
         # поэтому шаблонное описание пересобираем здесь — иначе две
         # карточки одной коллекции получают дословно одинаковый текст.
@@ -1282,6 +1434,15 @@ def build():
                 c["desc"] = FALLBACK_DESC.get(slug, "")
         for c in cards:
             c.pop("_gen", None)
+        # Полный текст уходит в карточку внутри лендинга, короткий —
+        # на плитку каталога: там больше двух строк не помещается.
+        for c in cards:
+            short = fit(c["desc"], 150)
+            if short != c["desc"]:
+                c["full"] = c["desc"]
+            c["desc"] = short
+            if not c["spec"]:
+                c.pop("spec")
 
         collections = []
         for c in cards:
