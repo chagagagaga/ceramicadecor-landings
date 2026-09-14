@@ -58,7 +58,7 @@ for (const slug of SLUGS) {
 
   // ── контакты ──
   const tel = d.querySelector('[data-tel]')?.getAttribute('href') || '';
-  t(/^tel:\d{10,}$/.test(tel), 'телефон не проставлен: '+tel);
+  t(/^tel:\+?\d{10,}$/.test(tel), 'телефон не проставлен: '+tel);
   const phoneTexts = new Set([...d.querySelectorAll('[data-phone-text]')].map(e=>e.textContent.trim()));
   t(phoneTexts.size <= 1, 'разные номера на странице: '+[...phoneTexts].join(' / '));
   t([...d.querySelectorAll('.mobilebar a:not([hidden])')].length >= 2, 'в мобильной панели меньше двух кнопок');
