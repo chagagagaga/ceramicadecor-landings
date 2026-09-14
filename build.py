@@ -43,7 +43,11 @@ BRAND = {
     "endpoint": "https://cd-lead.chagagagaga.workers.dev/lead",
     # Маячок ухода в мессенджер: заявки нет, а источник знать надо
     "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
-    "metrikaId": 0,          # ⚠️ заполнить: номер счётчика Метрики
+    # Счётчик Максима, один на все посадочные Керамики: направление
+    # уходит в параметры визита, разрез по нему есть без отдельных
+    # счётчиков. Цели в нём: lead_form, messenger_click,
+    # messenger_telegram/whatsapp/max, scroll_75 + офлайн crm_lead_*.
+    "metrikaId": 112495350,
 }
 
 # Шоурумы — со страницы контактов ceramicadecor.ru. Живой адрес, куда

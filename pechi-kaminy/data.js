@@ -12,7 +12,7 @@ window.LP = {
   "maxUrl": "",
   "endpoint": "https://cd-lead.chagagagaga.workers.dev/lead",
   "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
-  "metrikaId": 0
+  "metrikaId": 112495350
  },
  "duty": {
   "managers": {

@@ -368,6 +368,9 @@
       req.then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         goal('lead_submitted', { source: payload.source });
+        // Дубль под именем, которое заведено в счётчике Максима: там
+        // главная онлайн-цель называется lead_form.
+        goal('lead_form', { source: payload.source });
         form.dataset.sending = '';
         if (typeof onOk === 'function') { onOk(payload); return; }
         form.reset();
@@ -1332,8 +1335,16 @@
       if (lead && Calc) { goal('cta_click', { source: lead.dataset.src || 'cta' }); Calc.open(); }
       var tel = e.target.closest('a[href^="tel:"]');
       if (tel) goal('phone_click');
-      var msg = e.target.closest('a[href*="wa.me"], a[href*="t.me"]');
-      if (msg) goal('messenger_click');
+      // Мессенджеры: общая цель и своя на каждый канал — под неё Максим
+      // завёл цели в счётчике (messenger_telegram / whatsapp / max).
+      // MAX ловим по кнопке, а не по адресу: ссылки у него бывают разные.
+      var msg = e.target.closest('a[href*="wa.me"], a[href*="t.me"], a[href*="max.ru"], [data-max]');
+      if (msg) {
+        var h = msg.getAttribute('href') || '';
+        var kind = /wa\.me/.test(h) ? 'whatsapp' : /t\.me/.test(h) ? 'telegram' : 'max';
+        goal('messenger_click', { messenger: kind });
+        goal('messenger_' + kind);
+      }
     });
 
     $$('form[data-lead-source]').forEach(Lead.bind);
