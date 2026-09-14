@@ -24,4 +24,7 @@ compatibility_date = "2026-09-01"
 # Публичные переменные: они видны в панели Cloudflare и это нормально.
 # Список источников, которым разрешено слать заявки. Звёздочку не ставим:
 # иначе форму можно было бы дёргать с любой страницы в интернете.
-ALLOWED_ORIGINS = "https://chagagagaga.github.io,http://localhost:8099,http://127.0.0.1:8099"
+# Рекламные домены добавлены 14.09.2026: посадочные на них шлют заявки
+# сюда же, и без них браузер резал запрос на preflight — форма молча
+# теряла людей, пока реклама уже шла.
+ALLOWED_ORIGINS = "https://chagagagaga.github.io,https://decorceram.online,https://keramikakamin.online,https://keram-decor.online,https://decorkeram.online,https://decorceram.ru,http://localhost:8099,http://127.0.0.1:8099"
