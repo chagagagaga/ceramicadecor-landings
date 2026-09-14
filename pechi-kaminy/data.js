@@ -9,7 +9,7 @@ window.LP = {
   "site": "https://ceramicadecor.ru",
   "telegram": "+79950004488",
   "whatsapp": "79950004488",
-  "maxUrl": "",
+  "maxUrl": "https://max.ru/u/f9LHodD0cOLM8wvhXzGwW_HnvHQkEKIvFj1FpYaxHzHfcYjt3XliwFLklt8",
   "endpoint": "https://cd-lead.chagagagaga.workers.dev/lead",
   "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
   "metrikaId": 112495350
@@ -20,7 +20,7 @@ window.LP = {
     "name": "Александра Ступина",
     "phone": "+79950004488",
     "telegram": "Alexandra_CeramicaDecor",
-    "max": ""
+    "max": "https://max.ru/u/f9LHodD0cOLM8wvhXzGwW_HnvHQkEKIvFj1FpYaxHzHfcYjt3XliwFLklt8"
    },
    "valeria": {
     "name": "Валерия Румянцева",
@@ -32,19 +32,19 @@ window.LP = {
     "name": "Ольга Бережкова",
     "phone": "+79950001166",
     "telegram": "Olga_CeramicaDecor",
-    "max": ""
+    "max": "https://max.ru/u/f9LHodD0cOKDzHpUS5TIf-MK5RIjJ4lZLCEQP91bgHZgbcpLoPIjx4jQw58"
    },
    "natalia": {
     "name": "Наталия Рунцова",
     "phone": "+79950004422",
     "telegram": "Natalia_CeramicaDecor",
-    "max": ""
+    "max": "https://max.ru/u/f9LHodD0cOIOuTvtxAbiArNVeOZ4b0H43nAyLa6r-YFuU_VCRbsdq9v7aOY"
    },
    "elena": {
     "name": "Елена Полозова",
     "phone": "+79950001188",
     "telegram": "Elena_CeramicaDecor",
-    "max": ""
+    "max": "https://max.ru/u/f9LHodD0cOIFHcTEBsdbleMvzGj4SSWl_fngR58cnDKQcjagYgTh5yddGz8"
    }
   },
   "days": {
