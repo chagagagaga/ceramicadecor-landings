@@ -113,6 +113,17 @@ STEPS = [
      "text": "Финальный этап — облицовка изразцами. Каждый элемент подгоняется вручную, создавая единое полотно."},
 ]
 
+WHY_TPL = '''<section class="section" id="why">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <span class="kicker">Почему керамика</span>
+      <h2 class="section__title">@WHY_TITLE@</h2>
+    </div>
+    <div class="why" data-why></div>
+  </div>
+</section>
+'''
+
 WORKS_TPL = '''<section class="section section--tint" id="works">
   <div class="container">
     <div class="section__head section__head--center">
@@ -146,10 +157,13 @@ PRODUCTS = {
         base=0, spread=1.25, turnkeyFactor=2.0,
         matchBy={"field": "collection", "key": "collection"},
         fields=[
-            dict(id="front", type="range", step=1, label="Длина по фронту", min=2, max=8, stepSize=0.5,
+            dict(id="scope", type="radio", step=1, label="С чего начинаем", row=True, options=[
+                dict(id="full", label="Нужен комплекс с нуля", hint="Кладка, оборудование, облицовка, монтаж", k=1),
+                dict(id="facing", label="Уже есть комплекс, нужна облицовка", hint="Облицуем вашу печь или комплекс", k=1, noTurnkey=True)]),
+            dict(id="front", type="range", step=2, label="Длина по фронту", min=2, max=8, stepSize=0.5,
                  dec=1, unit="м", default=4, pricePerUnit=180000,
                  hint="Суммарная ширина всех модулей. Если сомневаетесь — 4 метра это стандартный комплекс с мангалом и казаном."),
-            dict(id="place", type="radio", step=2, label="Где стоит комплекс", row=True, options=[
+            dict(id="place", type="radio", step=3, label="Где стоит комплекс", row=True, options=[
                 dict(id="terrace", label="Открытая терраса", k=1),
                 dict(id="pavilion", label="Беседка с крышей", k=1.1),
                 dict(id="outdoor", label="Отдельно на участке", k=1.2)]),
@@ -216,20 +230,38 @@ PRODUCTS = {
         base=0, spread=1.22, turnkeyFactor=1.95,
         matchBy={"field": "collection", "key": "collection"},
         fields=[
-            dict(id="width", type="range", step=1, label="Ширина портала", min=0.9, max=2.6, stepSize=0.1,
+            # Правки Ивана 14.09.2026. Первый вопрос — с чего начинаем:
+            # у половины людей камин или топка уже стоят, им нужна только
+            # облицовка, и цена «под ключ» их только путает.
+            dict(id="scope", type="radio", step=1, label="С чего начинаем", row=True, options=[
+                dict(id="full", label="Нужен камин с нуля", hint="Топка, дымоход, облицовка, монтаж", k=1),
+                dict(id="facing", label="Уже есть камин, нужна облицовка", hint="Облицуем ваш камин или топку", k=1, noTurnkey=True)]),
+            # Формат — три варианта по цене, от бюджетного к эффектному.
+            # Печь-камин — заводские Дорф и Ритм: Иван считает их прямой
+            # альтернативой и хочет показывать здесь. Цена у них
+            # фиксированная, ползунок ширины на неё не влияет.
+            dict(id="format", type="radio", step=2, label="Формат камина", options=[
+                dict(id="stove", label="Печь-камин", hint="Самый бюджетный вариант: готовая модель со склада, 439 000 ₽",
+                     fixed=439000, img="../pechi-kaminy/img/b/01.webp", href="../pechi-kaminy/"),
+                dict(id="shelf", label="Камин до полки", hint="Средний по цене: облицовка до каминной полки", k=0.85, card=15, default=True),
+                dict(id="ceiling", label="Камин до потолка", hint="Самый дорогой и эффектный: облицовка от пола до потолка", k=1.2, card=6)]),
+            dict(id="width", type="range", step=3, label="Ширина портала", min=0.9, max=2.6, stepSize=0.1,
                  dec=1, unit="м", default=1.5, pricePerUnit=260000,
                  hint="Ширина готовой облицовки по фасаду. Стандартный пристенный камин — около 1,5 метра."),
-            dict(id="type", type="radio", step=2, label="Тип камина", row=True, options=[
+            dict(id="type", type="radio", step=4, label="Тип камина", row=True, options=[
                 dict(id="wood", label="Дровяной", hint="Нужен дымоход", k=1),
                 dict(id="electric", label="Электрический", hint="Без дымохода", k=0.9),
                 dict(id="bio", label="Биокамин", hint="Без дымохода", k=0.85)]),
+            # Топка — основа камина, не «дополнение» (Иван: «это как
+            # пельмени заказываешь, и спрашивают, мясо положить?»).
+            # Каменная полка с изразцами не дружит, подиум — лишний пункт.
             dict(id="extra", type="checks", label="Дополнить камин", collapsed=True, hidePrices=True, options=[
-                dict(id="firebox", label="Каминная топка в комплект", hint="Astov, Hoxter, Spartherm", add=185000),
                 dict(id="wood", label="Дровница в облицовке", add=72000),
-                dict(id="shelf", label="Каминная полка из камня", add=64000),
-                dict(id="podium", label="Подиум под камин", add=58000),
                 dict(id="panno", label="Изразцовое панно", hint="Ручная роспись по вашему сюжету", add=145000)]),
         ]),
+    # Блок «почему керамика» снят до переписывания: Иван — «в основном
+    # ерунда написана», факты неверные. Илана с Иваном пишут заново.
+    noWhy=True,
     why=dict(
         badTitle="Готовая облицовка из магазина",
         goodTitle="Изразцы Ceramica Decor",
@@ -243,7 +275,7 @@ PRODUCTS = {
               "Керамика с обжигом свыше 1100 °C, гарантия 50 лет, отдельный изразец заменяется точечно."]),
     faq=[
         ("Сколько стоит изразцовый камин?",
-         "Облицовка начинается от 356 000 ₽, комплект под ключ с топкой и монтажом — от 950 000 ₽. Разброс большой, потому что художественная роспись почти вдвое дороже однотонной глазури. Посчитайте свою конфигурацию в калькуляторе выше."),
+         "Облицовка начинается от 200 000 ₽, комплект под ключ с топкой и монтажом — от 900 000 ₽. Разброс большой, потому что художественная роспись почти вдвое дороже однотонной глазури. Посчитайте свою конфигурацию в калькуляторе выше."),
         ("Чем изразцовый камин лучше мраморного или гипсового?",
          "Теплотехникой. Изразец — это полая глиняная керамика с румпой, она накапливает тепло и отдаёт его несколько часов после того, как огонь погас. Мрамор и гипс так не умеют: они только декор. Плюс керамика не боится перегрева у топки."),
         ("Топку вы поставляете или её надо покупать отдельно?",
@@ -251,7 +283,7 @@ PRODUCTS = {
         ("У меня электрокамин или биокамин — облицовка подойдёт?",
          "Да, и это частый запрос в квартирах, где нет дымохода. Электро и био дешевле дровяного: не нужны дымоход, разделка и противопожарные отступы. В калькуляторе выше переключите тип и увидите разницу."),
         ("Сколько ждать изготовления?",
-         "От заявки до сдачи — 3–4 месяца. Каждый изразец формуется вручную, сушится, обжигается, расписывается и обжигается повторно — ускорить обжиг нельзя, на этом ломается качество глазури. Монтаж на объекте занимает 3–7 дней."),
+         "От заявки до сдачи — 3–4 месяца. Каждый изразец формуется вручную, сушится, обжигается, расписывается и обжигается повторно. Монтаж на объекте занимает 3–7 дней."),
         ("Можно поставить камин в готовый интерьер, не разрушая ремонт?",
          "Обычно да. На замере инженер смотрит перекрытия, дымоход и возможность подвести воздух. Электрический и биокамин ставятся почти в любой готовый интерьер, дровяной требует дымохода и противопожарной разделки."),
         ("Что с гарантией?",
@@ -625,8 +657,7 @@ INDEX_TPL = """<!DOCTYPE html>
     </a>
     <nav class="nav" data-nav>
 @WORKS_NAV@      <a href="#catalog">Каталог</a>
-      <a href="#why">Почему керамика</a>
-      <a href="#steps">Как работаем</a>
+@WHY_NAV@      <a href="#steps">Как работаем</a>
       <a href="#faq">Вопросы</a>
       <a href="#contacts">Контакты</a>
 
@@ -701,16 +732,7 @@ INDEX_TPL = """<!DOCTYPE html>
   </div>
 </section>
 
-<section class="section" id="why">
-  <div class="container">
-    <div class="section__head section__head--center">
-      <span class="kicker">Почему керамика</span>
-      <h2 class="section__title">@WHY_TITLE@</h2>
-    </div>
-    <div class="why" data-why></div>
-  </div>
-</section>
-
+@WHY_SECTION@
 
 <section class="section section--tint" id="steps">
   <div class="container">
@@ -1169,7 +1191,7 @@ CARD_ALIAS = [('летняя кухня', 'Летняя кухня'), ('летн
 # выбирает не коллекцию изразца, а конфигурацию комплекса — коллекция
 # для него пустое слово, и кнопка только дробит и без того короткий
 # каталог.
-NO_COLLECTION_FILTER = {'barbekyu-kompleksy'}
+NO_COLLECTION_FILTER = {'barbekyu-kompleksy', 'kaminy'}
 
 # Человекочитаемые значения товарных полей. Те же подписи стоят
 # на кнопках фильтров — держим их в одном месте.
@@ -1936,6 +1958,8 @@ def build():
                 .replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
                 .replace('@WORKS_SECTION@', '' if P.get("noGallery") else WORKS_TPL)
+                .replace('@WHY_SECTION@', '' if P.get("noWhy") else WHY_TPL)
+                .replace('@WHY_NAV@', '' if P.get("noWhy") else '      <a href="#why">Почему керамика</a>\n')
                 .replace('@WORKS_NAV@', '' if P.get("noGallery") else '      <a href="#works">Работы</a>\n')
                 .replace('@WORKS_TITLE@', P.get("worksTitle", "Реализованные проекты"))
                 .replace('@WORKS_LEAD@', P.get("worksLead",

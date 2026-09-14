@@ -364,6 +364,9 @@
       if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
       status(form, '');
 
+      // В демо-режиме заявку никуда не шлём, но кладём в window.LP_LAST_LEAD:
+      // так её видно в тестах и в консоли.
+      if (demo) window.LP_LAST_LEAD = payload;
       var req = demo
         ? new Promise(function (r) { setTimeout(function () { r({ ok: true }); }, 450); })
         : fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
@@ -414,7 +417,11 @@
     Q.fields.forEach(function (f) {
       if (f.type === 'range') state[f.id] = f.def != null ? f.def : f.min;
       else if (f.type === 'checks') state[f.id] = new Set((f.options || []).filter(function (o) { return o.def; }).map(function (o) { return o.id; }));
-      else state[f.id] = (f.options && f.options[0] && f.options[0].id) || '';
+      else {
+        // Радио стартует с варианта, помеченного default, иначе с первого.
+        var d = (f.options || []).filter(function (o) { return o.def; })[0];
+        state[f.id] = (d || (f.options && f.options[0]) || {}).id || '';
+      }
     });
     // стартовые значения можно задать адресом: ?<id>=<value>
     Q.fields.forEach(function (f) {
@@ -458,16 +465,23 @@
     }
 
     function compute() {
-      var base = Q.base || 0, k = 1;
+      var base = Q.base || 0, k = 1, fixed = 0, noTurnkey = false;
       Q.fields.forEach(function (f) {
         if (f.type === 'range') base += state[f.id] * (f.pricePerUnit || 0);
-        else selected(f).forEach(function (o) { base += (o.add || 0); if (o.k) k *= o.k; });
+        else selected(f).forEach(function (o) {
+          base += (o.add || 0); if (o.k) k *= o.k;
+          // Готовая модель со склада стоит ровно столько — ползунки
+          // и коэффициенты к ней не применяются.
+          if (o.fixed) fixed = o.fixed;
+          // «Уже есть камин, нужна облицовка»: цены под ключ нет по смыслу.
+          if (o.noTurnkey) noTurnkey = true;
+        });
       });
-      var main = Math.max(0, base * k);
+      var main = fixed || Math.max(0, base * k);
       return {
         main: Math.round(main / 1000) * 1000,
-        mainMax: Math.round(main * (Q.spread || 1.2) / 1000) * 1000,
-        turnkey: Q.turnkeyFactor ? Math.round(main * Q.turnkeyFactor / 1000) * 1000 : 0,
+        mainMax: fixed ? fixed : Math.round(main * (Q.spread || 1.2) / 1000) * 1000,
+        turnkey: (Q.turnkeyFactor && !fixed && !noTurnkey) ? Math.round(main * Q.turnkeyFactor / 1000) * 1000 : 0,
       };
     }
 
@@ -500,7 +514,7 @@
       // строку и не растягивает калькулятор. Применяем там, где у
       // вариантов нет ни цен, ни длинных подсказок.
       var plain = f.type === 'radio' && (f.options || []).length > 2 &&
-                  !(f.options || []).some(function (o) { return o.add; });
+                  !(f.options || []).some(function (o) { return o.add || o.card != null || o.cards || o.img; });
       if (plain) {
         return '<div class="calc__field">' + head +
           '<div class="calc-select">' +
@@ -518,14 +532,18 @@
       var opts = visible(f).map(function (o) {
         var on = f.type === 'checks' ? state[f.id].has(o.id) : state[f.id] === o.id;
         var ci = cardOf(o), card = ci != null && P.catalog ? P.catalog[ci] : null;
+        // Кадр не из этого каталога — например, печь-камин на посадочной
+        // каминов: свой файл и ссылка на соседнюю посадочную.
+        if (!card && o.img) card = { img: o.img, title: o.label, href: o.href || '' };
         return '<button type="button" class="calc-opt' + (f.type === 'checks' ? '' : ' calc-opt--radio') + (on ? ' is-on' : '') +
           (card ? ' calc-opt--pic' : '') + '" data-field="' + f.id + '" data-opt="' + o.id + '">' +
           '<span class="calc-opt__box" aria-hidden="true"></span>' +
           // Миниатюра — отдельная цель клика: открывает карточку объекта,
           // а не переключает вариант. Человек смотрит, потом выбирает.
           (card && card.img
-            ? '<span class="calc-opt__thumb" data-card-open="' + ci + '" role="link" title="Открыть карточку">' +
-                '<img src="' + esc(tier(card.img, 'b')) + '" alt="' + esc(card.title) + '" loading="lazy" decoding="async" width="72" height="72"></span>'
+            ? '<span class="calc-opt__thumb"' + (ci != null ? ' data-card-open="' + ci + '"' : (card.href ? ' data-href="' + esc(card.href) + '"' : '')) +
+                ' role="link" title="' + (ci != null ? 'Открыть карточку' : 'Подробнее') + '">' +
+                '<img src="' + esc(ci != null ? tier(card.img, 'b') : card.img) + '" alt="' + esc(card.title) + '" loading="lazy" decoding="async" width="72" height="72"></span>'
             : '') +
           '<span class="calc-opt__body"><span class="calc-opt__name">' + esc(o.label) + '</span>' +
           (o.hint ? '<span class="calc-opt__hint">' + esc(o.hint) + '</span>' : '') + '</span>' +
@@ -619,6 +637,12 @@
         t.addEventListener('click', function (e) {
           e.stopPropagation();
           if (window.LPCard) window.LPCard(+t.dataset.cardOpen, t);
+        });
+      });
+      $$('[data-href]', root).forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          e.stopPropagation();
+          window.open(t.dataset.href, '_blank', 'noopener');
         });
       });
       $$('[data-opt]', root).forEach(function (b) {

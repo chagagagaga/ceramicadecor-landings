@@ -98,9 +98,31 @@ window.LP = {
   },
   "fields": [
    {
+    "id": "scope",
+    "type": "radio",
+    "step": 1,
+    "label": "С чего начинаем",
+    "row": true,
+    "options": [
+     {
+      "id": "full",
+      "label": "Нужен комплекс с нуля",
+      "hint": "Кладка, оборудование, облицовка, монтаж",
+      "k": 1
+     },
+     {
+      "id": "facing",
+      "label": "Уже есть комплекс, нужна облицовка",
+      "hint": "Облицуем вашу печь или комплекс",
+      "k": 1,
+      "noTurnkey": true
+     }
+    ]
+   },
+   {
     "id": "front",
     "type": "range",
-    "step": 1,
+    "step": 2,
     "label": "Длина по фронту",
     "min": 2,
     "max": 8,
@@ -114,7 +136,7 @@ window.LP = {
    {
     "id": "place",
     "type": "radio",
-    "step": 2,
+    "step": 3,
     "label": "Где стоит комплекс",
     "row": true,
     "options": [
