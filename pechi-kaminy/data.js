@@ -37,13 +37,15 @@ window.LP = {
       "id": "dorf",
       "label": "Дорф",
       "hint": "Классика с рельефом, 439 000 ₽",
-      "add": 439000
+      "add": 439000,
+      "card": 0
      },
      {
       "id": "ritm",
       "label": "Ритм",
       "hint": "Современный минимализм, 449 000 ₽",
-      "add": 449000
+      "add": 449000,
+      "card": 3
      }
     ]
    },
@@ -56,18 +58,48 @@ window.LP = {
      {
       "id": "antik",
       "label": "Белый антик",
-      "k": 1
+      "k": 1,
+      "cards": {
+       "dorf": 0,
+       "ritm": 3
+      }
      },
      {
       "id": "choco",
       "label": "Горький шоколад",
-      "k": 1
+      "k": 1,
+      "card": 1,
+      "showIf": {
+       "model": "dorf"
+      }
      },
      {
       "id": "murav",
       "label": "Муравленый",
       "hint": "Глубокий зелёный",
-      "k": 1.04
+      "k": 1.04,
+      "card": 2,
+      "showIf": {
+       "model": "dorf"
+      }
+     },
+     {
+      "id": "burg",
+      "label": "Бургундия",
+      "k": 1,
+      "card": 4,
+      "showIf": {
+       "model": "ritm"
+      }
+     },
+     {
+      "id": "lazur",
+      "label": "Лазурный",
+      "k": 1,
+      "card": 5,
+      "showIf": {
+       "model": "ritm"
+      }
      },
      {
       "id": "palette",
@@ -272,6 +304,7 @@ window.LP = {
    "Та же керамика ручной формовки и та же гарантия 50 лет."
   ],
   "media": "img/02.webp",
+  "single": false,
   "mediaHi": "../assets/img/why/pechi-kaminy.webp 1998w"
  },
  "steps": [

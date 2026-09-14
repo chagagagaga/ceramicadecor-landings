@@ -397,6 +397,7 @@ window.LP = {
    "Изразец держит тепло часами после протопки, гарантия 50 лет."
   ],
   "media": "img/03.webp",
+  "single": false,
   "mediaHi": "../assets/img/why/bannye-portaly.webp 1998w"
  },
  "steps": [

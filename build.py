@@ -98,6 +98,18 @@ STEPS = [
      "text": "Финальный этап — облицовка изразцами. Каждый элемент подгоняется вручную, создавая единое полотно."},
 ]
 
+WORKS_TPL = '''<section class="section section--tint" id="works">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <span class="kicker">Наши работы</span>
+      <h2 class="section__title">@WORKS_TITLE@</h2>
+      <p class="section__lead">@WORKS_LEAD@</p>
+    </div>
+    <div class="gallery" data-gallery></div>
+  </div>
+</section>
+'''
+
 # ───────────────────────────────────────────────────────────────────────────
 # КОНТЕНТ ПО НАПРАВЛЕНИЯМ
 # ───────────────────────────────────────────────────────────────────────────
@@ -311,7 +323,7 @@ PRODUCTS = {
 "pechi-kaminy": dict(
     title="Типовые печи-камины",
     h1="Печь-камин в изразцах<br><em>с готовой ценой и сроком</em>",
-    badge="Заводская модель · срок от 2 недель",
+    badge="Заводская модель, в наличии",
     sub="Выберите модель — цена окончательная и видна сразу. Пришлём фотографии, размеры и условия доставки.",
     usp=["Цена окончательная, сразу", "Со склада — от 2 недель", "Доставка и монтаж по РФ", "Гарантия 50 лет на облицовку"],
     seo="Типовые печи-камины Ceramica Decor в изразцовой облицовке: готовые модели, фиксированная цена, срок от 2 недель.",
@@ -319,6 +331,9 @@ PRODUCTS = {
     # Заводская модель: комплект стоит ровно столько. «От» здесь спорит
     # с обещанием раздела — «цена окончательная, сразу».
     priceFrom=False,
+    # Шесть заводских моделей — это и каталог, и «работы» одновременно.
+    # Галерея показывала те же шесть рендеров, что и карточки ниже.
+    noGallery=True,
     priceNote="Цена за комплект со склада: облицовка и топка. Дымоход, монтаж и доставка считаются отдельно — в калькуляторе выше.",
     quiz=dict(
         title="Соберите свою печь-камин",
@@ -327,13 +342,21 @@ PRODUCTS = {
         base=0, spread=1.1, turnkeyFactor=0,
         matchBy=None,
         fields=[
+            # У варианта есть кадр — номер карточки каталога. Он показывается
+            # миниатюрой рядом с вариантом, клик открывает карточку объекта.
+            # Человек выбирает модель и цвет глазами, а не по названию.
             dict(id="model", type="radio", step=1, label="Модель", options=[
-                dict(id="dorf", label="Дорф", hint="Классика с рельефом, 439 000 ₽", add=439000),
-                dict(id="ritm", label="Ритм", hint="Современный минимализм, 449 000 ₽", add=449000)]),
+                dict(id="dorf", label="Дорф", hint="Классика с рельефом, 439 000 ₽", add=439000, card=0),
+                dict(id="ritm", label="Ритм", hint="Современный минимализм, 449 000 ₽", add=449000, card=3)]),
+            # Палитра у моделей разная: Дорф со склада идёт в белом антике,
+            # горьком шоколаде и муравленом; Ритм — в белом антике, бургундии
+            # и лазурном. Вариант показывается только под свою модель.
             dict(id="color", type="radio", step=2, label="Цвет глазури", options=[
-                dict(id="antik", label="Белый антик", k=1),
-                dict(id="choco", label="Горький шоколад", k=1),
-                dict(id="murav", label="Муравленый", hint="Глубокий зелёный", k=1.04),
+                dict(id="antik", label="Белый антик", k=1, cards={"dorf": 0, "ritm": 3}),
+                dict(id="choco", label="Горький шоколад", k=1, card=1, showIf={"model": "dorf"}),
+                dict(id="murav", label="Муравленый", hint="Глубокий зелёный", k=1.04, card=2, showIf={"model": "dorf"}),
+                dict(id="burg", label="Бургундия", k=1, card=4, showIf={"model": "ritm"}),
+                dict(id="lazur", label="Лазурный", k=1, card=5, showIf={"model": "ritm"}),
                 # Со страницы модели: расширенная палитра в 150 оттенков,
                 # доплата 50 000 ₽, срок изготовления плюс две недели.
                 dict(id="palette", label="Другой оттенок",
@@ -586,8 +609,7 @@ INDEX_TPL = """<!DOCTYPE html>
       <span class="logo__text"><b>CERAMICA DECOR</b><i>Керамика ручной работы</i></span>
     </a>
     <nav class="nav" data-nav>
-      <a href="#works">Работы</a>
-      <a href="#catalog">Каталог</a>
+@WORKS_NAV@      <a href="#catalog">Каталог</a>
       <a href="#why">Почему керамика</a>
       <a href="#steps">Как работаем</a>
       <a href="#faq">Вопросы</a>
@@ -647,17 +669,7 @@ INDEX_TPL = """<!DOCTYPE html>
   </div>
 </section>
 
-<section class="section section--tint" id="works">
-  <div class="container">
-    <div class="section__head section__head--center">
-      <span class="kicker">Наши работы</span>
-      <h2 class="section__title">@WORKS_TITLE@</h2>
-      <p class="section__lead">@WORKS_LEAD@</p>
-    </div>
-    <div class="gallery" data-gallery></div>
-  </div>
-</section>
-
+@WORKS_SECTION@
 <section class="section" id="catalog">
   <div class="container">
     <div class="section__head section__head--center">
@@ -1534,6 +1546,19 @@ def fmt_ru(n):
     return '{:,}'.format(int(n)).replace(',', '\u00a0')
 
 
+# Кадр блока «почему керамика», выбранный руками.
+# otopitelnye-pechi: автоматика брала кадр печи «Птицы» — в широкой
+#   полосе от него оставался фрагмент облицовки. Кадр 04 (Усадьба) снят
+#   горизонтально: печь с огнём в интерьере входит целиком.
+# izraztsy: одна плитка крупным планом ничего не говорит о разнообразии.
+#   Собран коллаж из четырёх каталожных снимков (assets/img/why/izraztsy.webp),
+#   это единый файл без уровней — флаг single.
+WHY_MEDIA = {
+    'otopitelnye-pechi': 'img/04.webp',
+    'izraztsy': '../assets/img/why/izraztsy.webp',
+}
+
+
 def why_hi(slug):
     """Кадр блока «почему» в высоком разрешении, если он скачан."""
     rel = os.path.join('assets', 'img', 'why', slug + '.webp')
@@ -1739,6 +1764,11 @@ def build():
             # было на сайте, а скачаться могло не всё.
             c["photos"] = [f for f in c["photos"]
                            if os.path.exists(os.path.join(ROOT, slug, f))]
+            # У изразцов дополнительные кадры на странице артикула — это
+            # соседние артикулы той же коллекции, а не другие ракурсы.
+            # Листать их внутри карточки — показывать чужой товар.
+            if slug == 'izraztsy':
+                c["photos"] = c["photos"][:1]
             cover = CARD_COVER.get((slug, pos))
             if cover and cover in c["photos"]:
                 c["photos"].remove(cover)
@@ -1835,13 +1865,14 @@ def build():
             "quiz": q, "catalog": cards, "filters": filters,
             "why": {"badTitle": P["why"]["badTitle"], "goodTitle": P["why"]["goodTitle"],
                     "bad": P["why"]["bad"], "good": P["why"]["good"],
-                    "media": why_media(slug, cards),
+                    "media": WHY_MEDIA.get(slug) or why_media(slug, cards),
+                    "single": WHY_MEDIA.get(slug, '').startswith('../'),
                     # Полоса тянется во всю ширину контейнера — на широком
                     # мониторе это под 1800 CSS-пикселей, а кадры объектов
                     # лежат в 1600. Единственное место, где картинка
                     # показывалась крупнее своего размера и мылила.
                     # Оригинал с сайта, до 2000 px: tools/fetch_why_hires.py
-                    "mediaHi": why_hi(slug)},
+                    "mediaHi": '' if WHY_MEDIA.get(slug, '').startswith('../') else why_hi(slug)},
             "steps": STEPS,
             "guarantees": [dict(g, svg=ICONS.get(g.get("icon", ""), "")) for g in GUARANTEES],
             "faq": [{"q": a, "a": b} for a, b in P["faq"]],
@@ -1884,6 +1915,8 @@ def build():
                 .replace('@HERO_TALL@', '../assets/img/hero/%s-760.webp' % slug)
                 .replace('@HERO@', hero)
                 .replace('@BADGE@', P["badge"]).replace('@H1@', no_orphan(P["h1"])).replace('@SUB@', P["sub"])
+                .replace('@WORKS_SECTION@', '' if P.get("noGallery") else WORKS_TPL)
+                .replace('@WORKS_NAV@', '' if P.get("noGallery") else '      <a href="#works">Работы</a>\n')
                 .replace('@WORKS_TITLE@', P.get("worksTitle", "Реализованные проекты"))
                 .replace('@WORKS_LEAD@', P.get("worksLead",
                     "Настоящие объекты, а не рендеры. Нажмите на фото — откроется галерея."))

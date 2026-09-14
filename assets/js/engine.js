@@ -415,8 +415,35 @@
       else if (f.type !== 'checks' && (f.options || []).some(function (o) { return o.id === v; })) state[f.id] = v;
     });
 
+    // Вариант может зависеть от другого поля: у печей-каминов палитра
+    // у каждой модели своя, и цвета другой модели человеку не показываем.
+    function shown(o) {
+      if (!o.showIf) return true;
+      return Object.keys(o.showIf).every(function (k) { return state[k] === o.showIf[k]; });
+    }
+    function visible(f) { return (f.options || []).filter(shown); }
+    // Если после смены модели выбранный цвет пропал из списка — берём
+    // первый доступный, иначе расчёт держится за невидимый вариант.
+    function settle() {
+      Q.fields.forEach(function (f) {
+        if (f.type !== 'radio' || !(f.options || []).some(function (o) { return o.showIf; })) return;
+        var vis = visible(f);
+        if (vis.length && !vis.some(function (o) { return o.id === state[f.id]; })) state[f.id] = vis[0].id;
+      });
+    }
+    // Карточка каталога, которой проиллюстрирован вариант: либо одна
+    // (card), либо своя под каждое значение другого поля (cards).
+    function cardOf(o) {
+      if (o.card != null) return o.card;
+      if (!o.cards) return null;
+      var k = Object.keys(o.cards).filter(function (key) {
+        return Object.keys(state).some(function (f) { return state[f] === key; });
+      })[0];
+      return k == null ? null : o.cards[k];
+    }
+
     function selected(f) {
-      return (f.options || []).filter(function (o) {
+      return visible(f).filter(function (o) {
         return f.type === 'checks' ? state[f.id].has(o.id) : state[f.id] === o.id;
       });
     }
@@ -479,11 +506,18 @@
           (f.hint ? '<p class="calc__hint">' + esc(f.hint) + '</p>' : '') + '</div>';
       }
 
-      var opts = (f.options || []).map(function (o) {
+      var opts = visible(f).map(function (o) {
         var on = f.type === 'checks' ? state[f.id].has(o.id) : state[f.id] === o.id;
+        var ci = cardOf(o), card = ci != null && P.catalog ? P.catalog[ci] : null;
         return '<button type="button" class="calc-opt' + (f.type === 'checks' ? '' : ' calc-opt--radio') + (on ? ' is-on' : '') +
-          '" data-field="' + f.id + '" data-opt="' + o.id + '">' +
+          (card ? ' calc-opt--pic' : '') + '" data-field="' + f.id + '" data-opt="' + o.id + '">' +
           '<span class="calc-opt__box" aria-hidden="true"></span>' +
+          // Миниатюра — отдельная цель клика: открывает карточку объекта,
+          // а не переключает вариант. Человек смотрит, потом выбирает.
+          (card && card.img
+            ? '<span class="calc-opt__thumb" data-card-open="' + ci + '" role="link" title="Открыть карточку">' +
+                '<img src="' + esc(tier(card.img, 'b')) + '" alt="' + esc(card.title) + '" loading="lazy" decoding="async" width="72" height="72"></span>'
+            : '') +
           '<span class="calc-opt__body"><span class="calc-opt__name">' + esc(o.label) + '</span>' +
           (o.hint ? '<span class="calc-opt__hint">' + esc(o.hint) + '</span>' : '') + '</span>' +
           (o.add && !f.hidePrices ? '<span class="calc-opt__price">+' + fmt(o.add) + ' ₽</span>' : '') +
@@ -572,6 +606,12 @@
           render();
         });
       });
+      $$('[data-card-open]', root).forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          e.stopPropagation();
+          if (window.LPCard) window.LPCard(+t.dataset.cardOpen, t);
+        });
+      });
       $$('[data-opt]', root).forEach(function (b) {
         b.addEventListener('click', function () {
           var f = Q.fields.filter(function (x) { return x.id === b.dataset.field; })[0];
@@ -580,7 +620,7 @@
             if (s.has(b.dataset.opt)) s.delete(b.dataset.opt); else s.add(b.dataset.opt);
             b.classList.toggle('is-on');
             refresh();
-          } else { state[f.id] = b.dataset.opt; render(); }
+          } else { state[f.id] = b.dataset.opt; settle(); render(); }
         });
       });
       $$('[data-cta]', root).forEach(function (b) {
@@ -701,6 +741,7 @@
     }
     function close() { if (modal) modal.hidden = true; document.body.style.overflow = ''; }
 
+    settle();
     render();
     return { open: open, state: state };
   })();
@@ -1068,9 +1109,13 @@
         // которая не загрузилась.
         (P.why.media
           ? '<div class="why__media"><img src="' + BLANK + '" data-src="' + esc(P.why.media) + '"' +
-            ' data-srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' +
-              esc(P.why.media) + ' 1600w' + (P.why.mediaHi ? ', ' + esc(P.why.mediaHi) : '') + '"' +
-            ' sizes="(min-width: 1024px) min(1280px, 100vw), 100vw" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>'
+            // Собранный вручную кадр (коллаж) лежит одним файлом — у него
+            // нет уровней s/m, и srcset ему не нужен.
+            (P.why.single ? '' :
+              ' data-srcset="' + esc(tier(P.why.media, 's')) + ' 700w, ' + esc(tier(P.why.media, 'm')) + ' 1100w, ' +
+                esc(P.why.media) + ' 1600w' + (P.why.mediaHi ? ', ' + esc(P.why.mediaHi) : '') + '"' +
+              ' sizes="(min-width: 1024px) min(1280px, 100vw), 100vw"') +
+            ' alt="" loading="lazy" decoding="async" width="1200" height="800"></div>'
           : '');
 
     // Галерея с лайтбоксом

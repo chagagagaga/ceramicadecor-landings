@@ -247,6 +247,13 @@ main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-si
 .calc-opt__name { font-size: .92rem; font-weight: 500; line-height: 1.3; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
 .calc-opt__hint { font-size: .72rem; color: var(--text-dim); line-height: 1.35; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
 .calc-opt__price { margin-left: auto; flex: none; font-size: .78rem; color: var(--text-muted); white-space: nowrap; }
+/* Миниатюра варианта — отдельная цель клика, открывает карточку объекта.
+   Рамка и лёгкое увеличение при наведении говорят, что она кликабельна
+   сама по себе, а не как часть кнопки. */
+.calc-opt__thumb { flex: none; width: 56px; height: 56px; overflow: hidden; background: #F4F4F4; cursor: zoom-in; border: 1px solid var(--border); transition: transform var(--transition), border-color var(--transition); }
+.calc-opt__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.calc-opt__thumb:hover { transform: scale(1.06); border-color: var(--primary); }
+.calc-opt--pic { padding-top: .45rem; padding-bottom: .45rem; }
 .calc-opt--radio { justify-content: flex-start; }
 .calc-opt--radio .calc-opt__box { border-radius: 50%; }
 .calc-opt--radio.is-on .calc-opt__box::after { left: 4px; top: 4px; width: 6px; height: 6px; border: 0; border-radius: 50%; background: var(--white); transform: none; }

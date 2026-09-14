@@ -450,6 +450,7 @@ window.LP = {
    "Изразец с румпой держит тепло часами, гарантия на керамику 50 лет."
   ],
   "media": "img/01.webp",
+  "single": false,
   "mediaHi": "../assets/img/why/russkie-pechi.webp 1998w"
  },
  "steps": [

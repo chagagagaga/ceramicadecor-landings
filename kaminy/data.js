@@ -751,6 +751,7 @@ window.LP = {
    "Керамика с обжигом свыше 1100 °C, гарантия 50 лет, отдельный изразец заменяется точечно."
   ],
   "media": "img/20.webp",
+  "single": false,
   "mediaHi": "../assets/img/why/kaminy.webp 1596w"
  },
  "steps": [

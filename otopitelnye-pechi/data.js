@@ -420,7 +420,8 @@ window.LP = {
    "Печь на изразцах служит десятилетиями, отдельный элемент меняется точечно.",
    "Становится центром интерьера, а не бытовым прибором в углу."
   ],
-  "media": "img/01.webp",
+  "media": "img/04.webp",
+  "single": false,
   "mediaHi": "../assets/img/why/otopitelnye-pechi.webp 1998w"
  },
  "steps": [

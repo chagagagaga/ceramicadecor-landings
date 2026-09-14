@@ -596,6 +596,7 @@ window.LP = {
    "Гарантия 50 лет на облицовку — зафиксирована в договоре."
   ],
   "media": "img/14.webp",
+  "single": false,
   "mediaHi": "../assets/img/why/barbekyu-kompleksy.webp 1996w"
  },
  "steps": [
