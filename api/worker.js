@@ -199,7 +199,14 @@ async function sendLso(env, lead) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(lead),
     });
-    return res.ok ? 'ok' : 'ошибка HTTP ' + res.status;
+    if (!res.ok) return 'ошибка HTTP ' + res.status;
+    // ЛСО отвечает 200 и на отказ тоже — «{"result": false, "message": …}».
+    // По одному статусу не понять, завёлся лид или нет: 14.09 воркер
+    // сутки писал «ok», пока ЛСО отвечала «Запрос с неизвестного сайта».
+    let data = null;
+    try { data = await res.json(); } catch (e) { return 'ok (ответ не JSON)'; }
+    if (data && data.result === false) return 'отказ ЛСО: ' + (data.message || 'без причины');
+    return 'ok';
   } catch (e) {
     return 'ошибка: ' + e.message;
   }
