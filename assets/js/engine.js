@@ -226,6 +226,9 @@
           // ── склейка с Метрикой: без этих полей сквозной аналитики нет
           lead_uid: LEAD_UID,
           site_key: 'cd-' + P.slug,
+          // Кому вели контакты в момент обращения: менеджер в ЛСО видит,
+          // что клиент шёл именно к нему.
+          manager: (window.LP_DUTY && window.LP_DUTY.name) || '',
           ym_client_id: clientId(),
           yclid: yclid(),
           gclid: (last.marks && last.marks.gclid) || '',
@@ -1219,6 +1222,40 @@
         }
       });
     }
+    /* Дежурный менеджер. Мессенджеры и телефон ведут не в общую очередь,
+       а к тому, кто сегодня на смене: расписание лежит в schedule.json и
+       попадает сюда как P.duty. Дата берётся московская — сервер тут ни
+       при чём, страница статическая, поэтому считаем в браузере. Если
+       расписания нет или дата в нём не найдена — недельное правило,
+       а если и его нет — общие контакты бренда. */
+    function dutyManager() {
+      var d = P.duty;
+      if (!d || !d.managers) return null;
+      var now = new Date(), iso, dow;
+      try {
+        iso = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Moscow' }).format(now);
+        dow = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Moscow', weekday: 'short' }).format(now);
+      } catch (e) {
+        iso = now.toISOString().slice(0, 10);
+        dow = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][now.getDay()];
+      }
+      var n = { Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6, Sun: 7 }[dow];
+      var id = (d.days && d.days[iso]) || (d.weekly && d.weekly[String(n)]);
+      var m = id && d.managers[id];
+      return m ? Object.assign({ id: id }, m) : null;
+    }
+    var duty = dutyManager();
+    window.LP_DUTY = duty;
+    b = Object.assign({}, b);
+    if (duty) {
+      // Телефон и мессенджеры — дежурного. Общий 8-800 остаётся запасным,
+      // если у менеджера чего-то нет.
+      if (duty.phone) { b.phone = duty.phone.replace(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})$/, '+7 ($1) $2-$3-$4'); b.whatsapp = duty.phone.replace(/\D/g, ''); }
+      if (duty.telegram) b.telegram = duty.telegram;
+      if (duty.max) b.maxUrl = duty.max;
+      var row = $('[data-duty-row]'), nm = $('[data-duty-name]');
+      if (row && nm) { nm.textContent = duty.name; row.hidden = false; }
+    }
     var txt = encodeURIComponent('Здравствуйте! Пишу с сайта по направлению «' + P.title + '», хочу расчёт.');
     wire('[data-wa]', b.whatsapp ? 'https://wa.me/' + b.whatsapp + '?text=' + txt : '');
     wire('[data-tg]', b.telegram ? 'https://t.me/' + b.telegram : '');
@@ -1243,7 +1280,10 @@
       });
     })();
 
-    $$('[data-tel]').forEach(function (a) { a.href = 'tel:' + b.phone.replace(/\D/g, ''); });
+    // Ссылка на звонок — в международном виде: с мобильного за границей
+    // «8» не наберётся, «+7» наберётся отовсюду.
+    var digits = b.phone.replace(/\D/g, '').replace(/^8(\d{10})$/, '7$1');
+    $$('[data-tel]').forEach(function (a) { a.href = 'tel:+' + digits; });
     $$('[data-phone-text]').forEach(function (el) { el.textContent = b.phone; });
     var y = $('[data-year]'); if (y) y.textContent = new Date().getFullYear();
 

@@ -58,6 +58,17 @@ SHOWROOMS = [
      "hours": "Пн–Пт 10:00–19:00, выходные по записи"},
 ]
 
+def _load_duty():
+    path = os.path.join(ROOT, 'schedule.json')
+    if not os.path.exists(path):
+        return None
+    d = json.load(io.open(path, encoding='utf-8'))
+    d.pop('_', None)
+    return d
+
+
+DUTY = _load_duty()
+
 STATS = [
     {"v": "14 лет", "l": "на рынке"},
     {"v": ">3000", "l": "выполненных объектов"},
@@ -774,6 +785,7 @@ INDEX_TPL = """<!DOCTYPE html>
       <p class="section__lead">Керамика ручной формовки с 2013 года. Собственное производство, свои монтажные бригады, отгрузка по всей России.</p>
       <dl class="contacts__list">
         <div><dt>Телефон</dt><dd><a data-tel data-phone-text>@PHONE@</a></dd></div>
+        <div data-duty-row hidden><dt>Сегодня на связи</dt><dd data-duty-name></dd></div>
         <div><dt>Часы работы</dt><dd>@WORKTIME@</dd></div>
         <div><dt>Производство</dt><dd>@ADDRESS@</dd></div>
         <div><dt>Сайт</dt><dd><a href="@SITE@" target="_blank" rel="noopener">ceramicadecor.ru</a></dd></div>
@@ -1858,6 +1870,10 @@ def build():
 
         data = {
             "slug": slug, "title": P["title"], "brand": BRAND,
+            # Дежурный менеджер по дате — schedule.json. Посадочная сама
+            # выбирает контакт на день: мессенджеры и телефон ведут к
+            # конкретному человеку, а не в общую очередь.
+            "duty": DUTY,
             "priceLabel1": P["priceLabel1"],
             "priceNote": P["priceNote"],
             "priceFrom": P.get("priceFrom", True),

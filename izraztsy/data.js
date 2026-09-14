@@ -14,6 +14,73 @@ window.LP = {
   "beacon": "https://cd-lead.chagagagaga.workers.dev/beacon",
   "metrikaId": 0
  },
+ "duty": {
+  "managers": {
+   "alexandra": {
+    "name": "Александра Ступина",
+    "phone": "+79950004488",
+    "telegram": "Alexandra_CeramicaDecor",
+    "max": ""
+   },
+   "valeria": {
+    "name": "Валерия Румянцева",
+    "phone": "+79950004646",
+    "telegram": "Valeria_CeramicaDecor",
+    "max": ""
+   },
+   "olga": {
+    "name": "Ольга Бережкова",
+    "phone": "+79950001166",
+    "telegram": "Olga_CeramicaDecor",
+    "max": ""
+   },
+   "natalia": {
+    "name": "Наталия Рунцова",
+    "phone": "+79950004422",
+    "telegram": "Natalia_CeramicaDecor",
+    "max": ""
+   },
+   "elena": {
+    "name": "Елена Полозова",
+    "phone": "+79950001188",
+    "telegram": "Elena_CeramicaDecor",
+    "max": ""
+   }
+  },
+  "days": {
+   "2026-09-14": "alexandra",
+   "2026-09-15": "alexandra",
+   "2026-09-16": "valeria",
+   "2026-09-17": "valeria",
+   "2026-09-18": "olga",
+   "2026-09-19": "alexandra",
+   "2026-09-20": "elena",
+   "2026-09-21": "alexandra",
+   "2026-09-22": "alexandra",
+   "2026-09-23": "valeria",
+   "2026-09-24": "valeria",
+   "2026-09-25": "valeria",
+   "2026-09-26": "alexandra",
+   "2026-09-27": "natalia",
+   "2026-09-28": "alexandra",
+   "2026-09-29": "alexandra",
+   "2026-09-30": "valeria",
+   "2026-10-01": "valeria",
+   "2026-10-02": "valeria",
+   "2026-10-03": "alexandra",
+   "2026-10-04": "natalia",
+   "2026-10-05": "alexandra"
+  },
+  "weekly": {
+   "1": "alexandra",
+   "2": "alexandra",
+   "3": "valeria",
+   "4": "valeria",
+   "5": "valeria",
+   "6": "alexandra",
+   "7": "natalia"
+  }
+ },
  "priceLabel1": "Цена за штуку",
  "priceNote": "Цена за один изразец из этой коллекции. Итог зависит от площади и раскладки — пришлём смету и раскладку за 2–3 дня.",
  "priceFrom": true,
