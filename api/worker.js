@@ -191,13 +191,30 @@ function buildMessage(lead, site) {
 
 /* ---- Каналы --------------------------------------------------------------- */
 
-async function sendLso(env, lead) {
+/* ЛСО узнаёт сайт по своему полю site_key — это домен с точками,
+   заменёнными на подчёркивания: decorceram.online → decorceram_online
+   (Никита, 14.09.2026). Наш site_key другой — cd-kaminy, luch-banya —
+   он нужен для раскладки по таблицам и ботам. Поэтому в ЛСО уходит
+   ключ, выведенный из домена страницы, а наш едет рядом как landing.
+   Домен берём из page_url, а не из Origin: Origin у тестов с github.io,
+   а page_url — то, что человек реально открыл. */
+function lsoSiteKey(lead, origin) {
+  const a = lead.attribution || {};
+  let host = '';
+  try { host = new URL(a.page_url || lead.page || origin || '').hostname; } catch (e) {}
+  return host.replace(/^www\./, '').replace(/[^a-z0-9]+/gi, '_').toLowerCase();
+}
+
+async function sendLso(env, lead, origin) {
   if (!env.LSO_ENDPOINT) return 'skip: нет LSO_ENDPOINT';
+  const key = lsoSiteKey(lead, origin);
+  if (!key) return 'skip: не определить домен';
+  const body = Object.assign({}, lead, { site_key: key, landing: lead.site_key || '' });
   try {
     const res = await fetch(env.LSO_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(lead),
+      body: JSON.stringify(body),
     });
     if (!res.ok) return 'ошибка HTTP ' + res.status;
     // ЛСО отвечает 200 и на отказ тоже — «{"result": false, "message": …}».
@@ -414,12 +431,18 @@ export default {
       let lso = 'skip';
       if (env.LSO_BEACON) {
         try {
+          // site_key для ЛСО — из домена страницы, как и у заявки
+          const key = lsoSiteKey({ page: b.page_url }, origin);
           const r = await fetch(env.LSO_BEACON, {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams({ ...b, beacon_id: b.lead_uid || '' }),
+            body: new URLSearchParams({ ...b, site_key: key, landing: b.site_key || '', beacon_id: b.lead_uid || '' }),
           });
-          lso = r.ok ? 'ok' : 'ошибка HTTP ' + r.status;
+          let data = null;
+          try { data = await r.json(); } catch (e) {}
+          lso = !r.ok ? 'ошибка HTTP ' + r.status
+              : (data && data.result === false) ? 'отказ ЛСО: ' + (data.message || '')
+              : 'ok';
         } catch (e) { lso = 'ошибка: ' + e.message; }
       }
       return json({ ok: true, sheet, lso }, 200, origin, env);
@@ -464,7 +487,7 @@ export default {
     const site = siteOf(lead);
     const text = buildMessage(lead, site);
     const [lso, tg, sheet, mail] = await Promise.all([
-      sendLso(env, lead),
+      sendLso(env, lead, origin),
       sendTelegram(env, site, text),
       sendSheet(env, site, lead),
       sendEmail(env, `Заявка ${site.title}: ${lead.name}, ${lead.phone}`, text.replace(/\n/g, '<br>')),
