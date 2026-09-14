@@ -1248,9 +1248,10 @@
     window.LP_DUTY = duty;
     b = Object.assign({}, b);
     if (duty) {
-      // Телефон и мессенджеры — дежурного. Общий 8-800 остаётся запасным,
-      // если у менеджера чего-то нет.
-      if (duty.phone) { b.phone = duty.phone.replace(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})$/, '+7 ($1) $2-$3-$4'); b.whatsapp = duty.phone.replace(/\D/g, ''); }
+      // К дежурному ведут только мессенджеры. Телефон на странице остаётся
+      // общий рабочий — решение Алексея 14.09: звонки идут в общую очередь,
+      // и подменять под «Целевой звонок» нужно один номер, а не пять.
+      if (duty.phone) b.whatsapp = duty.phone.replace(/\D/g, '');
       if (duty.telegram) b.telegram = duty.telegram;
       if (duty.max) b.maxUrl = duty.max;
       var row = $('[data-duty-row]'), nm = $('[data-duty-name]');
