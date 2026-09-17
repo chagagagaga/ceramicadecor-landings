@@ -890,7 +890,7 @@ INDEX_TPL = """<!DOCTYPE html>
 </div>
 
 <script src="data.js?v=4"></script>
-<script src="../assets/js/engine.js?v=4"></script>
+<script src="../assets/js/engine.js?v=5"></script>
 </body>
 </html>
 """

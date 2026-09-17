@@ -338,6 +338,45 @@
       b.textContent = text || '';
     }
 
+    /* Готовые для менеджера поля — subject, comment, quiz_answers. Приёмник
+       (наш воркер или lead.php на хостинге) отдаёт их в ЛСО и Telegram как
+       есть, ничего не пересобирая. Главное — выбранный канал: если человек
+       просил не звонить, это первая строка темы и комментария (17.09.2026,
+       Иван: «менеджеры не видят, что заказчик выбрал не звонить, и звонят»). */
+    var CHAN = { call: 'Звонок', max: 'MAX', telegram: 'Telegram', whatsapp: 'WhatsApp' };
+    var TIMING = { now: 'уже сейчас', '1-3m': 'в ближайшие 1–3 месяца', later: 'позже, присматривается' };
+    var SOURCE = {
+      calc: 'калькулятор', 'cta-mid': 'форма «3D-проект и смета»', contacts: 'форма «Задать вопрос»',
+      header: 'кнопка в шапке', 'hero-cta': 'первый экран', card: 'карточка каталога',
+      'card-detail': 'карточка объекта', burger: 'меню', mobilebar: 'нижняя панель',
+    };
+    function describe(p) {
+      var ch = p.channel || '', q = p.quiz || null;
+      var noCall = !!ch && ch !== 'call';
+      var clientComment = (p.comment || '').trim();
+      var lines = [];
+      if (ch) lines.push('Связь: ' + (noCall ? 'НЕ ЗВОНИТЬ — написать в ' + (CHAN[ch] || ch) : 'позвонить'));
+      if (p.timing) lines.push('Сроки: ' + (TIMING[p.timing] || p.timing));
+      if (q && q.summary) lines.push('Конфигурация: ' + q.summary);
+      if (q && q.estimate_min) {
+        lines.push('Расчёт на сайте: ' + fmt(q.estimate_min) + (q.estimate_max ? ' – ' + fmt(q.estimate_max) : '') + ' ₽' +
+                   (q.estimate_turnkey ? ', под ключ ' + fmt(q.estimate_turnkey) + ' ₽' : ''));
+      }
+      if (clientComment) lines.push('Комментарий клиента: ' + clientComment);
+      lines.push('Откуда: ' + (SOURCE[p.source] || p.source || 'форма сайта') + ', ' + (P.title || document.title));
+      lines.push('Страница: ' + location.origin + location.pathname);
+
+      p.subject = (noCall ? '❗НЕ ЗВОНИТЬ, ' + (CHAN[ch] || ch) + ' · ' : '') +
+                  'Заявка с сайта — ' + (P.title || 'форма') + ' · ' + (SOURCE[p.source] || p.source || 'форма');
+      p.comment = lines.join('\n');
+      p.client_comment = clientComment;
+      p.preferred_channel = ch;
+      p.no_call = noCall;
+      p.contact_method = 'website_form';
+      if (q && q.summary) p.quiz_answers = q.summary;
+      return p;
+    }
+
     function submit(form, extra, onOk) {
       if (form.dataset.sending === '1') return;
       var honey = form.querySelector('[name="website"]');
@@ -357,6 +396,7 @@
         page: location.pathname, sentAt: new Date().toISOString(),
         attribution: Attr.payload(),
       }, fd, extra || {});
+      describe(payload);
 
       var btn = form.querySelector('[type="submit"]');
       var label = btn ? btn.textContent : '';

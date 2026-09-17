@@ -141,9 +141,18 @@ function buildMessage(lead, site) {
   r.push(`👤 <b>Имя:</b> ${esc(lead.name)}`);
   r.push(`📞 <b>Телефон:</b> <a href="tel:+${digits(lead.phone)}">${esc(lead.phone)}</a>`);
   if (lead.source) r.push(`📍 <b>Источник:</b> ${esc(SOURCE[lead.source] || lead.source)}`);
-  if (lead.channel) r.push(`💬 <b>Связаться через:</b> ${CHANNEL[lead.channel] || lead.channel}`);
+  // Выбор канала — жирно и сразу после телефона: менеджеры звонили тем,
+  // кто просил написать (Иван, 17.09.2026).
+  if (lead.channel && lead.channel !== 'call') {
+    r.push(`❗ <b>НЕ ЗВОНИТЬ — написать в ${CHANNEL[lead.channel] || lead.channel}</b>`);
+  } else if (lead.channel) {
+    r.push(`💬 <b>Связаться через:</b> ${CHANNEL[lead.channel] || lead.channel}`);
+  }
   if (lead.timing) r.push(`🗓 <b>Когда планирует:</b> ${TIMING[lead.timing] || lead.timing}`);
-  if (lead.comment) r.push(`✏️ <b>Комментарий:</b> ${esc(lead.comment)}`);
+  // Новые посадочные кладут в comment готовое описание для ЛСО, а текст
+  // клиента — в client_comment. Старые шлют только comment.
+  const clientComment = 'client_comment' in lead ? lead.client_comment : lead.comment;
+  if (clientComment) r.push(`✏️ <b>Комментарий:</b> ${esc(clientComment)}`);
 
   if (q) {
     const lines = [];
@@ -312,7 +321,7 @@ async function sendSheet(env, site, lead) {
       q.estimate_min ? `${money(q.estimate_min)}${q.estimate_max ? ' – ' + money(q.estimate_max) : ''} ₽` : '',
       q.summary || [q.area_m2 && `площадь ${q.area_m2} м²`, q.steam_type && STEAM[q.steam_type],
                     q.package && PKG[q.package], q.stove].filter(Boolean).join('; '),
-      lead.comment || '',
+      ('client_comment' in lead ? lead.client_comment : lead.comment) || '',
       lead.utm_source || a.utm_source || '',
       lead.utm_medium || a.utm_medium || '',
       lead.utm_campaign || a.utm_campaign || '',
