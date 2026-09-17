@@ -373,7 +373,12 @@
       p.preferred_channel = ch;
       p.no_call = noCall;
       p.contact_method = 'website_form';
-      if (q && q.summary) p.quiz_answers = q.summary;
+      // Колонка «Ответы квиза» в ЛСО: первым словом — как клиент просил
+      // связаться (Никита выделит его жирным), дальше конфигурация.
+      var qa = [];
+      if (ch) qa.push(noCall ? 'НЕ ЗВОНИТЬ — написать в ' + (CHAN[ch] || ch) : 'ПОЗВОНИТЬ');
+      if (q && q.summary) qa.push(q.summary);
+      if (qa.length) p.quiz_answers = qa.join('. ');
       return p;
     }
 
