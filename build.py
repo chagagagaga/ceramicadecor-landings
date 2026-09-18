@@ -1600,7 +1600,7 @@ WHY_MEDIA = {
     'otopitelnye-pechi': 'img/04.webp',
     'izraztsy': '../assets/img/why/izraztsy.webp',
     # Печи-камины: живое фото Дорфа с объекта (коллаж), Иван 18.09.2026.
-    'pechi-kaminy': '../assets/img/why/pechi-kaminy.webp',
+    'pechi-kaminy': '../assets/img/why/pechi-kaminy.webp?v=3',
 }
 
 

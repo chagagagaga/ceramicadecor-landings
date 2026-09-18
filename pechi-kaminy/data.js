@@ -371,7 +371,7 @@ window.LP = {
    "Срок поставки от 2 недель, монтаж 1–2 дня.",
    "Тоже премиальная изразцовая облицовка и тоже гарантия 50 лет на керамику, но за существенно меньшую цену."
   ],
-  "media": "../assets/img/why/pechi-kaminy.webp",
+  "media": "../assets/img/why/pechi-kaminy.webp?v=3",
   "single": true,
   "mediaHi": ""
  },
