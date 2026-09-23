@@ -204,7 +204,8 @@ window.LP = {
      "Роспись",
      "Художественная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-medalonom-pod-syuzhetnuyu-rospis-kaban"
   },
   {
    "title": "Изразец с лепным рельефом 200х200 Русская Этника",
@@ -233,7 +234,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-200h200-russkaya-etnika"
   },
   {
    "title": "Изразец в окантовке Тюльпан с росписью Прованс",
@@ -262,7 +264,8 @@ window.LP = {
      "Роспись",
      "Художественная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-v-okantovke-tyulpan-s-rospisyu-provans"
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -287,7 +290,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-arhiv"
   },
   {
    "title": "Изразец с синей сюжетной росписью (в лес по дрова)",
@@ -312,7 +316,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-sinej-syuzhetnoj-rospisyu-v-les-po-drova"
   },
   {
    "title": "Изразец с рельефными тюльпанами Тюльпан",
@@ -341,7 +346,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-relefnymi-tyulpanami-tyulpan"
   },
   {
    "title": "Изразец с румпой и лепным рельефом 100х100х15 мм",
@@ -366,7 +372,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-rumpoj-i-lepnym-relefom-100h100h15-mm"
   },
   {
    "title": "Изразец с рельефными птичками и ягодами Птички",
@@ -395,7 +402,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-relefnymi-ptichkami-i-yagodami-ptichki"
   },
   {
    "title": "Изразец гладкий Универсальный",
@@ -424,7 +432,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-universalnyj"
   },
   {
    "title": "Изразец с лепным рельефом Сувенир",
@@ -449,7 +458,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-suvenir"
   },
   {
    "title": "Изразец в окантовке Универсал",
@@ -478,7 +488,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-v-okantovke-universal"
   },
   {
    "title": "Современный изразец коллекции Сохо",
@@ -507,7 +518,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "sovremennyj-izrazec-kollekcii-soho"
   },
   {
    "title": "Изразец рельефный",
@@ -532,7 +544,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-relefnyj"
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (деревья на обрыве)",
@@ -553,7 +566,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h30-s-rospisyu-1-2-derevya-na-obryve"
   },
   {
    "title": "Изразец гладкий 20х20 с росписью (летний отдых)",
@@ -578,7 +592,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h20-s-rospisyu-letnij-otdyh"
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (дерево на краю)",
@@ -599,7 +614,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h30-s-rospisyu-1-2-derevo-na-krayu"
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -624,7 +640,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-arhiv-2"
   },
   {
    "title": "Изразец с художественной росписью (Свиристель)",
@@ -649,7 +666,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-hudozhestvennoj-rospisyu-sviristel"
   },
   {
    "title": "Изразец цветной с лепным рельефом",
@@ -678,7 +696,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-s-lepnym-relefom"
   },
   {
    "title": "Изразец гладкий 20х20 с росписью 1/2 (дорога)",
@@ -699,7 +718,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h20-s-rospisyu-1-2-doroga"
   },
   {
    "title": "Изразец для фасада с лепным рельефом 300х300х20",
@@ -724,7 +744,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-dlya-fasada-s-lepnym-relefom-300h300h20"
   },
   {
    "title": "Изразец с лепной лилией Арт Нуво в Лазурной росписи",
@@ -753,7 +774,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnoj-liliej-art-nuvo-v-lazurnoj-rospisi"
   },
   {
    "title": "Угол гладкий с 3-х сторонним кантом Тюльпан",
@@ -778,7 +800,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "ugol-gladkij-s-3-h-storonnim-kantom-tyulpan"
   },
   {
    "title": "Изразец Прованс с роспись (На базар)",
@@ -807,7 +830,8 @@ window.LP = {
      "Роспись",
      "Художественная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-provans-s-rospis-na-bazar"
   },
   {
    "title": "Изразец Пэчворк с лепным рельефом",
@@ -836,7 +860,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-pechvork-s-lepnym-relefom"
   },
   {
    "title": "Изразец угловой с лепным рельефом Венская",
@@ -865,7 +890,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-uglovoj-s-lepnym-relefom-venskaya"
   },
   {
    "title": "Изразец цветной Пэчворк",
@@ -894,7 +920,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-pechvork"
   },
   {
    "title": "Изразец рельефный",
@@ -919,7 +946,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-relefnyj-2"
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -948,7 +976,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-ptichki"
   },
   {
    "title": "Изразец цветной Сувенир (грифон). Палитра: Зеленая",
@@ -973,7 +1002,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-suvenir-grifon-palitra-zelenaya"
   },
   {
    "title": "Изразец с сюжетной росписью Прованс (Полевые Гвоздики)",
@@ -998,7 +1028,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-syuzhetnoj-rospisyu-provans-polevye-gvozdiki"
   },
   {
    "title": "Угол в окантовке Универсал",
@@ -1027,7 +1058,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "ugol-v-okantovke-universal"
   },
   {
    "title": "Изразец с рельефными птичками и ягодами Птички",
@@ -1056,7 +1088,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-relefnymi-ptichkami-i-yagodami-ptichki-2"
   },
   {
    "title": "Изразец с сюжетной росписью Прованс (Букет Лаванды)",
@@ -1081,7 +1114,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-syuzhetnoj-rospisyu-provans-buket-lavandy"
   },
   {
    "title": "Изразец h300 мм с синей росписью (хорошая погода)",
@@ -1102,7 +1136,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-h300-mm-s-sinej-rospisyu-horoshaya-pogoda"
   },
   {
    "title": "Изразец гладкий 20х20 с росписью (водопой)",
@@ -1127,7 +1162,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h20-s-rospisyu-vodopoj"
   },
   {
    "title": "Изразец с лепным рельефом Пэчворк",
@@ -1156,7 +1192,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-pechvork"
   },
   {
    "title": "Плитка изразцовая рельефная Азулежу 200х200х12 мм",
@@ -1181,7 +1218,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "plitka-izrazcovaya-relefnaya-azulezhu-200h200h12-mm"
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -1210,7 +1248,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-vizantiya"
   },
   {
    "title": "Изразец угловой гладкий 20х30 с росписью (охотники с добычей)",
@@ -1235,7 +1274,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-uglovoj-gladkij-20h30-s-rospisyu-ohotniki-s-dobychej"
   },
   {
    "title": "Изразец с лепным рельефом Дорф",
@@ -1264,7 +1304,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-dorf"
   },
   {
    "title": "Изразец с румпой Арт Нуво",
@@ -1285,7 +1326,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-rumpoj-art-nuvo"
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -1314,7 +1356,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-ptichki-2"
   },
   {
    "title": "Изразец цветной Сувенир. Палитра: Коричневая",
@@ -1339,7 +1382,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-suvenir-palitra-korichnevaya"
   },
   {
    "title": "Изразец цветной Сувенир (двуглавый орел). Палитра: Коричневая",
@@ -1364,7 +1408,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-suvenir-dvuglavyj-orel-palitra-korichnevaya"
   },
   {
    "title": "Изразец с лепным рельефом Элеганс",
@@ -1393,7 +1438,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-elegans"
   },
   {
    "title": "Изразец с медальоном и росписью в коричневой окантовке (воробьи)",
@@ -1418,7 +1464,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-medalonom-i-rospisyu-v-korichnevoj-okantovke-vorobi"
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (деревенский пёс)",
@@ -1439,7 +1486,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h30-s-rospisyu-1-2-derevenskij-pes"
   },
   {
    "title": "Белый изразец с лепным рельефом Русская Этника",
@@ -1464,7 +1512,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "belyj-izrazec-s-lepnym-relefom-russkaya-etnika"
   },
   {
    "title": "Изразец рельефный",
@@ -1489,7 +1538,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-relefnyj-3"
   },
   {
    "title": "Изразец с румпой и лепным рельефом 100х100х15 мм",
@@ -1514,7 +1564,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-rumpoj-i-lepnym-relefom-100h100h15-mm-2"
   },
   {
    "title": "Угол изразцовый с лепным рельефом «Ярославская майолика»",
@@ -1543,7 +1594,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "ugol-izrazcovyj-s-lepnym-relefom-yaroslavskaya-majolika"
   },
   {
    "title": "Изразцовый угол с лепным рельефом Альбион",
@@ -1572,7 +1624,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazcovyj-ugol-s-lepnym-relefom-albion"
   },
   {
    "title": "Изразец с сюжетной росписью Прованс (Птички Чечетки с гнездом)",
@@ -1597,7 +1650,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-syuzhetnoj-rospisyu-provans-ptichki-chechetki-s-gnezdom"
   },
   {
    "title": "Изразец с лепным рельефом «Ярославская майолика»",
@@ -1626,7 +1680,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-yaroslavskaya-majolika"
   },
   {
    "title": "Изразец рельефный с росписью",
@@ -1655,7 +1710,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-relefnyj-s-rospisyu"
   },
   {
    "title": "Изразец с лепным рельефом Элеганс",
@@ -1684,7 +1740,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-elegans-2"
   },
   {
    "title": "Изразец с росписью Прованс (колибри)",
@@ -1709,7 +1766,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-rospisyu-provans-kolibri"
   },
   {
    "title": "Изразец с синей сюжетной росписью (посевной день)",
@@ -1734,7 +1792,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-sinej-syuzhetnoj-rospisyu-posevnoj-den"
   },
   {
    "title": "Изразец цветной Сувенир (жарптица). Палитра: Зеленая",
@@ -1759,7 +1818,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-suvenir-zharptica-palitra-zelenaya"
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -1784,7 +1844,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-arhiv-3"
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -1813,7 +1874,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-vizantiya-2"
   },
   {
    "title": "Плитка изразцовая рельефная Азулежу 200х200х12 мм",
@@ -1838,7 +1900,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "plitka-izrazcovaya-relefnaya-azulezhu-200h200h12-mm-2"
   },
   {
    "title": "Изразец с синей сюжетной росписью (разговор с конём)",
@@ -1863,7 +1926,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-sinej-syuzhetnoj-rospisyu-razgovor-s-konem"
   },
   {
    "title": "Плитка рельефная Азулежу 200х200х12 мм",
@@ -1888,7 +1952,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "plitka-relefnaya-azulezhu-200h200h12-mm"
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -1913,7 +1978,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-arhiv-4"
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -1938,7 +2004,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-ptichki-3"
   },
   {
    "title": "Изразец с медальоном под сюжетную роспись Прованс(ветряная мельница)",
@@ -1963,7 +2030,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-medalonom-pod-syuzhetnuyu-rospis-provans-vetryanaya-melnica"
   },
   {
    "title": "Угол левый к плитке в форме треугольника Маджестик",
@@ -1984,7 +2052,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "ugol-levyj-k-plitke-v-forme-treugolnika-madzhestik"
   },
   {
    "title": "Изразец цветной Пэчворк",
@@ -2013,7 +2082,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-pechvork-2"
   },
   {
    "title": "Изразец с лепным рельефом Дорф",
@@ -2042,7 +2112,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-dorf-2"
   },
   {
    "title": "Изразец гладкий с художественной синей росписью (водная тишь)",
@@ -2067,7 +2138,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-s-hudozhestvennoj-sinej-rospisyu-vodnaya-tish"
   },
   {
    "title": "Изразец рельефный 200х250 Неаполь",
@@ -2092,7 +2164,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-relefnyj-200h250-neapol"
   },
   {
    "title": "Изразец с синей сюжетной росписью (русские гулянья)",
@@ -2117,7 +2190,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-sinej-syuzhetnoj-rospisyu-russkie-gulyanya"
   },
   {
    "title": "Муравленный изразец 20х20 Русская Этника",
@@ -2146,7 +2220,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "muravlennyj-izrazec-20h20-russkaya-etnika"
   },
   {
    "title": "Изразец с росписью Прованс (Лаванда душистая)",
@@ -2171,7 +2246,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-rospisyu-provans-lavanda-dushistaya"
   },
   {
    "title": "Изразец цветной с лепным рельефом 200х200 Русская Этника",
@@ -2200,7 +2276,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-s-lepnym-relefom-200h200-russkaya-etnika"
   },
   {
    "title": "Изразец белый с рельефной розеткой Бристоль",
@@ -2229,7 +2306,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-belyj-s-relefnoj-rozetkoj-bristol"
   },
   {
    "title": "Изразец гладкий 20х30 с росписью 1/2 (водяная мельница)",
@@ -2250,7 +2328,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h30-s-rospisyu-1-2-vodyanaya-melnica"
   },
   {
    "title": "Угол с рельефной косичкой Птички",
@@ -2279,7 +2358,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "ugol-s-relefnoj-kosichkoj-ptichki"
   },
   {
    "title": "Изразец с лепным рельефом Арт Нуво в росписи Фисташковая",
@@ -2308,7 +2388,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-art-nuvo-v-rospisi-fistashkovaya"
   },
   {
    "title": "Изразец с лепным рельефом «Ярославская майолика»",
@@ -2333,7 +2414,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-yaroslavskaya-majolika-2"
   },
   {
    "title": "Изразец для фасада 230х230х30 мм с рельефом",
@@ -2354,7 +2436,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-dlya-fasada-230h230h30-mm-s-relefom"
   },
   {
    "title": "Изразец с современным рельефом",
@@ -2383,7 +2466,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-sovremennym-relefom"
   },
   {
    "title": "Изразец с декоративным рельефом 10х10 Нарцысс желтый",
@@ -2412,7 +2496,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-10h10-narcyss-zheltyj"
   },
   {
    "title": "Изразец с декоративным рельефом 10х10 Лавр",
@@ -2441,7 +2526,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-10h10-lavr"
   },
   {
    "title": "Изразец с художественной росписью (Птицы с птенчиками)",
@@ -2466,7 +2552,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-hudozhestvennoj-rospisyu-pticy-s-ptenchikami"
   },
   {
    "title": "Изразец с декоративным рельефом Архив",
@@ -2491,7 +2578,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-arhiv-5"
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -2520,7 +2608,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-vizantiya-3"
   },
   {
    "title": "Изразец с декоративным рельефом Византия",
@@ -2545,7 +2634,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-vizantiya-4"
   },
   {
    "title": "Русский изразец с рельефным Грифоном",
@@ -2570,7 +2660,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "russkij-izrazec-s-relefnym-grifonom"
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -2599,7 +2690,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-ptichki-4"
   },
   {
    "title": "Изразец с лепным рельефом Усадьба",
@@ -2624,7 +2716,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-usadba"
   },
   {
    "title": "Изразец с лепным рельефом Элеганс",
@@ -2653,7 +2746,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-elegans-3"
   },
   {
    "title": "Русский изразец с мифологической сценкой",
@@ -2682,7 +2776,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "russkij-izrazec-s-mifologicheskoj-scenkoj"
   },
   {
    "title": "Изразец цветной Сувенир (двуглавый орел). Палитра: Зеленая",
@@ -2707,7 +2802,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-cvetnoj-suvenir-dvuglavyj-orel-palitra-zelenaya"
   },
   {
    "title": "Изразец с художественной росписью (Птицы на ветке)",
@@ -2732,7 +2828,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-s-hudozhestvennoj-rospisyu-pticy-na-vetke"
   },
   {
    "title": "Изразец гладкий 20х20 с росписью (заброшенный замок)",
@@ -2757,7 +2854,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-gladkij-20h20-s-rospisyu-zabroshennyj-zamok"
   },
   {
    "title": "Изразец с лепным рельефом Птички",
@@ -2786,7 +2884,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-ptichki-5"
   },
   {
    "title": "Изразец с декоративным рельефом 10х10 Астры",
@@ -2815,7 +2914,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "izrazec-s-dekorativnym-relefom-10h10-astry"
   },
   {
    "title": "Изразец с лепным рельефом 200х200 мм Русская Этника (Зеленая окантовка)",
@@ -2840,7 +2940,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-lepnym-relefom-200h200-mm-russkaya-etnika-zelenaya-okantovka"
   },
   {
    "title": "Изразец Охота с сюжетной росписью (медведь)",
@@ -2865,7 +2966,8 @@ window.LP = {
      "Поверхность",
      "Гладкая"
     ]
-   ]
+   ],
+   "id": "izrazec-ohota-s-syuzhetnoj-rospisyu-medved"
   },
   {
    "title": "Изразец с насечкой Альбион",
@@ -2890,7 +2992,8 @@ window.LP = {
      "Поверхность",
      "Рельефная"
     ]
-   ]
+   ],
+   "id": "izrazec-s-nasechkoj-albion"
   },
   {
    "title": "Угол с насечкой Альбион",
@@ -2919,7 +3022,8 @@ window.LP = {
      "Роспись",
      "Цветная роспись"
     ]
-   ]
+   ],
+   "id": "ugol-s-nasechkoj-albion"
   },
   {
    "title": "Изразец с рельефными полосами и завитками Ар Деко",
@@ -2948,7 +3052,8 @@ window.LP = {
      "Роспись",
      "Однотонный"
     ]
-   ]
+   ],
+   "id": "izrazec-s-relefnymi-polosami-i-zavitkami-ar-deko"
   }
  ],
  "filters": [

@@ -187,7 +187,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-s-rospisnym-panno"
   },
   {
    "title": "Банный портал Сувенир",
@@ -213,7 +214,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-suvenir"
   },
   {
    "title": "Банный портал Усадьба",
@@ -236,7 +238,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-usadba"
   },
   {
    "title": "Банный портал Пастораль",
@@ -259,7 +262,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-pastoral"
   },
   {
    "title": "Банный портал Камея",
@@ -282,7 +286,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-kameya"
   },
   {
    "title": "Банный портал Прованс",
@@ -301,7 +306,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-provans"
   },
   {
    "title": "Банный портал Арт Нуво",
@@ -328,7 +334,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-art-nuvo"
   },
   {
    "title": "Банный портал Арт Нуво, лазурная роспись",
@@ -354,7 +361,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-art-nuvo-lazurnaya-rospis"
   },
   {
    "title": "Банный портал Дорф",
@@ -377,7 +385,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "bannyj-portal-dorf"
   }
  ],
  "filters": [

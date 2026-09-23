@@ -893,7 +893,7 @@ INDEX_TPL = """<!DOCTYPE html>
 </div>
 
 <script src="data.js?v=4"></script>
-<script src="../assets/js/engine.js?v=5"></script>
+<script src="../assets/js/engine.js?v=6"></script>
 </body>
 </html>
 """
@@ -1699,6 +1699,27 @@ def works_gallery(slug, P, cards):
     return out
 
 
+
+def slugify(t):
+    tr = dict(zip('абвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+                  ['a','b','v','g','d','e','e','zh','z','i','j','k','l','m','n','o','p','r','s','t','u','f','h','c','ch','sh','sch','','y','','e','yu','ya']))
+    t = ''.join(tr.get(ch, ch) for ch in (t or '').lower())
+    return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+
+def add_ids(cards):
+    """Адрес карточки: #kamin-albion. Менеджер шлёт клиенту ссылку на
+    конкретный объект, а не на весь каталог (Альфида, 23.09.2026). Ключ —
+    из названия; если названия совпадают, добавляем порядковый номер."""
+    seen = {}
+    for i, c in enumerate(cards):
+        base = slugify(c.get('title')) or 'item-%d' % (i + 1)
+        n = seen.get(base, 0) + 1
+        seen[base] = n
+        c['id'] = base if n == 1 else '%s-%d' % (base, n)
+    return cards
+
+
 def build():
     catalog = json.load(io.open(os.path.join(ROOT, 'catalog.json'), encoding='utf-8'))
     specs_path = os.path.join(ROOT, 'specs.json')
@@ -1911,7 +1932,7 @@ def build():
             "priceNote": P["priceNote"],
             "priceFrom": P.get("priceFrom", True),
             "catalogStyle": P.get("catalogStyle", ""),
-            "quiz": q, "catalog": cards, "filters": filters,
+            "quiz": q, "catalog": add_ids(cards), "filters": filters,
             "why": {"badTitle": P["why"]["badTitle"], "goodTitle": P["why"]["goodTitle"],
                     "bad": P["why"]["bad"], "good": P["why"]["good"],
                     "media": WHY_MEDIA.get(slug) or why_media(slug, cards),

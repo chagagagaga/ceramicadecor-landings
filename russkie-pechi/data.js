@@ -192,7 +192,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-russkaya-etnika"
   },
   {
    "title": "Русская печь Камея",
@@ -217,7 +218,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-kameya"
   },
   {
    "title": "Русская печь Тюльпан, белый",
@@ -235,7 +237,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-tyulpan-belyj"
   },
   {
    "title": "Русская печь Неаполь",
@@ -261,7 +264,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-neapol"
   },
   {
    "title": "Русская печь Усадьба",
@@ -284,7 +288,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-usadba"
   },
   {
    "title": "Русская печь Византия",
@@ -303,7 +308,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-vizantiya"
   },
   {
    "title": "Русская печь Арт Нуво",
@@ -328,7 +334,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-art-nuvo"
   },
   {
    "title": "Русская печь в зелёной майолике",
@@ -355,7 +362,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-v-zelenoj-majolike"
   },
   {
    "title": "Русская печь Русская Этника, зелёная роспись",
@@ -380,7 +388,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-russkaya-etnika-zelenaya-rospis"
   },
   {
    "title": "Русская печь Тюльпан",
@@ -405,7 +414,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-tyulpan"
   },
   {
    "title": "Русская печь Русская Этника, белый",
@@ -430,7 +440,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "russkaya-pech-russkaya-etnika-belyj"
   }
  ],
  "filters": [

@@ -239,7 +239,8 @@ window.LP = {
    "surface": "",
    "kind": "",
    "props": [],
-   "full": "Классический белый камин Альбион с топкой LISEO CASTIRON. Изразцовая облицовка ручной работы в белоснежной цветовой гамме создаёт элегантный и утончённый образ. Камин гармонично вписывается в классические и неоклассические интерьеры."
+   "full": "Классический белый камин Альбион с топкой LISEO CASTIRON. Изразцовая облицовка ручной работы в белоснежной цветовой гамме создаёт элегантный и утончённый образ. Камин гармонично вписывается в классические и неоклассические интерьеры.",
+   "id": "kamin-albion"
   },
   {
    "title": "Камин Альбион, майоликовая глазурь",
@@ -266,7 +267,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-albion-majolikovaya-glazur"
   },
   {
    "title": "Камин Тюльпан",
@@ -293,7 +295,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-tyulpan"
   },
   {
    "title": "Камин Тюльпан, Арктика",
@@ -313,7 +316,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-tyulpan-arktika"
   },
   {
    "title": "Камин Версаль",
@@ -332,7 +336,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-versal"
   },
   {
    "title": "Камин Бристоль",
@@ -359,7 +364,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-bristol"
   },
   {
    "title": "Камин Дорф",
@@ -384,7 +390,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-dorf"
   },
   {
    "title": "Камин Арт Нуво",
@@ -402,7 +409,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-art-nuvo"
   },
   {
    "title": "Камин Птицы",
@@ -423,7 +431,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-pticy"
   },
   {
    "title": "Камин Византия",
@@ -443,7 +452,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-vizantiya"
   },
   {
    "title": "Камин Луна",
@@ -470,7 +480,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-luna"
   },
   {
    "title": "Камин Универсал",
@@ -497,7 +508,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-universal"
   },
   {
    "title": "Камин Универсал, угловой",
@@ -523,7 +535,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-universal-uglovoj"
   },
   {
    "title": "Камин Голландия",
@@ -549,7 +562,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-gollandiya"
   },
   {
    "title": "Камин Браво",
@@ -575,7 +589,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-bravo"
   },
   {
    "title": "Камин Сохо",
@@ -601,7 +616,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-soho"
   },
   {
    "title": "Камин Усадьба",
@@ -625,7 +641,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-usadba"
   },
   {
    "title": "Камин Птички",
@@ -645,7 +662,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-ptichki"
   },
   {
    "title": "Камин Элеганс",
@@ -664,7 +682,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-elegans"
   },
   {
    "title": "Камин Минималист",
@@ -680,7 +699,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-minimalist"
   },
   {
    "title": "Камин Венская",
@@ -698,7 +718,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-venskaya"
   },
   {
    "title": "Камин Венская, классический",
@@ -724,7 +745,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "kamin-venskaya-klassicheskij"
   }
  ],
  "filters": [

@@ -36,7 +36,7 @@ for (const slug of SLUGS) {
   // в data-src. Проверяем именно его.
   const srcOf = i => i.dataset.src || i.getAttribute('src') || '';
   const miss = imgs.map(srcOf).filter(s=>s && !s.startsWith('http') && !s.startsWith('data:')
-    && !fs.existsSync(path.resolve(dir,s)));
+    && !fs.existsSync(path.resolve(dir,s.split('?')[0])));
   t(!miss.length, 'битые картинки: '+miss.slice(0,3).join(', '));
   t(!imgs.filter(i=>i.getAttribute('alt')===null).length, 'картинки без alt');
   t(!imgs.filter(i=>!i.getAttribute('width')).length, 'картинки без размеров');

@@ -182,7 +182,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-pticy"
   },
   {
    "title": "Отопительная печь Прованс",
@@ -201,7 +202,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-provans"
   },
   {
    "title": "Отопительная печь Арт Нуво, лазурная роспись",
@@ -227,7 +229,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-art-nuvo-lazurnaya-rospis"
   },
   {
    "title": "Отопительная печь Усадьба",
@@ -253,7 +256,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-usadba"
   },
   {
    "title": "Отопительная печь Универсал",
@@ -276,7 +280,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-universal"
   },
   {
    "title": "Отопительная печь Птички",
@@ -301,7 +306,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-ptichki"
   },
   {
    "title": "Отопительная печь Арт Нуво",
@@ -319,7 +325,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-art-nuvo"
   },
   {
    "title": "Отопительная печь Модерн",
@@ -344,7 +351,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-modern"
   },
   {
    "title": "Отопительная печь Дорф",
@@ -369,7 +377,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-dorf"
   },
   {
    "title": "Отопительная печь Неаполь",
@@ -393,7 +402,8 @@ window.LP = {
    "size": "",
    "surface": "",
    "kind": "",
-   "props": []
+   "props": [],
+   "id": "otopitelnaya-pech-neapol"
   }
  ],
  "filters": [

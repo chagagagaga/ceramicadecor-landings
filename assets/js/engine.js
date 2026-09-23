@@ -1015,6 +1015,7 @@
           '<div class="pcard__prices">' + price + '</div>' +
           '<div class="pcard__acts">' +
             '<button type="button" class="btn btn--primary" data-lead data-src="card-detail">Рассчитать такой же</button>' +
+            (item.id ? '<button type="button" class="btn btn--ghost pcard__share" data-share title="Скопировать ссылку на этот объект">Ссылка</button>' : '') +
           '</div>' +
           (P.priceNote ? '<p class="pcard__note">' + esc(P.priceNote) + '</p>' : '') +
         '</div>';
@@ -1042,6 +1043,14 @@
         if (e.key === 'ArrowLeft') { cur--; paint(); }
         if (e.key === 'ArrowRight') { cur++; paint(); }
       });
+      el.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-share]');
+        if (!b || !item) return;
+        var url = location.origin + location.pathname + '#' + item.id;
+        var done = function () { b.textContent = 'Скопировано'; setTimeout(function () { b.textContent = 'Ссылка'; }, 1800); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { prompt('Ссылка на объект', url); });
+        else prompt('Ссылка на объект', url);
+      });
       return el;
     }
 
@@ -1049,6 +1058,7 @@
       if (!box) return;
       box.hidden = true;
       document.body.style.overflow = '';
+      if (location.hash && history.replaceState) history.replaceState(null, '', location.pathname + location.search);
       if (back && back.focus) back.focus();
     }
 
@@ -1061,8 +1071,27 @@
       box.hidden = false;
       document.body.style.overflow = 'hidden';
       var c = $('.pcard__close', box); if (c) c.focus();
+      // Адрес карточки в строке браузера: его можно скопировать и отправить.
+      if (item.id && history.replaceState) history.replaceState(null, '', '#' + item.id);
       goal('card_detail', { item: item.title });
     };
+
+    /* Ссылка на конкретный объект: /kaminy/#kamin-albion открывает карточку
+       сразу (Альфида, 23.09.2026). Каталог рендерится после загрузки,
+       поэтому ждём его. */
+    function openFromHash() {
+      var id = decodeURIComponent((location.hash || '').slice(1));
+      if (!id || !P.catalog) return;
+      for (var i = 0; i < P.catalog.length; i++) {
+        if (P.catalog[i].id === id) {
+          var sec = $('#catalog'); if (sec) sec.scrollIntoView();
+          window.LPCard(i, null);
+          return;
+        }
+      }
+    }
+    if (location.hash) setTimeout(openFromHash, 60);
+    window.addEventListener('hashchange', openFromHash);
   })();
 
   // Фильтры
