@@ -454,7 +454,7 @@
     var Q = P.quiz;
     var state = {};
     // MAX — основной канал связи компании, с него и начинаем.
-    var modal = null, channel = 'max';
+    var modal = null, channel = '';
     // Какие раскрывашки человек открыл сам: при перерисовке они должны
     // остаться открытыми, а закрытые — закрытыми.
     var opened = {};
@@ -462,11 +462,10 @@
     Q.fields.forEach(function (f) {
       if (f.type === 'range') state[f.id] = f.def != null ? f.def : f.min;
       else if (f.type === 'checks') state[f.id] = new Set((f.options || []).filter(function (o) { return o.def; }).map(function (o) { return o.id; }));
-      else {
-        // Радио стартует с варианта, помеченного default, иначе с первого.
-        var d = (f.options || []).filter(function (o) { return o.def; })[0];
-        state[f.id] = (d || (f.options && f.options[0]) || {}).id || '';
-      }
+      // Радио стартует пустым: предвыбранный вариант люди не трогали,
+      // и менеджеры получали «Дорф, белый антик» от тех, кто хотел другое
+      // (Алексей, 23.09.2026). Ползунок без значения не бывает — он остаётся.
+      else state[f.id] = '';
     });
     // стартовые значения можно задать адресом: ?<id>=<value>
     Q.fields.forEach(function (f) {
@@ -489,7 +488,7 @@
       Q.fields.forEach(function (f) {
         if (f.type !== 'radio' || !(f.options || []).some(function (o) { return o.showIf; })) return;
         var vis = visible(f);
-        if (vis.length && !vis.some(function (o) { return o.id === state[f.id]; })) state[f.id] = vis[0].id;
+        if (state[f.id] && !vis.some(function (o) { return o.id === state[f.id]; })) state[f.id] = '';
       });
     }
     // Карточка каталога, которой проиллюстрирован вариант: либо одна
@@ -632,7 +631,7 @@
           '</div>' +
           '<div class="calc__cta">' +
             '<div class="calc-actions">' +
-              '<button type="button" class="btn btn--primary" data-cta="whatsapp">Прислать расчёт</button>' +
+              '<button type="button" class="btn btn--primary" data-cta="">Прислать расчёт</button>' +
               '<button type="button" class="btn btn--ghost" data-cta="call">Обсудить по телефону</button>' +
             '</div>' +
             '<div class="calc__social"><span class="calc__pulse"></span>Сегодня заказали расчёт: <b>' + orders() + '</b></div>' +
@@ -702,7 +701,7 @@
         });
       });
       $$('[data-cta]', root).forEach(function (b) {
-        b.addEventListener('click', function () { channel = b.dataset.cta; goal('calc_cta_click', { channel: channel }); open(); });
+        b.addEventListener('click', function () { if (b.dataset.cta) channel = b.dataset.cta; goal('calc_cta_click', { channel: channel || 'none' }); open(); });
       });
     }
 
@@ -749,7 +748,7 @@
           '</div>' +
           '<form data-lead-source="calc" novalidate>' +
             '<input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-            '<input type="hidden" name="channel" data-chan-input value="max">' +
+            '<input type="hidden" name="channel" data-chan-input value="">' +
             '<input type="hidden" name="timing" data-timing-input value="">' +
             '<label class="field"><span class="field__label">Имя</span><input class="input" type="text" name="name" placeholder="Как к вам обращаться" required></label>' +
             '<label class="field"><span class="field__label">Телефон</span><input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>' +
@@ -801,7 +800,7 @@
       $$('[data-chan]', modal).forEach(function (b) { b.classList.toggle('is-on', b.dataset.chan === channel); });
       $('[data-chan-input]', modal).value = channel;
       var call = channel === 'call';
-      $('[data-mtitle]', modal).textContent = call ? 'Перезвоним с расчётом' : 'Пришлём расчёт в мессенджер';
+      $('[data-mtitle]', modal).textContent = call ? 'Перезвоним с расчётом' : channel ? 'Пришлём расчёт в мессенджер' : 'Получить расчёт';
       $('[data-msub]', modal).textContent = call
         ? 'Инженер позвонит в течение 30 минут в рабочее время и на словах даст вилку по вашей конфигурации.'
         : 'Пришлём смету, 3D-эскиз и подборку похожих реализованных проектов. Ответим за 30 минут.';

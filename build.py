@@ -775,10 +775,10 @@ INDEX_TPL = """<!DOCTYPE html>
       <label class="field"><span class="field__label">Ваш номер телефона</span>
         <input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>
       <div class="field"><span class="field__label">Куда прислать расчёт</span>
-        <input type="hidden" name="channel" data-chan-input value="max">
+        <input type="hidden" name="channel" data-chan-input value="">
         <div class="chans" data-chans>
           <button type="button" class="chan" data-chan="call">Звонок</button>
-          <button type="button" class="chan is-on" data-chan="max">MAX</button>
+          <button type="button" class="chan" data-chan="max">MAX</button>
           <button type="button" class="chan" data-chan="telegram">Telegram</button>
           <button type="button" class="chan" data-chan="whatsapp">WhatsApp</button>
         </div>
@@ -893,7 +893,7 @@ INDEX_TPL = """<!DOCTYPE html>
 </div>
 
 <script src="data.js?v=4"></script>
-<script src="../assets/js/engine.js?v=7"></script>
+<script src="../assets/js/engine.js?v=8"></script>
 </body>
 </html>
 """
