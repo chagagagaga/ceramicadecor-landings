@@ -1033,12 +1033,21 @@
         if (st) { cur += +st.dataset.step; paint(); return; }
         var th = e.target.closest('.pcard__thumb');
         if (th) { cur = +th.dataset.i; paint(); return; }
+        // Клик по кадру — во весь экран, с листанием (Алексей, 23.09.2026).
+        if (e.target.closest('.pcard__pic') && window.LPGallery) {
+          var set = shots();
+          if (set.length) { goal('gallery_open', { item: item.title }); window.LPGallery(set, item.title, cur); }
+          return;
+        }
         // Кнопка расчёта живёт в общем обработчике: закрываем карточку,
         // чтобы форма не открывалась под ней.
         if (e.target.closest('[data-lead]')) close();
       });
       document.addEventListener('keydown', function (e) {
         if (el.hidden) return;
+        // Поверх карточки может быть лайтбокс — Escape закрывает только его.
+        var lbx = document.querySelector('.lightbox');
+        if (lbx && !lbx.hidden) return;
         if (e.key === 'Escape') close();
         if (e.key === 'ArrowLeft') { cur--; paint(); }
         if (e.key === 'ArrowRight') { cur++; paint(); }
@@ -1233,22 +1242,11 @@
     // и они должны заполнять плитку, а не висеть в белых полях.
     var galExternal = P.gallery && P.gallery.length && /^\.\./.test(P.gallery[0]);
     if (gal && P.catalogStyle === 'product' && !galExternal) gal.classList.add('gallery--product');
-    if (gal && P.gallery && P.gallery.length) {
-      // Плитка галереи занимает до 206 CSS-пикселей: на обычном экране
-      // хватает лёгкого уровня, на ретине — превью карточки. Раньше сюда
-      // уходило восемнадцать кадров по 700 px — почти мегабайт на блок,
-      // который человек чаще всего пролистывает.
-      var GAL_SIZES = '(min-width: 1024px) 210px, (min-width: 700px) 25vw, 33vw';
-      gal.innerHTML = P.gallery.map(function (src, i) {
-        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '">' +
-          '<img src="' + BLANK + '" data-src="' + esc(tier(src, 'g')) + '" data-srcset="' + esc(tier(src, 'b')) + ' 240w, ' + esc(tier(src, 'g')) + ' 460w, ' + esc(thumb(src)) + ' 700w"' +
-          ' sizes="' + GAL_SIZES + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
-      }).join('');
-      lazify(gal);
+    (function () {
       var lb = null, cur = 0;
       // Набор кадров и подпись задаются при открытии: из общей галереи
       // раздела или из фотографий конкретного объекта.
-      var set = P.gallery, caption = P.title + ' — реализованный проект';
+      var set = P.gallery || [], caption = P.title + ' — реализованный проект';
       function show() {
         cur = (cur + set.length) % set.length;
         $('img', lb).src = set[cur];
@@ -1289,11 +1287,23 @@
         }, { passive: true });
         return el;
       }
+    })();
+
+    if (gal && P.gallery && P.gallery.length) {
+      // Плитка галереи занимает до 206 CSS-пикселей: на обычном экране
+      // хватает лёгкого уровня, на ретине — превью карточки. Раньше сюда
+      // уходило восемнадцать кадров по 700 px — почти мегабайт на блок,
+      // который человек чаще всего пролистывает.
+      var GAL_SIZES = '(min-width: 1024px) 210px, (min-width: 700px) 25vw, 33vw';
+      gal.innerHTML = P.gallery.map(function (src, i) {
+        return '<button type="button" data-i="' + i + '" aria-label="Открыть фото ' + (i + 1) + '">' +
+          '<img src="' + BLANK + '" data-src="' + esc(tier(src, 'g')) + '" data-srcset="' + esc(tier(src, 'b')) + ' 240w, ' + esc(tier(src, 'g')) + ' 460w, ' + esc(thumb(src)) + ' 700w"' +
+          ' sizes="' + GAL_SIZES + '" alt="Реализованный проект" loading="lazy" decoding="async" width="400" height="400"></button>';
+      }).join('');
+      lazify(gal);
       gal.addEventListener('click', function (e) {
         var b = e.target.closest('[data-i]'); if (!b) return;
-        if (!lb) lb = makeLb();
-        set = P.gallery; caption = P.title + ' — реализованный проект';
-        cur = +b.dataset.i; show(); lb.hidden = false;
+        window.LPGallery(P.gallery, P.title + ' — реализованный проект', +b.dataset.i);
       });
     }
 
@@ -1432,6 +1442,13 @@
       }
       var det = e.target.closest('[data-more-card]');
       if (det && window.LPCard) { window.LPCard(+det.dataset.moreCard, det); return; }
+      // Вся плитка каталога кликабельна, не только «Подробнее» (Алексей,
+      // 23.09.2026). Кнопки, стрелки и ссылки внутри — со своей логикой.
+      var art = e.target.closest('.card');
+      if (art && window.LPCard && !e.target.closest('button, a, .card__nav')) {
+        var mb = $('[data-more-card]', art);
+        if (mb) { window.LPCard(+mb.dataset.moreCard, mb); return; }
+      }
       var lead = e.target.closest('[data-lead]');
       if (lead && Calc) { goal('cta_click', { source: lead.dataset.src || 'cta' }); Calc.open(); }
       var tel = e.target.closest('a[href^="tel:"]');
