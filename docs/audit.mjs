@@ -39,7 +39,7 @@ for (const slug of SLUGS) {
   t(!!d.querySelector('.card__p1 b'), 'в каталоге должна быть цена «под ключ»');
   click('[data-cards-more]'); click('.faq__inner .btn--ghost');
   const imgs = [...d.querySelectorAll('img[src]')];
-  const miss = imgs.map(i => i.getAttribute('src')).filter(s => !s.startsWith('http') && !fs.existsSync(path.resolve(dir, s)));
+  const miss = imgs.map(i => i.getAttribute('src')).filter(s => !s.startsWith('http') && !fs.existsSync(path.resolve(dir, s.split('?')[0])));
   t(!miss.length, 'битые картинки: ' + miss.slice(0,3).join(', '));
   t(!imgs.filter(i => i.getAttribute('alt') === null).length, 'картинки без alt');
   t(!imgs.filter(i => !i.getAttribute('width')).length, 'картинки без размеров');
