@@ -1,68 +1,68 @@
 {
-  "_": "Дежурные менеджеры. Посадочная выбирает контакт по московской дате: сначала days, если даты нет — weekly по дню недели (1 = понедельник … 7 = воскресенье). Телефоны сверены с ceramicadecor.ru/contacts 14.09.2026. Ссылки MAX взяты оттуда же, из карточек менеджеров. У Валерии на сайте ссылки нет — пустое поле значит общую ссылку компании (brand.maxUrl).",
-  "managers": {
-    "alexandra": {
-      "name": "Александра Ступина",
-      "phone": "+79950004488",
-      "telegram": "Alexandra_CeramicaDecor",
-      "max": "https://max.ru/u/f9LHodD0cOLM8wvhXzGwW_HnvHQkEKIvFj1FpYaxHzHfcYjt3XliwFLklt8"
-    },
-    "valeria": {
-      "name": "Валерия Румянцева",
-      "phone": "+79950004646",
-      "telegram": "Valeria_CeramicaDecor",
-      "max": ""
-    },
-    "olga": {
-      "name": "Ольга Бережкова",
-      "phone": "+79950001166",
-      "telegram": "Olga_CeramicaDecor",
-      "max": "https://max.ru/u/f9LHodD0cOKDzHpUS5TIf-MK5RIjJ4lZLCEQP91bgHZgbcpLoPIjx4jQw58"
-    },
-    "natalia": {
-      "name": "Наталия Рунцова",
-      "phone": "+79950004422",
-      "telegram": "Natalia_CeramicaDecor",
-      "max": "https://max.ru/u/f9LHodD0cOIOuTvtxAbiArNVeOZ4b0H43nAyLa6r-YFuU_VCRbsdq9v7aOY"
-    },
-    "elena": {
-      "name": "Елена Полозова",
-      "phone": "+79950001188",
-      "telegram": "Elena_CeramicaDecor",
-      "max": "https://max.ru/u/f9LHodD0cOIFHcTEBsdbleMvzGj4SSWl_fngR58cnDKQcjagYgTh5yddGz8"
-    }
+ "_": "Дежурные менеджеры. Посадочная выбирает контакт по московской дате: сначала days, если даты нет — weekly по дню недели (1 = понедельник … 7 = воскресенье). Телефоны сверены с ceramicadecor.ru/contacts 14.09.2026. Ссылки MAX взяты оттуда же, из карточек менеджеров. У Валерии на сайте ссылки нет — пустое поле значит общую ссылку компании (brand.maxUrl).",
+ "managers": {
+  "alexandra": {
+   "name": "Александра Ступина",
+   "phone": "+79950004488",
+   "telegram": "Alexandra_CeramicaDecor",
+   "max": "https://max.ru/u/f9LHodD0cOLM8wvhXzGwW_HnvHQkEKIvFj1FpYaxHzHfcYjt3XliwFLklt8"
   },
-  "days": {
-    "2026-09-14": "alexandra",
-    "2026-09-15": "alexandra",
-    "2026-09-16": "valeria",
-    "2026-09-17": "valeria",
-    "2026-09-18": "olga",
-    "2026-09-19": "alexandra",
-    "2026-09-20": "elena",
-    "2026-09-21": "alexandra",
-    "2026-09-22": "alexandra",
-    "2026-09-23": "valeria",
-    "2026-09-24": "valeria",
-    "2026-09-25": "valeria",
-    "2026-09-26": "alexandra",
-    "2026-09-27": "natalia",
-    "2026-09-28": "alexandra",
-    "2026-09-29": "alexandra",
-    "2026-09-30": "valeria",
-    "2026-10-01": "valeria",
-    "2026-10-02": "valeria",
-    "2026-10-03": "alexandra",
-    "2026-10-04": "natalia",
-    "2026-10-05": "alexandra"
+  "valeria": {
+   "name": "Валерия Румянцева",
+   "phone": "+79950004646",
+   "telegram": "Valeria_CeramicaDecor",
+   "max": "https://max.ru/u/f9LHodD0cOJJLGuHESlDGhfVI8-mhkx4HXT3XIMj9aJN4wDRu7b_6P24ZSU"
   },
-  "weekly": {
-    "1": "alexandra",
-    "2": "alexandra",
-    "3": "valeria",
-    "4": "valeria",
-    "5": "valeria",
-    "6": "alexandra",
-    "7": "natalia"
+  "olga": {
+   "name": "Ольга Бережкова",
+   "phone": "+79950001166",
+   "telegram": "Olga_CeramicaDecor",
+   "max": "https://max.ru/u/f9LHodD0cOKDzHpUS5TIf-MK5RIjJ4lZLCEQP91bgHZgbcpLoPIjx4jQw58"
+  },
+  "natalia": {
+   "name": "Наталия Рунцова",
+   "phone": "+79950004422",
+   "telegram": "Natalia_CeramicaDecor",
+   "max": "https://max.ru/u/f9LHodD0cOIOuTvtxAbiArNVeOZ4b0H43nAyLa6r-YFuU_VCRbsdq9v7aOY"
+  },
+  "elena": {
+   "name": "Елена Полозова",
+   "phone": "+79950001188",
+   "telegram": "Elena_CeramicaDecor",
+   "max": "https://max.ru/u/f9LHodD0cOIFHcTEBsdbleMvzGj4SSWl_fngR58cnDKQcjagYgTh5yddGz8"
   }
+ },
+ "days": {
+  "2026-09-14": "alexandra",
+  "2026-09-15": "alexandra",
+  "2026-09-16": "valeria",
+  "2026-09-17": "valeria",
+  "2026-09-18": "olga",
+  "2026-09-19": "alexandra",
+  "2026-09-20": "elena",
+  "2026-09-21": "alexandra",
+  "2026-09-22": "alexandra",
+  "2026-09-23": "valeria",
+  "2026-09-24": "valeria",
+  "2026-09-25": "valeria",
+  "2026-09-26": "alexandra",
+  "2026-09-27": "natalia",
+  "2026-09-28": "alexandra",
+  "2026-09-29": "alexandra",
+  "2026-09-30": "valeria",
+  "2026-10-01": "valeria",
+  "2026-10-02": "valeria",
+  "2026-10-03": "alexandra",
+  "2026-10-04": "natalia",
+  "2026-10-05": "alexandra"
+ },
+ "weekly": {
+  "1": "alexandra",
+  "2": "alexandra",
+  "3": "valeria",
+  "4": "valeria",
+  "5": "valeria",
+  "6": "alexandra",
+  "7": "natalia"
+ }
 }

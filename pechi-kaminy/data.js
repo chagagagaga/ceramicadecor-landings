@@ -26,7 +26,7 @@ window.LP = {
     "name": "Валерия Румянцева",
     "phone": "+79950004646",
     "telegram": "Valeria_CeramicaDecor",
-    "max": ""
+    "max": "https://max.ru/u/f9LHodD0cOJJLGuHESlDGhfVI8-mhkx4HXT3XIMj9aJN4wDRu7b_6P24ZSU"
    },
    "olga": {
     "name": "Ольга Бережкова",
