@@ -969,13 +969,31 @@
       }).join('') + '</dl>';
     }
 
+    /* 30.09.2026 (Алексей): зелёная «Написать в MAX» сверху карточки и под
+       «Рассчитать такой же» — к дежурному менеджеру, как остальные кнопки MAX.
+       Ссылку max.ru ловит общий обработчик (маячок ухода в мессенджер). */
+    var SHARE_TXT = 'Нажмите, чтобы скопировать ссылку на этот объект';
+    var MAX_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.03 2 11c0 2.62 1.25 4.98 3.24 6.62L4.5 22l4.3-2.15c1 .28 2.08.43 3.2.43 5.52 0 10-4.03 10-9S17.52 2 12 2zm-4.5 10.2a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6zm4.5 0a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6zm4.5 0a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6z"/></svg>';
+    function maxBtn(cls) {
+      var url = (window.LP_DUTY && window.LP_DUTY.max) || (P.brand && P.brand.maxUrl) || '';
+      if (!url) return '';
+      return '<a class="btn pcard__wa ' + cls + '" href="' + esc(url) + '" target="_blank" rel="noopener">' + MAX_ICON + '<span>Написать в MAX</span></a>';
+    }
+    function pic(src) { return tier(src, 'm'); }
+    function warm(set, from) {
+      for (var k = 1; k <= 2 && k < set.length; k++) { var im = new Image(); im.decoding = 'async'; im.src = pic(set[(from + k) % set.length]); }
+    }
+
     function shots() { return (item.photos && item.photos.length) ? item.photos : (item.img ? [item.img] : []); }
 
     function paint() {
       var set = shots();
       if (!set.length) return;
       cur = (cur % set.length + set.length) % set.length;
-      $('.pcard__pic', box).src = set[cur];
+      var el = $('.pcard__pic', box);
+      el.style.backgroundImage = 'url("' + tier(set[cur], 'g') + '")';
+      el.src = pic(set[cur]);
+      warm(set, cur);
       $('.pcard__pic', box).alt = item.title;
       $$('.pcard__thumb', box).forEach(function (b, i) {
         b.classList.toggle('is-on', i === cur);
@@ -992,8 +1010,9 @@
         : '<div class="pcard__p1"><span>' + esc(P.priceLabel1 || 'Облицовка') + '</span><b>' + FROM + fmt(item.p1) + ' ₽</b></div>';
       $('.pcard__box', box).innerHTML =
         '<button type="button" class="pcard__close" data-close aria-label="Закрыть">✕</button>' +
+        maxBtn('pcard__wa--top') +
         '<div class="pcard__gal">' +
-          '<img class="pcard__pic" src="" alt="" width="1200" height="900">' +
+          '<img class="pcard__pic" src="" alt="" width="1200" height="900" decoding="async" fetchpriority="high">' +
           (many
             ? '<button type="button" class="pcard__nav pcard__nav--prev" data-step="-1" aria-label="Предыдущий кадр">‹</button>' +
               '<button type="button" class="pcard__nav pcard__nav--next" data-step="1" aria-label="Следующий кадр">›</button>' +
@@ -1014,7 +1033,8 @@
           '<div class="pcard__prices">' + price + '</div>' +
           '<div class="pcard__acts">' +
             '<button type="button" class="btn btn--primary" data-lead data-src="card-detail">Рассчитать такой же</button>' +
-            (item.id ? '<button type="button" class="btn btn--ghost pcard__share" data-share title="Скопировать ссылку на этот объект">Ссылка</button>' : '') +
+            maxBtn('pcard__wa--bottom') +
+            (item.id ? '<button type="button" class="btn btn--ghost pcard__share" data-share>' + SHARE_TXT + '</button>' : '') +
           '</div>' +
           (P.priceNote ? '<p class="pcard__note">' + esc(P.priceNote) + '</p>' : '') +
         '</div>';
@@ -1055,7 +1075,7 @@
         var b = e.target.closest('[data-share]');
         if (!b || !item) return;
         var url = location.origin + location.pathname + '#' + item.id;
-        var done = function () { b.textContent = 'Скопировано'; setTimeout(function () { b.textContent = 'Ссылка'; }, 1800); };
+        var done = function () { b.textContent = 'Ссылка скопирована'; setTimeout(function () { b.textContent = SHARE_TXT; }, 1800); };
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { prompt('Ссылка на объект', url); });
         else prompt('Ссылка на объект', url);
       });
@@ -1098,7 +1118,17 @@
         }
       }
     }
-    if (location.hash) setTimeout(openFromHash, 60);
+    if (location.hash) {
+      (function () {
+        var id = decodeURIComponent(location.hash.slice(1));
+        for (var i = 0; i < (P.catalog || []).length; i++) if (P.catalog[i].id === id) {
+          var c = P.catalog[i], first = (c.photos && c.photos[0]) || c.img;
+          if (first) { var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image'; l.href = tier(first, 'm'); l.setAttribute('fetchpriority', 'high'); document.head.appendChild(l); }
+          break;
+        }
+      })();
+      setTimeout(openFromHash, 0);
+    }
     window.addEventListener('hashchange', openFromHash);
   })();
 

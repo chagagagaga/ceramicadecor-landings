@@ -644,7 +644,7 @@ INDEX_TPL = """<!DOCTYPE html>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/golos-text-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/oswald-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/system.css?v=5">
-<link rel="stylesheet" href="../assets/css/landing.css?v=5">
+<link rel="stylesheet" href="../assets/css/landing.css?v=6">
 </head>
 <body>
 
@@ -893,7 +893,7 @@ INDEX_TPL = """<!DOCTYPE html>
 </div>
 
 <script src="data.js?v=4"></script>
-<script src="../assets/js/engine.js?v=8"></script>
+<script src="../assets/js/engine.js?v=9"></script>
 </body>
 </html>
 """
