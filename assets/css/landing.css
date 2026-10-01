@@ -136,7 +136,8 @@ h1, h2, h3, .section__title, .hero__title { text-wrap: balance; }
 p, li, .section__lead, .hero__sub { text-wrap: pretty; }
 
 /* Скорость: секции ниже первого экрана браузер рисует по мере прокрутки */
-main > section:nth-of-type(n+4) { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+/* 01.10.2026: content-visibility снят — на телефонах (Instagram, Android) из-за него
+   страница прыгала и нажатия уходили мимо кнопок (баг Ивана на «Первом Луче»). */
 
 /* ── Шапка ───────────────────────────────────────────────────────────────── */
 .header {

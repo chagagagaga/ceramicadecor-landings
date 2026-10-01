@@ -14,6 +14,26 @@
 (function () {
   'use strict';
 
+  /* 01.10.2026 (Алексей): из рекламы в Instagram страницу само уносило вниз.
+     Встроенный браузер Instagram/Facebook восстанавливает чужую позицию
+     прокрутки, а «ленивая» отрисовка секций (content-visibility, снята)
+     сдвигает страницу при догрузке. Если в адресе нет якоря (#модель),
+     держим первый экран, пока человек сам не тронул страницу. */
+  (function pinTop() {
+    if (location.hash) return;
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+    var touched = false, t0 = Date.now();
+    function stop() { touched = true; }
+    ['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, stop, { once: true, passive: true, capture: true });
+    });
+    (function pin() {
+      if (touched || location.hash) return;
+      if (window.scrollY > 0) window.scrollTo(0, 0);
+      if (Date.now() - t0 < 3000) requestAnimationFrame(pin);
+    })();
+  })();
+
   var P = window.LP;
   if (!P) return;
 
